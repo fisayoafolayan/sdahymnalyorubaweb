@@ -201,6 +201,48 @@
         /* Hymn display */
         #hymn-content { display: none; }
         .hymn-hdr { text-align: center; margin-bottom: 2.2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+
+        /* Prev / Next hymn navigation row */
+        .hymn-nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.2rem;
+        }
+        .hymn-nav-btn {
+            display: flex; align-items: center; gap: 5px;
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--muted);
+            padding: 6px 11px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-family: 'EB Garamond', serif;
+            font-size: 0.8rem;
+            letter-spacing: 0.02em;
+            transition: background .15s, border-color .15s, color .15s;
+            white-space: nowrap;
+            min-width: 36px;
+            justify-content: center;
+        }
+        .hymn-nav-btn:hover:not(:disabled) {
+            background: var(--parch2);
+            border-color: var(--accent);
+            color: var(--accent-dk);
+        }
+        .hymn-nav-btn:disabled { opacity: 0.22; cursor: default; }
+        .hymn-nav-btn svg { width: 15px; height: 15px; flex-shrink: 0; }
+        .hymn-nav-btn .nav-label { display: none; }
+        @media (min-width: 500px) {
+            .hymn-nav-btn .nav-label { display: inline; }
+        }
+        .hymn-nav-center {
+            font-size: 0.68rem;
+            color: var(--muted);
+            font-style: italic;
+            letter-spacing: 0.04em;
+        }
+
         .h-badge { display: inline-block; font-family: 'Playfair Display', serif; font-size: 0.72rem; color: var(--badge-fg); background: var(--badge-bg); border: 1px solid var(--border); padding: 2px 12px; border-radius: 20px; letter-spacing: 0.05em; margin-bottom: 0.65rem; }
         .h-title { font-family: 'Playfair Display', serif; font-size: 1.85rem; font-weight: 600; line-height: 1.2; margin-bottom: 0.35rem; }
         .h-en { font-size: 0.95rem; color: var(--muted); font-style: italic; margin-bottom: 0.7rem; }
@@ -573,6 +615,12 @@
         $('empty').style.display = 'none';
         $('hymn-content').style.display = 'block';
         const refs = Object.entries(hymn.references || {}).map(([k,v]) => `<span class="ref-tag">${k} ${v}</span>`).join('');
+
+        // position in master HYMNS list
+        const idx  = HYMNS.findIndex(h => h.number === hymn.number);
+        const hasPrev = idx > 0;
+        const hasNext = idx < HYMNS.length - 1;
+
         let html = '';
         hymn.lyrics.forEach(block => {
             const isChorus = block.type === 'chorus';
@@ -581,7 +629,23 @@
             const inner = isChorus ? `<div class="chorus-block">${lines}</div>` : `<div class="verse-block">${lines}</div>`;
             html += `<div class="stanza"><div class="s-label">${label}</div>${inner}</div>`;
         });
+
         $('hymn-view').innerHTML = `
+    <div class="hymn-nav">
+      <button class="hymn-nav-btn" id="hymn-prev" ${hasPrev ? '' : 'disabled'} aria-label="Previous hymn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"/>
+        </svg>
+        <span class="nav-label">Previous</span>
+      </button>
+      <span class="hymn-nav-center">${idx + 1} of ${HYMNS.length}</span>
+      <button class="hymn-nav-btn" id="hymn-next" ${hasNext ? '' : 'disabled'} aria-label="Next hymn">
+        <span class="nav-label">Next</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="9 18 15 12 9 6"/>
+        </svg>
+      </button>
+    </div>
     <div class="hymn-hdr">
       <div class="h-badge">Hymn ${hymn.number}</div>
       <h1 class="h-title">${escHtml(hymn.title)}</h1>
@@ -589,7 +653,14 @@
       ${refs ? `<div class="h-refs">${refs}</div>` : ''}
     </div>
     ${html}`;
+
         applyReadFz();
+
+        // wire nav buttons
+        const prevBtn = document.getElementById('hymn-prev');
+        const nextBtn = document.getElementById('hymn-next');
+        if (prevBtn) prevBtn.addEventListener('click', () => selectHymn(HYMNS[idx - 1]));
+        if (nextBtn) nextBtn.addEventListener('click', () => selectHymn(HYMNS[idx + 1]));
     }
 
     function applyReadFz() {
