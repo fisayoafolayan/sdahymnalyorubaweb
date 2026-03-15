@@ -483,7 +483,8 @@
             </div>
             <div class="footer-meta">
                 <div class="footer-stat"><strong id="footer-count">—</strong> hymns</div>
-                <div class="footer-note">Use Present mode for church projection <br>Contact <a href="mailto:fisayo@afolayan.com" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">fisayo@afolayan.com</a></div>
+                <div class="footer-note">Use Present mode for church projection <br>Contact <a href="mailto:fisayo@afolayan.com" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">fisayo@afolayan.com</span></a></div>
+                <div class="footer-note" style="margin-top:4px;">&copy; <span id="copy-year"></span> <a href="https://afolayan.com" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">Afolayan</a>. All rights reserved.</div>
             </div>
         </footer>
     </main>
@@ -518,7 +519,7 @@
     </footer>
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 
     let HYMNS = [];
     let filtered = [];
@@ -553,6 +554,8 @@
         renderList();
         const fc = $('footer-count');
         if (fc) fc.textContent = HYMNS.length;
+        const cy = $('copy-year');
+        if (cy) cy.textContent = new Date().getFullYear();
         $('loading').style.opacity = '0';
         setTimeout(() => $('loading').style.display = 'none', 400);
         if (window.innerWidth >= 769 && HYMNS.length) selectHymn(HYMNS[0]);
