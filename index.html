@@ -527,7 +527,7 @@
     let presBlocks = [];
     let presIdx    = 0;
     let presFz     = 1.0;
-    let readFz     = 1.0;
+    let readFz = parseFloat(localStorage.getItem('readFz')) || 1.0;
 
     const $ = id => document.getElementById(id);
 
@@ -670,8 +670,8 @@
         $('hymn-view').querySelectorAll('.s-line').forEach(el => el.style.fontSize = (1.08 * readFz) + 'rem');
     }
 
-    $('fs-up').addEventListener('click',   () => { readFz = Math.min(readFz + 0.12, 1.8); applyReadFz(); });
-    $('fs-down').addEventListener('click', () => { readFz = Math.max(readFz - 0.12, 0.7); applyReadFz(); });
+    $('fs-up').addEventListener('click',   () => { readFz = Math.min(readFz + 0.12, 1.8); applyReadFz(); localStorage.setItem('readFz', readFz); });
+    $('fs-down').addEventListener('click', () => { readFz = Math.max(readFz - 0.12, 0.7); applyReadFz(); localStorage.setItem('readFz', readFz); });
 
     $('pres-open').addEventListener('click', () => {
         if (!current) return;
