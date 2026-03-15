@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="yo">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iwe Orin SDA — Yoruba Hymnal</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%0A%20%20%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2212%22%20fill%3D%22%235B52C8%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M10%2014%20L10%2050%20L32%2050%20L32%2014%20Q21%2011%2010%2014Z%22%20stroke%3D%22white%22%20stroke-width%3D%222.5%22%20fill%3D%22none%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M54%2014%20L54%2050%20L32%2050%20L32%2014%20Q43%2011%2054%2014Z%22%20stroke%3D%22white%22%20stroke-width%3D%222.5%22%20fill%3D%22none%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M32%2050%20Q31%2053%2032%2056%20Q33%2053%2032%2050Z%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%20fill%3D%22none%22%2F%3E%0A%20%20%3Cline%20x1%3D%2214%22%20y1%3D%2222%22%20x2%3D%2228%22%20y2%3D%2221%22%20stroke%3D%22white%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%3Cline%20x1%3D%2214%22%20y1%3D%2228%22%20x2%3D%2228%22%20y2%3D%2227%22%20stroke%3D%22white%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%3Cline%20x1%3D%2214%22%20y1%3D%2234%22%20x2%3D%2228%22%20y2%3D%2233%22%20stroke%3D%22white%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%3Cline%20x1%3D%2214%22%20y1%3D%2240%22%20x2%3D%2228%22%20y2%3D%2239%22%20stroke%3D%22white%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%3Cline%20x1%3D%2236%22%20y1%3D%2221%22%20x2%3D%2250%22%20y2%3D%2222%22%20stroke%3D%22white%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%3Cline%20x1%3D%2236%22%20y1%3D%2227%22%20x2%3D%2250%22%20y2%3D%2228%22%20stroke%3D%22white%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%3Cline%20x1%3D%2236%22%20y1%3D%2233%22%20x2%3D%2250%22%20y2%3D%2234%22%20stroke%3D%22white%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%3Cline%20x1%3D%2236%22%20y1%3D%2239%22%20x2%3D%2250%22%20y2%3D%2240%22%20stroke%3D%22white%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%2F%3E%0A%3C%2Fsvg%3E">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%0A%20%20%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2212%22%20fill%3D%22%235B52C8%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M10%2014%20L10%2050%20L32%2050%20L32%2014%20Q21%2011%2010%2014Z%22%20stroke%3D%22white%22%20stroke-width%3D%222.5%22%20fill%3D%22none%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M54%2014%20L54%2050%20L32%2050%20L32%2014%20Q43%2011%2054%2014Z%22%20stroke%3D%22white%22%20stroke-width%3D%222.5%22%20fill%3D%22none%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M32%2050%20Q31%2053%2032%2056%20Q33%2053%2032%2050Z%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%20fill%3D%22none%22%2F%3E%0A%20%20%3Cline%20x1%3D%2214%22%20y1%3D%2222%22%20x2%3D%2228%22%20y2%3D%2221%22%20stroke%3D%22white%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%3Cline%20x1%3D%2214%22%20y1%3D%2228%22%20x2%3D%2228%22%20y2%3D%2227%22%20stroke%3D%22white%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%3Cline%20x1%3D%2214%22%20y1%3D%2234%22%20x2%3D%2228%22%20y2%3D%2233%22%20stroke%3D%22white%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%3Cline%20x1%3D%2214%22%20y1%3D%2240%22%20x2%3D%2228%22%20y2%3D%2239%22%20stroke%3D%22white%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%3Cline%20x1%3D%2236%22%20y1%3D%2221%22%20x2%3D%2250%22%20y2%3D%2222%22%20stroke%3D%22white%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%3Cline%20x1%3D%2236%22%20y1%3D%2227%22%20x2%3D%2250%22%20y2%3D%2228%22%20stroke%3D%22white%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%3Cline%20x1%3D%2236%22%20y1%3D%2233%22%20x2%3D%2250%22%20y2%3D%2234%22%20stroke%3D%22white%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%3Cline%20x1%3D%2236%22%20y1%3D%2239%22%20x2%3D%2250%22%20y2%3D%2240%22%20stroke%3D%22white%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%2F%3E%0A%3C%2Fsvg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <style>
+
+        :root {
+            --accent:   #8B85E0;
+            --accent-lt:#C5C2F0;
+            --accent-dk:#3D37A0;
+            --ink:      #14123A;
+            --ink2:     #2A2660;
+            --parch:    #F4F3FC;
+            --parch2:   #E8E6F8;
+            --cream:    #F8F7FD;
+            --muted:    #7B78AA;
+            --border:   #C8C5E8;
+
+            /* chorus presentation */
+            --pres-chorus-stage-bg:  #100C30;
+            --pres-chorus-pill-bg:   rgba(180,170,255,0.12);
+            --pres-chorus-pill-fg:   #C5C2F0;
+            --pres-chorus-pill-bd:   rgba(180,170,255,0.25);
+            --sidebar:  300px;
+            --hdr:      54px;
+            /* header — matches purple logo bg #5B52C8 */
+            --hdr-bg:      #5B52C8;
+            --hdr-border:  #3D37A0;
+            /* sidebar active */
+            --row-active-bg: #5B52C8;
+            --row-active-fg: #EEECfC;
+            --row-active-num:#C5C2F0;
+            /* chorus */
+            --chorus-bar:   #8B85E0;
+            --chorus-bg:    rgba(91,82,200,0.07);
+            /* pres */
+            --pres-bg:     #0E0C28;
+            --pres-text:   #EEECfC;
+            --pres-chorus: #C5C2F0;
+            --pres-label:  #2E2A60;
+            --pres-prog:   #2E2A60;
+            --pres-hint:   #1C1840;
+            --pres-btn-bg: rgba(139,133,224,0.12);
+            --pres-btn-bd: rgba(139,133,224,0.25);
+            --pres-btn-fg: #C5C2F0;
+            --pres-exit-bd:#1C1840;
+            --pres-exit-fg:#3A3680;
+            --pres-foot-bg:rgba(0,0,0,0.45);
+            --pres-foot-bd:#140E30;
+            --pf-num:      #9B98D8;
+            --pf-name:     #3A3680;
+            --pfont-bd:    #1C1840;
+            --pfont-fg:    #3A3680;
+            /* badge */
+            --badge-fg:    #4A46A0;
+            --badge-bg:    #E8E6F8;
+            /* ref tag */
+            --ref-bg:      #E8E6F8;
+            --ref-fg:      #7B78AA;
+            /* fs bar */
+            --fsbar-bg:    #F8F7FD;
+            /* loading */
+            --load-spin:   #8B85E0;
+            /* footer */
+            --ft-bg:       #F8F7FD;
+            --ft-note:     #C8C5E8;
+            --ft-logo:     #8B85E0;
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html, body { height: 100%; }
+        body { font-family: 'EB Garamond', Georgia, serif; background: var(--parch); color: var(--ink); overflow: hidden; }
+
+        /* ═══ HEADER ═══ */
+        #hdr {
+            position: fixed; top: 0; left: 0; right: 0; height: var(--hdr);
+            background: var(--hdr-bg); border-bottom: 2px solid var(--hdr-border);
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 0 1rem; z-index: 300; gap: 10px;
+        }
+        .brand { display: flex; align-items: center; gap: 10px; min-width: 0; }
+        .xsvg { width: 28px; height: 24px; flex-shrink: 0; }
+        .brand-text { line-height: 1.1; }
+        .brand-name { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 600; color: #FFFFFF; letter-spacing: 0.04em; white-space: nowrap; }
+        .brand-sub  { font-size: 0.6rem; color: rgba(255,255,255,0.5); letter-spacing: 0.1em; text-transform: uppercase; }
+        .hdr-actions { display: flex; gap: 6px; align-items: center; flex-shrink: 0; }
+        .ic-btn {
+            background: transparent; border: 1px solid rgba(255,255,255,0.25); color: #EEECfC;
+            width: 34px; height: 34px; border-radius: 5px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: background .15s, border-color .15s; flex-shrink: 0;
+        }
+        .ic-btn:hover { background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.5); }
+        .ic-btn svg { width: 16px; height: 16px; }
+        #menu-btn { display: none; }
+        .pres-btn {
+            display: flex; align-items: center; gap: 6px;
+            background: #EEECfC; border: none; color: #14123A;
+            height: 34px; padding: 0 14px; border-radius: 5px; cursor: pointer;
+            font-family: 'EB Garamond', serif; font-size: 0.9rem; letter-spacing: 0.03em;
+            transition: background .15s, opacity .15s; white-space: nowrap;
+        }
+        .pres-btn:hover { opacity: 0.88; }
+        .pres-btn:disabled { opacity: 0.35; cursor: default; pointer-events: none; }
+        .pres-btn svg { width: 14px; height: 14px; }
+
+        /* ═══ LAYOUT ═══ */
+        #app { display: flex; height: 100vh; padding-top: var(--hdr); }
+
+        /* ═══ SIDEBAR ═══ */
+        #sidebar {
+            width: var(--sidebar); flex-shrink: 0; background: var(--cream);
+            border-right: 1px solid var(--border); display: flex;
+            flex-direction: column; height: 100%; transition: transform .25s ease;
+        }
+        .search-box { padding: 10px; border-bottom: 1px solid var(--border); background: var(--cream); position: sticky; top: 0; z-index: 2; }
+        .search-inner { position: relative; display: flex; align-items: center; }
+        .search-inner svg { position: absolute; left: 9px; width: 14px; height: 14px; color: var(--muted); pointer-events: none; }
+        #search {
+            width: 100%; padding: 7px 9px 7px 30px; border: 1px solid var(--border);
+            border-radius: 5px; background: var(--parch); font-family: 'EB Garamond', serif;
+            font-size: 0.92rem; color: var(--ink); outline: none; transition: border-color .15s;
+        }
+        #search:focus { border-color: #8B85E0; }
+        #search::placeholder { color: var(--muted); }
+        #list-wrap { overflow-y: auto; flex: 1; }
+        #list-wrap::-webkit-scrollbar { width: 3px; }
+        #list-wrap::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+        .hymn-row {
+            display: flex; align-items: baseline; gap: 9px; padding: 9px 12px;
+            cursor: pointer; border-bottom: 1px solid rgba(0,0,0,0.06); transition: background .1s;
+        }
+        .hymn-row:hover { background: var(--parch2); }
+        .hymn-row.active { background: var(--row-active-bg); color: var(--row-active-fg); }
+        .hymn-row.active .hnum { color: var(--row-active-num); }
+        .hymn-row.active .hsub { color: var(--muted); }
+        .hnum { font-family: 'Playfair Display', serif; font-size: 0.75rem; color: var(--accent-dk); min-width: 24px; flex-shrink: 0; }
+        .htitles { flex: 1; min-width: 0; }
+        .hyo { font-size: 0.88rem; line-height: 1.3; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .hsub { font-size: 0.7rem; color: var(--muted); font-style: italic; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 1px; }
+        #list-count { text-align: center; padding: 7px; font-size: 0.68rem; color: var(--muted); font-style: italic; border-top: 1px solid var(--border); }
+
+        /* ═══ MAIN ═══ */
+        #main { flex: 1; overflow-y: auto; background: var(--parch); position: relative; }
+        #main::-webkit-scrollbar { width: 5px; }
+        #main::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+        #hymn-view { max-width: 660px; margin: 0 auto; padding: 2.5rem 2rem 5rem; width: 100%; }
+
+        /* Empty state */
+        #empty { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; padding: 3rem; text-align: center; color: var(--muted); gap: 0.75rem; }
+        #empty .e-cross { width: 64px; height: 54px; }
+        #empty h2 { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 400; color: var(--ink2); }
+        #empty p { font-size: 0.95rem; font-style: italic; }
+
+        /* Hymn display */
+        #hymn-content { display: none; }
+        .hymn-hdr { text-align: center; margin-bottom: 2.2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+        .h-badge { display: inline-block; font-family: 'Playfair Display', serif; font-size: 0.72rem; color: var(--badge-fg); background: var(--badge-bg); border: 1px solid var(--border); padding: 2px 12px; border-radius: 20px; letter-spacing: 0.05em; margin-bottom: 0.65rem; }
+        .h-title { font-family: 'Playfair Display', serif; font-size: 1.85rem; font-weight: 600; line-height: 1.2; margin-bottom: 0.35rem; }
+        .h-en { font-size: 0.95rem; color: var(--muted); font-style: italic; margin-bottom: 0.7rem; }
+        .h-refs { display: flex; flex-wrap: wrap; gap: 5px; justify-content: center; margin-top: 0.4rem; }
+        .ref-tag { font-size: 0.68rem; background: var(--ref-bg); border: 1px solid var(--border); color: var(--ref-fg); padding: 2px 8px; border-radius: 4px; }
+        .stanza { margin-bottom: 1.7rem; }
+        .s-label { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.13em; color: var(--muted); margin-bottom: 0.45rem; display: flex; align-items: center; gap: 8px; }
+        .s-label::after { content: ''; flex: 1; height: 1px; background: var(--border); opacity: 0.55; }
+        .verse-block .s-line { font-size: 1.08rem; line-height: 1.95; color: var(--ink2); display: block; }
+        .chorus-block { border-left: 3px solid var(--chorus-bar); padding: 0.55rem 0 0.55rem 1rem; background: var(--chorus-bg); border-radius: 0 5px 5px 0; }
+        .chorus-block .s-line { font-size: 1.08rem; line-height: 1.95; color: var(--ink2); display: block; }
+        .fs-bar { display: flex; align-items: center; gap: 6px; padding: 6px 12px; border-bottom: 1px solid var(--border); background: var(--fsbar-bg); }
+        .fs-lbl { font-size: 0.65rem; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; flex: 1; }
+        .fs-btn { background: transparent; border: 1px solid var(--border); color: var(--muted); width: 24px; height: 24px; border-radius: 4px; cursor: pointer; font-size: 12px; display: flex; align-items: center; justify-content: center; transition: border-color .1s, color .1s; }
+        .fs-btn:hover { border-color: var(--accent); color: var(--accent-dk); }
+
+        /* ═══ FOOTER ═══ */
+        #site-footer { border-top: 1px solid var(--border); background: var(--ft-bg); padding: 1.5rem 2rem; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; }
+        .footer-brand { display: flex; align-items: center; gap: 10px; }
+        .footer-cross { width: 28px; height: 24px; flex-shrink: 0; opacity: 0.55; }
+        .footer-name { font-family: 'Playfair Display', serif; font-size: 0.9rem; font-weight: 600; color: var(--ink2); letter-spacing: 0.03em; }
+        .footer-tagline { font-size: 0.72rem; color: var(--muted); font-style: italic; margin-top: 1px; }
+        .footer-meta { display: flex; flex-direction: column; align-items: flex-end; gap: 3px; text-align: right; }
+        .footer-stat { font-size: 0.72rem; color: var(--muted); }
+        .footer-stat strong { font-weight: 500; color: var(--ink2); }
+        .footer-note { font-size: 0.65rem; color: var(--ft-note); letter-spacing: 0.04em; }
+
+        /* ═══ SIDEBAR OVERLAY (mobile) ═══ */
+        #sb-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.45); z-index: 199; }
+
+        /* ═══ PRESENTATION ═══ */
+        #pres { display: none; position: fixed; inset: 0; z-index: 500; background: var(--pres-bg); flex-direction: column; }
+        #pres.on { display: flex; }
+        #pres-stage { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 3rem 4rem; cursor: pointer; overflow: hidden; position: relative; user-select: none; }
+        #pres-stage::before, #pres-stage::after { content: ''; position: absolute; width: 24px; height: 24px; border-color: rgba(255,255,255,0.06); border-style: solid; }
+        #pres-stage::before { top: 20px; left: 20px; border-width: 1px 0 0 1px; }
+        #pres-stage::after  { bottom: 20px; right: 20px; border-width: 0 1px 1px 0; }
+        #pres-blk-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--pres-label); margin-bottom: 2rem; text-align: center; }
+        #pres-lines { text-align: center; width: 100%; max-width: 960px; }
+        .pl { display: block; font-family: 'Playfair Display', serif; color: var(--pres-text); line-height: 1.65; opacity: 0; transform: translateY(6px); animation: pline .3s ease forwards; }
+        .pl.ch { color: var(--pres-chorus); }
+        @keyframes pline { to { opacity: 1; transform: none; } }
+        #pres-foot { background: var(--pres-foot-bg); border-top: 1px solid var(--pres-foot-bd); padding: 8px 16px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+        .pf-info { flex: 1; min-width: 0; }
+        .pf-num { font-family: 'Playfair Display', serif; font-size: 0.75rem; color: var(--pf-num); margin-bottom: 1px; }
+        .pf-name { font-size: 0.8rem; color: var(--pf-name); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .pf-controls { display: flex; align-items: center; gap: 6px; }
+        .p-btn { background: var(--pres-btn-bg); border: 1px solid var(--pres-btn-bd); color: var(--pres-btn-fg); width: 36px; height: 36px; border-radius: 5px; cursor: pointer; font-size: 18px; display: flex; align-items: center; justify-content: center; transition: background .15s; }
+        .p-btn:hover { opacity: 0.8; }
+        .p-btn:disabled { opacity: 0.25; cursor: default; }
+        .p-prog { font-size: 0.75rem; color: var(--pres-prog); min-width: 48px; text-align: center; }
+        .pf-font { display: flex; gap: 4px; }
+        .pfont-btn { background: transparent; border: 1px solid var(--pfont-bd); color: var(--pfont-fg); width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 11px; display: flex; align-items: center; justify-content: center; transition: color .15s; }
+        .pfont-btn:hover { color: var(--pres-chorus); border-color: var(--pfont-fg); }
+        .p-exit { background: transparent; border: 1px solid var(--pres-exit-bd); color: var(--pres-exit-fg); height: 36px; padding: 0 12px; border-radius: 5px; cursor: pointer; font-family: 'EB Garamond', serif; font-size: 0.8rem; letter-spacing: 0.04em; transition: color .15s, border-color .15s; white-space: nowrap; }
+        .p-exit:hover { color: var(--pres-chorus); border-color: var(--pfont-fg); }
+        #pres-hint { position: absolute; bottom: 60px; right: 24px; font-size: 0.62rem; color: var(--pres-hint); letter-spacing: 0.06em; pointer-events: none; }
+
+
+        /* ── Presentation: chorus vs verse distinction ── */
+
+        /* Stage takes a tint when showing chorus */
+        #pres-stage.is-chorus {
+            background: var(--pres-chorus-stage-bg);
+            transition: background 0.3s ease;
+        }
+        #pres-stage.is-verse {
+            background: var(--pres-bg);
+            transition: background 0.3s ease;
+        }
+
+        /* Block-type pill shown above lines */
+        #pres-blk-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            margin-bottom: 2rem;
+            border: 1px solid transparent;
+            transition: background 0.3s, color 0.3s, border-color 0.3s;
+        }
+        #pres-blk-label.label-verse {
+            background: rgba(255,255,255,0.04);
+            color: var(--pres-label);
+            border-color: rgba(255,255,255,0.07);
+        }
+        #pres-blk-label.label-chorus {
+            background: var(--pres-chorus-pill-bg);
+            color: var(--pres-chorus-pill-fg);
+            border-color: var(--pres-chorus-pill-bd);
+        }
+
+        /* Verse lines: upright, normal weight */
+        .pl.verse-line {
+            font-style: normal;
+            font-weight: 400;
+            color: var(--pres-text);
+        }
+
+        /* Chorus lines: italic, slightly lighter/accented */
+        .pl.chorus-line {
+            font-style: italic;
+            font-weight: 400;
+            color: var(--pres-chorus);
+            letter-spacing: 0.01em;
+        }
+
+        /* Blank / end-of-hymn state */
+        #pres-end {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        #pres-end.visible {
+            display: flex;
+            opacity: 1;
+        }
+        #pres-end-line {
+            width: 48px;
+            height: 1px;
+            background: rgba(255,255,255,0.12);
+            margin-bottom: 0.25rem;
+        }
+        #pres-end-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 0.8rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.18);
+        }
+
+        /* ═══ LOADING ═══ */
+        #loading { position: fixed; inset: 0; background: var(--parch); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; z-index: 9999; transition: opacity .4s; }
+        #loading svg { width: 36px; height: 36px; color: var(--load-spin); animation: spin 1.5s linear infinite; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        #loading p { font-family: 'Playfair Display', serif; font-size: 0.9rem; color: var(--muted); letter-spacing: 0.05em; }
+
+        /* ═══ RESPONSIVE ═══ */
+        @media (max-width: 768px) {
+            :root { --sidebar: 88vw; }
+            #sidebar { position: fixed; top: var(--hdr); left: 0; height: calc(100vh - var(--hdr)); z-index: 200; transform: translateX(-100%); }
+            #sidebar.open { transform: translateX(0); box-shadow: 4px 0 20px rgba(0,0,0,0.18); }
+            #sb-overlay.show { display: block; }
+            #menu-btn { display: flex; }
+            #hymn-view { padding: 1.5rem 1.1rem 4rem; }
+            .h-title { font-size: 1.4rem; }
+            #pres-stage { padding: 2rem 1.5rem; }
+            .pf-info { display: none; }
+        }
+        @media (max-width: 520px) {
+            #site-footer { flex-direction: column; align-items: flex-start; gap: 0.75rem; padding: 1.25rem 1.1rem; }
+            .footer-meta { align-items: flex-start; text-align: left; }
+        }
+        @media (max-width: 420px) {
+            .pres-btn .pres-label { display: none; }
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- LOADING -->
+<div id="loading">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+    </svg>
+    <p>Loading hymnal…</p>
+</div>
+
+<!-- HEADER -->
+<header id="hdr">
+    <div class="brand">
+        <button class="ic-btn" id="menu-btn" aria-label="Open hymn list">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+        </button>
+        <svg class="xsvg" viewBox="0 0 48 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <!-- book body left page -->
+            <path d="M4 6 L4 34 L24 34 L24 6 Q14 4 4 6Z" stroke="white" stroke-width="1.8" fill="none" stroke-linejoin="round"/>
+            <!-- book body right page -->
+            <path d="M44 6 L44 34 L24 34 L24 6 Q34 4 44 6Z" stroke="white" stroke-width="1.8" fill="none" stroke-linejoin="round"/>
+            <!-- spine bottom -->
+            <path d="M24 34 Q23 36 24 38 Q25 36 24 34Z" stroke="white" stroke-width="1.6" fill="none"/>
+            <!-- lines left page -->
+            <line x1="8"  y1="12" x2="20" y2="11" stroke="white" stroke-width="1.2" stroke-linecap="round"/>
+            <line x1="8"  y1="16" x2="20" y2="15" stroke="white" stroke-width="1.2" stroke-linecap="round"/>
+            <line x1="8"  y1="20" x2="20" y2="19" stroke="white" stroke-width="1.2" stroke-linecap="round"/>
+            <line x1="8"  y1="24" x2="20" y2="23" stroke="white" stroke-width="1.2" stroke-linecap="round"/>
+            <line x1="8"  y1="28" x2="20" y2="27" stroke="white" stroke-width="1.2" stroke-linecap="round"/>
+            <!-- lines right page -->
+            <line x1="28" y1="11" x2="40" y2="12" stroke="white" stroke-width="1.2" stroke-linecap="round"/>
+            <line x1="28" y1="15" x2="40" y2="16" stroke="white" stroke-width="1.2" stroke-linecap="round"/>
+            <line x1="28" y1="19" x2="40" y2="20" stroke="white" stroke-width="1.2" stroke-linecap="round"/>
+            <line x1="28" y1="23" x2="40" y2="24" stroke="white" stroke-width="1.2" stroke-linecap="round"/>
+            <line x1="28" y1="27" x2="40" y2="28" stroke="white" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
+        <div class="brand-text">
+            <div class="brand-name">Iwe Orin SDA</div>
+            <div class="brand-sub">Yoruba Hymnal</div>
+        </div>
+    </div>
+    <div class="hdr-actions">
+        <button class="pres-btn" id="pres-open" disabled>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+            </svg>
+            <span class="pres-label">Present</span>
+        </button>
+    </div>
+</header>
+
+<div id="sb-overlay"></div>
+
+<div id="app">
+    <aside id="sidebar">
+        <div class="search-box">
+            <div class="search-inner">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                </svg>
+                <input id="search" type="search" placeholder="Search by title or number…" autocomplete="off" spellcheck="false">
+            </div>
+        </div>
+        <div id="list-wrap"></div>
+        <div id="list-count"></div>
+    </aside>
+
+    <main id="main">
+        <div id="empty">
+            <svg class="e-cross" viewBox="0 0 48 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="opacity:0.22">
+                <path d="M4 6 L4 34 L24 34 L24 6 Q14 4 4 6Z" stroke="#5B52C8" stroke-width="2" fill="none" stroke-linejoin="round"/>
+                <path d="M44 6 L44 34 L24 34 L24 6 Q34 4 44 6Z" stroke="#5B52C8" stroke-width="2" fill="none" stroke-linejoin="round"/>
+                <path d="M24 34 Q23 36 24 38 Q25 36 24 34Z" stroke="#5B52C8" stroke-width="1.8" fill="none"/>
+                <line x1="8"  y1="12" x2="20" y2="11" stroke="#5B52C8" stroke-width="1.4" stroke-linecap="round"/>
+                <line x1="8"  y1="16" x2="20" y2="15" stroke="#5B52C8" stroke-width="1.4" stroke-linecap="round"/>
+                <line x1="8"  y1="20" x2="20" y2="19" stroke="#5B52C8" stroke-width="1.4" stroke-linecap="round"/>
+                <line x1="8"  y1="24" x2="20" y2="23" stroke="#5B52C8" stroke-width="1.4" stroke-linecap="round"/>
+                <line x1="28" y1="11" x2="40" y2="12" stroke="#5B52C8" stroke-width="1.4" stroke-linecap="round"/>
+                <line x1="28" y1="15" x2="40" y2="16" stroke="#5B52C8" stroke-width="1.4" stroke-linecap="round"/>
+                <line x1="28" y1="19" x2="40" y2="20" stroke="#5B52C8" stroke-width="1.4" stroke-linecap="round"/>
+                <line x1="28" y1="23" x2="40" y2="24" stroke="#5B52C8" stroke-width="1.4" stroke-linecap="round"/>
+            </svg>
+            <h2>Select a Hymn</h2>
+            <p>Choose from the list or search by title or number</p>
+        </div>
+        <div id="hymn-content">
+            <div class="fs-bar">
+                <span class="fs-lbl">Text size</span>
+                <button class="fs-btn" id="fs-down">A−</button>
+                <button class="fs-btn" id="fs-up">A+</button>
+            </div>
+            <div id="hymn-view"></div>
+        </div>
+
+        <footer id="site-footer">
+            <div class="footer-brand">
+                <svg class="footer-cross" viewBox="0 0 48 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M4 6 L4 34 L24 34 L24 6 Q14 4 4 6Z" stroke="#8B85E0" stroke-width="1.8" fill="none" stroke-linejoin="round"/>
+                    <path d="M44 6 L44 34 L24 34 L24 6 Q34 4 44 6Z" stroke="#8B85E0" stroke-width="1.8" fill="none" stroke-linejoin="round"/>
+                    <path d="M24 34 Q23 36 24 38 Q25 36 24 34Z" stroke="#8B85E0" stroke-width="1.6" fill="none"/>
+                    <line x1="8"  y1="12" x2="20" y2="11" stroke="#8B85E0" stroke-width="1.2" stroke-linecap="round"/>
+                    <line x1="8"  y1="16" x2="20" y2="15" stroke="#8B85E0" stroke-width="1.2" stroke-linecap="round"/>
+                    <line x1="8"  y1="20" x2="20" y2="19" stroke="#8B85E0" stroke-width="1.2" stroke-linecap="round"/>
+                    <line x1="8"  y1="24" x2="20" y2="23" stroke="#8B85E0" stroke-width="1.2" stroke-linecap="round"/>
+                    <line x1="8"  y1="28" x2="20" y2="27" stroke="#8B85E0" stroke-width="1.2" stroke-linecap="round"/>
+                    <line x1="28" y1="11" x2="40" y2="12" stroke="#8B85E0" stroke-width="1.2" stroke-linecap="round"/>
+                    <line x1="28" y1="15" x2="40" y2="16" stroke="#8B85E0" stroke-width="1.2" stroke-linecap="round"/>
+                    <line x1="28" y1="19" x2="40" y2="20" stroke="#8B85E0" stroke-width="1.2" stroke-linecap="round"/>
+                    <line x1="28" y1="23" x2="40" y2="24" stroke="#8B85E0" stroke-width="1.2" stroke-linecap="round"/>
+                    <line x1="28" y1="27" x2="40" y2="28" stroke="#8B85E0" stroke-width="1.2" stroke-linecap="round"/>
+                </svg>
+                <div>
+                    <div class="footer-name">Iwe Orin SDA</div>
+                    <div class="footer-tagline">Yoruba Hymnal — for worship, study &amp; reflection</div>
+                </div>
+            </div>
+            <div class="footer-meta">
+                <div class="footer-stat"><strong id="footer-count">—</strong> hymns</div>
+                <div class="footer-note">Use Present mode for church projection <br>Contact <a href="mailto:fisayo@afolayan.com" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">fisyo@afolayan.com</a> </div>
+            </div>
+        </footer>
+    </main>
+</div>
+
+<!-- PRESENTATION -->
+<div id="pres">
+    <div id="pres-stage">
+        <div id="pres-blk-label">Verse 1</div>
+        <div id="pres-lines"></div>
+        <div id="pres-end">
+            <div id="pres-end-line"></div>
+            <div id="pres-end-text">End of hymn</div>
+        </div>
+        <div id="pres-hint">← → arrow keys · space · tap to advance</div>
+    </div>
+    <footer id="pres-foot">
+        <div class="pf-info">
+            <div class="pf-num" id="pf-num"></div>
+            <div class="pf-name" id="pf-name"></div>
+        </div>
+        <div class="pf-font">
+            <button class="pfont-btn" id="pf-down">A−</button>
+            <button class="pfont-btn" id="pf-up">A+</button>
+        </div>
+        <div class="pf-controls">
+            <button class="p-btn" id="p-prev">&#8592;</button>
+            <span class="p-prog" id="p-prog">1 / 1</span>
+            <button class="p-btn" id="p-next">&#8594;</button>
+        </div>
+        <button class="p-exit" id="p-exit">&#215; Exit</button>
+    </footer>
+</div>
+
+<script>
+
+    let HYMNS = [];
+    let filtered = [];
+    let current = null;
+    let presBlocks = [];
+    let presIdx    = 0;
+    let presFz     = 1.0;
+    let readFz     = 1.0;
+
+    const $ = id => document.getElementById(id);
+
+    async function loadData() {
+        try {
+            const res = await fetch('hymns.json');
+            if (!res.ok) throw new Error('not ok');
+            HYMNS = await res.json();
+        } catch(e) {
+            $('loading').innerHTML = `
+      <svg style="width:36px;height:36px;color:var(--load-spin)" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><circle cx="12" cy="16" r="1" fill="currentColor"/>
+      </svg>
+      <p style="max-width:320px;text-align:center;line-height:1.6">
+        Could not load data store
+      </p>`;
+            return false;
+        }
+        return true;
+    }
+
+    (async () => {
+        const ok = await loadData();
+        if (!ok) return;
+        filtered = [...HYMNS];
+        renderList();
+        const fc = $('footer-count');
+        if (fc) fc.textContent = HYMNS.length;
+        $('loading').style.opacity = '0';
+        setTimeout(() => $('loading').style.display = 'none', 400);
+        if (window.innerWidth >= 769 && HYMNS.length) selectHymn(HYMNS[0]);
+    })();
+
+    function renderList() {
+        const wrap = $('list-wrap');
+        wrap.innerHTML = '';
+        const frag = document.createDocumentFragment();
+        filtered.forEach(h => {
+            const div = document.createElement('div');
+            div.className = 'hymn-row' + (current && current.number === h.number ? ' active' : '');
+            div.dataset.n = h.number;
+            div.innerHTML = `<div class="hnum">${h.number}</div><div class="htitles"><div class="hyo">${h.title}</div><div class="hsub">${h.english_title}</div></div>`;
+            div.addEventListener('click', () => selectHymn(h));
+            frag.appendChild(div);
+        });
+        wrap.appendChild(frag);
+        $('list-count').textContent = filtered.length + (filtered.length === 1 ? ' hymn' : ' hymns');
+    }
+
+    $('search').addEventListener('input', () => {
+        const q = $('search').value.trim().toLowerCase();
+        filtered = q ? HYMNS.filter(h =>
+            h.title.toLowerCase().includes(q) ||
+            h.english_title.toLowerCase().includes(q) ||
+            String(h.number) === q || String(h.number).startsWith(q)
+        ) : [...HYMNS];
+        renderList();
+    });
+
+    function selectHymn(hymn) {
+        current = hymn;
+        document.querySelectorAll('.hymn-row').forEach(el => el.classList.toggle('active', parseInt(el.dataset.n) === hymn.number));
+        renderHymn(hymn);
+        $('pres-open').disabled = false;
+        presBlocks = hymn.lyrics.map(b => ({ type: b.type, index: b.index, lines: b.lines }));
+        presIdx = 0;
+        if (window.innerWidth < 769) closeSidebar();
+        $('main').scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function renderHymn(hymn) {
+        $('empty').style.display = 'none';
+        $('hymn-content').style.display = 'block';
+        const refs = Object.entries(hymn.references || {}).map(([k,v]) => `<span class="ref-tag">${k} ${v}</span>`).join('');
+        let html = '';
+        hymn.lyrics.forEach(block => {
+            const isChorus = block.type === 'chorus';
+            const label = isChorus ? 'Chorus' : 'Verse ' + block.index;
+            const lines = block.lines.map(l => `<span class="s-line">${escHtml(l)}</span>`).join('');
+            const inner = isChorus ? `<div class="chorus-block">${lines}</div>` : `<div class="verse-block">${lines}</div>`;
+            html += `<div class="stanza"><div class="s-label">${label}</div>${inner}</div>`;
+        });
+        $('hymn-view').innerHTML = `
+    <div class="hymn-hdr">
+      <div class="h-badge">Hymn ${hymn.number}</div>
+      <h1 class="h-title">${escHtml(hymn.title)}</h1>
+      <div class="h-en">${escHtml(hymn.english_title)}</div>
+      ${refs ? `<div class="h-refs">${refs}</div>` : ''}
+    </div>
+    ${html}`;
+        applyReadFz();
+    }
+
+    function applyReadFz() {
+        $('hymn-view').querySelectorAll('.s-line').forEach(el => el.style.fontSize = (1.08 * readFz) + 'rem');
+    }
+
+    $('fs-up').addEventListener('click',   () => { readFz = Math.min(readFz + 0.12, 1.8); applyReadFz(); });
+    $('fs-down').addEventListener('click', () => { readFz = Math.max(readFz - 0.12, 0.7); applyReadFz(); });
+
+    $('pres-open').addEventListener('click', () => {
+        if (!current) return;
+        $('pf-num').textContent  = 'Hymn ' + current.number;
+        $('pf-name').textContent = current.title;
+        presIdx = 0;
+        $('pres').classList.add('on');
+        renderPresBlock();
+        document.addEventListener('keydown', presKey);
+    });
+
+    function renderPresBlock() {
+        const endEl   = $('pres-end');
+        const linesEl = $('pres-lines');
+        const labelEl = $('pres-blk-label');
+        const stage   = $('pres-stage');
+
+        // ── BLANK / end-of-hymn state ──
+        const isEnd = presIdx >= presBlocks.length;
+        endEl.classList.toggle('visible', isEnd);
+        linesEl.style.display  = isEnd ? 'none' : '';
+        labelEl.style.display  = isEnd ? 'none' : '';
+        $('p-next').disabled   = isEnd;
+        $('p-prev').disabled   = presIdx === 0;
+        stage.classList.toggle('is-chorus', false);
+        stage.classList.toggle('is-verse',  !isEnd);
+        $('p-prog').textContent = isEnd
+            ? '— / ' + presBlocks.length
+            : (presIdx + 1) + ' / ' + presBlocks.length;
+
+        if (isEnd) return;
+
+        const b = presBlocks[presIdx];
+        const isChorus = b.type === 'chorus';
+
+        // Label pill
+        labelEl.textContent = isChorus ? 'Chorus' : 'Verse ' + b.index;
+        labelEl.className   = isChorus ? 'label-chorus' : 'label-verse';
+
+        // Stage tint
+        stage.classList.toggle('is-chorus', isChorus);
+        stage.classList.toggle('is-verse',  !isChorus);
+
+        // Lines
+        linesEl.innerHTML = '';
+        b.lines.forEach((line, i) => {
+            const span = document.createElement('span');
+            span.className = 'pl ' + (isChorus ? 'chorus-line' : 'verse-line');
+            span.textContent = line;
+            span.style.animationDelay = (i * 0.055) + 's';
+            linesEl.appendChild(span);
+            linesEl.appendChild(document.createElement('br'));
+        });
+
+        applyPresFz();
+    }
+
+    function applyPresFz() {
+        const base = Math.max(18, Math.min(window.innerWidth * 0.038, 52));
+        $('pres-lines').querySelectorAll('.pl').forEach(el => el.style.fontSize = (base * presFz) + 'px');
+    }
+
+    $('p-next').addEventListener('click', advance);
+    $('p-prev').addEventListener('click', retreat);
+    $('pres-stage').addEventListener('click', e => { if (!e.target.closest('button') && !e.target.closest('#pres-foot')) advance(); });
+    function advance()  { if (presIdx <= presBlocks.length - 1) { presIdx++; renderPresBlock(); } }
+    function retreat()  { if (presIdx > 0) { presIdx--; renderPresBlock(); } }
+    $('p-exit').addEventListener('click', closePres);
+    $('pf-up').addEventListener('click',   () => { presFz = Math.min(presFz + 0.15, 2.5); applyPresFz(); });
+    $('pf-down').addEventListener('click', () => { presFz = Math.max(presFz - 0.15, 0.4); applyPresFz(); });
+    function presKey(e) {
+        if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') { e.preventDefault(); advance(); }
+        else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); retreat(); }
+        else if (e.key === 'Escape') closePres();
+        else if (e.key === '+' || e.key === '=') { presFz = Math.min(presFz + 0.15, 2.5); applyPresFz(); }
+        else if (e.key === '-') { presFz = Math.max(presFz - 0.15, 0.4); applyPresFz(); }
+    }
+    function closePres() { $('pres').classList.remove('on'); document.removeEventListener('keydown', presKey); }
+    window.addEventListener('resize', () => { if ($('pres').classList.contains('on')) applyPresFz(); });
+    $('menu-btn').addEventListener('click', () => {
+        const sb = $('sidebar'); const ov = $('sb-overlay');
+        sb.classList.toggle('open'); ov.classList.toggle('show', sb.classList.contains('open'));
+    });
+    $('sb-overlay').addEventListener('click', closeSidebar);
+    function closeSidebar() { $('sidebar').classList.remove('open'); $('sb-overlay').classList.remove('show'); }
+    function escHtml(s) { return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+</script>
+</body>
+</html>
