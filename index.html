@@ -7,7 +7,7 @@
 
     <!-- SEO -->
     <meta name="description" content="Iwe Orin SDA — a complete Yoruba hymnal for Seventh-day Adventist worship, study and church projection. Browse, search and present over 620 hymns.">
-    <meta name="keywords" content="Iwe Orin SDA, Iwe Orin, Yoruba hymnal, Yoruba Adventist hymnal, Yoruba Adventist hymns, SDA hymns, Seventh-day Adventist, Seventh-day Adventist Yoruba hymnal, Yoruba worship, church hymns, Nigerian Adventist hymns, Nigieran hymns">
+    <meta name="keywords" content="Iwe Orin SDA, Iwe Orin, Yoruba hymnal, Yoruba Adventist hymnal, Yoruba Adventist hymns, SDA hymns, Seventh-day Adventist, Seventh-day Adventist Yoruba hymnal, Yoruba worship, church hymns, Nigerian Adventist hymns, Nigerian hymns">
     <meta name="author" content="Afolayan">
     <link rel="canonical" id="canonical-url" href="">
 
@@ -460,7 +460,7 @@
             </div>
             <div class="footer-meta">
                 <div class="footer-stat"><strong id="footer-count">—</strong> hymns</div>
-                <div class="footer-note">Use Present mode for church projection<br>Contact <a href="/cdn-cgi/l/email-protection#77111e04160e18371611181b160e16195914181a" style="color:inherit;text-decoration:underline;text-underline-offset:2px;"><span class="__cf_email__" data-cfemail="2d4b445e4c54426d4c4b42414c544c43034e4240">[email&#160;protected]</span></a></div>
+                <div class="footer-note">Use Present mode for church projection<br>Contact <a href="mailto:fisayo@afolayan.com" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">fisayo@afolayan.com</a></div>
                 <div class="footer-note" style="margin-top:4px;">&copy; <span id="copy-year"></span> <a href="https://afolayan.com" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">Afolayan</a>. All rights reserved.</div>
             </div>
         </footer>
@@ -496,7 +496,7 @@
     </footer>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 
     let HYMNS = [];
     let filtered = [];
@@ -525,7 +525,7 @@
     }
 
     // Pre-built search index — built once on load, reused on every keystroke
-    let searchIndex = []; // [{hymn, blob}] where blob is a single lowercase string
+    let searchIndex = [];
 
     function buildIndex() {
         searchIndex = HYMNS.map(h => ({
@@ -619,7 +619,6 @@
         presIdx = 0;
         if (window.innerWidth < 769) closeSidebar();
         $('main').scrollTo({ top: 0, behavior: 'smooth' });
-        // Persist selection
         localStorage.setItem('lastHymn', hymn.number);
         const url = new URL(location.href);
         url.searchParams.set('hymn', hymn.number);
@@ -683,7 +682,6 @@
         $('pres').classList.add('on');
         renderPresBlock();
         document.addEventListener('keydown', presKey);
-        // Request fullscreen
         const el = $('pres');
         if (el.requestFullscreen) el.requestFullscreen();
         else if (el.webkitRequestFullscreen) el.webkitRequestFullscreen();
@@ -699,7 +697,7 @@
     $('pres-stage').addEventListener('touchend', e => {
         const dx = e.changedTouches[0].clientX - swipeStartX;
         const dy = e.changedTouches[0].clientY - swipeStartY;
-        if (Math.abs(dx) < 40 && Math.abs(dy) < 40) { advance(); return; } // tap
+        if (Math.abs(dx) < 40 && Math.abs(dy) < 40) { advance(); return; }
         if (Math.abs(dx) > Math.abs(dy)) {
             if (dx < -40) advance();
             else if (dx > 40) retreat();
@@ -731,7 +729,6 @@
         const isTitle  = b.type === 'title';
         const isChorus = b.type === 'chorus';
 
-        // Label pill
         if (isTitle) {
             labelEl.textContent = 'Hymn ' + current.number;
             labelEl.className   = 'label-title';
@@ -740,15 +737,13 @@
             labelEl.className   = isChorus ? 'label-chorus' : 'label-verse';
         }
 
-        // Stage tint
         if (isTitle)       stage.classList.add('is-title');
         else if (isChorus) stage.classList.add('is-chorus');
         else               stage.classList.add('is-verse');
 
-        // Lines
         linesEl.innerHTML = '';
         b.lines.forEach((line, i) => {
-            if (!line) return; // skip empty english_title if absent
+            if (!line) return;
             const span = document.createElement('span');
             if (isTitle) {
                 span.className = 'pl ' + (i === 0 ? 'title-main' : 'title-sub');
@@ -767,13 +762,9 @@
     function applyPresFz() {
         const base = Math.max(18, Math.min(window.innerWidth * 0.038, 52));
         $('pres-lines').querySelectorAll('.pl').forEach(el => {
-            if (el.classList.contains('title-main')) {
-                el.style.fontSize = (base * presFz * 1.5) + 'px';
-            } else if (el.classList.contains('title-sub')) {
-                el.style.fontSize = (base * presFz * 0.75) + 'px';
-            } else {
-                el.style.fontSize = (base * presFz) + 'px';
-            }
+            if (el.classList.contains('title-main'))     el.style.fontSize = (base * presFz * 1.5) + 'px';
+            else if (el.classList.contains('title-sub')) el.style.fontSize = (base * presFz * 0.75) + 'px';
+            else                                         el.style.fontSize = (base * presFz) + 'px';
         });
     }
 
@@ -806,6 +797,7 @@
         const active = $('list-wrap').querySelector('.hymn-row.active');
         if (active) active.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
     }
+
     window.addEventListener('resize', () => { if ($('pres').classList.contains('on')) applyPresFz(); });
 
     $('menu-btn').addEventListener('click', openSidebar);
