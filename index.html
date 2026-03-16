@@ -62,7 +62,6 @@
             --ft-note:     #C8C5E8;
             --ft-logo:     #8B85E0;
         }
-
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         html, body { height: 100%; }
         body { font-family: 'EB Garamond', Georgia, serif; background: var(--parch); color: var(--ink); overflow: hidden; }
@@ -151,20 +150,11 @@
         #empty .e-cross { width: 64px; height: 54px; }
         #empty h2 { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 400; color: var(--ink2); }
         #empty p { font-size: 0.95rem; font-style: italic; }
-
-        /* Mobile search in empty state */
         .empty-search-wrap {
-            display: none;
-            width: 100%;
-            max-width: 320px;
-            flex-direction: column;
-            gap: 10px;
-            margin-top: 0.5rem;
+            display: none; width: 100%; max-width: 320px;
+            flex-direction: column; gap: 10px; margin-top: 0.5rem;
         }
-        .empty-search-inner {
-            position: relative;
-            width: 100%;
-        }
+        .empty-search-inner { position: relative; width: 100%; }
         .empty-search-inner svg {
             position: absolute; left: 11px; top: 50%; transform: translateY(-50%);
             width: 15px; height: 15px; color: var(--muted); pointer-events: none;
@@ -173,76 +163,42 @@
             width: 100%; padding: 10px 12px 10px 34px;
             border: 1px solid var(--border); border-radius: 8px;
             background: var(--cream); font-family: 'EB Garamond', serif;
-            font-size: 1rem; color: var(--ink); outline: none;
-            transition: border-color .15s;
+            font-size: 1rem; color: var(--ink); outline: none; transition: border-color .15s;
             box-shadow: 0 1px 4px rgba(91,82,200,0.08);
         }
         #empty-search:focus { border-color: var(--accent); }
         #empty-search::placeholder { color: var(--muted); }
-
         .empty-browse-btn {
             display: flex; align-items: center; justify-content: center; gap: 8px;
-            background: var(--accent); color: white;
-            border: none; border-radius: 8px;
-            padding: 11px 20px;
-            font-family: 'EB Garamond', serif; font-size: 1rem;
-            cursor: pointer; transition: opacity .15s;
-            width: 100%;
+            background: var(--accent); color: white; border: none; border-radius: 8px;
+            padding: 11px 20px; font-family: 'EB Garamond', serif; font-size: 1rem;
+            cursor: pointer; transition: opacity .15s; width: 100%;
         }
         .empty-browse-btn:hover { opacity: 0.88; }
         .empty-browse-btn svg { width: 16px; height: 16px; }
-
-        /* show mobile elements only on small screens */
         @media (max-width: 768px) {
             .empty-search-wrap { display: flex; }
-            #empty p { display: none; } /* replaced by the search/button UI */
+            #empty p { display: none; }
         }
 
-        /* Hymn display */
+        /* ═══ HYMN DISPLAY ═══ */
         #hymn-content { display: none; }
         .hymn-hdr { text-align: center; margin-bottom: 2.2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
-
-        /* Prev / Next hymn navigation row */
-        .hymn-nav {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 1.2rem;
-        }
+        .hymn-nav { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.2rem; }
         .hymn-nav-btn {
             display: flex; align-items: center; gap: 5px;
-            background: transparent;
-            border: 1px solid var(--border);
-            color: var(--muted);
-            padding: 6px 11px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-family: 'EB Garamond', serif;
-            font-size: 0.8rem;
-            letter-spacing: 0.02em;
+            background: transparent; border: 1px solid var(--border); color: var(--muted);
+            padding: 6px 11px; border-radius: 6px; cursor: pointer;
+            font-family: 'EB Garamond', serif; font-size: 0.8rem; letter-spacing: 0.02em;
             transition: background .15s, border-color .15s, color .15s;
-            white-space: nowrap;
-            min-width: 36px;
-            justify-content: center;
+            white-space: nowrap; min-width: 36px; justify-content: center;
         }
-        .hymn-nav-btn:hover:not(:disabled) {
-            background: var(--parch2);
-            border-color: var(--accent);
-            color: var(--accent-dk);
-        }
+        .hymn-nav-btn:hover:not(:disabled) { background: var(--parch2); border-color: var(--accent); color: var(--accent-dk); }
         .hymn-nav-btn:disabled { opacity: 0.22; cursor: default; }
         .hymn-nav-btn svg { width: 15px; height: 15px; flex-shrink: 0; }
         .hymn-nav-btn .nav-label { display: none; }
-        @media (min-width: 500px) {
-            .hymn-nav-btn .nav-label { display: inline; }
-        }
-        .hymn-nav-center {
-            font-size: 0.68rem;
-            color: var(--muted);
-            font-style: italic;
-            letter-spacing: 0.04em;
-        }
-
+        @media (min-width: 500px) { .hymn-nav-btn .nav-label { display: inline; } }
+        .hymn-nav-center { font-size: 0.68rem; color: var(--muted); font-style: italic; letter-spacing: 0.04em; }
         .h-badge { display: inline-block; font-family: 'Playfair Display', serif; font-size: 0.72rem; color: var(--badge-fg); background: var(--badge-bg); border: 1px solid var(--border); padding: 2px 12px; border-radius: 20px; letter-spacing: 0.05em; margin-bottom: 0.65rem; }
         .h-title { font-family: 'Playfair Display', serif; font-size: 1.85rem; font-weight: 600; line-height: 1.2; margin-bottom: 0.35rem; }
         .h-en { font-size: 0.95rem; color: var(--muted); font-style: italic; margin-bottom: 0.7rem; }
@@ -270,7 +226,7 @@
         .footer-stat strong { font-weight: 500; color: var(--ink2); }
         .footer-note { font-size: 0.65rem; color: var(--ft-note); letter-spacing: 0.04em; }
 
-        /* ═══ SIDEBAR OVERLAY (mobile) ═══ */
+        /* ═══ SIDEBAR OVERLAY ═══ */
         #sb-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.45); z-index: 199; }
 
         /* ═══ PRESENTATION ═══ */
@@ -300,8 +256,6 @@
         .p-exit { background: transparent; border: 1px solid var(--pres-exit-bd); color: var(--pres-exit-fg); height: 36px; padding: 0 12px; border-radius: 5px; cursor: pointer; font-family: 'EB Garamond', serif; font-size: 0.8rem; letter-spacing: 0.04em; transition: color .15s, border-color .15s; white-space: nowrap; }
         .p-exit:hover { color: var(--pres-chorus); border-color: var(--pfont-fg); }
         #pres-hint { position: absolute; bottom: 60px; right: 24px; font-size: 0.62rem; color: var(--pres-hint); letter-spacing: 0.06em; pointer-events: none; }
-
-        /* ── Presentation: chorus vs verse distinction ── */
         #pres-stage.is-chorus { background: var(--pres-chorus-stage-bg); transition: background 0.3s ease; }
         #pres-stage.is-verse  { background: var(--pres-bg); transition: background 0.3s ease; }
         #pres-blk-label {
@@ -315,8 +269,6 @@
         #pres-blk-label.label-chorus { background: var(--pres-chorus-pill-bg); color: var(--pres-chorus-pill-fg); border-color: var(--pres-chorus-pill-bd); }
         .pl.verse-line  { font-style: normal; font-weight: 400; color: var(--pres-text); }
         .pl.chorus-line { font-style: italic; font-weight: 400; color: var(--pres-chorus); letter-spacing: 0.01em; }
-
-        /* Blank / end-of-hymn state */
         #pres-end { display: none; flex-direction: column; align-items: center; gap: 0.75rem; opacity: 0; transition: opacity 0.5s ease; }
         #pres-end.visible { display: flex; opacity: 1; }
         #pres-end-line { width: 48px; height: 1px; background: rgba(255,255,255,0.12); margin-bottom: 0.25rem; }
@@ -431,8 +383,6 @@
             </svg>
             <h2>Iwe Orin SDA</h2>
             <p>Select a hymn from the list or search by title or number</p>
-
-            <!-- Mobile only: search + browse button shown in empty state -->
             <div class="empty-search-wrap">
                 <div class="empty-search-inner">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -483,7 +433,7 @@
             </div>
             <div class="footer-meta">
                 <div class="footer-stat"><strong id="footer-count">—</strong> hymns</div>
-                <div class="footer-note">Use Present mode for church projection <br>Contact <a href="mailto:fisayo@afolayan.com" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">fisayo@afolayan.com</span></a></div>
+                <div class="footer-note">Use Present mode for church projection<br>Contact <a href="mailto:fisayo@afolayan.com" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">fisayo@afolayan.com</a></div>
                 <div class="footer-note" style="margin-top:4px;">&copy; <span id="copy-year"></span> <a href="https://afolayan.com" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">Afolayan</a>. All rights reserved.</div>
             </div>
         </footer>
@@ -518,14 +468,16 @@
         <button class="p-exit" id="p-exit">&#215; Exit</button>
     </footer>
 </div>
+
 <script>
+
     let HYMNS = [];
     let filtered = [];
     let current = null;
     let presBlocks = [];
     let presIdx    = 0;
     let presFz     = 1.0;
-    let readFz = parseFloat(localStorage.getItem('readFz')) || 1.0;
+    let readFz     = parseFloat(localStorage.getItem('readFz')) || 1.0;
 
     const $ = id => document.getElementById(id);
 
@@ -545,9 +497,25 @@
         return true;
     }
 
+    // Pre-built search index — built once on load, reused on every keystroke
+    let searchIndex = []; // [{hymn, blob}] where blob is a single lowercase string
+
+    function buildIndex() {
+        searchIndex = HYMNS.map(h => ({
+            hymn: h,
+            blob: [
+                h.title,
+                h.english_title,
+                String(h.number),
+                ...h.lyrics.flatMap(b => b.lines)
+            ].join(' ').toLowerCase()
+        }));
+    }
+
     (async () => {
         const ok = await loadData();
         if (!ok) return;
+        buildIndex();
         filtered = [...HYMNS];
         renderList();
         const fc = $('footer-count');
@@ -575,29 +543,30 @@
         $('list-count').textContent = filtered.length + (filtered.length === 1 ? ' hymn' : ' hymns');
     }
 
-    // Sidebar search
+    function debounce(fn, delay) {
+        let timer;
+        return (...args) => { clearTimeout(timer); timer = setTimeout(() => fn(...args), delay); };
+    }
+
+    const debouncedSearch = debounce(syncSearch, 150);
+
     $('search').addEventListener('input', () => {
-        const q = $('search').value.trim().toLowerCase();
-        syncSearch(q);
+        debouncedSearch($('search').value.trim().toLowerCase());
     });
 
-    // Empty state search (mobile) — mirrors into sidebar search and opens sidebar
     $('empty-search').addEventListener('input', () => {
         const q = $('empty-search').value.trim().toLowerCase();
         $('search').value = q;
-        syncSearch(q);
+        debouncedSearch(q);
         if (q.length > 0) openSidebar();
     });
 
-    // Browse button opens sidebar
     $('empty-browse-btn').addEventListener('click', openSidebar);
 
     function syncSearch(q) {
-        filtered = q ? HYMNS.filter(h =>
-            h.title.toLowerCase().includes(q) ||
-            h.english_title.toLowerCase().includes(q) ||
-            String(h.number) === q || String(h.number).startsWith(q)
-        ) : [...HYMNS];
+        filtered = q
+            ? searchIndex.filter(({blob}) => blob.includes(q)).map(({hymn}) => hymn)
+            : [...HYMNS];
         renderList();
     }
 
@@ -616,12 +585,9 @@
         $('empty').style.display = 'none';
         $('hymn-content').style.display = 'block';
         const refs = Object.entries(hymn.references || {}).map(([k,v]) => `<span class="ref-tag">${k} ${v}</span>`).join('');
-
-        // position in master HYMNS list
-        const idx  = HYMNS.findIndex(h => h.number === hymn.number);
+        const idx = HYMNS.findIndex(h => h.number === hymn.number);
         const hasPrev = idx > 0;
         const hasNext = idx < HYMNS.length - 1;
-
         let html = '';
         hymn.lyrics.forEach(block => {
             const isChorus = block.type === 'chorus';
@@ -630,21 +596,16 @@
             const inner = isChorus ? `<div class="chorus-block">${lines}</div>` : `<div class="verse-block">${lines}</div>`;
             html += `<div class="stanza"><div class="s-label">${label}</div>${inner}</div>`;
         });
-
         $('hymn-view').innerHTML = `
     <div class="hymn-nav">
       <button class="hymn-nav-btn" id="hymn-prev" ${hasPrev ? '' : 'disabled'} aria-label="Previous hymn">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <polyline points="15 18 9 12 15 6"/>
-        </svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
         <span class="nav-label">Previous</span>
       </button>
       <span class="hymn-nav-center">${idx + 1} of ${HYMNS.length}</span>
       <button class="hymn-nav-btn" id="hymn-next" ${hasNext ? '' : 'disabled'} aria-label="Next hymn">
         <span class="nav-label">Next</span>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <polyline points="9 18 15 12 9 6"/>
-        </svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
       </button>
     </div>
     <div class="hymn-hdr">
@@ -654,10 +615,7 @@
       ${refs ? `<div class="h-refs">${refs}</div>` : ''}
     </div>
     ${html}`;
-
         applyReadFz();
-
-        // wire nav buttons
         const prevBtn = document.getElementById('hymn-prev');
         const nextBtn = document.getElementById('hymn-next');
         if (prevBtn) prevBtn.addEventListener('click', () => selectHymn(HYMNS[idx - 1]));
@@ -686,7 +644,6 @@
         const linesEl = $('pres-lines');
         const labelEl = $('pres-blk-label');
         const stage   = $('pres-stage');
-
         const isEnd = presIdx >= presBlocks.length;
         endEl.classList.toggle('visible', isEnd);
         linesEl.style.display  = isEnd ? 'none' : '';
@@ -698,17 +655,13 @@
         $('p-prog').textContent = isEnd
             ? '— / ' + presBlocks.length
             : (presIdx + 1) + ' / ' + presBlocks.length;
-
         if (isEnd) return;
-
         const b = presBlocks[presIdx];
         const isChorus = b.type === 'chorus';
-
         labelEl.textContent = isChorus ? 'Chorus' : 'Verse ' + b.index;
         labelEl.className   = isChorus ? 'label-chorus' : 'label-verse';
         stage.classList.toggle('is-chorus', isChorus);
         stage.classList.toggle('is-verse',  !isChorus);
-
         linesEl.innerHTML = '';
         b.lines.forEach((line, i) => {
             const span = document.createElement('span');
@@ -718,7 +671,6 @@
             linesEl.appendChild(span);
             linesEl.appendChild(document.createElement('br'));
         });
-
         applyPresFz();
     }
 
@@ -751,7 +703,6 @@
     function openSidebar() {
         $('sidebar').classList.add('open');
         $('sb-overlay').classList.add('show');
-        // focus the sidebar search so keyboard appears immediately on mobile
         setTimeout(() => $('search').focus(), 250);
     }
     function closeSidebar() {
