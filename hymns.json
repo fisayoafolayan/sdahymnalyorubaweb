@@ -22208,14 +22208,17 @@
         ]
       }
     ],
-    "revision": 1
+    "revision": 2
   },
   {
     "index": "334",
     "number": 334,
-    "title": "When All My Labours and Trials Are O'er",
+    "title": "Gbat' Ise Oun 'Soro Mi Ba D' Opin",
     "english_title": "When All My Labours and Trials Are O'er",
-    "references": {},
+    "references": {
+      "SDAH": 435,
+      "CH": 641
+    },
     "lyrics": [
       {
         "type": "verse",
@@ -22233,8 +22236,8 @@
         "lines": [
           "Eyi yoo je ogo fun-mi,",
           "Ogo fun mi, Ogo fun-mi;",
-          "Gba n' ba r' oju Re n'pa oore-ofe,",
-          "Eyi yoo j' ogo, yoo j' ogo Fun mi."
+          "Gba n' ba r' oju Re n' pa oore-ofe,",
+          "Eyi yoo j' ogo, yoo j' ogo fun mi."
         ]
       },
       {
@@ -22244,7 +22247,7 @@
           "Nipa ebun oore-ofe nla Re,",
           "Bi mo n' ibugbe n' ile Re l' oke;",
           "Ki n saa wa nibe ki n maa w' oju Re,",
-          "Eyi yoo j' ogo, yoo j' ogo Fun mi."
+          "Laelae ni yoo maa je ogo fun mi."
         ]
       },
       {
@@ -22253,18 +22256,18 @@
         "lines": [
           "Eyi yoo je ogo fun-mi,",
           "Ogo fun mi, Ogo fun-mi;",
-          "Gba n' ba r' oju Re n'pa oore-ofe,",
-          "Eyi yoo j' ogo, yoo j' ogo Fun mi."
+          "Gba n' ba r' oju Re n' pa oore-ofe,",
+          "Eyi yoo j' ogo, yoo j' ogo fun mi."
         ]
       },
       {
         "type": "verse",
         "index": 3,
         "lines": [
-          "Awon ore ti mo fe yoo Wa n'be,",
+          "Awon ore ti mo fe yoo Wa n' be,",
           "Ayo b' odo sisan yoo yi mi po;",
           "Sibe, mo mo erin Olugbala,",
-          "Eyi yoo j' ogo, yoo j' ogo Fun mi"
+          "Eyi yoo j' ogo, yoo j' ogo fun mi"
         ]
       },
       {
@@ -22274,16 +22277,16 @@
           "Eyi yoo je ogo fun-mi,",
           "Ogo fun mi, Ogo fun-mi;",
           "Gba n' ba r' oju Re n'pa oore-ofe,",
-          "Eyi yoo j' ogo, yoo j' ogo Fun mi."
+          "Laelae ni yoo maa je ogo fun mi."
         ]
       }
     ],
-    "revision": 1
+    "revision": 2
   },
   {
     "index": "335",
     "number": 335,
-    "title": "Here we Suffer Grief and Pain",
+    "title": "Nihin in L' Awa N Je 'Rora",
     "english_title": "Here we Suffer Grief and Pain",
     "references": {
       "CH": 509
@@ -22293,7 +22296,7 @@
         "type": "verse",
         "index": 1,
         "lines": [
-          "Nihin-in l'awa n je 'rora,",
+          "Nihin-in l' awa n je 'rora,",
           "Nihin-in ni a maa n pinya;",
           "L' orun, ko si 'pinya."
         ]
@@ -22364,24 +22367,62 @@
           "A! bi o ti dun to!",
           "'Gba ta a ki o pinya mo!"
         ]
+      },
+      {
+        "type": "verse",
+        "index": 5,
+        "lines": [
+          "Bi a o ti yo po to!",
+          "'Gba ta a ba r' Olugbala';",
+          "Ni ori ite Re!"
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "A! bi o ti dun to!",
+          "Dun to, dun to, dun to!",
+          "A! bi o ti dun to!",
+          "'Gba ta a ki o pinya mo!"
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 6,
+        "lines": [
+          "Nibe l' a o korin ayo",
+          "Titi aye ailopin,",
+          "L' a o maa yin Jesu"
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "A! bi o ti dun to!",
+          "Dun to, dun to, dun to!",
+          "A! bi o ti dun to!",
+          "'Gba ta a ki o pinya mo!"
+        ]
       }
     ],
-    "revision": 1
+    "revision": 2
   },
   {
     "index": "336",
     "number": 336,
-    "title": "For All The Saints",
+    "title": "F' Awon Eniyan Re",
     "english_title": "For All The Saints",
     "references": {
-      "SDAH": 42
+      "SDAH": 421
     },
     "lyrics": [
       {
         "type": "verse",
         "index": 1,
         "lines": [
-          "F'awon eniyan Re t'o lo simi,",
+          "F' awon eniyan Re t' o lo simi,",
           "Awon ti o f' igbagbo jewo Re",
           "Ka a yin oruko Re, Olugbala,",
           "Aleluya! Aleluya!"
@@ -22402,7 +22443,7 @@
         "index": 3,
         "lines": [
           "Je k' awon omo-ogun Re l' aye.",
-          "Jagun ni tooto b' awon ti 'Gba ni;",
+          "Jagun ni tooto b' awon ti 'gba ni;",
           "Ki won le gba ade ogo bi won.",
           "Aleluya! Aleluya!"
         ]
@@ -22428,12 +22469,12 @@
         ]
       }
     ],
-    "revision": 1
+    "revision": 2
   },
   {
     "index": "337",
     "number": 337,
-    "title": "Holy, Holy Is What the Angels Sing",
+    "title": "Mimo, Mimo, L' Awon Angeli N Ko",
     "english_title": "Holy, Holy Is What the Angels Sing",
     "references": {
       "SDAH": 425
@@ -22448,9 +22489,20 @@
           "Nibe ni awon angeli;",
           "n korin yin Od' agutan;",
           "Ohun won ja gooro, o si dun",
-          "mo ni i' eti pupo",
+          "Mo ni i' eti pupo",
           "A ba le tubo da bi won",
           "'gba ta a n sin Jesu nihin."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Mimo, Mimo, l' awon angeli n ko",
+          "Emi yoo se ranwo ki ode orun ho f' ayo,",
+          "Gba mo ba n korin irapade",
+          "Won o p' enu mo",
+          "Tor' awon angeli ko le mo ayo 'gbala wa"
         ]
       },
       {
@@ -22459,24 +22511,47 @@
         "lines": [
           "Sugbon emi n gbo",
           "awon ohun Orin didun miran",
-          "\"Si Eni ti o ra wa pada;\"",
-          "ni orin ti won n ko",
+          "Si Eni ti o ra wa pada;",
+          "Ni orin ti won n ko",
           "A ti de ile ewa naa lehin opo isoro",
-          "o ti fo aso wa mo funfun",
+          "O ti fo aso wa mo funfun",
           "lau ninu odo ti n san."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Mimo, Mimo, l' awon angeli n ko",
+          "Emi yoo se ranwo ki ode orun ho f' ayo,",
+          "Gba mo ba n korin irapade",
+          "Won o p' enu mo",
+          "Tor' awon angeli ko le mo ayo 'gbala wa"
         ]
       },
       {
         "type": "verse",
         "index": 3,
         "lines": [
-          "Sugbon emi n gbo lasan",
-          "ni, won ko le ko n'nu re",
+          "Awon Angeli n gbo lasan ni",
+          "Won ko le ko n' nu re",
           "B' iro opo odo sisan,",
-          "l' orin en' irapada;",
+          "L' orin en' irapada;",
+          "Won n ko nipa isoro ija ati isegun won",
           "Won n yin Olugbala t' o",
-          "w fun won pe",
-          "\"eku'se\"."
+          "W' fun won pe",
+          "\"e ku 'se\"."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Mimo, Mimo, l' awon angeli n ko",
+          "Emi yoo se ranwo ki ode orun ho f' ayo,",
+          "Gba mo ba n korin irapade",
+          "Won o p' enu mo",
+          "Tor' awon angeli ko le mo ayo 'gbala wa"
         ]
       },
       {
@@ -22486,15 +22561,26 @@
           "Bi o tile je pe emi ki i",
           "se angeli, sibe",
           "Mo mo pe n o dapo mo",
-          "egbe t' angeli ko le wo",
+          "Egbe t' angeli ko le wo",
           "N o k' orin nipa Olugbala",
-          "t' o ku ni kalfaari",
-          "Nibi t' o ti foriji mi, t' o si",
-          "so mi d' ommira"
+          "T' o ku ni Kalfaari",
+          "Nibi t' o ti foriji mi, t' O si",
+          "So mi d' ommira"
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Mimo, Mimo, l' awon angeli n ko",
+          "Emi yoo se ranwo ki ode orun ho f' ayo,",
+          "Gba mo ba n korin irapade",
+          "Won o p' enu mo",
+          "Tor' awon angeli ko le mo ayo 'gbala wa"
         ]
       }
     ],
-    "revision": 1
+    "revision": 2
   },
   {
     "index": "338",
@@ -27165,6 +27251,6516 @@
           "Ati pe Oun le toju gbogb' ohun",
           "Ti mo ti fi le E lowo",
           "Titi Oun Yoo fi de."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "404",
+    "number": 404,
+    "title": "Odi Nla Ni Olorun Wa",
+    "english_title": "A Mighty Fortress is Our God",
+    "references": {
+      "SDAH": 506,
+      "NAH": 298,
+      "CH": 261
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Odi nla ni Olorun wa,",
+          "Aabo ti ko le ye lae,",
+          "Oun n' iranwo wa n' nu igbi",
+          "Omi t' o fe bori wa.",
+          "Sibe ota wa ni",
+          "Fe sise ibi re,",
+          "O ni ogbon pupo,",
+          "O si kun fun 'wa 'ka,",
+          "Ko s' elegbe re l' aye."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Ibasep' a ko l' Eni ti",
+          "Olorun yan pelu wa;",
+          "Bi a ba ja fun ara wa,",
+          "Awa ki yoo le segun,",
+          "'Wo ha mo Eni naa?",
+          "Kristi Oluwa ni,",
+          "Oluwa om' ogun ni",
+          "Oun kii yipada,",
+          "O si ni lati segun"
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Bi aye to kun fun ika",
+          "Fe lati se wa ni ibi;",
+          "A k' yoo beru tor' Olorun",
+          "Yoo m' ooto Re se 'nu wa;",
+          "B' esu tile n hale,",
+          "Awa ki yoo beru;",
+          "A o fara da 'ja re",
+          "Isubu re daju",
+          "Tor' Oba wa ti segun."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 4,
+        "lines": [
+          "Oro Re ju agbar' aye",
+          "Oro naa yoo duro gbonin;",
+          "Tiwa l' emi at' oor' ofe",
+          "L' ola Olugbeja wa;",
+          "K' ara oun ini lo,",
+          "At' ara iku yii;",
+          "Ara ni won le pa,",
+          "Or' Olorun wa lae.",
+          "Ijoba Re wa laelae."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "405",
+    "number": 405,
+    "title": "Jesu L' Olusagutan Mi, Emi K' Yoo S' Alaini",
+    "english_title": "The Lord's My Shepherd; I'll Not Want",
+    "references": {
+      "SDAH": 552,
+      "NAH": 242,
+      "CH": 60
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Jesu l' Olusagutan mi,",
+          "Emi k'yoo s' alaini;",
+          "Nib' odo at' oko tutu",
+          "L' o n f' owo Re to mi."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "O mu k' okan mi tun soji,",
+          "O n to isise mi;",
+          "Ni ipa ona ododo,",
+          "Tori oruko Re."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Bi mo n rin n' ojiji 'ku,",
+          "Emi ki o beru;",
+          "'Wo n be pelu mi, - opa Re",
+          "Yoo maa tu mi ninu."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 4,
+        "lines": [
+          "Iwo te tabili fun mi",
+          "Loj' awon ota mi;",
+          "Iwo d' ororo sori mi,",
+          "Ago mi kun, o n se."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 5,
+        "lines": [
+          "Ire at' aanu Re n to mi",
+          "Ni gbogbo aye mi;",
+          "N o si fi ile Olorun",
+          "Se 'bugbe mi laelae."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "406",
+    "number": 406,
+    "title": "Jesu L' Olusagutan Mi",
+    "english_title": "The Lord's My Shepherd",
+    "references": {
+      "SDAH": 546
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Jesu l' Olusagutan mi,",
+          "Emi k' yoo s' alaini;",
+          "Nib' odo at' oko tutu",
+          "L' o n f' owo Re to mi.",
+          "O n to mi lo, o n to mi lo,",
+          "Nibi odo sisan."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "O mu k' okan mi tun soji,",
+          "O n to isise mi;",
+          "Ni ipa ona ododo,",
+          "Tori oruko Re.",
+          "Ni ipa ona ododo,",
+          "Tori oruko Re."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Bi mo n rin n' ojiji iku,",
+          "Emi ki o beru;",
+          "'Wo n be pelu mi, - opa Re",
+          "Yoo maa tu mi ninu.",
+          "'Wo n be pelu mi, - opa Re",
+          "Yoo maa tu mi ninu."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 4,
+        "lines": [
+          "Iwo te tabili fun mi",
+          "L' oj' awon ota mi;",
+          "Iwo d' ororo sori mi,",
+          "Ago mi kun, o n se.",
+          "Iwo d' ororo sori mi,",
+          "Ago mi kun, o n se."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 5,
+        "lines": [
+          "Ire at' aanu Re n to mi",
+          "Ni gbogbo aye mi;",
+          "N o si fi ile Olorun",
+          "Se 'bugbe mi laelae.",
+          "N o si fi ile Olorun",
+          "Se 'bugbe mi laelae."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "407",
+    "number": 407,
+    "title": "Jesu L' Olusagutan Mi, Oore Eni Ti Kii Ye!",
+    "english_title": "The King of Love My Shepherd is",
+    "references": {
+      "SDAH": 197,
+      "NAH": 50,
+      "CH": 86
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Jesu l' Olusagutan mi,",
+          "Oore Eni ti kii ye!",
+          "Ko s' ewu bi mo je Tire,",
+          "T' Oun si je temi titi."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Nib' odo omi iye n san,",
+          "Nibe l' O m' okan mi lo;",
+          "Nibi ti oko tutu n hu,",
+          "L' On f' ounje orun bo mi."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Mo ti fi were sako lo,",
+          "N' ife O si wa mi ri;",
+          "L' ejika Re l' O gbe mi si,",
+          "O f' ayo mu mi wa 'le."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "408",
+    "number": 408,
+    "title": "Maa Toju Mi Jehofa Nla",
+    "english_title": "Guide Me O Thou Great Jehovah",
+    "references": {
+      "SDAH": 538,
+      "NAH": 528
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Maa toju mi Jehofa nla,",
+          "Ero l' aye osi yii,",
+          "Emi ko lagbara 'Wo ni;",
+          "F' agbara Re gbe mi ro;",
+          "Ounje orun, Ounje orun;",
+          "Bo mi titi n o fi yo,",
+          "Bo mi titi n o fi yo."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Si isun didan naa sile",
+          "Nibit' omi iye n san;",
+          "K' owo ina ati sanmo",
+          "Sin mi d' opin ajo mi;",
+          "Olugbala, Olugbala,",
+          "S' agbara at' asa mi",
+          "S' agbara at' asa mi."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Leti bebe odo Jodan,",
+          "Je k' iberu mi to lo;",
+          "Mu mi la ikun omi ja,",
+          "Ki n le de ile Kenaan;",
+          "Orin iyin, Orin iyin,",
+          "L' emi o maa ko si O",
+          "L' emi o maa ko si O."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "409",
+    "number": 409,
+    "title": "Oluso-agutan To Wa",
+    "english_title": "Saviour, Like a Shepherd",
+    "references": {
+      "SDAH": 545,
+      "AH": 551,
+      "CH": 394
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Oluso-agutan to wa,",
+          "Awa n fe itoju Re;",
+          "Bo wa n' nu papa Re tutu,",
+          "Se agbo Re fun 'lo wa.",
+          "Jesu mimo! Jesu Mimo!",
+          "'Wo ra wa, Tire l' awa,",
+          "Jesu Mimo! Jesu Mimo!",
+          "'Wo ra wa, Tire l' awa,"
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Tire l' awa, joo s' ore wa,",
+          "S' Oluto wa l' ona wa;",
+          "P' agbo Re mo, k' ro 'nu ese",
+          "Wa wa, gba a ba sako lo;",
+          "Jesu Mimo! Jesu Mimo!",
+          "Gbo wa, 'gba a ba n gbadura",
+          "Jesu Mimo! Jesu Mimo!",
+          "Gbo wa, 'gba a ba n gbadura."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "O seleri lati gba wa.",
+          "Ba a tile je elese;",
+          "Iwo l' aanu lati gba wa,",
+          "Oor'-ofe fun 'wenumo;",
+          "Jesu Mimo! Jesu Mimo!",
+          "A o tete sun mo O!",
+          "Jesu Mimo! Jesu Mimo!",
+          "A o tete sun mo O!"
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "410",
+    "number": 410,
+    "title": "'Wo Imole Laarin Ookun Aye",
+    "english_title": "Lead Kindly Light",
+    "references": {
+      "NAH": 517,
+      "CH": 403
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "'Wo Imole laarin ookun aye",
+          "Maa sin mi lo.",
+          "Okunkun su, mo si jina s' ile;",
+          "Maa sin mi lo.",
+          "To 'sise mi: ohun ehin ola",
+          "Emi ko beere; 'sise kan to fun mi."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Nigba kan ri, emi ko be O pe;",
+          "Bee ni n ko fe O;",
+          "Sugbon nigba yi",
+          "Maa sin mi lo",
+          "Afe aye ni mo ti n to lehin;",
+          "Sugbon Jesu, ma ranti Igba ni."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Ipa Re l' o ti n di mi mu,",
+          "yoo si Maa sin mi lo;",
+          "Ninu ere ati yangi aye,",
+          "Maa sin mi lo.",
+          "Titi em' o fi ri awon won-ni",
+          "Ti m o fe ti won ti f' aye sile."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "411",
+    "number": 411,
+    "title": "On To Mi Lo, Iro 'Bukun",
+    "english_title": "He Leadeth Me! Oh, Blessed Thought",
+    "references": {
+      "SDAH": 537,
+      "NAH": 519,
+      "CH": 393
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "On to mi lo, iro 'bukun,",
+          "Oro t' orun tu mi ninu;",
+          "Ohun ti o wu k' emi se,",
+          "Sibe Olorun n to mi lo."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "O n to mi lo, O n to mi lo,",
+          "Owo Re l' o fi n to mi lo,",
+          "L' otito ni mo fe tele E,",
+          "Owo Re l' O fi n to mi lo."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Nigba miran t' iponju wa,",
+          "Nigba miran l' ogba Eden,",
+          "L' eba odo, l' oju okun,",
+          "Sibe Olorun n to mi lo."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "O n to mi lo, O n to mi lo,",
+          "Owo Re l' o fi n to mi lo,",
+          "L' otito ni mo fe tele E,",
+          "Owo Re l' O fi n to mi lo."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Oluwa mo d' 'owo Re mu,",
+          "N ko ni kun n ko ni banuje,",
+          "F' ohun to wu ti mo le ri,",
+          "Nigba t' Olorun mi n to mi."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "O n to mi lo, O n to mi lo,",
+          "Owo Re l' o fi n to mi lo,",
+          "L' otito ni mo fe tele E,",
+          "Owo Re l' O fi n to mi lo."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 4,
+        "lines": [
+          "Nigba 'se mi l' aye ba pin,",
+          "T' oor'-ofe Re fun mi n' segun;",
+          "Emi ko ni beru iku,",
+          "Nigba t' Olorun mi n to mi."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "O n to mi lo, O n to mi lo,",
+          "Owo Re l' o fi n to mi lo,",
+          "L' otito ni mo fe tele E,",
+          "Owo Re l' O fi n to mi lo."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "412",
+    "number": 412,
+    "title": "Oluso-agutan Orun",
+    "english_title": "Shepherd Divine",
+    "references": {
+      "NAH": 515,
+      "CH": 319
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Oluso-agutan orun,",
+          "Iwo to mi nib' odo n san.",
+          "'Wo bo mi n' nu papa tutu;",
+          "N' nu ife Re, n ki yoo saini"
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Nigba ewu Iwo gba mi,",
+          "Low' ota agbo-eran Re;",
+          "O to mi ni osan gangan",
+          "Lati simi nibi tutu."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "'Gba t' iri tutu ale n se,",
+          "S' aarin agbo Re l' O pe mi;",
+          "Mo f' ayo yara si 'pe Re;",
+          "Didun l' ohun ti o n pe mi."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "413",
+    "number": 413,
+    "title": "Jesu' Olutona Mi",
+    "english_title": "Jesus, Saviour, Pilot Me",
+    "references": {
+      "SDAH": 551,
+      "CH": 398
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Jesu' Olutona mi,",
+          "L' ori iru 'mi aye,",
+          "Ewu nla f' ara pamo",
+          "L' ona irin ajo mi;",
+          "'Wo l' Amona otito,",
+          "Jesu s' Olutona mi."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "B' iya ti n re 'mo lekun.",
+          "N' Iwo n da iji lekun;",
+          "Iru 'mi yoo gb' ase Re,",
+          "Gba to o wi pe \"Dake jee\"",
+          "Alase l' ori okun.",
+          "Jesu s' Olutona mi."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "'Gba mo fere d' ebute.",
+          "Ti ewu nla yo si mi;",
+          "Ti mo n naga wo 'simi,",
+          "Gba mo n simi l' aya Re.",
+          "Je ki n gb' ohun Re wipe.",
+          "\"Ma beru. N o tona re\"."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "414",
+    "number": 414,
+    "title": "Mokandinlogoorun Dubule Jee",
+    "english_title": "There were Ninety and Nine",
+    "references": {
+      "CH": 673
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Mokandinlogoorun dubule jee,",
+          "Labe ooji nin' agbo",
+          "Sugbon okan je lo sor' oke",
+          "Jina s' ilekun wura;",
+          "Jina rere lor' oke sisa,",
+          "Jina rere s' Olusagutan,",
+          "Jina rere s' Olusagutan."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "\"'Mokandinlogoorun Tire l' eyi",
+          "Jesu, won ko to fun O?\"",
+          "Olusagutan dahun,",
+          "\"Temi yii Ti sako lo lodo Mi;\"",
+          "Bi ona tile ri palapala,",
+          "N o w' aginju lo w' agutan mi,",
+          "N o w' aginju lo w' agutan mi."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Okan nin' awon taa ra pada,",
+          "Ko mo jijin omi naa;",
+          "Ati oru dudu ti Jesu koja",
+          "Ko to r' agutan Re he;",
+          "L' aginju rere l' O gbo 'gbe re",
+          "O ti re e tan, o si feree ku,",
+          "O ti re e tan, o si feree ku"
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 4,
+        "lines": [
+          "\"Nibo ni eje ni ti n kan wa,",
+          "T' o f' ona or' oke han?'",
+          "A ta a sile f' enikan t' o sako,",
+          "K' Olusagutan to mu u pada",
+          "\"Jesu, kil' o gun mi nibe bee?\"",
+          "\"Egun pupo l' o gun mi nibe\"",
+          "\"Egun pupo l' o gun mi nibe\""
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 5,
+        "lines": [
+          "Sugbon ni gbogbo ori oke",
+          "Ati lori apata,",
+          "Igbe, ta d' oke orun wipe,",
+          "\"Yo, mo r' agutan mi he!\"",
+          "Awon Angel' n korin yi 'te ka",
+          "\"Yo, Jesu m' ohun Tire pada!\"",
+          "\"Yo, Jesu m' ohun Tire pada!\""
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "415",
+    "number": 415,
+    "title": "Ko Mi Oluwa, Bi A Ti I",
+    "english_title": "Lord, Speak to Me",
+    "references": {
+      "SDAH": 541,
+      "NAH": 480
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Ko mi Oluwa, bi a ti i",
+          "Je gbohungbohun oro Re",
+          "B' o ti wa mi, je k' emi wa",
+          "Awon omo Re to ti nu"
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "To mi Oluwa, ki n le to",
+          "Awon asako si ona;",
+          "Bo mi Oluwa; Ki n le fi",
+          "Mana Re b' awon t' ebi n' pa."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Fun mi l' agbara; fi ese",
+          "Mi mule lori apata;",
+          "Ki n le na owo igbala",
+          "S' awon t' o n ri sinu ese"
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "416",
+    "number": 416,
+    "title": "Oluwa To 'Se Mi S' Ona Tooto",
+    "english_title": "Lord Who Has Set Me On The Right Path",
+    "references": {},
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Oluwa to 'se mi s' ona tooto",
+          "N o te le O;",
+          "N ko je gbeke l' ainilaari aye,",
+          "N o te le O.",
+          "Okunkun su n o si sina l' ona,",
+          "N o tele O.",
+          "Maa sin mi lo d' ojo 'mole ogo,",
+          "N o tele O."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Bi ile ba su ti n ko le riran,",
+          "No tele O.",
+          "Mo m' ohun didun Re ti n ke si mi",
+          "N o tele O.",
+          "N o gbekele En' t'o mona daju",
+          "N o tele O.",
+          "N o fi gbogbo 'yoku le O lowo",
+          "No tele O."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "S' akoso 'sise ati ero mi,",
+          "No tele O.",
+          "K' Iwo nikan j' aabo at' iso mi,",
+          "N o tele O.",
+          "B' o ti je pe n ko ye fun iso Re,",
+          "N o tele O.",
+          "Ka mi m' awonalabukun l' orun",
+          "N o tele O."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "417",
+    "number": 417,
+    "title": "Em' O Tete Wa Oluwa",
+    "english_title": "I Will Early Seek the Saviour",
+    "references": {
+      "SDAH": 539,
+      "NAH": 664,
+      "CH": 417
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Em' o tete wa Oluwa,",
+          "Emi o ko nipa Re;",
+          "Emi yoo te le 'pase Re,",
+          "Emi yoo rin 'na hiha."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Tor' o fe mi, A! o fe mi,",
+          "Jesu fe mi, mo mo bee;",
+          "Jesu fe mi, O ku fun mi,",
+          "'Tor' eyi ni mo se fe E."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Em' o lo si 'bi t' o ran mi,",
+          "N ko kere ju lati lo",
+          "L' oju ona 'bit' O to mi,",
+          "Mo to lati mo 'fe Re."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Tor' o fe mi, A! o fe mi,",
+          "Jesu fe mi, mo mo bee;",
+          "Jesu fe mi, O ku fun mi,",
+          "'Tor' eyi ni mo se fe E."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "O n duro ni enu 'lekun",
+          "Igbala kuro n' ese;",
+          "N o kankun tor' O se 'leri",
+          "Yoo Gbo, yoo je ki n wole"
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Tor' o fe mi, A! o fe mi,",
+          "Jesu fe mi, mo mo bee;",
+          "Jesu fe mi, O ku fun mi,",
+          "'Tor' eyi ni mo se fe E."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "418",
+    "number": 418,
+    "title": "Olus' Agutan Rere",
+    "english_title": "Loving Shepherd of Thy Sheep",
+    "references": {
+      "SDAH": 549,
+      "NAH": 666
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Olus' agutan rere,",
+          "Jesu, jowo pa mi mo,",
+          "Ko si n kan t' o le mu mi",
+          "Kuro labe ase Re."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Olugbala sunmo mi,",
+          "Ko mi lati gbohun Re;",
+          "Ma je ki ese mi ye",
+          "Kuro l' ona tooto naa."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "'Bikibi to o to mi si,",
+          "Je k' emi le te le O,",
+          "Jesu, gba mi se Tire,",
+          "Niwaju ite Baba Re."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "419",
+    "number": 419,
+    "title": "Jesu, 'Wo Ore Omode",
+    "english_title": "Jesus, Friend of Little Children",
+    "references": {
+      "SDAH": 543,
+      "NAH": 680
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Jesu, 'Wo Ore omode,",
+          "Ma sai s' Ore mi;",
+          "Gb' owo mi ki n si le maa wa",
+          "Lodo Re."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Ko mi ki n le maa po l' oore,",
+          "Bi mo ti n dagba;",
+          "Iwo ti je omode ri",
+          "Iwo mo."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Jowo maa sin mi lo bi mo",
+          "Ti n dagba s' oke;",
+          "Ki n po l' agbara, ooto Re,",
+          "At' ogbon."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 4,
+        "lines": [
+          "Ma fi mi 'le, mase ko mi,",
+          "Maa j' ore mi lae;",
+          "Iwo n mo fi se 'ranwo mi",
+          "De opin."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "420",
+    "number": 420,
+    "title": "Maa Toju Wa Baba Orun",
+    "english_title": "Lead Us Heavenly Father",
+    "references": {
+      "NAH": 565
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Maa toju wa Baba orun,",
+          "Laarin 'daamu aye yii;",
+          "Pa wa mo ko o si maa bo wa,",
+          "A ko n' iranwo miran;",
+          "Sugbon gbogbo 'bukun la a ni,",
+          "B' Olorun je Baba wa."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Olugbala, dariji wa,",
+          "Iwo saa m' ailera wa;",
+          "'Wo ti rin aye saaju wa,",
+          "'Wo ti mo 'se inu re;",
+          "B' En' ikaanu at' alare,",
+          "L' O ti la 'ginju yi ja."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Emi Olorun, So kale,",
+          "F' ayo orun k' okan wa;",
+          "K' ife dapo mo iya wa,",
+          "At' adun ti ki i su ni;",
+          "Ba a ba pese fun wa bayi,",
+          "Ki l' o le mi 'simi wa?"
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "421",
+    "number": 421,
+    "title": "Jesu Mi, Onirele",
+    "english_title": "Gentle Jesus, Meek and Mild",
+    "references": {
+      "SDAH": 540
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Jesu mi, Onirele,",
+          "Wo omode ti mo je;",
+          "Saanu iwa ope mi,",
+          "Jowo pe mi w' odo Re."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Odo agutan, mo n wo O,",
+          "Iwo ni apeere mi;",
+          "'Nu 'rele, aanu, oun 'fe,",
+          "Iwo ti j' omode ri."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Mo fe ri bi O ti ri,",
+          "Fun mi l' emi igboran;",
+          "O kun f' oore at' aanu,",
+          "Je ki n dabi Re 'nu 'fe."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 4,
+        "lines": [
+          "Gba naa maa kun fun 'yin Re",
+          "N o fi aye mi sin O;",
+          "Aye yoo maa wo Krist",
+          "Eni mimo l' aye mi."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "422",
+    "number": 422,
+    "title": "Baba Orun Wa Pelu Wa",
+    "english_title": "Heavenly Father Lead Us",
+    "references": {
+      "NAH": 525
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Baba orun wa pelu wa,",
+          "Ninu irumi aye;",
+          "So wa, to wa' si pa wa mo,",
+          "'Tor' a ko ni 'ranwo mii;",
+          "Alabukun ni awa je,",
+          "B' Olorun je Baba wa."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Olugbala dariji wa,",
+          "'Wo mo gbogb' ailera wa;",
+          "'Wo ti rin 'na yi saaju wa",
+          "Wo si mo inira re;",
+          "Iwo nikan ninu aare",
+          "L' O la aginju yii ja."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Emi orun so kale wa,",
+          "F' ayo orun k' okan wa;",
+          "Je ki ife at' oke wa,",
+          "Dapo mo adun l' aye;",
+          "Gba t' O n pese, t' O si n to wa,",
+          "Ko s' ohun le b' ayo wa je"
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "423",
+    "number": 423,
+    "title": "A F' Ope F' Olorun",
+    "english_title": "Now Thank We All Our God",
+    "references": {
+      "SDAH": 559,
+      "NAH": 7
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "A f' ope f' Olorun,",
+          "Pel' okan, at' ohun wa",
+          "Eni t' o s' ohun nla.",
+          "Ninu Eni t' aye n yo;",
+          "Eni t' o bukun wa",
+          "Ni gbogbo ona wa",
+          "Ebun 'fe ainiye,",
+          "Lonii, o je tiwa."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Oba Onib' ore",
+          "Ma fi wa sile laelae",
+          "Ayo ti ko lopin",
+          "Oun 'bukun yoo je ti wa;",
+          "Pa wa mo n' nu oore,",
+          "To wa gba a ba daamu,",
+          "Yo wa ninu ibi",
+          "Laye ati l' orun."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Ope ati iyin",
+          "Fun Olorun Baba wa",
+          "At' Omo to joba",
+          "Pelu won loke orun",
+          "Olorun ailopin",
+          "T' aye at' orun n' yin",
+          "Gege bo ti wa ri,",
+          "Bee ni yoo wa laelae."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "424",
+    "number": 424,
+    "title": "Kiku N' Nu Jesu, Iku Re",
+    "english_title": "Asleep in Jesus! Blessed Sleep",
+    "references": {
+      "NAH": 570,
+      "CH": 489
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Kiku n' nu Jesu, iku re",
+          "Ta a kii ji ninu re sokun,",
+          "Isimi t' o ni itura,",
+          "Ti iku ko le yo lenu."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Kiku n' nu Jesu ti dun to,",
+          "A ba le ye fun oorun yii,",
+          "Ka a fi igbekele korin,",
+          "Pe, Iku, oro re ha da?"
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Kiku n' nu Jesu je 'simi,",
+          "Ti ajinde t' o n' ibukun,",
+          "Ko s' eru ti yoo ba ojo",
+          "Agbara Olugbala je."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 4,
+        "lines": [
+          "Kiku n' nu Jesu laipe yii,",
+          "'Gba taa ba fun ipe 'kehin",
+          "A o ji dide, a o fo 'boji,",
+          "A o gba iye ainipekun."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "425",
+    "number": 425,
+    "title": "Gbat' A Kun Fun 'Banuje",
+    "english_title": "When Our Heads Are Bowed With Woe",
+    "references": {
+      "NAH": 571
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Gbat' a kun fun 'banuje,",
+          "Gb' omije n san loju wa,",
+          "Gbat' a n sokun t' a n sofo",
+          "Olugbala gbo tiwa."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "'Wo ti gbe ara wa wo,",
+          "O si mo 'banuje wa,",
+          "O ti sokun bi awa;",
+          "Olugbala gbo tiwa."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "'Wo ti teriba fun ku,",
+          "'Wo ta eje Re sile,",
+          "A te O si 'boji ri,",
+          "Olugbala gbo tiwa."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 4,
+        "lines": [
+          "Gba t' okan wa ba baje,",
+          "Nitori ese taa da,",
+          "Gba t' eru ba b okan wa,",
+          "Olugbala gbo tiwa"
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 5,
+        "lines": [
+          "'Wo ti mo eru ese",
+          "Ese ti ki i se Tire;",
+          "Eru ese naa l' O gbe;",
+          "Olugbala gbo tiwa."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "426",
+    "number": 426,
+    "title": "Oluwa Ikore Naa",
+    "english_title": "Lord Of The Harvest",
+    "references": {
+      "NAH": 559
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Oluwa ikore naa",
+          "Ti n pon ni gbogb' aye,",
+          "Nib' awon angel yoo ko",
+          "Iti won jo laipe;",
+          "Lo owo wa fun 'se Re,",
+          "Je k' a f' okan fe O.",
+          "Si lo won lati mu ki",
+          "'Joba Re yara de."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Ise po ni papa Re,",
+          "Alagbase ko to,",
+          "F' itara mimo ati",
+          "Igbagb' otun kun wa;",
+          "Awon iranse Re ti",
+          "F' omije fun 'rugbin,",
+          "L' akoko yii je k' awa",
+          "Pelu gbo, \"O seun\"."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Krist' ran wa lati sise",
+          "Nin' ogb' ajara Re;",
+          "O te wa lorun lati",
+          "Sise pupo fun O;",
+          "A ko fe oya miran",
+          "Ju pe ki a le ni",
+          "Ipa ninu ise nla",
+          "Mimu 'joba Re de."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "427",
+    "number": 427,
+    "title": "Oluwa, Awa Omo Re, Tun De",
+    "english_title": "Lord, We Your Children, Have Come Again",
+    "references": {
+      "SSS": 474
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Oluwa, awa omo Re, tun de.",
+          "Lati wa aanu Re;",
+          "Ni ajodun isin ikore wa,",
+          "Ma sai saanu fun wa."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Aanu, Aanu, Aanu, l' a n fe,",
+          "Lowo Re, Baba wa orun;",
+          "Joo si ferese orun Re lonii",
+          "Ma sai saanu fun wa."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Jesu Oluwa l' ojo aye Re,",
+          "Ob' Alaanu ni O;",
+          "Awon adete ati afoju",
+          "R' aanu gba lowo Re."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Aanu, Aanu, Aanu, l' a n fe,",
+          "Lowo Re, Baba wa orun;",
+          "Joo si ferese orun Re lonii",
+          "Ma sai saanu fun wa."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "L' odun yii; Oluwa awa, be O",
+          "Ma je ki 'se won wa;",
+          "K' O si je k' a sowo b' ode pade,",
+          "K' ara de gbobgo wa."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Aanu, Aanu, Aanu, l' a n fe,",
+          "Lowo Re, Baba wa orun;",
+          "Joo si ferese orun Re lonii",
+          "Ma sai saanu fun wa."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 4,
+        "lines": [
+          "Ma se je ki esu ri wa, gbe se",
+          "Ni gbogb' oj' aye wa;",
+          "K' O ti lekun iku ati arun;",
+          "Joo je k' a je Tire."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Aanu, Aanu, Aanu, l' a n fe,",
+          "Lowo Re, Baba wa orun;",
+          "Joo si ferese orun Re lonii",
+          "Ma sai saanu fun wa."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 5,
+        "lines": [
+          "Oluwa dari ese wa ji wa,",
+          "T' an fi bi O ninu;",
+          "Joo se ayipada rere fun wa",
+          "K' a le maa je Tire."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Aanu, Aanu, Aanu, l' a n fe,",
+          "Lowo Re, Baba wa orun;",
+          "Joo si ferese orun Re lonii",
+          "Ma sai saanu fun wa."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 6,
+        "lines": [
+          "Nigbat' ikore aye ba pari,",
+          "To O ko awa naa jo;",
+          "B' ikore si kun aba Re orun",
+          "F' aanu te wo gba wa."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Aanu, Aanu, Aanu, l' a n fe,",
+          "Lowo Re, Baba wa orun;",
+          "Joo si ferese orun Re lonii",
+          "Ma sai saanu fun wa."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "428",
+    "number": 428,
+    "title": "Jesu Ni, Gb' Oju Re Soke",
+    "english_title": "Lift Up Your Eyes, The Saviour Says",
+    "references": {
+      "NAH": 280
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Jesu ni, Gb' Oju re soke,",
+          "Si wo o b' oko ti pon;",
+          "Fifun irugbin Oro naa",
+          "Mu eso rere wa."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Jesu ni, Gb' oju re soke,",
+          "Si wo alikama",
+          "Ti ekun kikoro ati",
+          "Irora Mi mu pon."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Gb' oju re soke, 'wo t' o wa",
+          "Ni aini ireti",
+          "Iranse Jesu n' bi gbogbo",
+          "N kore ogo wo 'le."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 4,
+        "lines": [
+          "E jade lo olukore,",
+          "Wo Jesu f' agbara;",
+          "Eyin yoo pada nikehin",
+          "Pelu iti pupo."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "429",
+    "number": 429,
+    "title": "Wa Eyin Olope Wa",
+    "english_title": "Come Ye Thankful People",
+    "references": {
+      "SDAH": 557,
+      "NAH": 554,
+      "CH": 496
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Wa eyin olope wa,",
+          "Gbe orin ikore ga;",
+          "'Koore gbogbo ti wo 'le",
+          "K' otutu oye too de;",
+          "Olorun Eleda wa",
+          "L' O ti pese f' aini wa;",
+          "Wa k' a re 'le Olorun",
+          "Gbe orin ikore ga."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Oko Olorun l' aye,",
+          "Lati s' eso iyin Re;",
+          "Alikama at' epo",
+          "N dagba f' aro tab' ayo;",
+          "Eenu na ipe te le e,",
+          "Siri oka nikehin;",
+          "Oluwa 'kore, mu wa",
+          "Je eso rere fun O."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "N' tori Olorun wa n bo,",
+          "Yoo si kore Re si 'le;",
+          "Oun o gbon gbogbo panti",
+          "Kuro l' oko Re n' 'jo naa;",
+          "Yoo f' ase f' awon angel'",
+          "Lati gba epo s' ina,",
+          "Lati ko alikama",
+          "Si aba Re titi lae."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 4,
+        "lines": [
+          "Bee ni, Ijo t' o segun,",
+          "Wa, gbe orin 'kore ga;",
+          "A ti ko gbogb' ee 'yan jo",
+          "Kuro l' ese at' aro,",
+          "A so won di mimo lae,",
+          "Ki won le maa ba O gbe;",
+          "Wa, t' Iwo t' Angeli Re",
+          "Gbe orin ikore ga."
+        ]
+      }
+    ],
+    "revision": 1
+  },
+  {
+    "index": "430",
+    "number": 430,
+    "title": "A N Roko, A N Funrugbin",
+    "english_title": "We Plough the Fields",
+    "references": {
+      "SDAH": 561,
+      "NAH": 556
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "A n roko, a n funrugbin",
+          "Sinu oko gbogbo,",
+          "Sugbon owo Olorun",
+          "L' o n mu 'rugbin dagba,",
+          "O n ran ootu at' ooru",
+          "Lati mu eso pon,",
+          "Efuufu ati oorun,",
+          "At' ojot' o n rin 'le"
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Lati orun wa ni",
+          "Ebun rere gbogbo;",
+          "F' ope f' Oluwa, e s' ope",
+          "Fun gbogbo ife Re."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Oun nikan li Eleda",
+          "Orun ati aye;",
+          "O fun itanna l' ewa;",
+          "O mu irawo tan;",
+          "Iji gba ohun Re Gbo,",
+          "O n bo awon eye;",
+          "Paapa awon omo Re",
+          "L' o n bo lojoojumo."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Lati orun wa ni",
+          "Ebun rere gbogbo;",
+          "F' ope f' Oluwa, e s' ope",
+          "Fun gbogbo ife Re."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Baba, a f' ope fun O.",
+          "F' ohun rere gbogbo,",
+          "Fun 'gba 'rugbin oun 'kore,",
+          "F' emi, 'lera, ounje;",
+          "Gba ebun ti a mu wa",
+          "To O fun wa 'nu 'fe Re",
+          "Ani ohun t' O fe ju",
+          "L' ope at iyin wa."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Lati orun wa ni",
+          "Ebun rere gbogbo;",
+          "F' ope f' Oluwa, e s' ope",
+          "Fun gbogbo ife Re."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "431",
+    "number": 431,
+    "title": "Ni Igba Ayo Ikore",
+    "english_title": "In the Glad Time of the Harvest",
+    "references": {
+      "NAH": 731,
+      "CH": 539
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Ni igba ayo ikore,",
+          "L' opin aye ese yii,",
+          "Oba naa yoo si f' ara han,",
+          "Lati se 'dajo aye;",
+          "Aye yoo ko 'sura re jo,",
+          "Won o wa siwaju 'te;",
+          "Igba naa l' a o gb' ere wa,",
+          "Gb' Oba ba n p' awon Tire."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "A, ayo awon ee yan Re!",
+          "Won ti pe lori aye,",
+          "T' okan won si n fa si ile,",
+          "T' ife won po s' Olorun",
+          "Won o ni iye ailopin,",
+          "Won o mo b' a ti mo won,",
+          "Won o koja 'lekun didan,",
+          "Gb' Oba ba n p' awon Tire."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Won ti n sise fun 'kore pe,",
+          "Won f' omije fun 'rugbin;",
+          "Won o s' eru kale laipe",
+          "Lopin aye ese yii;",
+          "Won o pin nin' ayo orun,",
+          "Ko tun ni si edun mo;",
+          "Won o gb' ade pelu 'rawo,",
+          "Gb' Oba ba n p' awon Tire."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 4,
+        "lines": [
+          "Awa o k' awon ayanfe,",
+          "T' o ti fi wa sile lo;",
+          "Gbogbo 'banuje yoo fo lo",
+          "Gbat' Olugbala ba de;",
+          "Ko ni si banuje ese,",
+          "Ko ni si anikangbe,",
+          "A, a n reti oj' ayo naa",
+          "Gb' Oba ba n p' awon Tire."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "432",
+    "number": 432,
+    "title": "Oluwa 'Kore, 'Wo L' A N Yin",
+    "english_title": "Lord of The Harvest, Thee we Hail",
+    "references": {
+      "HC": 59
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Oluwa 'kore, 'Wo l' a n yin;",
+          "Ileri Re 'gbaa ni ko ye;",
+          "Orisi igba si n yipo",
+          "Odoodun kun fun oore Re,",
+          "Lojo oni, awa dupe;",
+          "Je k' iyin gba okan wa kan."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "B' akoko 'rugbin mu wa yo;",
+          "B' igba eerun n mu ooru wa;",
+          "'Gbat' owo ojo ba n rinle;",
+          "Tab' igbat' ikore baa pon,",
+          "'Wo Oba wa l' a o maa yin;",
+          "Wo l' alakoso gbogbo won."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Ju gbogbo re lo, nigba ti",
+          "Owo Re fun opo ka 'le;",
+          "Gbat' ohun ayo gbile kan",
+          "B' eda ti n ko ire won jo;",
+          "Awa pelu yoo maa yin O",
+          "Oore Re ni gbogbo wa n pin."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 4,
+        "lines": [
+          "Oluwa 'kore, Tire ni",
+          "Ojo ti n ro, oorun ti n ran;",
+          "Irugbin ti a gbin ti n ran;",
+          "Tire l' ogbon ti n mu u dagba;",
+          "Otun l' ebun Re l' odoodun",
+          "Otun n' iyin Re l' enu wa."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "433",
+    "number": 433,
+    "title": "Yin Olorun, Yin In Laelae,",
+    "english_title": "Praise to God, Immortal Praise",
+    "references": {
+      "HC": 60,
+      "NAH": 267
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Yin Olorun, yin in laelae,",
+          "Fun ife ojoojumo,",
+          "Orisun ayo gbogbo",
+          "Ki yin Re gb' enu wa kan."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Fun ire t' oko n mu wa:",
+          "Fun ounje t' a n mu l' ogba:",
+          "Fun eso igi pelu;",
+          "At' ororo ti a n lo."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Fun gbogb' eran osin wa",
+          "T' oun siri oka gbogbo;",
+          "Orun ti n se 'ri sile;",
+          "Oorun ti n m' ooru re wa."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 4,
+        "lines": [
+          "Gbogbo n kan t' eerun n mu wa",
+          "Kakiri gbogbo ile;",
+          "At' eso igba ojo",
+          "Lat' inu ekun re wa"
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 5,
+        "lines": [
+          "'Wo elebun gbogbo won",
+          "Orisun ibukun wa;",
+          "'Tori naa okan wa yoo",
+          "F' iyin at' ope O."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "434",
+    "number": 434,
+    "title": "Ma Koja Mi Olugbala",
+    "english_title": "Pass Me Not O Gentle Saviour",
+    "references": {
+      "SDAH": 569,
+      "CH": 559
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Ma koja mi Olugbala,",
+          "Gbo adura mi;",
+          "'Gbat Iwo ba n p' elomiran,",
+          "Mase koja mi!"
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Jesu! Jesu!",
+          "Gbo adura mi!",
+          "'Gbat' Iwo ba n p' elomiran,",
+          "Mase koja mi!"
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "N' ite aanu, je k' emi ri",
+          "Itura didun;",
+          "Teduntedun ni mo wo le,",
+          "Joo ran mi lowo."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Jesu! Jesu!",
+          "Gbo adura mi!",
+          "'Gbat' Iwo ba n p' elomiran,",
+          "Mase koja mi!"
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "N' igbekele itoye Re,",
+          "L' em' o w' oju Re;",
+          "Wo 'banuje okan mi san",
+          "F' ife Re gba mi."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Jesu! Jesu!",
+          "Gbo adura mi!",
+          "'Gbat' Iwo ba n p' elomiran,",
+          "Mase koja mi!"
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 4,
+        "lines": [
+          "'Wo orisun itunu mi,",
+          "Ju 'ye fun mi lo;",
+          "Tani mo ni l' aye l' orun,",
+          "Bikose Iwo?"
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Jesu! Jesu!",
+          "Gbo adura mi!",
+          "'Gbat' Iwo ba n p' elomiran,",
+          "Mase koja mi!"
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "435",
+    "number": 435,
+    "title": "Se Ife Tire, Se Ife Re",
+    "english_title": "Have Thine Own Way Lord",
+    "references": {
+      "SDAH": 567,
+      "NAH": 475
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Se ife Tire, Se ife Re,",
+          "Wo l' Amokoko amo ni mi,",
+          "Mo mi, si da mi, bi ife Re.",
+          "Mo duro de O ni 'dakeje."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Se ife Tire, se ife Re!",
+          "Wadi okan mi, ko O dan mi wo!",
+          "We mi Oluwa, Ki n funfun lau,",
+          "Bi mo ti n f' irele teriba."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Se ife Tire, se ife Re!",
+          "Mo je alaare, ran mi lowo!",
+          "Gbogbo agbara l' o je Tire!",
+          "Wo mi san, Olugbala Mimo!"
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 4,
+        "lines": [
+          "Se ife Tire, se ife Re!",
+          "Joba lori mi, t' okan, t' ara!",
+          "F' Emi Mimo Re kun mi to bee",
+          "T' aye yoo fi ri Kristi n' nu mi."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "436",
+    "number": 436,
+    "title": "Ninu Okan Jesu",
+    "english_title": "In the Heart of Jesus",
+    "references": {
+      "SDAH": 577,
+      "NAH": 624,
+      "CH": 318
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Ninu okan Jesu,",
+          "Ife wa fun o,",
+          "Ife Mimo, tutu,",
+          "'Fe jijin tooto.",
+          "Yoo se ku 'wo nikan",
+          "T' o n ronu ore,",
+          "'Gba ti okan Jesu",
+          "Kun fun 'fe ooto."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Ninu aya Jesu",
+          "Ero wa fun o,",
+          "Ero alaafia '",
+          "At' igbala re.",
+          "Eese ti oo foya",
+          "T' okan re daamu",
+          "'Gba ti okan Jesu",
+          "N ke awon t' O ra."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Ninu aya Jesu,",
+          "Aaye wa fun o,",
+          "Ise t' angel' paapaa",
+          "Yoo yo lati se",
+          "Eese t' o fi n duro",
+          "De 'se nla t' aye,",
+          "Gbat' aaye wa fun o",
+          "Nibi 'se Jesu."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 4,
+        "lines": [
+          "Ninu ile Jesu",
+          "Aaye wa fun o,",
+          "Ile ayo didan",
+          "T' o tutu nini.",
+          "E-e-sise ti o o fi",
+          "Maa rin b' asako",
+          "Gbat' aaye wa fun o",
+          "N' nu ile Jesu."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "437",
+    "number": 437,
+    "title": "A N Ba O Sise Po",
+    "english_title": "Working O Christ with Thee",
+    "references": {
+      "SDAH": 582,
+      "NAH": 489,
+      "CH": 345
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "A n ba O sise po,",
+          "Krist' Oluwa;",
+          "Bi awa tile je",
+          "Eni aiye;",
+          "A f' ara wa fun O,",
+          "A wa laaye fun O,",
+          "Nipa oor' ofe Re,",
+          "L' awa n sise."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "A n ba O sise po,",
+          "Nibi gbogbo;",
+          "Pelu 'tara l' a n fe",
+          "Ri bo O ti ri;",
+          "A n m' alaini wo 'le,",
+          "Asako k' ro n' ese;",
+          "Lati gba okan la,",
+          "L' awa n sise."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Ko re wa lati ba",
+          "Krist sise;",
+          "'Se wa ko le to",
+          "Eyi to O se,",
+          "Ayo wa l' eyi pe",
+          "\"Oore-ofe Re to\"",
+          "'Gbat a n ba O sise",
+          "Awa l' ayo."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 4,
+        "lines": [
+          "'Tori naa, Je k' a le",
+          "Ba O sise;",
+          "Tit' a o fi gb' aye la",
+          "Kuro n' ese;",
+          "Titi gbogb' eniyan",
+          "Yoo maa yin O l' ogo;",
+          "T' awon Pelu wa yoo,",
+          "Ba O sise."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "438",
+    "number": 438,
+    "title": "Oluwa Emi Fe N' Ipin",
+    "english_title": "Sharing in the Joys of service",
+    "references": {
+      "NAH": 638
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Oluwa emi fe n' ipin",
+          "Ninu ise Re;",
+          "T' ayo t' ayo ni n o fi fi",
+          "Okan mi fun O."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Jesu gba mi patapata,",
+          "Gba gbogb' okan mi,",
+          "Je ki 'fe Re ko mi bi n o",
+          "Ti rin sunmo O."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Awon angeli l' orun n fi,",
+          "Ayo se 'fe Re;",
+          "Emi naa yoo fi gbogb' okan",
+          "Mi rin sunmo O"
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Jesu gba mi patapata,",
+          "Gba gbogb' okan mi,",
+          "Je ki 'fe Re ko mi bi n o",
+          "Ti rin sunmo O."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Titi laelae agbara Re,",
+          "L' em' o gbekele,",
+          "Titi imole ogo Re",
+          "Yoo fi yo loke."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Jesu gba mi patapata,",
+          "Gba gbogb' okan mi,",
+          "Je ki 'fe Re ko mi bi n o",
+          "Ti rin sunmo O."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "439",
+    "number": 439,
+    "title": "Fi N' Agbara Re F' Oluwa",
+    "english_title": "Give of Your Best to the Master",
+    "references": {
+      "SDAH": 572,
+      "NAH": 549
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Fi n' agbara re f' Oluwa,",
+          "Fun-Un n' agbara ewe re",
+          "Fi gbogbo okan gbigbona",
+          "Ja ogun fun otito;",
+          "Jesu fi apeere le 'le,",
+          "Akin at' ogboya ni;",
+          "F' okan isin ooto re fun-Un",
+          "F' eyi t' o dara ju fun-Un."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Fi n' agbara re l' Oluwa,",
+          "Fun-Un n' agbara ewe re,",
+          "Gbe 'hamora igbala wo,",
+          "Ja ogun fun otito."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Fi n' agbara re f' Oluwa",
+          "Fi l leke okan re,",
+          "Fi se 'bi kinni n' isin re,",
+          "Ya ara re si Mimo;",
+          "Fi sile, a o si ti fun o,",
+          "Baba f' Omo Re fun wa;",
+          "Fi Pelu okan ope sin In,",
+          "F' eyi t' o dara ju fun-Un"
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Fi n' agbara re l' Oluwa,",
+          "Fun-Un n' agbara ewe re,",
+          "Gbe 'hamora igbala wo,",
+          "Ja ogun fun otito."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Fi n' agbara re f' Oluwa,",
+          "'Tori pe o feran re;",
+          "O f' emi Re ra o pada,",
+          "O bo ogo Re sile;",
+          "O f' emi Re le 'le jeje",
+          "Lati gba o low' ese;",
+          "Fi iyin atokan wa fun-Un,",
+          "F' eyi t' o dara ju fun-Un."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Fi n' agbara re l' Oluwa,",
+          "Fun-Un n' agbara ewe re,",
+          "Gbe 'hamora igbala wo,",
+          "Ja ogun fun otito."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "440",
+    "number": 440,
+    "title": "Ife Ni N Mu 'Dunnu Wa",
+    "english_title": "'Tis Love That Makes Us Happy",
+    "references": {
+      "SDAH": 579,
+      "AH": 585
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Ife ni n mu 'dunnu wa,",
+          "Ife l' o n s' aye re;",
+          "O n mu wa se inu rere,",
+          "S' omonikeji wa."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Awa je om' Olorun Ife,",
+          "Ife l' Oun;a fe dabi Re;",
+          "Ife l' on mu dunnu wa",
+          "Ife l' o n s' aye re;",
+          "O n mu wa se inu rere,",
+          "S' omonikeji wa."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Aye kun fun 'banuje,",
+          "Aisan ati ese;",
+          "A o sa ipa wa pel' ayo,",
+          "Lati gba emi la."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Awa je om' Olorun Ife,",
+          "Ife l' Oun;a fe dabi Re;",
+          "Ife l' on mu dunnu wa",
+          "Ife l' o n s' aye re;",
+          "O n mu wa se inu rere,",
+          "S' omonikeji wa."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "'Gbat' aye yii baa koja,",
+          "Ta a si pe wa l' oke,",
+          "Orin wa titi yoo maa je,",
+          "Jesu ati 'fe Re."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Awa je om' Olorun Ife,",
+          "Ife l' Oun;a fe dabi Re;",
+          "Ife l' on mu dunnu wa",
+          "Ife l' o n s' aye re;",
+          "O n mu wa se inu rere,",
+          "S' omonikeji wa."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "441",
+    "number": 441,
+    "title": "Ninu Kristi Ko Si Eya",
+    "english_title": "In Christ There Is No East or West",
+    "references": {
+      "SDAH": 587
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Ninu Kristi ko si eya,",
+          "'Nu Re ko si 'yapa;",
+          "Sugbon okun 'fe kan soso",
+          "Ni gbogbo agbaye."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Ninu Re ni gbogbo okan",
+          "Le b' Eleda soro;",
+          "Ise Re je okun wura",
+          "T' o so gbogb' eda po."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "E jumo dide n' nu gbagbo",
+          "Eya o wu te e le je;",
+          "Eni n sin Baba b' omo Re,",
+          "Oun naa ni 'yekan mi."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 4,
+        "lines": [
+          "Ninu Kristi e parapo,",
+          "Ni gbogb' oril' ede;",
+          "Gbogbo okan t' o gba Jesu",
+          "Yoo j' okan l' agbaye."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "442",
+    "number": 442,
+    "title": "Ile Ayo At' Ife Ni Ile T' Olorun Wa;",
+    "english_title": "Happy The Home When God Is There",
+    "references": {
+      "SDAH": 655
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Ile ayo at' ife ni",
+          "Ile t' Olorun wa;",
+          "Gba 'fe at' adua won j' okan",
+          "Lati simi l' orun."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Ile ayo ni ile naa",
+          "Ni 'bi Jesu joba",
+          "N' b' awon omo n fon rere Re",
+          "T' awon obi n gbe E ga."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Ile ayo ni 'le t' adua,",
+          "Ati iyin n joba;",
+          "T' awon obi fe we Mimo,",
+          "At' ewa inu re"
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 4,
+        "lines": [
+          "Oluwa je k' a p' enu po",
+          "L' adua f' alaafia;",
+          "K' okan wa j' okan n' nu 'fe Re,",
+          "Ki 'fe le gb' okan wa."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "443",
+    "number": 443,
+    "title": "Gbat' A N Ba Jesu Rin",
+    "english_title": "When We Walk With the Lord",
+    "references": {
+      "SDAH": 590,
+      "NAH": 700
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Gbat' a n ba Jesu rin,",
+          "N' nu mole Oro Re,",
+          "Wo ogo t' o tan si ona wa!",
+          "Gbat' a ba n se 'fe Re,",
+          "Oun yoo wa pelu wa,",
+          "At awon t' o ba tun gbekele E."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Saa gbekele E,",
+          "Ona miran ko si",
+          "Lati layo n' nu Jesu",
+          "Iwo saa gbekele E."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Ibi kan ko le se,",
+          "Ko le si 'banuje,",
+          "Ti erin Re ko le mu kuro;",
+          "Ko si omije kan,",
+          "Ko si si eru kan",
+          "T' o le wa gbat' a ba gbekele E."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Saa gbekele E,",
+          "Ona miran ko si",
+          "Lati layo n' nu Jesu",
+          "Iwo saa gbekele E."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Ko si inira kan",
+          "Tab' edun ti a ni,",
+          "Sugbon O san esan ise wa;",
+          "Ko s' edun tab' ofo,",
+          "Ko si s' agbelebuu",
+          "T' a ko bukun ba a ba gbekele E."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Saa gbekele E,",
+          "Ona miran ko si",
+          "Lati layo n' nu Jesu",
+          "Iwo saa gbekele E."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 4,
+        "lines": [
+          "Sugbon a ko lee mo",
+          "Ayo ife Tire",
+          "Titi a o fi Tara wa fun-Un;",
+          "N' tor' ojurere Re",
+          "At' ayo t' O n fun ni,",
+          "Wa fun awon ti yoo gbekele E."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Saa gbekele E,",
+          "Ona miran ko si",
+          "Lati layo n' nu Jesu",
+          "Iwo saa gbekele E"
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 5,
+        "lines": [
+          "Ni idapo didun",
+          "L' a o wa l' ese Re",
+          "A o rin Pelu Re ni ona,",
+          "A o se ohun t' O wi,",
+          "A o lo bi t' O fe,",
+          "Ma beru, Iwo saa gbekele E."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Saa gbekele E,",
+          "Ona miran ko si",
+          "Lati layo n' nu Jesu",
+          "Iwo saa gbekele E."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "444",
+    "number": 444,
+    "title": "Igboran Saa San Ju Ebo Lo",
+    "english_title": "Obedience Is Far Better Than Sacrifice",
+    "references": {
+      "GS": 197
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Igboran saa san ju ebo lo,",
+          "L' Oluwa wi;",
+          "Ifeti sile si san ju",
+          "Ora agbo lo."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Yi s' Oluwa, yoo si saanu fun o,",
+          "Pa gbogbo awon ofin Re mo,",
+          "Igboran saa san ju ebo lo",
+          "L' Oluwa wi,",
+          "Ifeti sile si san ju ora agbo lo."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Eyin t' o wi pe, ko si ofin,",
+          "Kristi ti ku",
+          "E ranti ase Re n' nu iwe",
+          "Ti o fun ni."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Yi s' Oluwa, yoo si saanu fun o,",
+          "Pa gbogbo awon ofin Re mo,",
+          "Igboran saa san ju ebo lo",
+          "L' Oluwa wi,",
+          "Ifeti sile si san ju ora agbo lo."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Ranti p' oluse oro naa",
+          "Nikan la a bukun;",
+          "Gbigbo ko to, sugbon sise",
+          "Lo ni ibukun."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Yi s' Oluwa, yoo si saanu fun o,",
+          "Pa gbogbo awon ofin Re mo,",
+          "Igboran saa san ju ebo lo",
+          "L' Oluwa wi,",
+          "Ifeti sile si san ju ora agbo lo."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "445",
+    "number": 445,
+    "title": "Omo Ijoba",
+    "english_title": "Heir of the Kingdom",
+    "references": {
+      "SDAH": 594,
+      "NAH": 156,
+      "CH": 135
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Omo ijoba, eese ti 'wo fi n sun?",
+          "Eese ti 'wo fi n sun nitosi 'le?",
+          "Ji dide, ki o si di amure re,",
+          "Se kankan, tor' akoko tete n lo."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Omo ijoba, eese ti 'wo n lora",
+          "'Gba ti 'wo le ere lokeere?",
+          "Dide, si mura, 'tor' Olugbala n bo;",
+          "Se giri, si ki kaabo, b' o ti n bo."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Awon orile-ede nla kun f' eru",
+          "At' ifoya ninu 'ja at' ote;",
+          "Gbogbo wonyii j' amin bibo Oluwa.",
+          "Omo ijoba mase jafara."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 4,
+        "lines": [
+          "Mase gbe ara le ohun aye yii,",
+          "Wo bi ogo re ti se n koja lo;",
+          "Tu okun ide ti ota fi de o,",
+          "Omo ijoba kuro ninu re."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 5,
+        "lines": [
+          "F' oju s' ona kan, ko o si gb' ori soke,",
+          "Reti bibo ogo oba aye;",
+          "Wo bi imole ti n tan li oke,",
+          "Omo ijoba yo, ko o si korin."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "446",
+    "number": 446,
+    "title": "Alore Or' Odi Sion,",
+    "english_title": "Watchmen on the Walls of Zion",
+    "references": {
+      "SDAH": 601,
+      "CM": 184
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Alore or' odi Sion,",
+          "So fun wa oru ti ri?",
+          "Irawo ooro ha dide?",
+          "'Mole yoo ha de laipe?",
+          "Imole ha",
+          "N mole si oju re bi?",
+          "Imole ha",
+          "N mole si oju re bi?"
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "So fun wa, a ha ti koja",
+          "Gbogb' awon amin ona?",
+          "A ha sunm' ebute naa bi,",
+          "A ha le ri 'le naa bi?",
+          "A ha ri i pe",
+          "'Joba orun sun mo 'le? ",
+          "A ha ri i pe",
+          "'Joba orun sun mo le?"
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Imole n tan, ojo naa n bo",
+          "Je ka a kigbe re kikan;",
+          "A ri 'rawo owuro yo",
+          "Ni didan l' oke l' ohun-un",
+          "Yo 'yin Mimo,",
+          "Igbala yin fere de",
+          "Yo 'yin Mimo,",
+          "Igbala yin fere de."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 4,
+        "lines": [
+          "Awa ti ri awon anin",
+          "Pe a n sunmo ile naa,",
+          "Awa n yara kikankikan,",
+          "Laipe ebute yoo han;",
+          "E je k' ohun yin",
+          "Korin s' oke f' ayo.",
+          "E je k' ohun",
+          "Yin korin s' oke f' ayo."
+        ]
+      }
+    ],
+    "revision": 1
+  },
+  {
+    "index": "447",
+    "number": 447,
+    "title": "Gbo Ohun Alore, Ji ara, Ji",
+    "english_title": "Hark 'Tis the Watchman's Cry",
+    "references": {
+      "NAH": 165,
+      "CM": 301
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Gbo ohun alore, Ji ara, ji",
+          "Jesu ma fere de, Ji ara ji:",
+          "Omo oru ni i sun,",
+          "Omo imole l' eyin,",
+          "Tiyin l' ogo didan ji, ara, ji."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "So f' egbe t' o ti ji,",
+          "Ara sora;",
+          "Ase Jesu daju, Ara, sora;",
+          "N' ilekun Oluwa yin,",
+          "Bi O tile pe de, Ara sora."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Gbo ohun iriju",
+          "Ara, sise;",
+          "Ise naa kari wa,",
+          "Ara, sise; Ogba Oluwa wa,",
+          "Kun fun 'se nigba gbogbo;",
+          "Oun yoo fun yin l' ere;",
+          "Ara sise"
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 4,
+        "lines": [
+          "Gb' ohun Oluwa wa.",
+          "E gbadura Be e fe k' inu Re dun",
+          "E gbadura; Ese mu 'beru wa,",
+          "Ailera n'f' oluranwo",
+          "Ni ijakadi yin",
+          "E gbadura."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 5,
+        "lines": [
+          "Ko orin ikehin,",
+          "Yin, ara, yin;",
+          "Mimo ni Oluwa.",
+          "Yin ara, yin; Kil' o tun ye ahon,",
+          "T' o fere b' angel' korin,",
+          "T' orun yoo ko titi,",
+          "Yin ara, yin."
+        ]
+      }
+    ],
+    "revision": 1
+  },
+  {
+    "index": "448",
+    "number": 448,
+    "title": "Let Every Lamp Be Burning",
+    "english_title": "Let Every Lamp Be Burning",
+    "references": {
+      "SDAH": 595
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Ki gbogb' atupa jo geere,",
+          "Igba ookun sun mo 'le;",
+          "Okunkun pipe lor' aye,",
+          "Ki Jesu to farahan."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Tun fitila re se, ara,",
+          "F' iberu Oluwa tun-un se;",
+          "Bibo Oluwa sun mo le",
+          "Ki gbogb' atupa maa jo"
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Ogunlogo n be loj' oorun,",
+          "Lainani 'kilo 'kehin;",
+          "Igbagbo wa duro lori",
+          "Ileri pipada Re"
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Tun fitila re se, ara,",
+          "F' iberu Oluwa tun-un se;",
+          "Bibo Oluwa sun mo le",
+          "Ki gbogb' atupa maa jo"
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Oro Re l' atupa fun wa,",
+          "A ko le sina rara;",
+          "B' ewu n dide l' otun l' osi",
+          "A ki yoo ko wa sile"
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Tun fitila re se, ara,",
+          "F' iberu Oluwa tun-un se;",
+          "Bibo Oluwa sun mo le",
+          "Ki gbogb' atupa maa jo"
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 4,
+        "lines": [
+          "F' ise rere oun 'gbagbo han,",
+          "Lati doju ti aye,",
+          "Igboran n mu ibukun wa,",
+          "Gba 'gbagbo wa ba d'ro gbon-in."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Tun fitila re se, ara,",
+          "F' iberu Oluwa tun-un se;",
+          "Bibo Oluwa sun mo le",
+          "Ki gbogb' atupa maa jo"
+        ]
+      }
+    ],
+    "revision": 1
+  },
+  {
+    "index": "449",
+    "number": 449,
+    "title": "Christians Seek Not Yet Repose",
+    "english_title": "Christians Seek Not Yet Repose",
+    "references": {
+      "SDAH": 603,
+      "NAH": 363,
+      "CH": 357
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Kristen, ma tii wa 'simi,",
+          "Mase l' ero irora;",
+          "Ni aarin ota l' o wa;",
+          "\"Maa sora!\""
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Wo 'hamora-orun re,",
+          "Wo o l' osan ati l' oru;",
+          "Esu ba, o n dode re;",
+          "'Maa 'sora!"
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Gb' ohun awon asegun,",
+          "Won mo ona ajagun,",
+          "Gbogbo won n wi I' ohun kan;",
+          "\"Maa sora!\""
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 4,
+        "lines": [
+          "Gbo ohun Olugbala,",
+          "Eni ti o fe tele E;",
+          "P' oro Re mo s' aya re;",
+          "\"Maasora!\""
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 5,
+        "lines": [
+          "Maa sora, bi eni pe",
+          "Nibe ni 'segun re wa;",
+          "Gbadura fun 'ranlowo;",
+          "\"Maa sora!\""
+        ]
+      }
+    ],
+    "revision": 1
+  },
+  {
+    "index": "450",
+    "number": 450,
+    "title": "One Sweetly Solemn Thought",
+    "english_title": "One Sweetly Solemn Thought",
+    "references": {
+      "CH": 352
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Ero didun kan n so",
+          "S' okan mi firifiri",
+          "Mo sun mo ile mi lonii,",
+          "Ju bi mo ti sun mo on."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Mo sun mo 'le",
+          "Mo sun mo 'le",
+          "Mo sun mo 'ile mi lonii",
+          "Ju bi mo ti sun mo on."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Mo sun mo 'te nla ni,",
+          "Mo sun m okun didan,",
+          "Mo sun mo 'ile Baba wa,",
+          "Nib'opo 'bugbe wa,"
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Mo sun mo 'le",
+          "Mo sun mo 'le",
+          "Mo sun mo 'ile mi lonii",
+          "Ju bi mo ti sun mo on."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Mo sun m' opin emi,",
+          "T'a a so eni kale;",
+          "T'a a gbe agbelebuu sile,",
+          "T' a a si bere gb' ade."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Mo sun mo 'le",
+          "Mo sun mo 'le",
+          "Mo sun mo 'ile mi lonii",
+          "Ju bi mo ti sun mo on."
+        ]
+      }
+    ],
+    "revision": 1
+  },
+  {
+    "index": "451",
+    "number": 451,
+    "title": "Oft In Danger, Oft in Woe",
+    "english_title": "Oft In Danger, Oft in Woe",
+    "references": {
+      "NAH": 50
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Laarin ewu at' osi",
+          "Kristen, maa te siwaju;",
+          "Roju duro, j' ija naa,",
+          "K' ounje 'ye fun o l' okun"
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Je ki okan yin k' o yo;",
+          "Gbe 'hamora orun wo;",
+          "Ja, ma ro pe ogun n pe",
+          "Isegun yin fere de."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Ma je k' inu yin baje",
+          "O fe e n' omije yin nu;",
+          "Mase je k' eru ba yin",
+          "B' aini yin, l' agbara yin."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 4,
+        "lines": [
+          "Nje e maa tesiwaju",
+          "E o ju asegun lo;",
+          "B' op' ota doju ko yin,",
+          "Kristen, e te siwaju."
+        ]
+      }
+    ],
+    "revision": 1
+  },
+  {
+    "index": "452",
+    "number": 452,
+    "title": "Soldiers of Christ Arise",
+    "english_title": "Soldiers of Christ Arise",
+    "references": {
+      "SDAH": 6,
+      "NAH": 503
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Dide, om' ogun Krist'",
+          "E gbe 'hamora wo",
+          "L' agbara t' Olorun fun yin",
+          "Nipase Omo Re;",
+          "Oluwa Om' ogun",
+          "Le fun ni l' agbara",
+          "Eni baa gbekele Jesu,",
+          "O ju asegun lo."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "E duro n' tori naa,",
+          "Ninu agbara Re",
+          "E f' ihamora Olorun",
+          "D' amure fun 'ja naa",
+          "Maa sora n'gba gbogbo",
+          "Mu ihamora yin dan",
+          "E maa tele balogun yin,",
+          "E si maa gbadura."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "E maa te siwaju,",
+          "E ja, e gbadura;",
+          "E te agbara ookun ba,",
+          "K' e e si se ogun naa;",
+          "Gbat'ija ba pari",
+          "Te e s' ohun gbogbo tan",
+          "Nu Krist nikan l' e le segun",
+          "Ke e si duro gbon-in gbon-in."
+        ]
+      }
+    ],
+    "revision": 1
+  },
+  {
+    "index": "453",
+    "number": 453,
+    "title": "Believe Not Those Who Say",
+    "english_title": "Believe Not Those Who Say",
+    "references": {
+      "NAH": 609
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Mase gbagbo wipe",
+          "Didan lona orun,",
+          "Ki o ma baa subu ko o si",
+          "Kuna fun otito."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Oun nikan l' ona naa",
+          "T' o lo sibi ayo;",
+          "Eni ba si fe 'bugbe naa",
+          "Gbodo sa ipa re."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Mura fun ija naa!",
+          "Gb' eru ese sonu",
+          "Mura sile ni gbogb' oru;",
+          "Sise losan gangan."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 4,
+        "lines": [
+          "Sise ko o si n' ife,",
+          "Dariji, farada;",
+          "Gb' okan Re s' Olorun l' oke,",
+          "K' eri okan re mo."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 5,
+        "lines": [
+          "F' eyi se ero re,",
+          "'Reti at' ayo re;",
+          "Ko se n kan b' a n da o lebi.",
+          "Tabi sainaani re."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 6,
+        "lines": [
+          "B' iwo ba wu Jesu,",
+          "Iwo yoo ni 'tunu;",
+          "At' ife Re ni okan re",
+          "At isimi Re."
+        ]
+      }
+    ],
+    "revision": 1
+  },
+  {
+    "index": "454",
+    "number": 454,
+    "title": "A Call for loyal Soldiers",
+    "english_title": "A Call for loyal Soldiers",
+    "references": {},
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Ipe fun omo ogun",
+          "N to gbogbo wa wa;",
+          "Omo ogun fun 'ja,",
+          "'Wo yoo je 'pe naa?",
+          "Wo yoo tete dahun?",
+          "Pel' okan ayo?",
+          "'Wo yoo f' ooko sile",
+          "B' omo ogun bi."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Omo ogun fun Jesu, Oloot' omo;",
+          "Awon mi-i f' ooko 'le,",
+          "Iwo nko?",
+          "Jesu ni Balogun,",
+          "A ki yoo beru;",
+          "'Wo yoo f' ooko sile",
+          "B' omo ogun bi?"
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Jesu n pe omo ogun",
+          "T o kun f' agbara",
+          "Om' ogun ti yoo sin",
+          "Li ojoojumo;",
+          "Oun ki yoo ko o le",
+          "Oun yoo f' sun mo O;",
+          "Wo yoo f' ooko sile",
+          "B' omo ogun bi?"
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Omo ogun fun Jesu, Oloot' omo;",
+          "Awon mi-i f' ooko 'le,",
+          "Iwo nko?",
+          "Jesu ni Balogun,",
+          "A ki yoo beru;",
+          "'Wo yoo f' ooko sile",
+          "B' omo ogun bi?"
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "O n pe o nitori pe",
+          "O fe o pupo",
+          "En 't' o ku nitori",
+          "Ese araye;",
+          "O n pe o nisiyii,",
+          "Pel' ohun gooro,",
+          "'Wo yoo f' ooko sile",
+          "B' omo ogun bi?"
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Omo ogun fun Jesu, Oloot' omo;",
+          "Awon mi-i f' ooko 'le,",
+          "Iwo nko?",
+          "Jesu ni Balogun,",
+          "A ki yoo beru;",
+          "'Wo yoo f' ooko sile",
+          "B' omo ogun bi?"
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 4,
+        "lines": [
+          "'Gbat' ogun ba si pari.",
+          "T' a ba si segun;",
+          "'Gbat awon olototo",
+          "Ba ko ara jo,",
+          "Oun yoo f' ade ogo",
+          "F'awon t' o wa n' be;",
+          "'Wo yoo f' ooko sile",
+          "B' omo ogun bi?"
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Omo ogun fun Jesu, Oloot' omo;",
+          "Awon mi-i f' ooko 'le,",
+          "Iwo nko?",
+          "Jesu ni Balogun,",
+          "A ki yoo beru;",
+          "'Wo yoo f' ooko sile",
+          "B' omo ogun bi?"
+        ]
+      }
+    ],
+    "revision": 1
+  },
+  {
+    "index": "455",
+    "number": 455,
+    "title": "The Last Great conflict now is On",
+    "english_title": "The Last Great conflict now is On",
+    "references": {
+      "AH": 552,
+      "NAH": 472
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Ija nla ikehin naa de,",
+          "Opagun n fe lele",
+          "Immanuel Om'",
+          "N fun ohun ipe naa",
+          "Afe aye fere pin na,",
+          "A gbo 'kerora re;",
+          "Tani yoo jiyin rere naa?",
+          "Tani yoo j' ayoda?"
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "A Gbo ipe balogun wa,",
+          "A o ba a lo s' ogun",
+          "A o sin Immanuel wa",
+          "Tit' ibi yoo fi tan",
+          "Oluwa ma se je k' ida",
+          "Tabi oro were",
+          "Mu wa duro tabi y' ese",
+          "Tit' ipadabo Krist'."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "\"Ife Kristi ni o n ro wa\"",
+          "A f ohun gbogbo fun-Un",
+          "Lati sise nibikibi",
+          "Ti Oluwa ba yan",
+          "Ki iran yu to rekoja,",
+          "Ile okun, yoo gbo",
+          "Ise ta a ran si gbogb' aye pe",
+          "Oba naa de tan."
+        ]
+      }
+    ],
+    "revision": 1
+  },
+  {
+    "index": "456",
+    "number": 456,
+    "title": "Awake My Soul",
+    "english_title": "Awake My Soul",
+    "references": {
+      "SDAH": 6,
+      "NAH": 509,
+      "CH": 355
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Ji okan mi, dide giri,",
+          "Maa lepa n so kikan;",
+          "F' itara sure ije yii",
+          "Fun ade ti ki i sa."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Olorun n f' ohun itara",
+          "Ke si o lat' oke;",
+          "Tika Re l' O n pin ere naa,",
+          "To o n naga lati wo."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Opolo eleri wa,",
+          "Ti won n f' oju sun o",
+          "Gbagbe irin atehinwa,",
+          "Saa maa te siwaju."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 4,
+        "lines": [
+          "Olugbala, 'Wo l' o mu wa",
+          "Bere ije wa yii;",
+          "Nigbat' a ba de wa l' ade,",
+          "A o wole lese Re."
+        ]
+      }
+    ],
+    "revision": 1
+  },
+  {
+    "index": "457",
+    "number": 457,
+    "title": "Duro, Duro Fun Jesu",
+    "english_title": "Stand Up! Stand Up for Jesus!",
+    "references": {
+      "SDAH": 618,
+      "NAH": 505,
+      "CH": 354
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Duro, duro fun Jesu,",
+          "Eyin om' Ogun Krist'.",
+          "Gbe asia Re soke,",
+          "A ko gbodo fe e ku;",
+          "Lat' isegun de segun",
+          "Ni yoo to ogun Re;",
+          "Tit' a o segun gbogb' ota,",
+          "Ti Krist'yoo j' Oluwa."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Duro, duro fun Jesu,",
+          "F' eti s' ohun ipe;",
+          "Jade lo s' oju ija,",
+          "L' oni ojo n la Re;",
+          "Eyin akin ti n ja fun-Un,",
+          "Laaarin ainiye ota,",
+          "N' nu ewu, e ni gboya;",
+          "E koju 'ja s' ota."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Duro, duro fun Jesu,",
+          "Duro l' agbara Re;",
+          "Ipa eniyan ko to,",
+          "Ma gbekele tire,",
+          "Di 'hamora 'hinrere,",
+          "Maa sona, maa gbadura,",
+          "B' ise tab' ewu ba pe,",
+          "Ma se alai de be."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 4,
+        "lines": [
+          "Duro, duro fun Jesu,",
+          "Ija naa ki yoo pe;",
+          "Oni ariwo ogun",
+          "Ola orin 'segun,",
+          "Eni t' o ba si segun",
+          "Yoo gba ade iye;",
+          "Yoo maa ba Oba ogo",
+          "Joba titi laelae"
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "458",
+    "number": 458,
+    "title": "F' Agbara Ja Ija Rere",
+    "english_title": "Fight the Good Fight",
+    "references": {
+      "SDAH": 613,
+      "NAH": 511
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "F' agbara ja ija rere",
+          "Krist' ni 'gbala oun eto re",
+          "F' owo le iye, yoo si je",
+          "Ayo oun ade re titi."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "F' oore-ofe ja' ja rere,",
+          "Gb' oju s' oke, si w' oju Re",
+          "Ona 'ye si sile fun o,",
+          "Krist l' ona, Oun si' l' ere."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Ko aniyan re s' apakan,",
+          "Simi le E, Oun yoo si pese;",
+          "Igbekele re yoo fi han",
+          "Pe krist' ni ye at' ife re"
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 4,
+        "lines": [
+          "Ma beru, ma si se saare",
+          "Ki i yipada, wo, si s' owon;",
+          "Saa gbagbo, 'wo yoo si ri i pe",
+          "Kristi l' ohun gbogbo fun o."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "459",
+    "number": 459,
+    "title": "E Maa Te Si Waju, Kristen Ologun",
+    "english_title": "Onward Christian Soldiers!",
+    "references": {
+      "SDAH": 612,
+      "NAH": 299,
+      "CH": 360
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "E maa te si waju,",
+          "Kristen ologun,",
+          "Maa tejumo Jesu,",
+          "T' O n be ni 'waju;",
+          "Kristi Oluwa wa",
+          "Ni Balogun wa,",
+          "Woo! asia Re wa",
+          "Ni 'waju ogun."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "E maa te siwaju,",
+          "Kristen ologun",
+          "Saa teju mo Jesu,",
+          "T' o n be niwaju."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Ni oruko Jesu,",
+          "Ogun Esu sa,",
+          "N je Kristen ologun,",
+          "Maa n so si segun",
+          "Orun apaadi mi,",
+          "Ni hiho iyin,",
+          "Ara gb' ohun yin ga,",
+          "Gb' orin 'yin s' oke."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "E maa te siwaju,",
+          "Kristen ologun",
+          "Saa teju mo Jesu,",
+          "T' o n be niwaju."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Bi egbe ogun nla,",
+          "N' ijo Olorun,",
+          "Ara a n rin l' ona",
+          "T' awon mimo n rin;",
+          "A ko ya wa n' ipa,",
+          "Egbe kan ni wa;",
+          "Okan n' ireti l' eko,",
+          "Okan ni ife."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "E maa te siwaju,",
+          "Kristen ologun",
+          "Saa teju mo Jesu,",
+          "T' o n be niwaju."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 4,
+        "lines": [
+          "Ite at' ijoba,",
+          "Wonyi le parun,",
+          "Sugbon ijo Jesu",
+          "Yoo wa titi lae;",
+          "Orun apaadi ko",
+          "Le bor' ijo yii;",
+          "A n ileri Kristi,",
+          "Eyi ko le ye"
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "E maa te siwaju,",
+          "Kristen ologun",
+          "Saa teju mo Jesu,",
+          "T' o n be niwaju."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 5,
+        "lines": [
+          "E maa ba ni ka lo",
+          "Eyin eniyan",
+          "D' ohun yin po mo wa",
+          "L' orin isegun",
+          "Ogo, iyin, ola,",
+          "Fun Kristi Oba;",
+          "Eyi ni yoo ma je",
+          "Orin wa titi."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "E maa te siwaju,",
+          "Kristen ologun",
+          "Saa teju mo Jesu,",
+          "T' o n be niwaju."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "460",
+    "number": 460,
+    "title": "Tani N Se T' Oluwa",
+    "english_title": "Who is on the Lord's Side?",
+    "references": {
+      "NAH": 507
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Tani n se t' Oluwa?",
+          "Tani y' o sin 'Ba?",
+          "Tani yoo ran-an lowo",
+          "Lati gb' emi la?",
+          "Tani yoo ko aye,",
+          "K' o doju k' ota?",
+          "Tani n se t' Oluwa",
+          "Ti yoo ji se fun Un?",
+          "Nipa ipe aanu",
+          "Nipa oor'-ofe,",
+          "T' Oluwa l' awa n se;",
+          "Ti Olugbala."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Ki i se 'tori ogo,",
+          "Ade a t' ope,",
+          "L' a fi d' omo-ogun,",
+          "T'a n korin ogun;",
+          "Sugbon fun ife t' O n",
+          "P' awon to O ku fun,",
+          "Eni Jesu ba pe",
+          "Yoo se t' Oluwa;",
+          "Nipa 'fe Mimo Re,",
+          "Nipa oor' ofe,",
+          "T' Oluwa l' awa n se'",
+          "Ti Olugbala."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Jesu, Ki i se wura",
+          "Ni O fi ra wa;",
+          "O f' emi Re ra wa,",
+          "Lati fi s' oso",
+          "'Wo f'ibukun Re kun",
+          "Eni to O wa",
+          "'Wo fun wa ni ife",
+          "At' omimira,",
+          "Nipa irapada,",
+          "Nipa oor'-ofe,",
+          "T' Oluwa l' awa n se;",
+          "Ti Olugbala."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 4,
+        "lines": [
+          "Ija le le kikan",
+          "Ota le taagun,",
+          "ko s' eni le bori",
+          "Ogun Oba wa.",
+          "Labe asia Re",
+          "Isegun daju,",
+          "Nitori ooto Re,",
+          "Yoo bori dandan,",
+          "Pel' ayo l' a o josin,",
+          "Nipa oor'-ofe,",
+          "T' Oluwa l' awa n se;",
+          "Ti Olugbala."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "461",
+    "number": 461,
+    "title": "A Wa Wa Laaye, A Si N Gbe",
+    "english_title": "We Are Living, We Are Dwelling",
+    "references": {
+      "SDAH": 617,
+      "NAH": 149,
+      "CH": 359
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "A wa wa laaye, a si n gbe",
+          "L' akoko t' o kun f' eru;",
+          "Igba n de, igba n so wipe",
+          "Wiwa laaye ni ola.",
+          "Gbo! ji dide oril'-ede,",
+          "Gbogbo won lo si ogun;",
+          "Gbo! kin ni ha n dun?",
+          "Eda ha N kerora ikehin bi?"
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Kristen gb' ohun ija re wo,",
+          "Mura fun ija nla naa;",
+          "De asi-bori igbala,",
+          "Si mu asa 'hinrere;",
+          "Gbe aso alaafia wo,",
+          "Mu ida Emi lowo;",
+          "Jade pelu 'gboya lati",
+          "Duro n' nu 'pa jehofa."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "B' emi buburu yi o ka,",
+          "Ti i se ota Olorun;",
+          "Oba alagbara julo",
+          "Won n rin kaakiri lairi;",
+          "Won ko ara won jo s' ogun,",
+          "Won n mura fun 'ja kehin,",
+          "Kristen maa mura, maa sona,",
+          "Ja b' okunrin fun 'gbala"
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 4,
+        "lines": [
+          "Kristen dide ja n' ogun yii",
+          "Maa ja tit' o o fi segun;",
+          "Tit Ogagun yoo fi wipe,",
+          "O seun om' odo rere!",
+          "Eni ti o ba j' oloooto",
+          "T' o si foriti i d' opin,",
+          "Ni yoo jogun 'ye ailopin",
+          "Ti a ti se 'leri re."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "462",
+    "number": 462,
+    "title": "A! Egbe mi, E W' Asia",
+    "english_title": "Hold The Fort",
+    "references": {
+      "SSS": 669
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "A! egbe mi, e w' asia.",
+          "B' o ti n fe lele!",
+          "Ogun Jesu fere de na",
+          "A fere segun,"
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "D' odi mu, Emi feree de,",
+          "Bee ni Jesu wi,",
+          "Ran 'dahun pada s' orun pe,",
+          "Awa yoo di i mu."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Wo awon akoni aye,",
+          "Esu n ko won bo;",
+          "Awon alagbara n' subu",
+          "Idaamu de tan,"
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "D' odi mu Emi feree de,",
+          "Bee ni Jesu wi,",
+          "Ran 'dahun pada s' orun pe,",
+          "Awa yoo di i mu."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Wo b' asia ogo ti n fe!",
+          "Gbo ohun ipe!",
+          "L' oruko Jesu, Balogun,",
+          "Awa yoo segun"
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "D' odi mu Emi feree de,",
+          "Bee ni Jesu wi,",
+          "Ran 'dahun pada s' orun pe,",
+          "Awa yoo di i mu."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 4,
+        "lines": [
+          "B' ija naa tile pe pari,",
+          "Iranwo wa n bo,",
+          "Balogun wa n bowa tete",
+          "A, e ho f' ayo."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "D' odi mu Emi feree de,",
+          "Bee ni Jesu wi,",
+          "Ran 'dahun pada s' orun pe,",
+          "Awa yoo di i mu."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "463",
+    "number": 463,
+    "title": "Fon Ipe Ogun",
+    "english_title": "Sound the Battle Cry",
+    "references": {
+      "SDAH": 614,
+      "CH": 499
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Fon ipe ogun, ota feree de,",
+          "E mura ija, f' Oluwa",
+          "E dide giri, di amure yin;",
+          "E gbeke yin le 'tosona Re."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "E si ogun, dide, bo s' oju 'ja",
+          "Dide, mura; kigbe naa kikan,",
+          "Te siwaju, Kigbe pe Hosana!",
+          "Kristi ni Balogun, egbe wa."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "A n te siwaju pelu agbara,",
+          "O da wa l' oju p' a o segun;",
+          "Ohun ija wa, asa at' asia",
+          "B' a n ja f' otito a k' yoo baku."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "E si ogun, dide, bo s' oju 'ja",
+          "Dide, mura; kigbe naa kikan,",
+          "Te siwaju, Kigbe pe Hosana!",
+          "Kristi ni Balogun, egbe wa."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Olorun wa, gbo 'gba ta ba pe O",
+          "Je ki 'ranwo Re kari wa,",
+          "'Gb' ogun ba pari, t' aba si segun,",
+          "Fun gbogbo wa l' ade iye Re."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "E si ogun, dide, bo s' oju 'ja",
+          "Dide, mura; kigbe naa kikan,",
+          "Te siwaju, Kigbe pe Hosana!",
+          "Kristi ni Balogun, egbe wa."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "464",
+    "number": 464,
+    "title": "Ma F' Ara Fun 'Danwo",
+    "english_title": "Yield Not to Temptation",
+    "references": {
+      "AH": 685,
+      "CH": 498
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Ma f' ara fun 'danwo",
+          "Nitor' ese ni;",
+          "'Segun kan yoo je Ko o",
+          "Le segun miran",
+          "Saa ja bi okunrin",
+          "Te 'fekufe ba",
+          "Maa te jumo Jesu",
+          "Yoo mu o la a ja"
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Kepe Jesu fun 'ranwo",
+          "Itunu at' agbara;",
+          "Oun fee ran o lowo,",
+          "Yoo mu o la a ja"
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Ma se k' egbekegbe,",
+          "Ma soro aiye;",
+          "Ma se pe oruko Olorun lasan;",
+          "Maa ronu, ma saare,",
+          "Je olotito,",
+          "Maa teju mo Jesu,",
+          "Yoo mu o la a ja."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Kepe Jesu fun 'ranwo",
+          "Itunu at' agbara;",
+          "Oun fee ran o lowo,",
+          "Yoo mu o la a ja"
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Olorun yoo f' ade",
+          "F' eni ba segun;",
+          "'Gbagbo l' a o fi segun,",
+          "Ba a tile n subu;",
+          "Olugbala wa yoo",
+          "Fi kun okun wa;",
+          "Maa teju mo Jesu,",
+          "Yoo mu o la a ja."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Kepe Jesu fun 'ranwo",
+          "Itunu at' agbara;",
+          "Oun fee ran o lowo,",
+          "Yoo mu o la a ja"
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "465",
+    "number": 465,
+    "title": "N O Tele O Olugbala",
+    "english_title": "I Will Follow Thee My Saviour",
+    "references": {
+      "SDAH": 623,
+      "NAH": 601,
+      "CH": 266
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "N o tele O, Olugbala,",
+          "Bo ti wu k' ipin mi ri,",
+          "N' ibi-kibi ti O ba n lo,",
+          "Oluwa, n o tele O."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "N o tele O, Olugbala,",
+          "O t' eje Re le fun mi,",
+          "Bi gbogb' eeyan ko O sile",
+          "N' p' oor-ofe n o tele O."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "B' ona naa tile ni egun",
+          "Ti ko l' ona bi okun,",
+          "'Wo ti rin 'na yi saaju mi,",
+          "N o si f' ayo tele O."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "N o tele O, Olugbala,",
+          "O t' eje Re le fun mi,",
+          "Bi gbogb' eeyan ko O sile",
+          "N' p' oor-ofe n o tele O."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Bi mo tile ri iponju",
+          "Ta a si dan mi wo kikan",
+          "Mo ranti pa a dan O wo ri",
+          "Mo yo lati tele O."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "N o tele O, Olugbala,",
+          "O t' eje Re le fun mi,",
+          "Bi gbogb' eeyan ko O sile",
+          "N' p' oor-ofe n o tele O."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 4,
+        "lines": [
+          "Bi O mu mi koja 'ponju,",
+          "Ti a si ko mi sile,",
+          "A ti ko iwo sile ri,",
+          "N o si tele 'sise Re."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "N o tele O, Olugbala,",
+          "O t' eje Re le fun mi,",
+          "Bi gbogb' eeyan ko O sile",
+          "N' p' oor-ofe n o tele O."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 5,
+        "lines": [
+          "Bi iwo tile mu mi lo",
+          "S' ib' odo riru Jordan,",
+          "O ti la a koja saaju mi.",
+          "Sibe em' o tele O."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "N o tele O, Olugbala,",
+          "O t' eje Re le fun mi,",
+          "Bi gbogb' eeyan ko O sile",
+          "N' p' oor-ofe n o tele O."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "466",
+    "number": 466,
+    "title": "Mo N Te Siwaju N' Gba Gbogbo",
+    "english_title": "I'm Pressing On the Upward Way",
+    "references": {
+      "SDAH": 625,
+      "NAH": 708,
+      "CH": 631
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Mo n te siwaju n' gba gbogbo,",
+          "Ni irin ajo mi s' orun;",
+          "Bi mo ti n lo, mo n gbadura",
+          "S' Oluwa fun 'te siwaju."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Joo gbe mi soke, Oluwa,",
+          "Si ibi petele orun;",
+          "Oluwa, fi ese mi le",
+          "Bi giga ju ti saaju lo."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Okan mi ko fe duro ni",
+          "Ibi 'yemeji at' eru",
+          "Awon mii n gbe n' ibi wonyi,",
+          "Ki n te siwaju l' adua mi."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Joo gbe mi soke, Oluwa,",
+          "Si ibi petele orun;",
+          "Oluwa, fi ese mi le",
+          "Bi giga ju ti saaju lo."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Mo fe gbe ga ju aye lo,",
+          "Oko Esu ko le se n kan,",
+          "Tori 'gbagbo fi 'ro orin",
+          "Ayo awon mimo fun mi."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Joo gbe mi soke, Oluwa,",
+          "Si ibi petele orun;",
+          "Oluwa, fi ese mi le",
+          "Bi giga ju ti saaju lo."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 4,
+        "lines": [
+          "Mo fe gun oke giga naa",
+          "Ki n ri titayo ogo re;",
+          "Titi n o d' orun, mo n gbadua",
+          "K' Oba mu mi de 'le giga"
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Joo gbe mi soke, Oluwa,",
+          "Si ibi petele orun;",
+          "Oluwa, fi ese mi le",
+          "Bi giga ju ti saaju lo."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "467",
+    "number": 467,
+    "title": "Krist Balogun Wa Niwaju Ogun",
+    "english_title": "Christ, Our Mighty Captain, Lead against the foe",
+    "references": {
+      "AH": 392
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Krist Balogun wa niwaju ogun,",
+          "B' O ba ran wa ni se a ko ni beru;",
+          "Bi ohun t' O fe se ko tile ye wa,",
+          "Sibe a o tele E titi."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Te si 'waju! l' ase Oluwa,",
+          "Te si 'waju! si 'le 'leri naa",
+          "Te si 'waju! ko orin s' oke,",
+          "Pelu Kristi isegun daju."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Gbogbo ifeju esu ko le mi wa,",
+          "Bi Kristi je asa at' apata wa;",
+          "A o maa fi ida-emi bi a ti n lo.",
+          "A o maa tele E titi."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Te si 'waju! l' ase Oluwa,",
+          "Te si 'waju! si 'le 'leri naa",
+          "Te si 'waju! ko orin s' oke,",
+          "Pelu Kristi isegun daju."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "E je ki a gbe asia wa soke,",
+          "Ibi ko le de ibi ti O ba wa;",
+          "Kristi Balogun wa ti segun aye",
+          "A o maa tele E titi"
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Te si 'waju! l' ase Oluwa,",
+          "Te si 'waju! si 'le 'leri naa",
+          "Te si 'waju! ko orin s' oke,",
+          "Pelu Kristi isegun daju."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 4,
+        "lines": [
+          "B' ogun naa tile le, ko ni pe pari,",
+          "Nigba naa a o dapo Pel' awon mimo;",
+          "Lati fi ayo ko orin isegun,",
+          "Bi a ba tele E titi."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Te si 'waju! l' ase Oluwa,",
+          "Te si 'waju! si 'le 'leri naa",
+          "Te si 'waju! ko orin s' oke,",
+          "Pelu Kristi isegun daju."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "468",
+    "number": 468,
+    "title": "Lehin Odun Die",
+    "english_title": "A Few More Years shall Roll",
+    "references": {
+      "NAH": 535,
+      "CH": 372
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Lehin odun die,",
+          "Lehin igba die,",
+          "Awa yoo wa pelu awon",
+          "Ti won sun n' iboji,",
+          "Oluwa mu mi ye",
+          "Fun ojo nla nla naa",
+          "Joo we mi ninu eje Re,",
+          "Si ko ese mi lo."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Lehin iji die,",
+          "L' aye bururu yii",
+          "A o de ibi iji dekun,",
+          "Ti irumi ko si",
+          "Oluwa mu mi ye",
+          "Fun ojo nla nla naa",
+          "Joo we mi ninu eje Re,",
+          "Si ko ese mi lo!"
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Lehin 'yonu die,",
+          "Lehin 'pinya die;",
+          "Lehin ise oun omije,",
+          "A ki yoo sokun mo,",
+          "Oluwa mu mi ye",
+          "Fun ojo 'bukun naa",
+          "Joo we mi ninu eje Re,",
+          "Si ko ese mi lo!"
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 4,
+        "lines": [
+          "Ojo die l' o ku",
+          "Oun yoo tun pada wa,",
+          "Eni t' o ku k' awa le ye.",
+          "Ka a baa le ba A joba.",
+          "Oluwa mu mi ye",
+          "Fun ojo nla nla naa",
+          "Joo we mi ninu eje Re,",
+          "Si ko ese mi lo!"
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "469",
+    "number": 469,
+    "title": "Laipe Awa Yoo Lo Sile",
+    "english_title": "In a Little While We're Going Home",
+    "references": {
+      "SDAH": 626
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Eje ka a korin ti yoo mu inu wa dun,",
+          "Laipe awa yoo lo sile;",
+          "Oru yoo koja ni ojo ayeraye",
+          "Laipe awa yoo lo s' ile;"
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Laipe ojo, Laipe ojo",
+          "A o la isoro koja;",
+          "Awa yoo pade, nigba t' iji ba koja,",
+          "Laipe awa yoo lo s' ile."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "A o se ise t' owo wa ba lati se,",
+          "Laipe awa yoo lo s' ile;",
+          "Ogo Olorun yoo fun wa ni agbara",
+          "Laipe awa yoo lo s' ile."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Laipe ojo, Laipe ojo",
+          "A o la isoro koja;",
+          "Awa yoo pade, nigba t' iji ba koja,",
+          "Laipe awa yoo lo s' ile."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "A o t' ona se fun arinrin-ajo t' o re,",
+          "Laipe awa yoo lo s' ile;",
+          "Je k' a tan ihin-rere naa ka gbogb' aye,",
+          "Laipe awa yoo lo s' ile."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Laipe ojo, Laipe ojo",
+          "A o la isoro koja;",
+          "Awa yoo pade, nigba t' iji ba koja,",
+          "Laipe awa yoo lo s' ile."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 4,
+        "lines": [
+          "Isimi n be fun gbogbo okan ti n s' aare",
+          "Laipe awa yoo lo s' ile;",
+          "Ekun ki yoo si ninu ilu didan naa",
+          "Laipe awa yoo lo s' ile."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Laipe ojo, Laipe ojo",
+          "A o la isoro koja;",
+          "Awa yoo pade, nigba t' iji ba koja,",
+          "Laipe awa yoo lo s' ile."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "470",
+    "number": 470,
+    "title": "Laarin 'Yemeji At' Aro",
+    "english_title": "Through the Night of Doubt and sorrow",
+    "references": {
+      "NAH": 541
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Laarin 'yemeji at' aro,",
+          "L' awa owo ero n lo,",
+          "A n korin ireti ogo,",
+          "A n to lo si le 'leri."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Kedere niwaju wa ni",
+          "Imole Atona han",
+          "Pelu ifowoso wo po.",
+          "Awa n f' igboya yan lo."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Olorun n b' awa ero lo,",
+          "'Mole Re f' ayo fun wa,",
+          "O le 'banuje lo fun wa,",
+          "O f' ayo si ona wa."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 4,
+        "lines": [
+          "Ered' irin ajo wa, ni,",
+          "Igbagbo ti ko le ye;",
+          "Ireti wa ti o l' ogo wa.",
+          "At' ododo Oba wa."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 5,
+        "lines": [
+          "Igba ayo naa fere de,",
+          "Ta a o si 'boji gbogbo,",
+          "A o f' opin si ise ese,",
+          "Wahala yoo si d' opin."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "471",
+    "number": 471,
+    "title": "Eyin Ero",
+    "english_title": "Whiter Pilgrim",
+    "references": {},
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "“Eyin ero nibo l' e n lo",
+          "T' eyin t' opa lowo yin?”",
+          "A n rin ajo mimo kan lo,",
+          "Nipa ase Oba wa.",
+          "Lori oke oun petele",
+          "A n lo s' aafin Oba rere,",
+          "A n lo s' aafin Oba rere,",
+          "A n lo s' ile t' o dara.",
+          "A n lo s' aafin Oba rere,",
+          "A n lo s' ile t' o dara."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "“Eyin ero, e so fun ni",
+          "T' ireti ti eyin ni?",
+          "Aso Mimo, ade ogo",
+          "Ni Jesu yoo fi fun wa;",
+          "Omi iye l' a o maa mu;",
+          "A o si b' Olorun wa gbe,",
+          "A o si b' Olorun wa gbe,",
+          "Nile Mimo didara,",
+          "A o si b' Olorun wa gbe",
+          "Nile Mimo didara,"
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "E ko beru ona te e n rin",
+          "Eyin ero kekere?",
+          "Ore airi n pelu wa lo,",
+          "Awon Angel' yi wa ka,",
+          "Jesu Kristi l' amona wa",
+          "Yoo maa so wa, yoo maa to wa,",
+          "Yoo maa so wa, yoo maa to wa,",
+          "Ninu ona ajo wa,",
+          "Yoo maa so wa, yoo maa to wa,",
+          "Ninu ona ajo wa."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 4,
+        "lines": [
+          "Ero, a le ba yin kegbe",
+          "L' ona ajo sile naa?”",
+          "Wa si egbe ero wa, wa",
+          "E ma se fi wa sile,",
+          "Jesu n duro, O n reti wa,",
+          "Jesu n duro, O n reti wa,",
+          "N' ile mimo t' o dara,",
+          "Jesu n duro, O n reti wa,",
+          "N' ile mimo t' o dara."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "472",
+    "number": 472,
+    "title": "Gbo Okan Mi",
+    "english_title": "Hark! Hark, My Soul!",
+    "references": {
+      "NAH": 529,
+      "CH": 376
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Gbo okan mi,",
+          "Bi Angeli ti n korin",
+          "Yika orun ati yika aye;",
+          "E gbo bi oro orin won ti dun to!",
+          "Ti n so 'gba ti ese ki yoo si mo!"
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Angeli Jesu, angel' mole,",
+          "Won n korin ayo pade ero l' ona."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Ba a si n lo bee l' a si n gbo orin won",
+          "'Wa, alaare, Jesu l' O ni k' e e wa;",
+          "L' okunkun ni an gbo orin didun won",
+          "Ohun orin won ni n f' ona han wa."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Angeli Jesu, angel' mole,",
+          "Won n korin ayo pade ero l' ona."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Ohun Jesu ni a n gbo l' ona rere;",
+          "Ohun naa n dun b' agogo y' aye ka,",
+          "Egbeegberun awon t' o gbo ni si n bo;",
+          "Mu won w' odo Re, Olugbala wa."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Angeli Jesu, angel' mole,",
+          "Won n korin ayo pade ero l' ona."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 4,
+        "lines": [
+          "Maa korin n so, eyin Angeli rere.",
+          "E maa korin didun, k' a a baa maa gbo;",
+          "Tit' a o fi 'nu omije oju wa nu;",
+          "Ti a o si maa yo titi laelae."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Angeli Jesu, angel' mole,",
+          "Won n korin ayo pade ero l' ona."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "473",
+    "number": 473,
+    "title": "Gbat' Ajo Mi Ba Pin",
+    "english_title": "When My Life Work Is Ended",
+    "references": {
+      "AH": 703
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Gbat' ajo mi ba pin, ti mo goke odo aye,",
+          "Ti ara iku yi si gbe aiku wo,",
+          "Em' o mo Olugbala mi lodi keji odo,",
+          "Oun paapaa ni yoo ko ki mi ku abo."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Em' o mo On, em' o mo On.",
+          "Lodo Re l' emi o si duro;",
+          "Em' o mo On, em' o mo On,",
+          "Nipa ami iso owo Re."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "A! Ireti ibukun, gba ti mo ba r' oju Re,",
+          "Ati gbogbo didan ogo ewa Re;",
+          "Okan mi y' o f' iyin fun Un F' opo oor'-ofe Re,",
+          "Ti O pese ibugbe fun mi l' oke."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Em' o mo On, em' o mo On.",
+          "Lodo Re l' emi o si duro;",
+          "Em' o mo On, em' o mo On,",
+          "Nipa ami iso owo Re."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "A! emi yoo ri awon won-on-ni ti mo ti fe",
+          "Ti won ti fi aye osi yii sile;",
+          "Nibi 'simi ogba Eden' a ki yoo pinya lae.",
+          "Sugbon mo ko fe ri Oluwa mi na."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Em' o mo On, em' o mo On.",
+          "Lodo Re l' emi o si duro;",
+          "Em' o mo On, em' o mo On,",
+          "Nipa ami iso owo Re."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 4,
+        "lines": [
+          "Laarin 'bode ilu, ninu aso ogbo funfun,",
+          "Yoo sin mi de ibi ti ekun ko si;",
+          "Inu mi yoo dun pelu orin ayeraye,",
+          "Sugbon mo ko fe ri Oluwa mi naa."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Em' o mo On, em' o mo On.",
+          "Lodo Re l' emi o si duro;",
+          "Em' o mo On, em' o mo On,",
+          "Nipa ami iso owo Re."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "474",
+    "number": 474,
+    "title": "Title missing",
+    "english_title": "Title missing",
+    "references": {
+      "AH": 705
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "'Gba ta ba ba Jesu duro n' ile ibukun ni",
+          "Ti ojo irin-ajo wa yoo pin;",
+          "Awa yoo ha ranti iya ti a ti je ri bi?",
+          "Tab' a o ranti a o ranti ibanuje aye yii?"
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Awa ki yoo ranti gbogbo isoro wa rara",
+          "Nigba ta a ba ti pari ise wa l' aye yii,",
+          "Nigba ti a ba ti f' ade iye de wa lori,",
+          "Ohun gbogbo l' a o gbagbe l' oj' ayo naa."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Nigba ti a ba fi oro ijoba naa han wa.",
+          "T' Oba si pe wa lati pin n' ayo Re;",
+          "Awa yoo ha le fi ibanuje aye yii",
+          "We oro ogo ti ijoba orun?"
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Awa ki yoo ranti gbogbo isoro wa rara",
+          "Nigba ta a ba ti pari ise wa l' aye yii,",
+          "Nigba ti a ba ti f' ade iye de wa lori,",
+          "Ohun gbogbo l' a o gbagbe l' oj' ayo naa."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Nigba ti a ba ri awon ti a ti ranlowo,",
+          "Ti won duro yi ite Olorun ka",
+          "S' a o k' abam' akoko ta a lo lati ran won lowo?",
+          "Tab' a o kegan oro oore-ofe Re?"
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Awa ki yoo ranti gbogbo isoro wa rara",
+          "Nigba ta a ba ti pari ise wa l' aye yii,",
+          "Nigba ti a ba ti f' ade iye de wa lori,",
+          "Ohun gbogbo l' a o gbagbe l' oj' ayo naa."
+        ]
+      }
+    ],
+    "revision": 1
+  },
+  {
+    "index": "475",
+    "number": 475,
+    "title": "Ipe Naa Ti Dun To",
+    "english_title": "How Welcome Was the Call",
+    "references": {
+      "RAH": 491,
+      "SDAH": 265
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Ipe naa ti dun to,",
+          "Ojo ayo si ni,",
+          "Nigba ti Jesu, ni Kana,",
+          "Bukun 'gbeyawo naa."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Jesu Baba ife,",
+          "So kale wa lonii;",
+          "Lati fun wa ni 'bukun Re,",
+          "Ti ki yoo tan laelae."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Tu bukun Re sori,",
+          "Oko at' aya yii,",
+          "Ibukun ti o n san jade,",
+          "Lati 'ha Re, Jesu."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 4,
+        "lines": [
+          "Ba wa p' Emi Mimo",
+          "Aanu yii l' a n' toro;",
+          "Bi O ti so won po s' okan",
+          "Bukun won titi lae."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "476",
+    "number": 476,
+    "title": "Ire Taa Su Ni Eden",
+    "english_title": "The Voice That Breathed O'er Eden",
+    "references": {
+      "NAH": 490
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Ire taa su ni Eden,",
+          "Ni 'gbeyawo kin-in ni",
+          "Ibukun ta a bukun won,",
+          "O wa sibe sibe."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Sibe titi di oni,",
+          "N' igbeyawo kristen;",
+          "Olorun wa laarin wa,",
+          "Lati sure fun wa."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Ire ki won le maa bi,",
+          "Ki won si le maa re;",
+          "Ki won n' idapo Mimo,",
+          "T' enikan k' yoo le tu."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 4,
+        "lines": [
+          "Ba ni pe Baba, si fa",
+          "Obinrin yii f' oko;",
+          "Bi O ti fi Eefa fun",
+          "Adam l' ojo kin ni."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "477",
+    "number": 477,
+    "title": "Baba, Awa Gbe Okan",
+    "english_title": "We Lift Our Hearts, O Father",
+    "references": {
+      "NAH": 561
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Baba, awa gbe okan",
+          "At' ohun wa si O,",
+          "Fun iranse Re wonyi",
+          "Ni adura at' iyin,",
+          "Iyin fun ayo fife,",
+          "Awon ayo t' oke,",
+          "Iyin 'bukun ainiye",
+          "Ati ife s' ife."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Adura ki ituuba",
+          "Tooto le di pipe,",
+          "K' okan d' ara ekeji",
+          "Ki won j' okan n' nu Re;",
+          "Adura k' idapo won",
+          "Le je timotimo,",
+          "Gege bi 'de ti o so",
+          "Kristi mo ijo Re"
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Adura k' ileri yii",
+          "Le j' asepe n' pa Re,",
+          "Si f' ibukun ti ki i tan",
+          "Si odun aye won,",
+          "Iyin 'reti t' o logo",
+          "T' o r' ehin ikele",
+          "Nib' igbagbo gbe fo lo.",
+          "Nib' ife kii i ye lae."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "478",
+    "number": 478,
+    "title": "Ife Pipe",
+    "english_title": "O Perfect Love",
+    "references": {
+      "SDAH": 656,
+      "NAH": 560
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Ife pipe t' o ga ju ero wa lo,",
+          "A f' irele kunle n' waju 'te Re",
+          "Ki ife ailopin le maa je t' awon",
+          "Ti Iwo so po titi laelae."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Iye pipe maa se igbekeke won,",
+          "Ife at' igbagbo ti ko lee ye,",
+          "Fun won n' ireti at' ifarada nla,",
+          "Ti ki i beru iku tab' irora."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Fun won l' ayo ti n mu 'banuje fo lo",
+          "Fun won l' alaafia ti n mu 'ja tan.",
+          "Fi ife at' iye ailopin fun won",
+          "K' aye won si je eyi t' o logo."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "479",
+    "number": 479,
+    "title": "Simi Le Oluwa",
+    "english_title": "Rest in Lord",
+    "references": {
+      "HC": 523
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Simi le Oluwa, e gbo",
+          "Orin duuru orun;",
+          "Simi le Ife ailopin,",
+          "Si duro jee."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Simi iwo oko t'ogba,",
+          "Iyawo re lonii Ninu",
+          "Jesu, 'yawo re ni",
+          "Titi aye."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Iwo ti a fa owo re",
+          "F' oko n' nu ile yii,",
+          "Simi, Baba f' edidi Re",
+          "S' ileri yin."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 4,
+        "lines": [
+          "E simi, eyin ore won",
+          "T' e e wa ba won pe jo;",
+          "Olorun won, ati ti yin,",
+          "Gba ohun won."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 5,
+        "lines": [
+          "Simi: Jesu oko ijo",
+          "Duro ti yin nihin-in;",
+          "Ninu idapo, o n fa,",
+          "Ijo mo 'ra."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 6,
+        "lines": [
+          "E simi: Adaba Mimo,",
+          "Sise Re ninu wa;",
+          "Simi le ife ailopin",
+          "Si duro jee."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "480",
+    "number": 480,
+    "title": "Jesu F' Ara Han Ni Tooto",
+    "english_title": "Jesus truly manifested himself",
+    "references": {},
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Jesu f' ara han ni tooto",
+          "Nibi ase 'yawo;",
+          "Oluwa, awa be O, wa,",
+          "F' ara Re han nihin-in."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Fi ibukun Re fun awon",
+          "Ti o dawo po yii,",
+          "F' oju rere wo 'dapo won,",
+          "Si bukun eje won."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "F' ebun ife kun aya won,",
+          "Fun won n' itelorun;",
+          "Fi alaafia Re fun won,",
+          "Si busi ini won."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 4,
+        "lines": [
+          "F' ife mimo so won d' okan,",
+          "Ki won fife Kristi",
+          "Mu aniyan ile fere,",
+          "Nipa ajumo se."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 5,
+        "lines": [
+          "Je ki won ran 'ra won lowo,",
+          "Ninu igbagbo won;",
+          "Ki won si ni omo rere,",
+          "Ti yoo gbe 'le won ro!",
+          "Amin."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "481",
+    "number": 481,
+    "title": "Ohun T' Aa Fi Fun O",
+    "english_title": "We Give Thee But Thine Own",
+    "references": {
+      "SDAH": 670,
+      "NAH": 372
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Ohun t' aa fi fun O",
+          "Tire ni Oluwa,",
+          "Gbogbo ohun ti a si ni;",
+          "Owo Re l' o ti wa,"
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Je k' a gba ebun Re",
+          "Bi iriju rere,",
+          "Bi o si ti n bukun wa to,",
+          "Bee l' a o fi fun O."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Opo ni ise n se",
+          "Ti won ko r' ounje je;",
+          "Opo l' o si ti sako lo",
+          "Kuro l' agbo Jesu."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 4,
+        "lines": [
+          "K' a maa tu ni ninu,",
+          "K' a maa re ni l' ekun,",
+          "K' a maa bo alaini-baba,",
+          "N' ise taa ba maa se."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 5,
+        "lines": [
+          "A gba oro Re gbo",
+          "Busi igbagbo wa;",
+          "Ohun t' a a se fun eni Re",
+          "Jesu, a se e fun O."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "482",
+    "number": 482,
+    "title": "Eyin Ijo Olorun",
+    "english_title": "You the Church of God",
+    "references": {},
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Eyin Ijo Olorun,",
+          "E mu 'damewa yin wa,",
+          "E mu 'damewa at' ore yin",
+          "Wa f' Oluwa."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Ase Oluwa wa ni,",
+          "O pese 'bukun f' awon",
+          "To ba j' oloooto ninu sisan",
+          "'Damew' at' ore."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Ibukun fun yin nile,",
+          "Ibukun fun yin l' oko,",
+          "Ibukun fun yin nibi gbogbo",
+          "Ti e ba n lo."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "483",
+    "number": 483,
+    "title": "Krist' Oluwa, Wa Pelu Wa",
+    "english_title": "Christ The Lord, Be With Us",
+    "references": {
+      "RAH": 500
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Krist' Oluwa, wa pelu wa,",
+          "B'a ti wole ni ile Re;",
+          "B'a ti n korin, t'a n gbadura,",
+          "Je k'a ronu s'ohun t'a n wi,",
+          "Je k'a f' eti si Oro Re,",
+          "Ma je k'okan wa sako lo."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "484",
+    "number": 484,
+    "title": "Jesu Gbo Tiwa",
+    "english_title": "Hear Our Prayer, O Lord",
+    "references": {
+      "SDAH": 684,
+      "CH": 688
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Jesu gbo tiwa,",
+          "Gbo adura wa;",
+          "Teti sile si wa,",
+          "F' alaafia fun wa.",
+          "Amin."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "485",
+    "number": 485,
+    "title": "Iwo Eni T' O O N Gb' Adura Okan",
+    "english_title": "O Thou Who Heareth Every Heart felt Prayer",
+    "references": {
+      "SDAH": 668,
+      "CH": 684
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Iwo Eni t' o o n gb' adura okan.",
+          "F' oore-ofe Re pese okan wa;",
+          "'Wo n' iye, ife at' imole wa,",
+          "Se wakat' Ojo Isimi l' adun,",
+          "Amin."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "486",
+    "number": 486,
+    "title": "Oluwa Pa Wa Mo",
+    "english_title": "Lord Keep Us Safe",
+    "references": {
+      "NAH": 367,
+      "CH": 694
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Oluwa pa wa mo,",
+          "L' ailewu l' ale yii;",
+          "K' awon angel so busun wa,",
+          "Tit' ile yoo fi mo. Amin."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "487",
+    "number": 487,
+    "title": "Gb' Adura Mi, Baba Orun",
+    "english_title": "Hear My Prayer, O heavenly Father",
+    "references": {
+      "NAH": 368
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Gb' adura mi, Baba orun,",
+          "K' emi to lo dubule;",
+          "Je ki angeli mimo Re",
+          "So mi lori 'busun mi."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "488",
+    "number": 488,
+    "title": "Oore-ofe Krist' Oluwa",
+    "english_title": "May the Grace of Christ Our Saviour",
+    "references": {
+      "SDAH": 659,
+      "AH": 223
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Oore-ofe Krist' Oluwa",
+          "Ife Baba ailopin,",
+          "Oju-rere Emi Mimo,",
+          "K' o t' oke ba s' ori wa."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Bayi l' a le maa jumo gbe",
+          "N' irepo n' nu Oluwa;",
+          "K' a si le ni 'dapo didun,",
+          "At' ayo t 'aye ko ni.",
+          "Amin."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "489",
+    "number": 489,
+    "title": "Wa S' Id' Ite Pelu Owo",
+    "english_title": "With Reverence Let the Saints Appear",
+    "references": {
+      "CH": 4
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Wa s' id' ite pelu owo,",
+          "E wole f' Oluwa,",
+          "E f' irele Gbo ase Re",
+          "E beru oro Re;",
+          "E beru oro Re."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "490",
+    "number": 490,
+    "title": "Jesu Wa Laarin Wa",
+    "english_title": "Jesus, Stand Among Us",
+    "references": {
+      "SDAH": 683,
+      "NAH": 270
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Jesu wa laarin wa",
+          "L' agbar' ajinde,",
+          "K' akoko 'sin wa yii",
+          "Le kun fun owo."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Fi Emi Mimo Re",
+          "S' okan gbogbo wa;",
+          "Le eru oun edun",
+          "Kuro l' okan wa."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Bee ni kanmokanmo,",
+          "L' a o t' ese m' ona",
+          "A o maa reti ooro",
+          "Oj' ayeraye."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "491",
+    "number": 491,
+    "title": "Oluwa N Be 'Nu Tempili Re",
+    "english_title": "The Lord Is in His Holy Temple",
+    "references": {
+      "SDAH": 692,
+      "BH": 482
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Oluwa n be 'nu tempili Re",
+          "Oluwa n be 'nu tempili Re",
+          "Ki gbogb' aye pa roro",
+          "Ki gbogb' aye pa roro n' waju Re",
+          "Pa roro, pa roro, n waju Re.",
+          "Amin."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "492",
+    "number": 492,
+    "title": "Oluwa N Be 'Nu Tempili Re",
+    "english_title": "The Lord is in His Holy Temple",
+    "references": {
+      "SDAH": 687,
+      "CH": 690,
+      "BH": 482
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Oluwa n be 'Nu tempili Re",
+          "Oluwa n be 'nu tempili Re",
+          "Ki gbogb' aye pa roro",
+          "Ki gbogb' aye pa roro",
+          "Pa roro, n' waju Re."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "493",
+    "number": 493,
+    "title": "Yin Olorun, Ibu Oore",
+    "english_title": "Praise God From whom All Blessings Flow",
+    "references": {},
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Yin Olorun, ibu oore;",
+          "E yin In, eyin eda aye,",
+          "E yin In, eyin eda orun,",
+          "Yin Baba, Omo, oun Emi.",
+          "Amin."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "494",
+    "number": 494,
+    "title": "Duro Pelu Okan Kan",
+    "english_title": "Standing by a Purpose True",
+    "references": {
+      "NAH": 675,
+      "CH": 497
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Duro pelu okan kan,",
+          "Se 'fe Olorun,",
+          "Yin awon olotito,",
+          "Awon egbe Daniel'!"
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Se gege bi Daniel'",
+          "Ma wo enikan!",
+          "Ni ero rere l' okan!",
+          "Si je ki aye mo."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Opo akin l' o n segbe,",
+          "Won ko to duro;",
+          "Won ba wo egbe Daniel',",
+          "Won ba ja f' Olorun."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Se gege bi Daniel'",
+          "Ma wo enikan!",
+          "Ni ero rere l' okan!",
+          "Si je ki aye mo."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Opolopo omiran,",
+          "Ti n hale kiri",
+          "Ni iba subu lu ile",
+          "B' egbe Daniel' ko won!"
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Se gege bi Daniel'",
+          "Ma wo enikan!",
+          "Ni ero rere l' okan!",
+          "Si je ki aye mo."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 4,
+        "lines": [
+          "Gb' opagun 'hin-rere ga!",
+          "E maa segun n so!",
+          "Pe ogun Esu n' ija,",
+          "Ho yee f' egbe Daniel'!"
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Se gege bi Daniel'",
+          "Ma wo enikan!",
+          "Ni ero rere l' okan!",
+          "Si je ki aye mo."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "495",
+    "number": 495,
+    "title": "Jesu, 'Se Wa Fun Mi Bi",
+    "english_title": "Master Hast Thou Work For Me?",
+    "references": {
+      "NAH": 663
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Jesu, 'se wa fun mi bi?",
+          "N o f' ayo sise fun O;",
+          "Alailagbara l' emi,",
+          "Bee mo fe wulo fun O;",
+          "B' owo tile kere",
+          "Sibe n o sise fun O."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Jesu 'se wa fun mi bi?",
+          "N o f' ayo sise fun O."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Je ki n ko nigb' ewe mi",
+          "Eko lati 'nu 'we Re;",
+          "Je ki n rin ni ona Re",
+          "K' emi si mo ife Re;",
+          "Mo fi ara mi fun O,",
+          "Je ki n sin O, Oba mi!"
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Jesu 'se wa fun mi bi?",
+          "N o f' ayo sise fun O."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Je ki n maa fun irugbin,",
+          "Je ki n maa se 'se rere;",
+          "Fi 'fe 'ranwo Re fun mi",
+          "Fun mi ni igbekele;",
+          "Mo mo pe 'wo yoo ko mi,",
+          "Bi n o ti sin O nihin."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Jesu 'se wa fun mi bi?",
+          "N o f' ayo sise fun O."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "496",
+    "number": 496,
+    "title": "Olorun R' Opeere Subu",
+    "english_title": "God Sees The Little Sparrow Fall",
+    "references": {
+      "NAH": 656
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Olorun r' opeere subu,",
+          "O doju aanu Re;",
+          "B' Olorun fe 'ye kekere,",
+          "Mo mo, O fe mi naa."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "O fe mi naa, O fe mi naa,",
+          "Mo mo, O fe mi naa,",
+          "'Tor' O fe ohun kekere,",
+          "Mo mo, O fe mi naa."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "O kun awon lili igbe,",
+          "O f' oorun fun lili;",
+          "B' O ba fe 'tanna kekere,",
+          "Mo mo, O fe mi naa."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "O fe mi naa, O fe mi naa,",
+          "Mo mo, O fe mi naa,",
+          "'Tor' O fe ohun kekere,",
+          "Mo mo, O fe mi naa."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "O da awon eye, 'tanna,",
+          "Ati ohun gbogbo,",
+          "Ko si gbagbe awon 'mo Re,",
+          "Mo mo, p' O feran won."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "O fe mi naa, O fe mi naa,",
+          "Mo mo, O fe mi naa,",
+          "'Tor' O fe ohun kekere,",
+          "Mo mo, O fe mi naa."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "497",
+    "number": 497,
+    "title": "Ore Kan N Be Fun Omode",
+    "english_title": "There's a Friend for Little Children",
+    "references": {
+      "AH": 589
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Ore kan n be fun omode",
+          "Loke orun lohun-un;",
+          "Ore ti kii yipada,",
+          "T' ife Re ko le ku;",
+          "Ko dabi ore aye,",
+          "Ti n baje l' odoodun,",
+          "Oruko Re bi ore",
+          "Wo fun-un nigba-gbogbo."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Isimi kan n be f' omode",
+          "Loke orun lohun-un;",
+          "F' awon t' o f' Olugbala,",
+          "Ti n ke Abba Baba,",
+          "Isimi lowo 'yonu;",
+          "L' ow' ese at' ewu;",
+          "Nibi t' awon omode",
+          "Yoo simi titi lae."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Ile kan n be fun omode,",
+          "Loke orun lohun-un,",
+          "Nibi ti Jesu n joba,",
+          "Ile alaafia!",
+          "Ko s' ile t' o jo o l' aye",
+          "T'a le fi sakawe:",
+          "Ara ro 'lukuluku;",
+          "Irora naa dopin."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 4,
+        "lines": [
+          "Ade kan n be fun omode",
+          "Loke orun lohun-un;",
+          "Eni t' o ba n wo Jesu",
+          "Yoo ri ade naa de;",
+          "Ade t' o l' ogo julo,",
+          "Ti yoo fi fun gbogbo",
+          "Awon ore Re l' aye",
+          "Awon t' o fe E nihin-in."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "498",
+    "number": 498,
+    "title": "Awon Ewe Salemu",
+    "english_title": "Children of Jerusalem",
+    "references": {
+      "NAH": 650
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Awon ewe Salemu",
+          "Korin 'yin ooko Jesu;",
+          "Awa ewe t' isiyii,",
+          "Jumo yin Olugbala."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Gbo! gbo! gbo",
+          "B' awon ewe ti n ko,",
+          "Gbo! gbo! gbo",
+          "B' awon ewe ti n ko,",
+          "Ke Hosana, Ke Hosana",
+          "Ke Hosana s' Oba wa."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "A ko wa k' a f' Oluwa,",
+          "K' a si maa ka oro Re,",
+          "A f' ona orun han wa;",
+          "Ogo ni fun Olorun"
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Gbo! gbo! gbo",
+          "B' awon ewe ti n ko,",
+          "Gbo! gbo! gbo",
+          "B' awon ewe ti n ko,",
+          "Ke Hosana, Ke Hosana",
+          "Ke Hosana s' Oba wa."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "K' oluko, tagba-tewe,",
+          "Jumo gbe orin naa ga;",
+          "Loke-loke, k' o maa ho,",
+          "Ki Hosana de orun."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Gbo! gbo! gbo",
+          "B' awon ewe ti n ko,",
+          "Gbo! gbo! gbo",
+          "B' awon ewe ti n ko,",
+          "Ke Hosana, Ke Hosana",
+          "Ke Hosana s' Oba wa."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "499",
+    "number": 499,
+    "title": "Nigba Kan Awon 'Mode K' Orin",
+    "english_title": "Long Ago The Children Sang",
+    "references": {
+      "NAH": 649
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Nigba kan awon 'mode k' orin",
+          "Iyin si Jesu b' O ti n g' esin lo;",
+          "Hosana!Hosana!",
+          "Hosana l' oke orun!"
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Orin 'yin, orin 'yin",
+          "Je k'a won omode korin",
+          "Iyin won; Orin 'yin orin 'yin",
+          "Jesu fe gbo orin wa."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "B' igba 'tijo O fe gb' orin wa,",
+          "Orin iyin si Oba wa orun;",
+          "Hosana! Hosana!",
+          "Hosana l'oke orun!"
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Orin 'yin, orin 'yin",
+          "Je k'a won omode korin",
+          "Iyin won; Orin 'yin orin 'yin",
+          "Jesu fe gbo orin wa."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Nigboose a o korin t' o dun,",
+          "Pel' awujo to l' ogo, ta a gbala;",
+          "Hosana! Hosana!",
+          "Hosana l'oke orun!"
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Orin 'yin, orin 'yin",
+          "Je k'a won omode korin",
+          "Iyin won; Orin 'yin orin 'yin",
+          "Jesu fe gbo orin wa."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "500",
+    "number": 500,
+    "title": "Ina Kekere L' A N Se",
+    "english_title": "We are But Little Candles",
+    "references": {
+      "AH": 599
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Ina kekere l' a n se,",
+          "Awa le tan roro;",
+          "K' a f' imole tin-ntin wa",
+          "Fi Olugbala han,",
+          "Nigba ti awa ba n sin,",
+          "T' a si n mu 'fe Re se,",
+          "'Tori awa feran Re,",
+          "A si n fe se 'fe Re."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Nje winni, winni, winni, winni,",
+          "B' a ti n tan roro;",
+          "Itansan wa han yika wa,",
+          "Loke lodo, loke lodo,",
+          "Kaakiri ni 'bi gbogbo",
+          "Bayi l' awa n tan."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Isokuso oun 'binu,",
+          "Buru pupopupo;",
+          "'Tori won o pa 'na wa,",
+          "'Tori naa k' a sora,",
+          "Atuntan ina soro,",
+          "Sugbon k' a gbidanwo,",
+          "K' Olorun dariji wa,",
+          "K' O si ran wa lowo."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Nje winni, winni, winni, winni,",
+          "B'a ti n tan roro;",
+          "Itansan wa han yika wa,",
+          "Loke lodo, loke lodo,",
+          "Kaakiri ni 'bi gbogbo",
+          "Bayi l' awa n tan."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Ekun wa yoo pa 'na naa",
+          "'Tori naa k' a mura,",
+          "Lati maa yo n' gba-gbogbo",
+          "K' a ma se rewesi,",
+          "Tor' Eleda feran wa,",
+          "Yoo to yoo si ko wa;",
+          "O so fun wa n' oro Re",
+          "Ohun t' o ye k' a se."
+        ]
+      },
+      {
+        "type": "chorus",
+        "index": 1,
+        "lines": [
+          "Nje winni, winni, winni, winni,",
+          "B'a ti n tan roro;",
+          "Itansan wa han yika wa,",
+          "Loke lodo, loke lodo,",
+          "Kaakiri ni 'bi gbogbo",
+          "Bayi l' awa n tan."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "501",
+    "number": 501,
+    "title": "Jesu Pase Pe Ki Awa Maa Tan",
+    "english_title": "Jesus Bids Us Shine With a Pure Clear Light",
+    "references": {
+      "NAH": 670
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Jesu pase pe ki awa maa tan,",
+          "Bi 'mole kekere ti n mole l' ookun;",
+          "Okunkun wa l' aye, e je k' a maa tan,",
+          "Iwo ni ipo re, emi n' temi."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Jesu pase pe k' a ko tan f' Oun,",
+          "O ri, O si mo b' atupa wa sookun;",
+          "O wo wa lat' orun, bi awa ba n tan,",
+          "Iwo ni ipo re, emi n' temi."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Jesu ni k' a tan,",
+          "F' aladugbo wa,",
+          "Onirur' okunkun l' o wa ni aye,",
+          "Ese ati aini, a ni lati tan,",
+          "Iwo ni ipo re emi n temi."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "502",
+    "number": 502,
+    "title": "Gba 'Won Iya Salem",
+    "english_title": "When Mothers of Salem",
+    "references": {
+      "NAH": 657
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "'Gba 'won iya Salem'",
+          "Gb' omo won to Jesu wa,",
+          "Awon om' -ehin Re le won",
+          "Wi pe ki won maa lo;",
+          "Sugbon ki won to maa Sa lo.",
+          "Jesu ri won, O f' ayo pe,",
+          "“Je ki awon omo-wewe to Mi wa!”"
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Em' o tewo gba won,",
+          "N o gbe won mora pelu;",
+          "Emi yoo je Oluso won",
+          "E ma se le won lo!",
+          "Bi won ba f' okan won fun Mi,",
+          "Won yoo ba Mi gbe'nu ogo;",
+          "Je ki awon, omo-wewe to Mi wa!"
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "Olugbala wa seun",
+          "T' O tewo gba 'won 'mo naa",
+          "Sugbon opo ewe n be ti",
+          "Ko gbo ooko Re ri.",
+          "Ti won ko ka Bibeli ri",
+          "Nibi t' Olugbala so,",
+          "“Je ki awon omo-wewe to Mi wa”"
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 4,
+        "lines": [
+          "Laipe ki keferi",
+          "Ti n be ni gbogbo aye",
+          "M' oro Re se, ki won si ko",
+          "Orisa won danu!",
+          "Joo tan imole Re si won,",
+          "Fara han b' Olorun ife;",
+          "Ko awon 'mo-wewe lati to O wa."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "503",
+    "number": 503,
+    "title": "Eyin In, E Ein In Gbogb' Eyin Omode",
+    "english_title": "Praise Him! Praise Him! All Ye Little Children",
+    "references": {
+      "NAH": 645
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Eyin In, e yin In,",
+          "Gbogb' eyin omode,",
+          "Ife ni Olorun;",
+          "E yin In, e yin In",
+          "Gbogb' eyin omode,",
+          "Ife ni Olorun."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "E f' ope fun un",
+          "Gbogb' eyin omode,",
+          "Ife ni Olorun;",
+          "E f' ope fun un",
+          "Gbogb' eyin omode,",
+          "Ife ni Olorun."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "E feran Re,",
+          "Gbogb' eyin omode,",
+          "Ife ni Olorun;",
+          "E feran Re,",
+          "Gbogb' eyin omode,",
+          "Ife ni Olorun."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 4,
+        "lines": [
+          "E se E l'Oba",
+          "Gbogb' eyin omode,",
+          "Ife ni Olorun;",
+          "E se E l' Oba",
+          "Gbogb' eyin omode,",
+          "Ife ni Olorun."
+        ]
+      }
+    ],
+    "revision": 2
+  },
+  {
+    "index": "504",
+    "number": 504,
+    "title": "Yika Or' Ite Olorun",
+    "english_title": "Around The Throne of God",
+    "references": {
+      "HC": 511
+    },
+    "lyrics": [
+      {
+        "type": "verse",
+        "index": 1,
+        "lines": [
+          "Yika or' ite Olorun,",
+          "Egberun ewe wa,",
+          "Ewe ta a dari ese ji,",
+          "Awon egbe mimo",
+          "N korin ogo, ogo, ogo,",
+          "N korin ogo, ogo, ogo."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 2,
+        "lines": [
+          "Kil' o mu won de aye naa,",
+          "Orun t' o se mimo,",
+          "Nib' alaafia at' ayo,",
+          "Bi won ti se de 'be?",
+          "N korin ogo, ogo, ogo,",
+          "N korin ogo, ogo, ogo."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 3,
+        "lines": [
+          "'Tori won, Jesu ta' je Re,",
+          "Lati k' ese won lo",
+          "A ri won ninu eje naa,",
+          "Won di mimo laulau;",
+          "N korin ogo, ogo, ogo,",
+          "N korin ogo, ogo, ogo."
+        ]
+      },
+      {
+        "type": "verse",
+        "index": 4,
+        "lines": [
+          "L' aye won wa Olugbala,",
+          "Won fe oruko Re;",
+          "Nisisiyi won r' oju Re",
+          "Won wa niwaji Re;",
+          "N korin ogo, ogo, ogo,",
+          "N korin ogo, ogo, ogo."
         ]
       }
     ],
