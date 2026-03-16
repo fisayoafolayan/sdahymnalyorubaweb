@@ -1,0 +1,18 @@
+{
+  "name": "Iwe Orin SDA",
+  "short_name": "Iwe Orin SDA",
+  "description": "Yoruba Seventh-Day Adventist Hymnal for worship, study and church projection",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F4F3FC",
+  "theme_color": "#5B52C8",
+  "lang": "yo",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2212%22%20fill%3D%22%235B52C8%22%2F%3E%3Cpath%20d%3D%22M10%2014%20L10%2050%20L32%2050%20L32%2014%20Q21%2011%2010%2014Z%22%20stroke%3D%22white%22%20stroke-width%3D%222.5%22%20fill%3D%22none%22%2F%3E%3Cpath%20d%3D%22M54%2014%20L54%2050%20L32%2050%20L32%2014%20Q43%2011%2054%2014Z%22%20stroke%3D%22white%22%20stroke-width%3D%222.5%22%20fill%3D%22none%22%2F%3E%3C%2Fsvg%3E",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
