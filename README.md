@@ -180,7 +180,7 @@ Each hymn has a `revision` field that increments when its content changes. You c
 
 ## License
 
-All rights reserved. The hymn texts are used for worship and educational purposes.
+This project is licensed under the [MIT License](LICENSE).
 
 ## Contact
 
