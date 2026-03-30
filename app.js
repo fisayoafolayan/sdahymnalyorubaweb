@@ -181,6 +181,10 @@ function syncSearch(q) {
         scored.sort((a, b) => b.score - a.score || a.hymn.number - b.hymn.number);
         filtered = scored.map(s => s.hymn);
     }
+    if (normalised && typeof umami !== 'undefined') {
+        clearTimeout(syncSearch._t);
+        syncSearch._t = setTimeout(() => umami.track('search', { query: q, results: filtered.length }), 1000);
+    }
     listScrollTop = 0;
     $('list-wrap').scrollTop = 0;
     renderList();
@@ -208,6 +212,7 @@ function selectHymn(hymn) {
     const url = new URL(location.href);
     url.searchParams.set('hymn', hymn.number);
     history.replaceState(null, '', url);
+    if (typeof umami !== 'undefined') umami.track('hymn_viewed', { hymn_id: hymn.number, title: hymn.title });
     scrollSidebarToActive();
 }
 
@@ -286,6 +291,7 @@ $('fs-down').addEventListener('click', () => { readFz = Math.max(readFz - 0.12, 
 
 $('pres-open').addEventListener('click', () => {
     if (!current) return;
+    if (typeof umami !== 'undefined') umami.track('hymn_presented', { hymn_id: current.number, title: current.title });
     $('pf-num').textContent  = 'Hymn ' + current.number;
     $('pf-name').textContent = current.title;
     presIdx = 0;
@@ -518,6 +524,7 @@ $('theme-btn').addEventListener('click', () => {
     const next = current === 'dark' ? 'light' : 'dark';
     localStorage.setItem('theme', next);
     applyTheme(next);
+    if (typeof umami !== 'undefined') umami.track('theme_toggle', { theme: next });
 });
 
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
