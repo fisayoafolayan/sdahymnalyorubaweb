@@ -26,22 +26,24 @@ async function loadData() {
 
 // Normalise text — strips diacritics
 function normalise(str) {
-    return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+    return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9\s]/gi, '').toLowerCase();
 }
 
 // Pre-built search index — built once on load, reused on every keystroke
 let searchIndex = [];
 
 function buildIndex() {
-    searchIndex = HYMNS.map(h => ({
-        hymn: h,
-        blob: normalise([
-            h.title,
-            h.english_title,
-            String(h.number),
-            ...h.lyrics.flatMap(b => b.lines.map(l => typeof l === 'string' ? l : l.text))
-        ].join(' '))
-    }));
+    searchIndex = HYMNS.map(h => {
+        const refs = Object.entries(h.references || {}).map(([k, v]) => k + ' ' + v).join(' ');
+        return {
+            hymn: h,
+            number: String(h.number),
+            title: normalise(h.title),
+            englishTitle: normalise(h.english_title),
+            refs: normalise(refs),
+            lyrics: normalise(h.lyrics.flatMap(b => b.lines.map(l => typeof l === 'string' ? l : l.text)).join(' '))
+        };
+    });
 }
 
 (async () => {
@@ -155,9 +157,30 @@ $('empty-browse-btn').addEventListener('click', openSidebar);
 
 function syncSearch(q) {
     const normalised = normalise(q);
-    filtered = normalised
-        ? searchIndex.filter(({blob}) => blob.includes(normalised)).map(({hymn}) => hymn)
-        : [...HYMNS];
+    if (!normalised) {
+        filtered = [...HYMNS];
+    } else {
+        const scored = [];
+        for (const entry of searchIndex) {
+            let score = 0;
+            // Exact hymn number match
+            if (entry.number === normalised) score = 100;
+            // Number starts with query
+            else if (entry.number.startsWith(normalised) && /^\d+$/.test(normalised)) score = 90;
+            // Yoruba title match
+            if (entry.title.includes(normalised)) score = Math.max(score, 80);
+            // English title match
+            if (entry.englishTitle.includes(normalised)) score = Math.max(score, 70);
+            // Reference match (e.g. "sdah 16", "nah 2")
+            if (entry.refs.includes(normalised)) score = Math.max(score, 60);
+            // Lyrics match
+            if (entry.lyrics.includes(normalised)) score = Math.max(score, 40);
+
+            if (score > 0) scored.push({ hymn: entry.hymn, score });
+        }
+        scored.sort((a, b) => b.score - a.score || a.hymn.number - b.hymn.number);
+        filtered = scored.map(s => s.hymn);
+    }
     listScrollTop = 0;
     $('list-wrap').scrollTop = 0;
     renderList();
