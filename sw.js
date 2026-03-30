@@ -28,11 +28,12 @@ self.addEventListener('activate', e => {
 });
 
 self.addEventListener('fetch', e => {
+  if (!e.request.url.startsWith('http')) return;
   e.respondWith(
     caches.match(e.request).then(cached => {
       // Return cache hit immediately, but refresh in background (stale-while-revalidate)
       const fetchPromise = fetch(e.request).then(response => {
-        if (response && response.status === 200 && response.type === 'basic') {
+        if (response && response.status === 200 && (response.type === 'basic' || response.type === 'cors')) {
           const clone = response.clone();
           caches.open(CACHE).then(c => c.put(e.request, clone));
         }
