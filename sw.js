@@ -1,12 +1,17 @@
-const CACHE = 'sda-hymnal-yoruba-v0.0.1';
+const CACHE = 'sda-hymnal-yoruba-v0.0.2';
 const ASSETS = [
   '/',
   '/index.html',
   '/styles.css',
   '/app.js',
   '/hymns.json',
-  '/manifest.json',
-  'https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Noto+Serif:ital,wght@0,400;0,500;1,400&display=swap'
+  '/manifest.json'
+];
+
+const CACHEABLE_ORIGINS = [
+  self.location.origin,
+  'https://fonts.googleapis.com',
+  'https://fonts.gstatic.com'
 ];
 
 self.addEventListener('install', e => {
@@ -27,24 +32,32 @@ self.addEventListener('activate', e => {
   );
 });
 
+function isCacheable(url) {
+  return CACHEABLE_ORIGINS.some(origin => url.startsWith(origin));
+}
+
 self.addEventListener('fetch', e => {
-  if (!e.request.url.startsWith('http')) return;
+  const url = e.request.url;
+
+  if (!url.startsWith('http') || !isCacheable(url)) return;
 
   if (e.request.mode === 'navigate') {
     e.respondWith(
-      fetch(e.request).catch(() =>
-        caches.match('/index.html')
-          .then(r => r || caches.match('/'))
-      )
+      fetch(e.request)
+        .then(response => {
+          const clone = response.clone();
+          caches.open(CACHE).then(c => c.put('/index.html', clone));
+          return response;
+        })
+        .catch(() => caches.match('/index.html'))
     );
     return;
   }
 
   e.respondWith(
     caches.match(e.request).then(cached => {
-      // Return cache hit immediately, but refresh in background (stale-while-revalidate)
       const fetchPromise = fetch(e.request).then(response => {
-        if (response && response.status === 200 && (response.type === 'basic' || response.type === 'cors')) {
+        if (response && response.status === 200) {
           const clone = response.clone();
           caches.open(CACHE).then(c => c.put(e.request, clone));
         }
