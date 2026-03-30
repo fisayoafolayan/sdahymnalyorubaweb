@@ -74,8 +74,6 @@ function buildIndex() {
         history.replaceState(null, '', url);
     } else if (startHymn) {
         selectHymn(startHymn);
-    } else if (window.innerWidth >= 769 && HYMNS.length) {
-        selectHymn(HYMNS[0]);
     }
 })();
 
