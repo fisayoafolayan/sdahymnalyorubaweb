@@ -449,7 +449,9 @@ function scrollSidebarToActive() {
 
 window.addEventListener('resize', () => { if ($('pres').classList.contains('on')) applyPresFz(); });
 
-$('menu-btn').addEventListener('click', openSidebar);
+$('menu-btn').addEventListener('click', () => {
+    $('sidebar').classList.contains('open') ? closeSidebar() : openSidebar();
+});
 $('home-btn').addEventListener('click', goHome);
 $('sb-overlay').addEventListener('click', closeSidebar);
 
