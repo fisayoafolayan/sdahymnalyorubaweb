@@ -18,7 +18,7 @@ async function loadData() {
   <svg style="width:36px;height:36px;color:var(--load-spin)" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
     <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><circle cx="12" cy="16" r="1" fill="currentColor"/>
   </svg>
-  <p style="max-width:320px;text-align:center;line-height:1.6">Could not load data store</p>`;
+  <p style="max-width:320px;text-align:center;line-height:1.6">Could not load hymns. Check your connection and try again.</p>`;
         return false;
     }
     return true;
