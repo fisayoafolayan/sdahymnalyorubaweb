@@ -24,12 +24,12 @@ async function loadData() {
     return true;
 }
 
-// Normalise text — strips diacritics
+// Normalise text - strips diacritics
 function normalise(str) {
     return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9\s]/gi, '').toLowerCase();
 }
 
-// Pre-built search index — built once on load, reused on every keystroke
+// Pre-built search index - built once on load, reused on every keystroke
 let searchIndex = [];
 
 function buildIndex() {
@@ -79,8 +79,8 @@ function buildIndex() {
     }
 })();
 
-// ── Virtual list — only renders visible rows ──
-const ROW_H = 62; // px per hymn row — must match CSS padding
+// ── Virtual list - only renders visible rows ──
+const ROW_H = 62; // px per hymn row - must match CSS padding
 let listScrollTop = 0;
 
 function renderList() {
@@ -342,7 +342,7 @@ function renderPresBlock() {
     $('p-prev').disabled   = presIdx === 0;
     stage.classList.remove('is-chorus', 'is-verse', 'is-title');
     $('p-prog').textContent = isEnd
-        ? '— / ' + (presBlocks.length - 1)
+        ? '- / ' + (presBlocks.length - 1)
         : presIdx === 0
             ? 'Title'
             : presIdx + ' / ' + (presBlocks.length - 1);
@@ -509,7 +509,7 @@ document.getElementById('canonical-url').setAttribute('href', canonicalBase);
 document.getElementById('og-url').setAttribute('content', canonicalBase);
 document.addEventListener('DOMContentLoaded', () => {
     const hymView = document.getElementById('hymn-view');
-    if (hymView) hymView.setAttribute('data-print-credit', 'SDA Hymnal Yoruba — ' + location.hostname);
+    if (hymView) hymView.setAttribute('data-print-credit', 'SDA Hymnal Yoruba - ' + location.hostname);
 });
 
 document.addEventListener('keydown', e => {
