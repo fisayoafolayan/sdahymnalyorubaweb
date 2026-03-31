@@ -122,8 +122,15 @@ function renderList() {
     frag.appendChild(bot);
 
     wrap.innerHTML = '';
-    wrap.appendChild(frag);
-    $('list-count').textContent = total + (total === 1 ? ' hymn' : ' hymns');
+    if (total === 0) {
+        const msg = document.createElement('div');
+        msg.className = 'no-results';
+        msg.textContent = 'No hymns found';
+        wrap.appendChild(msg);
+    } else {
+        wrap.appendChild(frag);
+    }
+    $('list-count').textContent = total === 0 ? 'No hymns found' : total + (total === 1 ? ' hymn' : ' hymns');
 }
 
 // Re-render on scroll to show newly visible rows

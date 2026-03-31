@@ -186,6 +186,7 @@ body { font-family: 'Noto Serif', Georgia, serif; background: var(--parch); colo
 .htitles { flex: 1; min-width: 0; }
 .hyo { font-size: 0.96rem; line-height: 1.3; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .hsub { font-size: 0.78rem; color: var(--muted); font-style: italic; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 2px; }
+.no-results { text-align: center; padding: 2rem 1rem; font-size: 0.85rem; color: var(--muted); font-style: italic; }
 #list-count { text-align: center; padding: 7px; font-size: 0.68rem; color: var(--muted); font-style: italic; border-top: 1px solid var(--border); }
 
 /* ═══ MAIN ═══ */
