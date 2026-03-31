@@ -303,6 +303,7 @@ $('pres-open').addEventListener('click', () => {
     $('pf-name').textContent = current.title;
     presIdx = 0;
     $('pres').classList.add('on');
+    history.pushState({ presentation: true }, '');
     renderPresBlock();
     document.addEventListener('keydown', presKey);
     const el = $('pres');
@@ -428,12 +429,14 @@ function presKey(e) {
     else if (e.key === '-') { presFz = Math.max(presFz - 0.15, 0.4); applyPresFz(); localStorage.setItem('presFz', presFz); }
 }
 function closePres() {
+    if (!$('pres').classList.contains('on')) return;
     $('pres').classList.remove('on');
     document.removeEventListener('keydown', presKey);
     if (document.fullscreenElement || document.webkitFullscreenElement) {
         if (document.exitFullscreen) document.exitFullscreen();
         else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
     }
+    if (history.state && history.state.presentation) history.back();
 }
 
 // Auto-scroll sidebar to keep active hymn visible (virtual list aware)
@@ -485,12 +488,16 @@ function openSidebar() {
     setTimeout(() => $('search').focus(), 250);
 }
 function closeSidebar() {
+    if (!$('sidebar').classList.contains('open')) return;
     $('sidebar').classList.remove('open');
     $('sb-overlay').classList.remove('show');
+    if (history.state && history.state.sidebar) history.back();
 }
 
 window.addEventListener('popstate', e => {
-    if ($('sidebar').classList.contains('open')) {
+    if ($('pres').classList.contains('on')) {
+        closePres();
+    } else if ($('sidebar').classList.contains('open')) {
         closeSidebar();
     }
 });
