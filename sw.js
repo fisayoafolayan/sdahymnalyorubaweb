@@ -1,4 +1,4 @@
-const CACHE = 'sda-hymnal-yoruba-v0.0.3';
+const CACHE = 'sda-hymnal-yoruba-v0.0.4';
 const ASSETS = [
   '/',
   '/index.html',
