@@ -481,12 +481,19 @@ function goHome() {
 function openSidebar() {
     $('sidebar').classList.add('open');
     $('sb-overlay').classList.add('show');
+    history.pushState({ sidebar: true }, '');
     setTimeout(() => $('search').focus(), 250);
 }
 function closeSidebar() {
     $('sidebar').classList.remove('open');
     $('sb-overlay').classList.remove('show');
 }
+
+window.addEventListener('popstate', e => {
+    if ($('sidebar').classList.contains('open')) {
+        closeSidebar();
+    }
+});
 
 function escHtml(s) { return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 
