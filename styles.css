@@ -225,7 +225,7 @@ body { font-family: 'Noto Serif', Georgia, serif; background: var(--parch); colo
 #empty-search::placeholder { color: var(--muted); }
 .empty-browse-btn {
     display: flex; align-items: center; justify-content: center; gap: 8px;
-    background: var(--accent); color: white; border: none; border-radius: 8px;
+    background: var(--hdr-bg); color: white; border: none; border-radius: 8px;
     padding: 11px 20px; font-family: 'Noto Serif', serif; font-size: 1rem;
     cursor: pointer; transition: opacity .15s; width: 100%;
 }
