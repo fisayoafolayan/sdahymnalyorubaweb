@@ -428,7 +428,7 @@ function presKey(e) {
     else if (e.key === '+' || e.key === '=') { presFz = Math.min(presFz + 0.15, 2.5); applyPresFz(); localStorage.setItem('presFz', presFz); }
     else if (e.key === '-') { presFz = Math.max(presFz - 0.15, 0.4); applyPresFz(); localStorage.setItem('presFz', presFz); }
 }
-function closePres() {
+function closePres(fromPopstate) {
     if (!$('pres').classList.contains('on')) return;
     $('pres').classList.remove('on');
     document.removeEventListener('keydown', presKey);
@@ -436,7 +436,7 @@ function closePres() {
         if (document.exitFullscreen) document.exitFullscreen();
         else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
     }
-    if (history.state && history.state.presentation) history.back();
+    if (!fromPopstate && history.state && history.state.presentation) history.back();
 }
 
 // Auto-scroll sidebar to keep active hymn visible (virtual list aware)
@@ -487,18 +487,18 @@ function openSidebar() {
     history.pushState({ sidebar: true }, '');
     setTimeout(() => $('search').focus(), 250);
 }
-function closeSidebar() {
+function closeSidebar(fromPopstate) {
     if (!$('sidebar').classList.contains('open')) return;
     $('sidebar').classList.remove('open');
     $('sb-overlay').classList.remove('show');
-    if (history.state && history.state.sidebar) history.back();
+    if (!fromPopstate && history.state && history.state.sidebar) history.back();
 }
 
 window.addEventListener('popstate', e => {
     if ($('pres').classList.contains('on')) {
-        closePres();
+        closePres(true);
     } else if ($('sidebar').classList.contains('open')) {
-        closeSidebar();
+        closeSidebar(true);
     }
 });
 
