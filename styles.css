@@ -127,7 +127,7 @@ body { font-family: 'Noto Serif', Georgia, serif; background: var(--parch); colo
 .xsvg { width: 28px; height: 24px; flex-shrink: 0; }
 .brand-text { line-height: 1.2; }
 .brand-name { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 600; color: #FFFFFF; letter-spacing: 0.04em; white-space: nowrap; }
-.brand-sub  { font-size: 0.55rem; color: rgba(255,255,255,0.7); letter-spacing: 0.14em; text-transform: uppercase; margin-top: 2px; }
+.brand-sub  { font-size: 0.55rem; color: rgba(255,255,255,0.85); letter-spacing: 0.14em; text-transform: uppercase; margin-top: 2px; }
 .hdr-actions { display: flex; gap: 6px; align-items: center; flex-shrink: 0; }
 .ic-btn {
     background: transparent; border: 1px solid rgba(255,255,255,0.25); color: #EEECfC;
