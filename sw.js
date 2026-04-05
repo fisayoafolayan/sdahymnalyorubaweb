@@ -1,4 +1,4 @@
-const CACHE = 'sda-hymnal-yoruba-v0.0.13';
+const CACHE = 'sda-hymnal-yoruba-v0.0.15';
 const ASSETS = [
   '/',
   '/index.html',
@@ -37,34 +37,37 @@ function isCacheable(url) {
 }
 
 self.addEventListener('fetch', e => {
+  if (e.request.method !== 'GET') return;
+
   const url = e.request.url;
+  if (!url.startsWith('http') || !isCacheable(url)) return;
 
-  if (!url.startsWith('http') || !isCacheable(url) || e.request.method !== 'GET') return;
-
-  if (e.request.mode === 'navigate' || (e.request.method === 'GET' && e.request.headers.get('accept').includes('text/html'))) {
-    e.respondWith(
-      fetch(e.request)
-        .then(response => {
-          const clone = response.clone();
-          caches.open(CACHE).then(c => c.put('/', clone));
-          return response;
-        })
-        .catch(() => caches.match('/').then(r => r || caches.match('/index.html')))
-    );
-    return;
-  }
-
+  // All requests: cache-first, then network
   e.respondWith(
-    caches.match(e.request).then(cached => {
-      const fetchPromise = fetch(e.request).then(response => {
+    caches.match(e.request, { ignoreSearch: e.request.mode === 'navigate' }).then(cached => {
+      if (cached) {
+        // Return cache immediately, update in background
+        fetch(e.request).then(response => {
+          if (response && response.status === 200) {
+            caches.open(CACHE).then(c => c.put(e.request, response));
+          }
+        }).catch(() => {});
+        return cached;
+      }
+
+      // Not in cache - try network, cache the result
+      return fetch(e.request).then(response => {
         if (response && response.status === 200) {
           const clone = response.clone();
           caches.open(CACHE).then(c => c.put(e.request, clone));
         }
         return response;
-      }).catch(() => cached);
-
-      return cached || fetchPromise;
+      }).catch(() => {
+        // Last resort for navigation: serve cached root
+        if (e.request.mode === 'navigate') {
+          return caches.match('/');
+        }
+      });
     })
   );
 });
