@@ -146,9 +146,47 @@ function debounce(fn, delay) {
 
 const debouncedSearch = debounce(syncSearch, 150);
 
+let searchHighlight = -1;
+
 $('search').addEventListener('input', () => {
+    searchHighlight = -1;
     debouncedSearch($('search').value.trim());
 });
+
+$('search').addEventListener('keydown', e => {
+    if (e.key === 'Enter') {
+        e.preventDefault();
+        const target = searchHighlight >= 0 && searchHighlight < filtered.length
+            ? filtered[searchHighlight] : filtered[0];
+        if (target) { selectHymn(target); $('search').blur(); }
+    } else if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        searchHighlight = Math.min(searchHighlight + 1, filtered.length - 1);
+        updateSearchHighlight();
+    } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        searchHighlight = Math.max(searchHighlight - 1, 0);
+        updateSearchHighlight();
+    }
+});
+
+function updateSearchHighlight() {
+    const wrap = $('list-wrap');
+    wrap.querySelectorAll('.hymn-row').forEach(el => el.classList.remove('kb-focus'));
+    if (searchHighlight < 0) return;
+    // Scroll the highlighted row into view
+    const rowTop = searchHighlight * ROW_H;
+    const { scrollTop, clientHeight } = wrap;
+    if (rowTop < scrollTop) wrap.scrollTop = rowTop;
+    else if (rowTop + ROW_H > scrollTop + clientHeight) wrap.scrollTop = rowTop + ROW_H - clientHeight;
+    listScrollTop = wrap.scrollTop;
+    renderList();
+    // Apply highlight after render
+    const rows = wrap.querySelectorAll('.hymn-row');
+    rows.forEach(el => {
+        if (parseInt(el.dataset.n) === filtered[searchHighlight]?.number) el.classList.add('kb-focus');
+    });
+}
 
 $('empty-search').addEventListener('input', () => {
     const q = $('empty-search').value.trim();
@@ -197,6 +235,8 @@ function syncSearch(q) {
     renderList();
 }
 
+let fromPopstate = false;
+
 function selectHymn(hymn) {
     current = hymn;
     document.querySelectorAll('.hymn-row').forEach(el => el.classList.toggle('active', parseInt(el.dataset.n) === hymn.number));
@@ -218,7 +258,11 @@ function selectHymn(hymn) {
     localStorage.setItem('lastHymn', hymn.number);
     const url = new URL(location.href);
     url.searchParams.set('hymn', hymn.number);
-    history.replaceState(null, '', url);
+    if (fromPopstate) {
+        fromPopstate = false;
+    } else {
+        history.pushState({ hymn: hymn.number }, '', url);
+    }
     if (typeof umami !== 'undefined') umami.track('hymn_' + hymn.number);
     scrollSidebarToActive();
 }
@@ -262,7 +306,10 @@ function renderHymn(hymn) {
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
     <span class="nav-label">Previous</span>
   </button>
-  <span class="hymn-nav-center">${idx + 1} of ${HYMNS.length}</span>
+  <div class="hymn-nav-center">
+    <span>${idx + 1} of ${HYMNS.length}</span>
+    <button class="share-icon" id="share-btn" aria-label="Share hymn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></button>
+  </div>
   <button class="hymn-nav-btn" id="hymn-next" ${hasNext ? '' : 'disabled'} aria-label="Next hymn">
     <span class="nav-label">Next</span>
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
@@ -280,6 +327,8 @@ ${html}`;
         const nextBtn = document.getElementById('hymn-next');
         if (prevBtn) prevBtn.addEventListener('click', () => selectHymn(HYMNS[idx - 1]));
         if (nextBtn) nextBtn.addEventListener('click', () => selectHymn(HYMNS[idx + 1]));
+        const shareBtn = document.getElementById('share-btn');
+        if (shareBtn) shareBtn.addEventListener('click', () => shareHymn(hymn));
         view.classList.remove('fading');
         // Move focus to hymn title on desktop for screen reader users
         if (window.innerWidth >= 769) {
@@ -287,6 +336,26 @@ ${html}`;
             if (title) title.focus();
         }
     }, 80);
+}
+
+function shareHymn(hymn) {
+    const url = new URL(location.href);
+    url.searchParams.set('hymn', hymn.number);
+    const shareData = {
+        title: `Hymn ${hymn.number} – ${hymn.title}`,
+        text: `${hymn.title} (${hymn.english_title})`,
+        url: url.toString()
+    };
+    if (navigator.share) {
+        navigator.share(shareData).catch(() => {});
+    } else {
+        navigator.clipboard.writeText(url.toString()).then(() => {
+            const btn = $('share-btn');
+            btn.classList.add('copied');
+            setTimeout(() => btn.classList.remove('copied'), 1500);
+        });
+    }
+    if (typeof umami !== 'undefined') umami.track('share_' + hymn.number);
 }
 
 function applyReadFz() {
@@ -459,6 +528,29 @@ function scrollSidebarToActive() {
 
 window.addEventListener('resize', () => { if ($('pres').classList.contains('on')) applyPresFz(); });
 
+// ── Swipe between hymns on mobile ──
+let mainSwipeX = 0, mainSwipeY = 0;
+$('main').addEventListener('touchstart', e => {
+    mainSwipeX = e.touches[0].clientX;
+    mainSwipeY = e.touches[0].clientY;
+}, { passive: true });
+$('main').addEventListener('touchend', e => {
+    if (!current) return;
+    const dx = e.changedTouches[0].clientX - mainSwipeX;
+    const dy = e.changedTouches[0].clientY - mainSwipeY;
+    if (Math.abs(dx) < 60 || Math.abs(dy) > Math.abs(dx)) return;
+    const idx = HYMNS.findIndex(h => h.number === current.number);
+    if (dx < -60 && idx < HYMNS.length - 1) selectHymn(HYMNS[idx + 1]);
+    else if (dx > 60 && idx > 0) selectHymn(HYMNS[idx - 1]);
+}, { passive: true });
+
+// ── Scroll-to-top button ──
+const scrollBtn = $('scroll-top');
+$('main').addEventListener('scroll', () => {
+    scrollBtn.classList.toggle('visible', current && $('main').scrollTop > 400);
+}, { passive: true });
+scrollBtn.addEventListener('click', () => $('main').scrollTo({ top: 0, behavior: 'smooth' }));
+
 $('menu-btn').addEventListener('click', () => {
     $('sidebar').classList.contains('open') ? closeSidebar() : openSidebar();
 });
@@ -475,9 +567,13 @@ function goHome() {
     filtered = [...HYMNS];
     renderList();
     localStorage.removeItem('lastHymn');
-    const url = new URL(location.href);
-    url.searchParams.delete('hymn');
-    history.replaceState(null, '', url);
+    if (fromPopstate) {
+        fromPopstate = false;
+    } else {
+        const url = new URL(location.href);
+        url.searchParams.delete('hymn');
+        history.pushState(null, '', url);
+    }
     $('main').scrollTo({ top: 0, behavior: 'smooth' });
 }
 
@@ -497,8 +593,20 @@ function closeSidebar(fromPopstate) {
 window.addEventListener('popstate', e => {
     if ($('pres').classList.contains('on')) {
         closePres(true);
-    } else if ($('sidebar').classList.contains('open')) {
+        return;
+    }
+    if ($('sidebar').classList.contains('open')) {
         closeSidebar(true);
+        return;
+    }
+    // Restore hymn from URL
+    const num = parseInt(new URLSearchParams(location.search).get('hymn'));
+    const hymn = num ? HYMNS.find(h => h.number === num) : null;
+    fromPopstate = true;
+    if (hymn) {
+        selectHymn(hymn);
+    } else {
+        goHome();
     }
 });
 
