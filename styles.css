@@ -141,7 +141,7 @@ body { font-family: 'Noto Serif', Georgia, serif; background: var(--parch); colo
 #menu-btn { display: none; }
 .pres-btn {
     display: flex; align-items: center; gap: 6px;
-    background: var(--parch); border: none; color: var(--ink);
+    background: rgba(255,255,255,0.15); border: none; color: #fff;
     height: 34px; padding: 0 14px; border-radius: 5px; cursor: pointer;
     font-family: 'Noto Serif', serif; font-size: 0.9rem; letter-spacing: 0.03em;
     transition: background .15s, opacity .15s; white-space: nowrap;
@@ -410,6 +410,8 @@ body { font-family: 'Noto Serif', Georgia, serif; background: var(--parch); colo
 .scroll-top svg { width: 20px; height: 20px; flex-shrink: 0; }
 .scroll-top.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
 .scroll-top:hover { background: var(--accent); }
+[data-theme="dark"] .scroll-top { background: rgba(255,255,255,0.15); }
+[data-theme="dark"] .scroll-top:hover { background: rgba(255,255,255,0.25); }
 
 /* ═══ PRINT ═══ */
 @media print {
