@@ -213,7 +213,7 @@ function selectHymn(hymn) {
         }))
     ];
     presIdx = 0;
-    if (window.innerWidth < 769) closeSidebar();
+    if (window.innerWidth < 769) closeSidebar(true);
     $('main').scrollTo({ top: 0, behavior: 'smooth' });
     localStorage.setItem('lastHymn', hymn.number);
     const url = new URL(location.href);
