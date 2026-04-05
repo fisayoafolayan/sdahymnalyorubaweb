@@ -41,7 +41,7 @@ self.addEventListener('fetch', e => {
 
   if (!url.startsWith('http') || !isCacheable(url) || e.request.method !== 'GET') return;
 
-  if (e.request.mode === 'navigate') {
+  if (e.request.mode === 'navigate' || (e.request.method === 'GET' && e.request.headers.get('accept').includes('text/html'))) {
     e.respondWith(
       fetch(e.request)
         .then(response => {
@@ -49,7 +49,7 @@ self.addEventListener('fetch', e => {
           caches.open(CACHE).then(c => c.put('/', clone));
           return response;
         })
-        .catch(() => caches.match('/'))
+        .catch(() => caches.match('/').then(r => r || caches.match('/index.html')))
     );
     return;
   }
