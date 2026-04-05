@@ -242,6 +242,7 @@ function selectHymn(hymn) {
     document.querySelectorAll('.hymn-row').forEach(el => el.classList.toggle('active', parseInt(el.dataset.n) === hymn.number));
     renderHymn(hymn);
     $('pres-open').disabled = false;
+    $('fs-toggle').style.display = '';
     presBlocks = [
         { type: 'title', index: 0, lines: [current.title, current.english_title] },
         ...hymn.lyrics.map(b => ({
@@ -270,6 +271,7 @@ function selectHymn(hymn) {
 function renderHymn(hymn) {
     $('empty').style.display = 'none';
     $('hymn-content').style.display = 'block';
+    document.querySelector('.scroll-spacer').style.height = '4rem';
     const view = $('hymn-view');
     view.classList.add('fading');
     setTimeout(() => {
@@ -358,12 +360,25 @@ function shareHymn(hymn) {
     if (typeof umami !== 'undefined') umami.track('share_' + hymn.number);
 }
 
+const FZ_SIZES = [
+    { label: 'A', value: 1.0 },
+    { label: 'A', value: 1.2 },
+    { label: 'A', value: 1.45 }
+];
+let fzIdx = FZ_SIZES.findIndex(s => s.value === readFz);
+if (fzIdx === -1) fzIdx = 0;
+
 function applyReadFz() {
     $('hymn-view').querySelectorAll('.s-line').forEach(el => el.style.fontSize = (1.08 * readFz) + 'rem');
 }
 
-$('fs-up').addEventListener('click',   () => { readFz = Math.min(readFz + 0.12, 1.8); applyReadFz(); localStorage.setItem('readFz', readFz); });
-$('fs-down').addEventListener('click', () => { readFz = Math.max(readFz - 0.12, 0.7); applyReadFz(); localStorage.setItem('readFz', readFz); });
+$('fs-toggle').addEventListener('click', () => {
+    fzIdx = (fzIdx + 1) % FZ_SIZES.length;
+    readFz = FZ_SIZES[fzIdx].value;
+    applyReadFz();
+    localStorage.setItem('readFz', readFz);
+});
+
 
 $('pres-open').addEventListener('click', () => {
     if (!current) return;
@@ -529,13 +544,17 @@ function scrollSidebarToActive() {
 window.addEventListener('resize', () => { if ($('pres').classList.contains('on')) applyPresFz(); });
 
 // ── Swipe between hymns on mobile ──
-let mainSwipeX = 0, mainSwipeY = 0;
+let mainSwipeX = 0, mainSwipeY = 0, mainSwipeOk = false;
 $('main').addEventListener('touchstart', e => {
+    mainSwipeOk = e.touches.length === 1;
     mainSwipeX = e.touches[0].clientX;
     mainSwipeY = e.touches[0].clientY;
 }, { passive: true });
+$('main').addEventListener('touchmove', e => {
+    if (e.touches.length > 1) mainSwipeOk = false;
+}, { passive: true });
 $('main').addEventListener('touchend', e => {
-    if (!current) return;
+    if (!current || !mainSwipeOk) return;
     const dx = e.changedTouches[0].clientX - mainSwipeX;
     const dy = e.changedTouches[0].clientY - mainSwipeY;
     if (Math.abs(dx) < 60 || Math.abs(dy) > Math.abs(dx)) return;
@@ -561,7 +580,9 @@ function goHome() {
     current = null;
     $('hymn-content').style.display = 'none';
     $('empty').style.display = '';
+    document.querySelector('.scroll-spacer').style.height = '0';
     $('pres-open').disabled = true;
+    $('fs-toggle').style.display = 'none';
     $('search').value = '';
     $('empty-search').value = '';
     filtered = [...HYMNS];
@@ -633,33 +654,39 @@ document.addEventListener('keydown', e => {
 // ── Theme toggle ──
 const sunSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
 const moonSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+const systemSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 7V2M12 22v-5"/><path d="M16.24 7.76l2.83-2.83M4.93 19.07l2.83-2.83"/><path d="M22 12h-5M7 12H2"/><path d="M19.07 19.07l-2.83-2.83M7.76 7.76L4.93 4.93"/><path d="M12 7a5 5 0 0 0 0 10" fill="currentColor" stroke="none"/></svg>';
 
-function getEffectiveTheme() {
-    const saved = localStorage.getItem('theme');
-    if (saved) return saved;
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+function getThemeMode() {
+    return localStorage.getItem('theme') || 'system';
 }
 
-function applyTheme(theme) {
-    document.documentElement.setAttribute('data-theme', theme);
+function resolveTheme(mode) {
+    if (mode === 'system') return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    return mode;
+}
+
+function applyTheme(mode) {
+    const resolved = resolveTheme(mode);
+    document.documentElement.setAttribute('data-theme', resolved);
     const btn = $('theme-btn');
-    if (btn) btn.innerHTML = theme === 'dark' ? sunSvg : moonSvg;
+    if (btn) btn.innerHTML = mode === 'system' ? systemSvg : resolved === 'dark' ? sunSvg : moonSvg;
     const meta = document.querySelector('meta[name="theme-color"]');
-    if (meta) meta.setAttribute('content', theme === 'dark' ? '#1A1840' : '#5B52C8');
+    if (meta) meta.setAttribute('content', resolved === 'dark' ? '#1A1840' : '#5B52C8');
 }
 
-applyTheme(getEffectiveTheme());
+applyTheme(getThemeMode());
 
 $('theme-btn').addEventListener('click', () => {
-    const current = getEffectiveTheme();
-    const next = current === 'dark' ? 'light' : 'dark';
-    localStorage.setItem('theme', next);
+    const mode = getThemeMode();
+    const next = mode === 'light' ? 'dark' : mode === 'dark' ? 'system' : 'light';
+    if (next === 'system') localStorage.removeItem('theme');
+    else localStorage.setItem('theme', next);
     applyTheme(next);
     if (typeof umami !== 'undefined') umami.track('theme_' + next);
 });
 
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-    if (!localStorage.getItem('theme')) applyTheme(getEffectiveTheme());
+    if (getThemeMode() === 'system') applyTheme('system');
 });
 
 if ('serviceWorker' in navigator) {

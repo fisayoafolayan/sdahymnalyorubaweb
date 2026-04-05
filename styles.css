@@ -43,7 +43,7 @@
     --badge-bg:    #E8E6F8;
     --ref-bg:      #E8E6F8;
     --ref-fg:      #7B78AA;
-    --fsbar-bg:    #FFFFFF;
+
     --load-spin:   #8B85E0;
     --ft-bg:       #FFFFFF;
     --ft-note:     #C8C5E8;
@@ -71,7 +71,7 @@
     --badge-bg:    #1E1C40;
     --ref-bg:      #1E1C40;
     --ref-fg:      #8886B0;
-    --fsbar-bg:    #161432;
+
     --ft-bg:       #121024;
     --ft-note:     #2A2850;
     --load-spin:   #9B95F0;
@@ -99,7 +99,7 @@
         --badge-bg:    #1E1C40;
         --ref-bg:      #1E1C40;
         --ref-fg:      #8886B0;
-        --fsbar-bg:    #161432;
+    
         --ft-bg:       #121024;
         --ft-note:     #2A2850;
         --load-spin:   #9B95F0;
@@ -192,7 +192,7 @@ body { font-family: 'Noto Serif', Georgia, serif; background: var(--parch); colo
 
 /* ═══ MAIN ═══ */
 #main { flex: 1; overflow-y: auto; background: var(--parch); position: relative; display: flex; flex-direction: column; }
-#main > #hymn-content, #main > #empty { flex: 1; }
+#main > #empty { flex: 1; }
 #main::-webkit-scrollbar { width: 5px; }
 #main::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
 
@@ -200,7 +200,7 @@ body { font-family: 'Noto Serif', Georgia, serif; background: var(--parch); colo
 /* ═══ EMPTY STATE ═══ */
 #empty {
     display: flex; flex-direction: column; align-items: center;
-    justify-content: center; height: 100%; padding: 2rem;
+    justify-content: center; padding: 2rem;
     text-align: center; color: var(--muted); gap: 1rem;
 }
 #empty .e-cross { width: 64px; height: 54px; color: var(--accent); }
@@ -239,7 +239,7 @@ body { font-family: 'Noto Serif', Georgia, serif; background: var(--parch); colo
 
 /* ═══ HYMN DISPLAY ═══ */
 #hymn-content { display: none; }
-#hymn-view { max-width: 660px; margin: 0 auto; padding: 2.5rem 2.5rem 5rem; width: 100%; transition: opacity 0.15s ease, transform 0.15s ease; }
+#hymn-view { max-width: 660px; margin: 0 auto; padding: 0.75rem 2.5rem 5rem; width: 100%; transition: opacity 0.15s ease, transform 0.15s ease; }
 #hymn-view.fading { opacity: 0; transform: translateY(4px); }
 .hymn-hdr { text-align: center; margin-bottom: 2.2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); border-bottom-color: transparent; box-shadow: 0 1px 0 var(--border); }
 .hymn-nav { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.2rem; }
@@ -279,17 +279,14 @@ body { font-family: 'Noto Serif', Georgia, serif; background: var(--parch); colo
 .cr-part { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); min-width: 90px; padding-top: 0.35rem; flex-shrink: 0; text-align: right; }
 .cr-text { flex: 1; }
 .cr-line.congregation .cr-text { font-style: italic; color: var(--accent-dk); }
-.fs-bar { display: flex; align-items: center; gap: 6px; padding: 12px 12px 7px; border-bottom: 1px solid var(--border); background: var(--fsbar-bg); box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
-.fs-lbl { font-size: 0.65rem; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; flex: 1; line-height: 28px; }
-.fs-btn { background: transparent; border: 1px solid var(--border); color: var(--muted); width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 12px; display: flex; align-items: center; justify-content: center; transition: border-color .1s, color .1s; }
-.fs-btn:hover { border-color: var(--accent); color: var(--accent-dk); }
-.fs-btn:active { transform: scale(0.9); }
 
 /* ═══ FOOTER ═══ */
 #site-footer {
     background: transparent; padding: 2rem 2rem 1.5rem;
     display: flex; flex-direction: column; align-items: center; gap: 0.75rem;
+    flex-shrink: 0;
 }
+.scroll-spacer { height: 0; flex-shrink: 0; }
 .footer-line { width: 32px; height: 2px; border-radius: 1px; background: var(--accent); opacity: 0.3; }
 .footer-links { display: flex; align-items: center; gap: 0.75rem; }
 .footer-links a {
@@ -299,6 +296,9 @@ body { font-family: 'Noto Serif', Georgia, serif; background: var(--parch); colo
 }
 .footer-links a:hover { color: var(--accent); }
 .footer-dot { width: 3px; height: 3px; border-radius: 50%; background: var(--border); }
+.theme-footer-btn { background: none; border: 1px solid var(--border); border-radius: 50%; cursor: pointer; color: var(--muted); padding: 6px; display: inline-flex; align-items: center; justify-content: center; transition: color 0.2s, border-color 0.2s; margin: 0.6rem 0; }
+.theme-footer-btn:hover { color: var(--accent); border-color: var(--accent); }
+.theme-footer-btn svg { width: 14px; height: 14px; }
 .footer-copy { font-size: 0.6rem; color: var(--muted); letter-spacing: 0.08em; }
 
 /* ═══ SIDEBAR OVERLAY ═══ */
@@ -371,7 +371,12 @@ body { font-family: 'Noto Serif', Georgia, serif; background: var(--parch); colo
     #hdr { justify-content: center; }
     #menu-btn { display: flex; position: absolute; left: max(0.75rem, env(safe-area-inset-left)); }
     .hdr-actions { position: absolute; right: max(0.75rem, env(safe-area-inset-right)); }
-    .brand { gap: 8px; max-width: calc(100vw - 200px); text-align: center; }
+    .hdr-actions { gap: 8px; }
+    .hdr-actions .ic-btn { width: 30px; height: 30px; }
+    .hdr-actions .ic-btn svg { width: 14px; height: 14px; }
+    .pres-btn { padding: 4px 8px; font-size: 0.65rem; }
+    .pres-btn svg { width: 12px; height: 12px; }
+    .brand { gap: 8px; max-width: calc(100vw - 180px); text-align: center; }
     .brand-name { font-size: 0.85rem; }
     .xsvg { display: none; }
     #hymn-view { padding: 1.5rem 1.8rem calc(4rem + env(safe-area-inset-bottom)); }
@@ -380,8 +385,6 @@ body { font-family: 'Noto Serif', Georgia, serif; background: var(--parch); colo
     .pf-info { display: none; }
     #pres-foot { padding-bottom: max(8px, env(safe-area-inset-bottom)); }
     #search { font-size: 1rem; padding: 10px 10px 10px 32px; }
-    .fs-btn { width: 36px; height: 36px; font-size: 14px; }
-    .fs-bar { padding: 6px 12px; gap: 8px; }
     .empty-search-wrap { display: flex; }
     #empty p { display: none; }
 }
@@ -411,7 +414,7 @@ body { font-family: 'Noto Serif', Georgia, serif; background: var(--parch); colo
 /* ═══ PRINT ═══ */
 @media print {
     #hdr, #sidebar, #sb-overlay, #loading, #pres,
-    #site-footer, .fs-bar, .hymn-nav, #empty, .scroll-top { display: none !important; }
+    #site-footer, .hymn-nav, #empty, .scroll-top { display: none !important; }
 
     html, body { height: auto; overflow: visible; background: #fff; }
     #app { display: block; padding-top: 0; height: auto; }
