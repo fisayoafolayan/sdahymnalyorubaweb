@@ -1,4 +1,4 @@
-const CACHE = 'sda-hymnal-yoruba-v0.0.15';
+const CACHE = 'sda-hymnal-yoruba-v0.0.16';
 const ASSETS = [
   '/',
   '/index.html',
@@ -36,38 +36,50 @@ function isCacheable(url) {
   return CACHEABLE_ORIGINS.some(origin => url.startsWith(origin));
 }
 
+function isNavigate(req) {
+  if (req.mode === 'navigate') return true;
+  const accept = req.headers.get('accept');
+  return accept && accept.includes('text/html');
+}
+
 self.addEventListener('fetch', e => {
   if (e.request.method !== 'GET') return;
 
   const url = e.request.url;
   if (!url.startsWith('http') || !isCacheable(url)) return;
 
-  // All requests: cache-first, then network
-  e.respondWith(
-    caches.match(e.request, { ignoreSearch: e.request.mode === 'navigate' }).then(cached => {
-      if (cached) {
-        // Return cache immediately, update in background
-        fetch(e.request).then(response => {
-          if (response && response.status === 200) {
-            caches.open(CACHE).then(c => c.put(e.request, response));
-          }
-        }).catch(() => {});
-        return cached;
-      }
+  // Navigation requests: always serve cached root page
+  if (isNavigate(e.request)) {
+    e.respondWith(
+      caches.open(CACHE).then(cache =>
+        cache.match('/').then(cached => {
+          const fetchPromise = fetch(e.request).then(response => {
+            if (response && response.status === 200) {
+              cache.put('/', response.clone());
+            }
+            return response;
+          }).catch(() => cached);
 
-      // Not in cache - try network, cache the result
-      return fetch(e.request).then(response => {
-        if (response && response.status === 200) {
-          const clone = response.clone();
-          caches.open(CACHE).then(c => c.put(e.request, clone));
-        }
-        return response;
-      }).catch(() => {
-        // Last resort for navigation: serve cached root
-        if (e.request.mode === 'navigate') {
-          return caches.match('/');
-        }
-      });
-    })
+          return cached || fetchPromise;
+        })
+      )
+    );
+    return;
+  }
+
+  // All other GET requests: cache-first
+  e.respondWith(
+    caches.open(CACHE).then(cache =>
+      cache.match(e.request).then(cached => {
+        const fetchPromise = fetch(e.request).then(response => {
+          if (response && response.status === 200) {
+            cache.put(e.request, response.clone());
+          }
+          return response;
+        }).catch(() => cached);
+
+        return cached || fetchPromise;
+      })
+    )
   );
 });
