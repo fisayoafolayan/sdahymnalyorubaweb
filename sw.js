@@ -1,4 +1,4 @@
-const CACHE = 'sda-hymnal-yoruba-v0.0.11';
+const CACHE = 'sda-hymnal-yoruba-v0.0.12';
 const ASSETS = [
   '/',
   '/index.html',
@@ -46,10 +46,10 @@ self.addEventListener('fetch', e => {
       fetch(e.request)
         .then(response => {
           const clone = response.clone();
-          caches.open(CACHE).then(c => c.put('/index.html', clone));
+          caches.open(CACHE).then(c => c.put('/', clone));
           return response;
         })
-        .catch(() => caches.match('/index.html'))
+        .catch(() => caches.match('/'))
     );
     return;
   }
