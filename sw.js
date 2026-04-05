@@ -1,4 +1,4 @@
-const CACHE = 'sda-hymnal-yoruba-v0.0.10';
+const CACHE = 'sda-hymnal-yoruba-v0.0.11';
 const ASSETS = [
   '/',
   '/index.html',
@@ -39,7 +39,7 @@ function isCacheable(url) {
 self.addEventListener('fetch', e => {
   const url = e.request.url;
 
-  if (!url.startsWith('http') || !isCacheable(url)) return;
+  if (!url.startsWith('http') || !isCacheable(url) || e.request.method !== 'GET') return;
 
   if (e.request.mode === 'navigate') {
     e.respondWith(
