@@ -22,7 +22,7 @@ A web-based Yoruba hymnal for Seventh-day Adventist worship, study, and church p
 
 ## Tech Stack
 
-No frameworks, no build tools, no dependencies.
+No frameworks, no dependencies. Uses [esbuild](https://esbuild.github.io/) for minification only.
 
 - `index.html` - markup
 - `styles.css` - all styles
@@ -31,14 +31,16 @@ No frameworks, no build tools, no dependencies.
 - `sw.js` - service worker for offline caching
 - `manifest.json` - PWA manifest
 - `sitemap.xml` - sitemap for search engines
+- `build.js` - build script (minifies JS, CSS, JSON into `dist/`)
 
 ## Running Locally
 
 ```bash
-npx serve .
+npm install
+npm run dev
 ```
 
-Then open [http://localhost:3000](http://localhost:3000).
+Then open [http://localhost:8787](http://localhost:8787). The dev server watches for file changes and auto-rebuilds.
 
 ## Contributing
 
@@ -86,7 +88,7 @@ All hymns live in `hymns.json`. Each hymn has this structure:
 1. **Fork** the repository
 2. **Create a branch** for your change (`git checkout -b fix/hymn-42-typo`)
 3. **Make your changes** - edit `hymns.json` for hymn corrections, or the relevant file for code changes
-4. **Test locally** with `npx serve .`
+4. **Test locally** with `npm run dev`
 5. **Submit a pull request** with a clear description of what you changed and why
 
 ### What We Need Help With
@@ -173,6 +175,8 @@ val url = "https://sdahymnalyoruba.com/hymns.json"
 - **Credit the source** - include a link back to this repository or [sdahymnalyoruba.com](https://sdahymnalyoruba.com).
 - **Contribute back** - if you find errors in the data, open a PR so all apps benefit.
 - **Bundle locally** - ship a copy of `hymns.json` in your app and use the URL only to check for updates.
+
+> **Note:** The live endpoint serves minified JSON (no whitespace). The readable, formatted version is in the [repository source](https://github.com/fisayoafolayan/sdahymnalyorubaweb/blob/main/hymns.json).
 
 ### Data Versioning
 

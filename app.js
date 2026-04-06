@@ -1,3 +1,21 @@
+/**
+ * app.js - SDA Hymnal Yoruba Web Application
+ *
+ * Main client-side logic for browsing, searching, and presenting Yoruba
+ * Seventh-day Adventist hymns. Loads hymn data from hymns.json, renders a
+ * virtual-scrolling sidebar list, provides accent-insensitive search, a
+ * reading view with adjustable font size, a full-screen presentation mode,
+ * swipe navigation, theme toggling, and PWA service-worker registration.
+ */
+
+// ── App State ──
+// HYMNS: full hymn dataset loaded from hymns.json
+// filtered: current search-filtered subset of HYMNS
+// current: currently selected/displayed hymn object (null = home screen)
+// presBlocks: structured blocks for presentation mode (title + verses/choruses)
+// presIdx: current slide index in presentation mode
+// presFz: presentation font size multiplier (persisted in localStorage)
+// readFz: reading view font size multiplier (persisted in localStorage)
 let HYMNS = [];
 let filtered = [];
 let current = null;
@@ -8,6 +26,7 @@ let readFz     = parseFloat(localStorage.getItem('readFz')) || 1.0;
 
 const $ = id => document.getElementById(id);
 
+/** Fetch hymn data from hymns.json. Returns false and shows error UI on failure. */
 async function loadData() {
     try {
         const res = await fetch('hymns.json');
@@ -24,7 +43,7 @@ async function loadData() {
     return true;
 }
 
-// Normalise text - strips diacritics
+/** Strip diacritics and special chars for search comparison. Yoruba text uses combining marks that must be removed for accent-insensitive matching. */
 function normalise(str) {
     return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9\s]/gi, '').toLowerCase();
 }
@@ -32,6 +51,7 @@ function normalise(str) {
 // Pre-built search index - built once on load, reused on every keystroke
 let searchIndex = [];
 
+/** Build the search index from HYMNS. Each entry contains pre-normalised text fields for fast substring matching on every keystroke. Called once after data load. */
 function buildIndex() {
     searchIndex = HYMNS.map(h => {
         const refs = Object.entries(h.references || {}).map(([k, v]) => k + ' ' + v).join(' ');
@@ -83,6 +103,7 @@ function buildIndex() {
 const ROW_H = 62; // px per hymn row - must match CSS padding
 let listScrollTop = 0;
 
+/** Render the sidebar hymn list using virtual scrolling. Only DOM nodes for visible rows (plus overscan buffer) are created. ROW_H (62px) must match CSS .hymn-row height (padding + content). */
 function renderList() {
     const wrap = $('list-wrap');
     const total = filtered.length;
@@ -139,6 +160,7 @@ $('list-wrap').addEventListener('scroll', () => {
     renderList();
 }, { passive: true });
 
+/** Create a debounced version of fn that delays execution by delay ms. */
 function debounce(fn, delay) {
     let timer;
     return (...args) => { clearTimeout(timer); timer = setTimeout(() => fn(...args), delay); };
@@ -170,6 +192,7 @@ $('search').addEventListener('keydown', e => {
     }
 });
 
+/** Scroll the keyboard-highlighted row into view and apply visual focus class. */
 function updateSearchHighlight() {
     const wrap = $('list-wrap');
     wrap.querySelectorAll('.hymn-row').forEach(el => el.classList.remove('kb-focus'));
@@ -200,6 +223,7 @@ $('empty-search').addEventListener('input', () => {
 
 $('empty-browse-btn').addEventListener('click', openSidebar);
 
+/** Filter and rank hymns against search query. Scoring priority: exact number (100) > number prefix (90) > Yoruba title (80) > English title (70) > references (60) > lyrics (40). */
 function syncSearch(q) {
     const normalised = normalise(q);
     if (!normalised) {
@@ -237,6 +261,7 @@ function syncSearch(q) {
 
 let fromPopstate = false;
 
+/** Select a hymn: update state, render content, update URL, close sidebar on mobile. */
 function selectHymn(hymn) {
     current = hymn;
     document.querySelectorAll('.hymn-row').forEach(el => el.classList.toggle('active', parseInt(el.dataset.n) === hymn.number));
@@ -268,14 +293,17 @@ function selectHymn(hymn) {
     scrollSidebarToActive();
 }
 
+/** Render hymn content into #hymn-view. First render is synchronous to avoid a flash of empty content; subsequent renders use an 80ms fade transition. */
+let initialLoad = true;
 function renderHymn(hymn) {
     $('empty').style.display = 'none';
     $('hymn-content').style.display = 'block';
     document.querySelector('.scroll-spacer').style.height = '4rem';
     const view = $('hymn-view');
-    view.classList.add('fading');
-    setTimeout(() => {
-        const refs = Object.entries(hymn.references || {}).map(([k,v]) => `<span class="ref-tag">${k} ${v}</span>`).join('');
+    const doFade = !initialLoad;
+    if (doFade) view.classList.add('fading');
+    const render = () => {
+        const refs = Object.entries(hymn.references || {}).map(([k,v]) => `<span class="ref-tag">${escHtml(String(k))} ${escHtml(String(v))}</span>`).join('');
         const idx = HYMNS.findIndex(h => h.number === hymn.number);
         const hasPrev = idx > 0;
         const hasNext = idx < HYMNS.length - 1;
@@ -331,15 +359,17 @@ ${html}`;
         if (nextBtn) nextBtn.addEventListener('click', () => selectHymn(HYMNS[idx + 1]));
         const shareBtn = document.getElementById('share-btn');
         if (shareBtn) shareBtn.addEventListener('click', () => shareHymn(hymn));
-        view.classList.remove('fading');
+        if (doFade) view.classList.remove('fading');
         // Move focus to hymn title on desktop for screen reader users
         if (window.innerWidth >= 769) {
             const title = document.getElementById('hymn-title');
             if (title) title.focus();
         }
-    }, 80);
+    };
+    if (doFade) setTimeout(render, 80); else { render(); initialLoad = false; }
 }
 
+/** Share hymn via Web Share API (mobile) or copy URL to clipboard (desktop). */
 function shareHymn(hymn) {
     const url = new URL(location.href);
     url.searchParams.set('hymn', hymn.number);
@@ -360,6 +390,7 @@ function shareHymn(hymn) {
     if (typeof umami !== 'undefined') umami.track('share_' + hymn.number);
 }
 
+// Reading font size steps: small (1.0x), medium (1.2x), large (1.45x)
 const FZ_SIZES = [
     { label: 'A', value: 1.0 },
     { label: 'A', value: 1.2 },
@@ -368,6 +399,7 @@ const FZ_SIZES = [
 let fzIdx = FZ_SIZES.findIndex(s => s.value === readFz);
 if (fzIdx === -1) fzIdx = 0;
 
+/** Apply current reading font size to all lyric lines. Base size is 1.08rem. */
 function applyReadFz() {
     $('hymn-view').querySelectorAll('.s-line').forEach(el => el.style.fontSize = (1.08 * readFz) + 'rem');
 }
@@ -412,6 +444,7 @@ $('pres-stage').addEventListener('touchend', e => {
     }
 }, { passive: true });
 
+/** Render the current presentation slide. Handles title, verse, chorus, call-response, and end-of-hymn states. Each line animates in with a staggered delay. */
 function renderPresBlock() {
     const endEl   = $('pres-end');
     const linesEl = $('pres-lines');
@@ -488,6 +521,7 @@ function renderPresBlock() {
     applyPresFz();
 }
 
+/** Scale presentation text based on viewport width and user font size preference. Base size ranges 18-52px proportional to screen width. */
 function applyPresFz() {
     const base = Math.max(18, Math.min(window.innerWidth * 0.038, 52));
     $('pres-lines').querySelectorAll('.pl').forEach(el => {
@@ -500,11 +534,13 @@ function applyPresFz() {
 $('p-next').addEventListener('click', advance);
 $('p-prev').addEventListener('click', retreat);
 $('pres-stage').addEventListener('click', e => { if (!e.target.closest('button') && !e.target.closest('#pres-foot')) advance(); });
+/** Move to next/previous presentation slide. */
 function advance()  { if (presIdx <= presBlocks.length - 1) { presIdx++; renderPresBlock(); } }
 function retreat()  { if (presIdx > 0) { presIdx--; renderPresBlock(); } }
 $('p-exit').addEventListener('click', closePres);
 $('pf-up').addEventListener('click',   () => { presFz = Math.min(presFz + 0.15, 2.5); applyPresFz(); localStorage.setItem('presFz', presFz); });
 $('pf-down').addEventListener('click', () => { presFz = Math.max(presFz - 0.15, 0.4); applyPresFz(); localStorage.setItem('presFz', presFz); });
+/** Keyboard handler for presentation mode. Arrow keys and space navigate slides; +/- adjust font; Escape exits. */
 function presKey(e) {
     if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') { e.preventDefault(); advance(); }
     else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); retreat(); }
@@ -512,6 +548,7 @@ function presKey(e) {
     else if (e.key === '+' || e.key === '=') { presFz = Math.min(presFz + 0.15, 2.5); applyPresFz(); localStorage.setItem('presFz', presFz); }
     else if (e.key === '-') { presFz = Math.max(presFz - 0.15, 0.4); applyPresFz(); localStorage.setItem('presFz', presFz); }
 }
+/** Exit presentation mode: hide overlay, remove keyboard listener, exit fullscreen, update history. */
 function closePres(fromPopstate) {
     if (!$('pres').classList.contains('on')) return;
     $('pres').classList.remove('on');
@@ -523,7 +560,7 @@ function closePres(fromPopstate) {
     if (!fromPopstate && history.state && history.state.presentation) history.back();
 }
 
-// Auto-scroll sidebar to keep active hymn visible (virtual list aware)
+/** Scroll the sidebar so the active hymn row is visible. Accounts for virtual list row positioning. */
 function scrollSidebarToActive() {
     if (!current) return;
     const idx = filtered.findIndex(h => h.number === current.number);
@@ -543,7 +580,9 @@ function scrollSidebarToActive() {
 
 window.addEventListener('resize', () => { if ($('pres').classList.contains('on')) applyPresFz(); });
 
-// ── Swipe between hymns on mobile ──
+// ── Swipe navigation ──
+// Horizontal swipe (>60px) on #main navigates between adjacent hymns.
+// Vertical scroll or multi-touch is ignored.
 let mainSwipeX = 0, mainSwipeY = 0, mainSwipeOk = false;
 $('main').addEventListener('touchstart', e => {
     mainSwipeOk = e.touches.length === 1;
@@ -576,6 +615,7 @@ $('menu-btn').addEventListener('click', () => {
 $('home-btn').addEventListener('click', goHome);
 $('sb-overlay').addEventListener('click', closeSidebar);
 
+/** Return to home/empty state: deselect hymn, clear search, update URL. */
 function goHome() {
     current = null;
     $('hymn-content').style.display = 'none';
@@ -598,12 +638,14 @@ function goHome() {
     $('main').scrollTo({ top: 0, behavior: 'smooth' });
 }
 
+/** Open the sidebar with history state for back-button support. */
 function openSidebar() {
     $('sidebar').classList.add('open');
     $('sb-overlay').classList.add('show');
     history.pushState({ sidebar: true }, '');
     setTimeout(() => $('search').focus(), 250);
 }
+/** Close the sidebar. Skips history.back() if triggered by popstate. */
 function closeSidebar(fromPopstate) {
     if (!$('sidebar').classList.contains('open')) return;
     $('sidebar').classList.remove('open');
@@ -631,6 +673,7 @@ window.addEventListener('popstate', e => {
     }
 });
 
+/** Escape HTML special characters to prevent XSS in innerHTML. */
 function escHtml(s) { return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 
 const canonicalBase = location.origin + '/';
@@ -651,20 +694,25 @@ document.addEventListener('keydown', e => {
     setTimeout(() => $('search').focus(), window.innerWidth < 769 ? 260 : 0);
 });
 
-// ── Theme toggle ──
+// ── Theme (light / dark / system) ──
+// Cycles: light -> dark -> system. System follows OS prefers-color-scheme.
+// Persisted in localStorage('theme'). Applied via data-theme attribute on <html>.
 const sunSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
 const moonSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
 const systemSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 7V2M12 22v-5"/><path d="M16.24 7.76l2.83-2.83M4.93 19.07l2.83-2.83"/><path d="M22 12h-5M7 12H2"/><path d="M19.07 19.07l-2.83-2.83M7.76 7.76L4.93 4.93"/><path d="M12 7a5 5 0 0 0 0 10" fill="currentColor" stroke="none"/></svg>';
 
+/** Get stored theme preference. Returns 'light', 'dark', or 'system'. */
 function getThemeMode() {
     return localStorage.getItem('theme') || 'system';
 }
 
+/** Resolve theme mode to actual 'light' or 'dark' value, checking OS preference for 'system'. */
 function resolveTheme(mode) {
     if (mode === 'system') return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
     return mode;
 }
 
+/** Apply theme: set data-theme attribute, update toggle button icon, update meta theme-color. */
 function applyTheme(mode) {
     const resolved = resolveTheme(mode);
     document.documentElement.setAttribute('data-theme', resolved);

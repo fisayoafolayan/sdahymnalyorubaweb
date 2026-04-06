@@ -64,8 +64,8 @@
 <body>
 
 <!-- LOADING -->
-<div id="loading">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+<div id="loading" role="status" aria-label="Loading hymnal">
+    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
         <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
     </svg>
     <p>Loading hymnal…</p>
@@ -75,7 +75,7 @@
 <header id="hdr">
     <div class="brand">
         <button class="ic-btn" id="menu-btn" aria-label="Open hymn list">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
             </svg>
         </button>
@@ -107,7 +107,7 @@
     </div>
     <div class="hdr-actions">
         <button class="ic-btn" id="fs-toggle" aria-label="Change text size" style="display:none">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><text x="1" y="20" font-size="13" font-family="serif" font-weight="600" fill="currentColor" stroke="none">A</text><text x="13" y="20" font-size="18" font-family="serif" font-weight="600" fill="currentColor" stroke="none">A</text></svg>
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><text x="1" y="20" font-size="13" font-family="serif" font-weight="600" fill="currentColor" stroke="none">A</text><text x="13" y="20" font-size="18" font-family="serif" font-weight="600" fill="currentColor" stroke="none">A</text></svg>
         </button>
         <button class="pres-btn" id="pres-open" disabled aria-label="Present hymn">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -124,9 +124,10 @@
     <aside id="sidebar">
         <div class="search-box">
             <div class="search-inner">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
                 </svg>
+                <label for="search" class="sr-only">Search hymns</label>
                 <input id="search" type="search" placeholder="Search by title, number or lyrics…" autocomplete="off" spellcheck="false">
             </div>
         </div>
@@ -159,9 +160,10 @@
             <p>Select a hymn from the list or search by title or number</p>
             <div class="empty-search-wrap">
                 <div class="empty-search-inner">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
                     </svg>
+                    <label for="empty-search" class="sr-only">Search hymns</label>
                     <input id="empty-search" type="search" placeholder="Search by title, number or lyrics…" autocomplete="off" spellcheck="false">
                 </div>
                 <button class="empty-browse-btn" id="empty-browse-btn">

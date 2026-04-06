@@ -1,3 +1,46 @@
+/*
+ * SDA Hymnal Yoruba - Stylesheet
+ *
+ * Structure:
+ *   1. CSS Variables (light theme, dark theme)
+ *   2. Reset & Base
+ *   3. Header
+ *   4. Layout
+ *   5. Sidebar & Search
+ *   6. Main Content & Hymn Display
+ *   7. Footer
+ *   8. Presentation Mode
+ *   9. Loading Screen
+ *  10. Responsive Breakpoints (768px tablet, 520px, 480px mobile)
+ *  11. Scroll-to-top
+ *  12. Print
+ *
+ * Z-index stack:
+ *   9999 - #loading (covers everything during load)
+ *    500 - #pres (fullscreen presentation mode)
+ *    300 - #hdr (fixed header)
+ *    200 - #sidebar (mobile overlay)
+ *    199 - #sb-overlay (backdrop behind sidebar)
+ *     10 - .scroll-top
+ *
+ * Key coupling:
+ *   .hymn-row height (padding + content ≈ 62px) must match ROW_H in app.js
+ */
+
+/* ═══ LIGHT THEME VARIABLES ═══
+   --accent/lt/dk: brand purple palette
+   --ink/ink2: text colors (primary, secondary)
+   --parch/parch2/cream: background colors (page, subtle, surface)
+   --muted: subdued text (labels, placeholders)
+   --border: dividers and input borders
+   --pres-*: presentation mode colors
+   --sidebar/hdr: layout dimensions
+   --row-active-*: selected hymn row colors
+   --chorus-*: chorus block styling
+   --badge/ref-*: hymn number badge and reference tag colors
+   --load-spin: loading spinner color
+   --ft-*: footer colors
+*/
 :root {
     --accent:   #8B85E0;
     --accent-lt:#C5C2F0;
@@ -49,7 +92,42 @@
     --ft-note:     #C8C5E8;
     --ft-logo:     #8B85E0;
 }
-/* ═══ DARK MODE ═══ */
+/* ═══ DARK MODE ═══
+   These two blocks MUST have identical values. Both are required:
+   - @media block: applies dark theme before JS loads (prevents white flash)
+   - [data-theme] block: applies dark theme when user explicitly toggles
+   CSS cannot combine @media selectors with attribute selectors, so
+   duplication is unavoidable without a build step. When changing dark
+   theme colors, update BOTH blocks.
+*/
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --accent:   #9B95F0;
+        --accent-lt:#6E68C0;
+        --accent-dk:#C5C2F0;
+        --ink:      #E8E6F8;
+        --ink2:     #D0CEE8;
+        --parch:    #121024;
+        --parch2:   #1A1836;
+        --cream:    #161432;
+        --muted:    #8886B0;
+        --border:   #2A2850;
+        --hdr-bg:      #1A1840;
+        --hdr-border:  #2A2850;
+        --row-active-bg: #2E2A60;
+        --row-active-fg: #E8E6F8;
+        --row-active-num:#9B95F0;
+        --chorus-bg:    rgba(139,133,224,0.1);
+        --badge-fg:    #9B95F0;
+        --badge-bg:    #1E1C40;
+        --ref-bg:      #1E1C40;
+        --ref-fg:      #8886B0;
+
+        --ft-bg:       #121024;
+        --ft-note:     #2A2850;
+        --load-spin:   #9B95F0;
+    }
+}
 [data-theme="dark"] {
     --accent:   #9B95F0;
     --accent-lt:#6E68C0;
@@ -77,38 +155,16 @@
     --load-spin:   #9B95F0;
 }
 
-@media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-        --accent:   #9B95F0;
-        --accent-lt:#6E68C0;
-        --accent-dk:#C5C2F0;
-        --ink:      #E8E6F8;
-        --ink2:     #D0CEE8;
-        --parch:    #121024;
-        --parch2:   #1A1836;
-        --cream:    #161432;
-        --muted:    #8886B0;
-        --border:   #2A2850;
-        --hdr-bg:      #1A1840;
-        --hdr-border:  #2A2850;
-        --row-active-bg: #2E2A60;
-        --row-active-fg: #E8E6F8;
-        --row-active-num:#9B95F0;
-        --chorus-bg:    rgba(139,133,224,0.1);
-        --badge-fg:    #9B95F0;
-        --badge-bg:    #1E1C40;
-        --ref-bg:      #1E1C40;
-        --ref-fg:      #8886B0;
-    
-        --ft-bg:       #121024;
-        --ft-note:     #2A2850;
-        --load-spin:   #9B95F0;
-    }
-}
-
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html, body { height: 100%; }
 body { font-family: 'Noto Serif', Georgia, serif; background: var(--parch); color: var(--ink); overflow: hidden; }
+
+/* ═══ UTILITIES ═══ */
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+/* Focus styles for keyboard navigation */
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.ic-btn:focus-visible, .pres-btn:focus-visible, .hymn-nav-btn:focus-visible { outline: 2px solid var(--accent-lt); outline-offset: 2px; }
 
 /* ═══ HEADER ═══ */
 #hdr {
@@ -361,7 +417,10 @@ body { font-family: 'Noto Serif', Georgia, serif; background: var(--parch); colo
 @keyframes spin { to { transform: rotate(360deg); } }
 #loading p { font-family: 'Playfair Display', serif; font-size: 0.9rem; color: var(--muted); letter-spacing: 0.05em; }
 
-/* ═══ RESPONSIVE ═══ */
+/* ═══ RESPONSIVE ═══
+   768px: Mobile layout - sidebar becomes slide-out overlay, header centers
+   520px: Footer safe area adjustment
+   480px: Hide presentation button label */
 @media (max-width: 768px) {
     :root { --sidebar: 88vw; }
     #hdr { padding-left: max(1rem, env(safe-area-inset-left)); padding-right: max(1rem, env(safe-area-inset-right)); }
