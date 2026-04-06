@@ -8,6 +8,25 @@ A web-based Yoruba hymnal for Seventh-day Adventist worship, study, and church p
 
 **Live site:** [sdahymnalyoruba.com](https://sdahymnalyoruba.com)
 
+## Screenshots
+
+<table align="center">
+  <tr>
+    <td align="center"><strong>Desktop</strong></td>
+    <td align="center"><strong>Mobile</strong></td>
+  </tr>
+  <tr>
+    <td><img src="screenshots/desktop-view-dark.png" alt="Desktop view with hymn list and lyrics" width="500"></td>
+    <td align="center"><img src="screenshots/hymn-view-light.png" alt="Mobile hymn view" width="250"></td>
+  </tr>
+  <tr>
+    <td align="center" colspan="2"><strong>Presentation Mode</strong></td>
+  </tr>
+  <tr>
+    <td align="center" colspan="2"><img src="screenshots/presentation-mode.png" alt="Presentation mode for church projection" width="700"></td>
+  </tr>
+</table>
+
 ## Features
 
 - Full-text search by title, number, or lyrics (with diacritics-insensitive matching)
