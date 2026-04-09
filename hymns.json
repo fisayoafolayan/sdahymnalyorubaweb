@@ -3,7 +3,7 @@
     "index": "001",
     "number": 1,
     "title": "Gbogbo Ẹ̀yin Tí Ń Gbé Ayé",
-    "english_title": "All People That On Earth Do Dwell",
+    "english_title": "All People On Earth Do Dwell",
     "references": {
       "SDAH": 16,
       "NAH": 2,
@@ -16703,8 +16703,8 @@
         "index": 1,
         "lines": [
           "Ìgbàgbọ́ àwọn ìyá wa",
-          "N' ín' orin àt' àdúrà f' ẹwé,",
-          "N' ìtàn ẹwé t' ó kún fún 'fẹ́;",
+          "N' 'n' orin àt' àdúrà f' ẹwé,",
+          "N' ìtàn ẹ̀we t' ó kún fún 'fẹ́;",
           "Ọwọ́ rẹ̀ sì wà yí wa ká.",
           "Gbàgbọ́ òótọ́ àwọn 'yá wa,",
           "A ó dúró tí ó d' ojú 'kú."
@@ -16718,7 +16718,7 @@
           "Orísun 'gbàgbọ́ àt' ìfẹ́;",
           "Jẹ́ kí 'fàradà rẹ le jẹ́",
           "Ìsun ìwà mímọ́ fún wa",
-          "Ìgbàgbọ́ fẹ́ t' àwọn ìyá wa?",
+          "Ìgbàgbọ́ 'fẹ́ t' àwọn ìyá wa?",
           "A ó s' òótọ́ sí o d' ojú 'kú."
         ]
       },
@@ -16727,7 +16727,7 @@
         "index": 3,
         "lines": [
           "Ìgbàgbọ́ àwọn ìyá wa,",
-          "T' ó ń tọ́ wa n' ínú ìwà ẹwé",
+          "T' ó ń tọ́ wa n' 'nú ìwà ẹ̀we",
           "Tí ó dì wá l' ojú ẹ̀mí:",
           "'Tọ́jú rẹ fún wa pọ̀ jọjọ",
           "Ìgbàgbọ́ àwọn ìyá wa,",
@@ -16752,60 +16752,61 @@
   {
     "index": "252",
     "number": 252,
-    "title": "Jesu mi, mo fe O",
+    "title": "Jésù Mi, Mo Fẹ́ Ọ",
     "english_title": "My Jesus I Love Thee",
     "references": {
       "SDAH": 321,
-      "NAH": 439
+      "NAH": 439,
+      "CH": 276
     },
     "lyrics": [
       {
         "type": "verse",
         "index": 1,
         "lines": [
-          "Jesu mi, mo fe O, O si je temi",
-          "Mo ko gbogbo ese sile n' tori Re!",
-          "Iwo l' Oluwa at' Olugbala mi;",
-          "Bi mo ba fe O ri, Yoo je nisiyi"
+          "Jésù mi, mo fẹ́ Ọ, Ọ sì jẹ́ tèmi",
+          "Mo kọ gbogbo ẹ̀ṣẹ̀ sílẹ̀ n' tòrí Rẹ!",
+          "Ìwọ l' Olúwa àt' Olùgbàlà mi;",
+          "Bí mo bá fẹ́ Ọ rí, yóò jẹ́ nísiyìí"
         ]
       },
       {
         "type": "verse",
         "index": 2,
         "lines": [
-          "Mo fe O 'tori pe 'Wo l' o ko fe mi,",
-          "O san gbese mi gba to O ku lor' igi;",
-          "Mo fe O n' tori pe o de ade egun;",
-          "Bi mo ba fe O ri, yoo je nisiyi."
+          "Mo fẹ́ Ọ 'tòrí pé 'Wọ l' ó kọ́ fẹ́ mi,",
+          "Ó san gbèsè mi gbà tó Ó kú lór' igi;",
+          "Mo fẹ́ Ọ n' tòrí pé o dé adé ẹ̀gún;",
+          "Bí mo bá fẹ́ Ọ rí, yóò jẹ́ nísiyìí."
         ]
       },
       {
         "type": "verse",
         "index": 3,
         "lines": [
-          "Ni iye, ni iku, emi yoo fe O;",
-          "Emi yoo yin O nigba ti mo ba n mi;",
-          "Nigba t' iku ba si pa oju mi de",
-          "Bi mo ba fe O ri yoo je nisiyi."
+          "Ní ìyè, ní ikú, èmi yóò fẹ́ Ọ;",
+          "Èmi yóò yìn Ọ nígbà tí mo bá ń mí;",
+          "Nígbà t' ikú bá sì pa ojú mi dé",
+          "Bí mo bá fẹ́ Ọ rí yóò jẹ́ nísiyìí."
         ]
       },
       {
         "type": "verse",
         "index": 4,
         "lines": [
-          "Ni 'bugbe ogo at' ayo ailopin",
-          "Emi yoo yin O, n o si gbe 'waju Re;",
-          "N o korin pel' ade ogo lori mi",
-          "Bi mo ba fe O ri yoo je nsisyi."
+          "Ní 'búgbé ògo àt' ayọ̀ àìlópin",
+          "Èmi yóò yìn Ọ, n ó sì gbé 'wájú Rẹ;",
+          "N ó kọrin pẹ̀l' adé ògo lórí mi",
+          "Bí mo bá fẹ́ Ọ rí yóò jẹ́ nísiyìí."
         ]
       }
     ],
-    "revision": 2
+    "revision": 3
   },
   {
     "index": "253",
     "number": 253,
-    "title": "Jesu S' aye Mi N' Imole",
+    "title": "Jésù Ṣ' ayé Mi N' Ìmọ́lẹ̀",
     "english_title": "God Make My Life a Little Light",
     "references": {
       "NAH": 677
@@ -16815,60 +16816,60 @@
         "type": "verse",
         "index": 1,
         "lines": [
-          "Jesu s' aye mi n' imole,",
-          "Lati tan 'nu aye;",
-          "K' emi le je 'mole nibi",
-          "Gbogbo ti mo ba lo."
+          "Jésù ṣ' ayé mi n' ìmọ́lẹ̀,",
+          "Láti tàn 'nú ayé;",
+          "K' èmi lè jẹ́ 'mọ́lẹ̀ níbi",
+          "Gbogbo tí mo bá lọ."
         ]
       },
       {
         "type": "verse",
         "index": 2,
         "lines": [
-          "Jesu, s' aye mi ni 'tanna,",
-          "Ti n f' ayo f' eniyan",
-          "Ti o maa n tan ni ipo re,",
-          "B' ibe tile kere."
+          "Jésù, ṣ' ayé mi ní 'tànná,",
+          "Tí ń f' ayọ̀ f' ènìyàn",
+          "Tí ó máa ń tàn ní ipò rẹ̀,",
+          "B' ibẹ̀ tilẹ̀ kéré."
         ]
       },
       {
         "type": "verse",
         "index": 3,
         "lines": [
-          "Jesu se aye mi l' orin,",
-          "Ti o n tu ni ninu;",
-          "Ti n fun elomii l' agbara",
-          "Ti n mu 'n' akorin dun."
+          "Jésù ṣe ayé mi l' orin,",
+          "Tí ó ń tù ní nínú;",
+          "Tí ń fún elòmíì l' agbára",
+          "Tí ń mu 'n' akọrin dùn."
         ]
       },
       {
         "type": "verse",
         "index": 4,
         "lines": [
-          "Jesu se aye mi l' opaa",
-          "Fun 'simi alaaare;",
-          "Ki 'lera at' agbara mi",
-          "Wa f' aladuugbo mi."
+          "Jésù ṣe ayé mi l' ọ̀pàá",
+          "Fún 'simi aláààrẹ̀;",
+          "Kí 'lera àt' agbára mi",
+          "Wá f' aládùúgbò mi."
         ]
       },
       {
         "type": "verse",
         "index": 5,
         "lines": [
-          "Jesu s' emi l' orin mimo,",
-          "Ti 'tunu at' iyin;",
-          "Ti igbagbo ti ki i tutu",
-          "L ona iyanu Re."
+          "Jésù ṣ' èmi l' orin mímọ́,",
+          "Ti 'tùnú àt' ìyìn;",
+          "Tí ìgbàgbọ́ ti kì í tutù",
+          "L' ọ̀nà ìyànu Rẹ."
         ]
       }
     ],
-    "revision": 2
+    "revision": 3
   },
   {
     "index": "254",
     "number": 254,
-    "title": "Lasan L' Afe Aye N Pe Mi",
-    "english_title": "Earthly Pleasure Vainly call Me",
+    "title": "Lásán L' Àfẹ́ Ayé Ń Pè Mí",
+    "english_title": "Earthly Pleasure Vainly Call Me",
     "references": {
       "SDAH": 311
     },
@@ -16877,89 +16878,89 @@
         "type": "verse",
         "index": 1,
         "lines": [
-          "Lasan l' afe aye n pe mi,",
-          "Mo fe dabi Jesu;",
-          "Ohun aye ko ni de mi,",
-          "Mo fe dabi Jesu."
+          "Lásán l' àfẹ́ ayé ń pè mí,",
+          "Mo fẹ́ dàbí Jésù;",
+          "Ohun ayé kò ní dé mi,",
+          "Mo fẹ́ dàbí Jésù."
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "Dabi Jesu l' orin mi,",
-          "Ninu 'le at' awujo;",
-          "Ki n jo Jesu l' ojoojo,",
-          "Mo fe dabi Jesu."
+          "Dàbí Jésù l' orin mi,",
+          "Nínú 'lé àt' àwùjọ;",
+          "Kí n jọ Jésù l' ọjọ́ọjọ́,",
+          "Mo fẹ́ dàbí Jésù."
         ]
       },
       {
         "type": "verse",
         "index": 2,
         "lines": [
-          "A! O ti ja gbogbo ide.",
-          "Mo fe dabi Jesu;",
-          "K okan mi le sin in b' o ti to,",
-          "Mo fe dabi Jesu."
+          "A! Ó ti ja gbogbo ìdè.",
+          "Mo fẹ́ dàbí Jésù;",
+          "K' ọkàn mi lè sìn ín b' ó ti tọ́,",
+          "Mo fẹ́ dàbí Jésù."
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "Dabi Jesu l' orin mi,",
-          "Ninu 'le at' awujo;",
-          "Ki n jo Jesu l' ojoojo,",
-          "Mo fe dabi Jesu."
+          "Dàbí Jésù l' orin mi,",
+          "Nínú 'lé àt' àwùjọ;",
+          "Kí n jọ Jésù l' ọjọ́ọjọ́,",
+          "Mo fẹ́ dàbí Jésù."
         ]
       },
       {
         "type": "verse",
         "index": 3,
         "lines": [
-          "Lati aye sinu ogo,",
-          "Mo fe da bi Jesu;",
-          "La o maa so itan ayo naa,",
-          "Mo fe dabi Jesu."
+          "Láti ayé sínú ògo,",
+          "Mo fẹ́ dà bí Jésù;",
+          "Là ó máa sọ ìtàn ayọ̀ náà,",
+          "Mo fẹ́ dàbí Jésù."
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "Dabi Jesu l' orin mi,",
-          "Ninu 'le at' awujo;",
-          "Ki n jo Jesu l' ojoojo,",
-          "Mo fe dabi Jesu."
+          "Dàbí Jésù l' orin mi,",
+          "Nínú 'lé àt' àwùjọ;",
+          "Kí n jọ Jésù l' ọjọ́ọjọ́,",
+          "Mo fẹ́ dàbí Jésù."
         ]
       },
       {
         "type": "verse",
         "index": 4,
         "lines": [
-          "Ki o le pade mi l' orun,",
-          "Mo fe dabi Jesu;",
-          "Ko O le so fun mi pe, 'o seun.",
-          "Mo fe dabi Jesu."
+          "Kí O lè padé mi l' ọ̀run,",
+          "Mo fẹ́ dàbí Jésù;",
+          "Ko O lè sọ fún mi pé, 'ó ṣeun.",
+          "Mo fẹ́ dàbí Jésù."
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "Dabi Jesu l' orin mi,",
-          "Ninu 'le at' awujo;",
-          "Ki n jo Jesu l' ojoojo,",
-          "Mo fe dabi Jesu."
+          "Dàbí Jésù l' orin mi,",
+          "Nínú 'lé àt' àwùjọ;",
+          "Kí n jọ Jésù l' ọjọ́ọjọ́,",
+          "Mo fẹ́ dàbí Jésù."
         ]
       }
     ],
-    "revision": 2
+    "revision": 3
   },
   {
     "index": "255",
     "number": 255,
-    "title": "A' Nba Le Ba Olorun Rin",
+    "title": "A' Ńbá Le Bá Ọlọ́run Rìn",
     "english_title": "O For A Closer Walk",
     "references": {
       "SDAH": 315
@@ -16969,50 +16970,50 @@
         "type": "verse",
         "index": 1,
         "lines": [
-          "A! nba le ba Olorun rin",
-          "Idapo simi t' orun;",
-          "Imole si oju ona,",
-          "S' odo Od' agutan."
+          "A! ńbá le bá Ọlọ́run rìn",
+          "Ìdápọ̀ sìmí t' ọ̀run;",
+          "Ìmọ́lẹ̀ sí ojú ọ̀nà,",
+          "S' ọ̀dọ̀ Od' àgùtàn."
         ]
       },
       {
         "type": "verse",
         "index": 2,
         "lines": [
-          "So kale Adaba orun,",
-          "Iranse tur' adun",
-          "Mo ko ese t' o n bi O n' nu",
-          "T' o mu O sa fun mi."
+          "Sọ kalẹ̀ Àdàbà ọ̀run,",
+          "Ìránṣẹ́ tùr' adùn",
+          "Mo kọ ẹ̀ṣẹ̀ t' ó ń bí Ọ n' nú",
+          "T' ó mú Ọ sá fún mi."
         ]
       },
       {
         "type": "verse",
         "index": 3,
         "lines": [
-          "A! adun s' imi l' odo Re",
-          "'Ranti won ti dun to!",
-          "Ayo simi yii di edun,",
-          "T' aye ko le ropo."
+          "A! àdùn sìmí l' ọ̀dọ̀ Rẹ",
+          "'Rántí wọn ti dùn tó!",
+          "Ayọ̀ sìmí yìí di ẹ̀dùn,",
+          "T' ayé kò lè rọ́pò."
         ]
       },
       {
         "type": "verse",
         "index": 4,
         "lines": [
-          "Ohun t' okan mi fe julo",
-          "Iru yowu k' o je;",
-          "Je ki n ya a k 'ro nwaju 'te Re",
-          "Ki n sin 'Wo nikan so."
+          "Ohun t' ọkàn mi fẹ́ jùlọ",
+          "Irú yòwú k' ó jẹ́;",
+          "Jẹ́ kí n yà á k' 'rọ̀ ńwájú 'tẹ́ Rẹ",
+          "Kí n sìn 'Wọ nìkan ṣo."
         ]
       }
     ],
-    "revision": 2
+    "revision": 3
   },
   {
     "index": "256",
     "number": 256,
-    "title": "Ob' Aye Mi, Kabiyesi",
-    "english_title": "King of My Life, I Crown Thee Now",
+    "title": "Ọb' Ayé Mi, Kàbíyèsí",
+    "english_title": "King Of My Life, I Crown Thee Now",
     "references": {
       "SDAH": 317
     },
@@ -17021,90 +17022,90 @@
         "type": "verse",
         "index": 1,
         "lines": [
-          "Ob' aye mi, Kabiyesi!",
-          "Ogo yoo je Tire;",
-          "Ki n ranti ade egun Re,",
-          "Sin mi de Kalfari."
+          "Ọb' ayé mi, Kàbíyèsí!",
+          "Ògo yóò jẹ́ Tire;",
+          "Kí n rántí adé ẹ̀gún Rẹ,",
+          "Sìn mi dé Kalfari."
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "Ki n ma gbagbe Getsemani,",
-          "Ki n ma gbagbe iya to O je;",
-          "Ki n ma baa gbagbe ife Re",
-          "Sin mi de Kalfari."
+          "Kí n má gbàgbé Getsemani,",
+          "Kí n má gbàgbé ìyà tó O jẹ;",
+          "Kí n má bàá gbàgbé ìfẹ́ Rẹ",
+          "Sìn mi dé Kalfari."
         ]
       },
       {
         "type": "verse",
         "index": 2,
         "lines": [
-          "Fi 'boji to O sun si han mi,",
-          "Gba won f' ekun sofo;",
-          "Angel' ta a wo l' aso mimo,",
-          "L' o n so O n' nu 'boji."
+          "Fi 'bòjì tó O sùn sí hàn mi,",
+          "Gbà wọ́n f' ẹkún ṣòfò;",
+          "Ángẹ́lì t' a a wò l' aṣọ mímọ́,",
+          "L' ó ń ṣọ́ Ọ n' nú 'bòjì."
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "Ki n ma gbagbe Getsemani,",
-          "Ki n ma gbagbe iya to O je;",
-          "Ki n ma baa gbagbe ife Re",
-          "Sin mi de Kalfari."
+          "Kí n má gbàgbé Getsemani,",
+          "Kí n má gbàgbé ìyà tó O jẹ;",
+          "Kí n má bàá gbàgbé ìfẹ́ Rẹ",
+          "Sìn mi dé Kalfari."
         ]
       },
       {
         "type": "verse",
         "index": 3,
         "lines": [
-          "Je ki n mu ebun wa fun O,",
-          "Gege bi Maria,",
-          "Fi 'boji ofo naa han mi,",
-          "Sin mi de Kalfari."
+          "Jẹ́ kí n mú ẹ̀bùn wá fún Ọ,",
+          "Gẹ́gẹ́ bí Maria,",
+          "Fi 'bòjì òfò náà hàn mi,",
+          "Sìn mi dé Kalfari."
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "Ki n ma gbagbe Getsemani,",
-          "Ki n ma gbagbe iya to O je;",
-          "Ki n ma baa gbagbe ife Re",
-          "Sin mi de Kalfari."
+          "Kí n má gbàgbé Getsemani,",
+          "Kí n má gbàgbé ìyà tó O jẹ;",
+          "Kí n má bàá gbàgbé ìfẹ́ Rẹ",
+          "Sìn mi dé Kalfari."
         ]
       },
       {
         "type": "verse",
         "index": 4,
         "lines": [
-          "Oluwa ran mi lowo, ki",
-          "N le forit' ipin mi;",
-          "Eto mi n' n' ago iya Re,",
-          "Ni wo ti ru fun mi."
+          "Olúwa ràn mí lọ́wọ́, kí",
+          "N lè forítì ìpín mi;",
+          "Ẹ̀tọ́ mi ń n' àgọ́ ìyà Rẹ,",
+          "Ní 'wọ ti rù fún mi."
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "Ki n ma gbagbe Getsemani,",
-          "Ki n ma gbagbe iya to O je;",
-          "Ki n ma baa gbagbe ife Re",
-          "Sin mi de Kalfari."
+          "Kí n má gbàgbé Getsemani,",
+          "Kí n má gbàgbé ìyà tó O jẹ;",
+          "Kí n má bàá gbàgbé ìfẹ́ Rẹ",
+          "Sìn mi dé Kalfari."
         ]
       }
     ],
-    "revision": 2
+    "revision": 3
   },
   {
     "index": "257",
     "number": 257,
-    "title": "Oluwa, Mo Fe Je Kristen",
-    "english_title": "Lord I want to be a Christian",
+    "title": "Olúwa, Mo Fẹ́ Jẹ́ Kristẹ́n",
+    "english_title": "Lord I Want To Be A Christian",
     "references": {
       "SDAH": 319
     },
@@ -17113,65 +17114,65 @@
         "type": "verse",
         "index": 1,
         "lines": [
-          "Oluwa, mo fe je Kristen,",
-          "N' n okan mi, n' ri' okan mi;",
-          "Oluwa, mo je Kriten",
-          "N n' okan mi",
-          "N n' okan mi",
-          "N n' okan mi",
-          "Oluwa, mo fe je Kristen',",
-          "N n' okan mi."
+          "Olúwa, mo fẹ́ jẹ́ Kristẹ́n,",
+          "N' n' ọkàn mi, n' n' ọkàn mi;",
+          "Olúwa, mo fẹ́ jẹ́ Kristẹ́n",
+          "N' n' ọkàn mi",
+          "N' n' ọkàn mi",
+          "N' n' ọkàn mi",
+          "Olúwa, mo fẹ́ jẹ́ Kristẹ́n,",
+          "N n' ọkàn mi."
         ]
       },
       {
         "type": "verse",
         "index": 2,
         "lines": [
-          "Oluwa, mo fe n' ife sii,",
-          "N' n'okan mi, N' n' okan mi,",
-          "Oluwa, mo fe n' ife sii,",
-          "N n' okan mi,",
-          "N n' okan mi,",
-          "N n' okan mi,",
-          "Oluwa, mo fe n ife sii",
-          "N' n' okan mi."
+          "Olúwa, mo fẹ́ n' ìfẹ́ síi,",
+          "N' n' ọkàn mi, n' n' ọkàn mi,",
+          "Olúwa, mo fẹ́ n' ìfẹ́ síi,",
+          "N' n' ọkàn mi,",
+          "N' n' ọkàn mi,",
+          "N' n' ọkàn mi,",
+          "Olúwa, mo fẹ́ n' ìfẹ́ síi",
+          "N' n' ọkàn mi."
         ]
       },
       {
         "type": "verse",
         "index": 3,
         "lines": [
-          "Oluwa, mo fe je mimo",
-          "N' n okan mi, n' n okan mi;",
-          "Oluwa, mo fe je mimo",
-          "N n'okan mi,",
-          "N n'okan mi,",
-          "N n'okan mi,",
-          "Oluwa, mo fe, je mimo",
-          "N' n' okan mi."
+          "Olúwa, mo fẹ́ jẹ́ mímọ́",
+          "N' n' ọkàn mi, n' n' ọkàn mi;",
+          "Olúwa, mo fẹ́ jẹ́ mímọ́",
+          "N' n' ọkàn mi,",
+          "N' n' ọkàn mi,",
+          "N' n' ọkàn mi,",
+          "Olúwa, mo fẹ́ jẹ́ mímọ́",
+          "N' n' ọkàn mi."
         ]
       },
       {
         "type": "verse",
         "index": 4,
         "lines": [
-          "Oluwa, mo fe jo Jesu,",
-          "N' n' okan mi, n' n' okan mi;",
-          "Oluwa, mi fe jo Jesu",
-          "N n' okan mi,",
-          "N n' okan mi,",
-          "N n' okan mi,",
-          "Oluwa, mo fe jo Jesu",
-          "N n' okan mi."
+          "Olúwa, mo fẹ́ jọ Jésù,",
+          "N' n' ọkàn mi, n' n' ọkàn mi;",
+          "Olúwa, mo fẹ́ jọ Jésù",
+          "N' n' ọkàn mi,",
+          "N' n' ọkàn mi,",
+          "N' n' ọkàn mi,",
+          "Olúwa, mo fẹ́ jọ Jésù",
+          "N n' ọkàn mi."
         ]
       }
     ],
-    "revision": 2
+    "revision": 3
   },
   {
     "index": "258",
     "number": 258,
-    "title": "Mo Fe Jesu Ju Wura Oun Fadaka",
+    "title": "Mo Fẹ́ Jésù Ju Wúrà Oùn Fàdákà",
     "english_title": "I'd Rather Have Jesus",
     "references": {
       "SDAH": 327
@@ -17181,69 +17182,69 @@
         "type": "verse",
         "index": 1,
         "lines": [
-          "Mo fe Jesu ju wura oun fadaka",
-          "Maa kuku yan Jesu ju oro aye;",
-          "Mo fe ni Jesu ju ile tab' ile",
-          "Mo ku ku fe k' owo Re maa to mi."
+          "Mo fẹ́ Jésù ju wúrà oùn fàdákà",
+          "Máa kúkú yàn Jésù ju ọrọ̀ ayé;",
+          "Mo fẹ́ ní Jésù ju ilé tàb' ilẹ̀",
+          "Mo kúkú fẹ́ k' ọwọ́ Rẹ máa tọ́ mi."
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "Ju ki n je Oba l' ori ilu kan",
-          "Tabi ajele ese",
-          "Mo fe Jesu ju ohun gbogbo lo",
-          "Ti aye le fun ni."
+          "Ju kí n jẹ́ Ọba l' orí ìlú kan",
+          "Tàbí àjẹlẹ̀ ẹ̀ṣẹ̀",
+          "Mo fẹ́ Jésù ju ohun gbogbo lọ",
+          "Tí ayé lè fún ni."
         ]
       },
       {
         "type": "verse",
         "index": 2,
         "lines": [
-          "Mo fe Jesu ju iyin eniyan lo,",
-          "Mo fe j' olooto iriju ise Re;",
-          "Mo fe Jesu ju okiki aye.",
-          "Maa kuku duro ti oruko Re"
+          "Mo fẹ́ Jésù ju ìyìn ènìyàn lọ,",
+          "Mo fẹ́ j' olóòótọ́ ìríjú iṣẹ́ Rẹ;",
+          "Mo fẹ́ Jésù ju okìkí ayé.",
+          "Máa kúkú dúró ti orúkọ Rẹ"
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "Ju ki n je Oba l' ori ilu kan",
-          "Tabi ajele ese",
-          "Mo fe Jesu ju ohun gbogbo lo",
-          "Ti aye le fun ni."
+          "Ju kí n jẹ́ Ọba l' orí ìlú kan",
+          "Tàbí àjẹlẹ̀ ẹ̀ṣẹ̀",
+          "Mo fẹ́ Jésù ju ohun gbogbo lọ",
+          "Tí ayé lè fún ni."
         ]
       },
       {
         "type": "verse",
         "index": 3,
         "lines": [
-          "O Lewa ju ododo eti 'do,",
-          "O dun ju oyin inu afara lo",
-          "Oun nikan ni okan ebi mi n fe,",
-          "Mo fe Jesu k' o j' Olutona mi."
+          "Ó Lẹ́wà ju odòdó etí 'dò,",
+          "Ó dùn ju oyìn inú àfàrá lọ",
+          "Òun nìkan ni ọkàn èbí mi ń fẹ́,",
+          "Mo fẹ́ Jésù k' ó j' Olùtọ́nà mi."
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "Ju ki n je Oba l' ori ilu kan",
-          "Tabi ajele ese",
-          "Mo fe Jesu ju ohun gbogbo lo",
-          "Ti aye le fun ni."
+          "Ju kí n jẹ́ Ọba l' orí ìlú kan",
+          "Tàbí àjẹlẹ̀ ẹ̀ṣẹ̀",
+          "Mo fẹ́ Jésù ju ohun gbogbo lọ",
+          "Tí ayé lè fún ni."
         ]
       }
     ],
-    "revision": 2
+    "revision": 3
   },
   {
     "index": "259",
     "number": 259,
-    "title": "Ki Jesu Ha Nikan Jiya",
+    "title": "Kí Jésù Ha Nìkan Jìyà",
     "english_title": "Must Jesus Bear The Cross Alone",
     "references": {
       "SDAH": 328
@@ -17253,39 +17254,39 @@
         "type": "verse",
         "index": 1,
         "lines": [
-          "Ki Jesu ha nikan jiya",
-          "K' araye lo l' ofee?",
-          "Eru n be f' olukuluku,",
-          "Eru n be fun mi naa"
+          "Kí Jésù ha nìkan jìyà",
+          "K' aráyé lọ l' ọ̀fẹ́ẹ́?",
+          "Erù ń bẹ f' olúkúlùkù,",
+          "Erù ń bẹ fún mi náà"
         ]
       },
       {
         "type": "verse",
         "index": 2,
         "lines": [
-          "Em' o ru agbelebuu mi",
-          "Titi yoo fi gba mi;",
-          "'Gba naa n o lo 'le lo d' ade,",
-          "Tor' ade n be fun mi."
+          "Èm' ó ru àgbélébùú mi",
+          "Títí yóò fi gbà mí;",
+          "'Gbà náà n ó lọ 'lé lọ d' adé,",
+          "Tòr' adé ń bẹ fún mi."
         ]
       },
       {
         "type": "verse",
         "index": 3,
         "lines": [
-          "Ni ile ita Kristal' naa,",
-          "Lebaa ese Jesu;",
-          "N' o gb' ade wura mi lele",
-          "Ogo f' oruko Re."
+          "Ní ilé ìtà Kristál náà,",
+          "Lẹ́bàá ẹsẹ̀ Jésù;",
+          "N' ó gb' adé wúrà mi lélé",
+          "Ògo f' orúkọ Rẹ."
         ]
       }
     ],
-    "revision": 2
+    "revision": 3
   },
   {
     "index": "260",
     "number": 260,
-    "title": "Jesu Mo Ti Se 'Leri",
+    "title": "Jésù Mo Ti Ṣe 'Lérí",
     "english_title": "O Jesus I Have Promised",
     "references": {
       "SDAH": 331
@@ -17295,52 +17296,52 @@
         "type": "verse",
         "index": 1,
         "lines": [
-          "Jesu mo ti se 'leri",
-          "Lati sin O d' opin;",
-          "Maa wa l' odo mi titi,",
-          "Baba mi, Ore mi;",
-          "Emi k' yoo beru ogun,",
-          "B' Iwo ba n' tosi,",
-          "Emi ko ni sako lo",
-          "Bo O ba f' ona han mi."
+          "Jésù mo ti ṣe 'lérí",
+          "Láti sìn Ọ d' òpin;",
+          "Máa wà l' ọ̀dọ̀ mi títí,",
+          "Bàbá mi, Ọ̀rẹ́ mi;",
+          "Èmi k' yóò bẹ̀rù ogun,",
+          "B' Ìwọ bá ń tòsí,",
+          "Èmi kò ní ṣáko lọ",
+          "Bó O bá f' ọ̀nà hàn mi."
         ]
       },
       {
         "type": "verse",
         "index": 2,
         "lines": [
-          "Je ki n mo po O wa n' tosi,",
-          "Aye feju mo mi;",
-          "Aye fe gba okan mi,",
-          "O si fe tan mi je;",
-          "Ota yi mi kaakiri",
-          "L' ode ati ninu",
-          "Sugbon Jesu sun mo mi,",
-          "D' aabo bo okan mi."
+          "Jẹ́ kí n mọ̀ pé O wà n' tòsí,",
+          "Ayé fẹjú mọ́ mi;",
+          "Ayé fẹ́ gbà ọkàn mi,",
+          "Ó sì fẹ́ tàn mi jẹ;",
+          "Ọ̀tá yí mi káàkiri",
+          "L' òde àti nínú",
+          "Ṣùgbọ́n Jésù sún mọ́ mi,",
+          "D' àábò bo ọkàn mi."
         ]
       },
       {
         "type": "verse",
         "index": 3,
         "lines": [
-          "Jesu, 'wo ti se 'leri",
-          "F' awon t' o te le O,",
-          "Pe 'bikibi to O ba wa,",
-          "N' iranse Re yoo wa;",
-          "Jesu mo ti se 'pinnu",
-          "Lati sin O d' opin.",
-          "Je k' emi le te le O",
-          "Baba mi, Ore mi!"
+          "Jésù, 'wọ ti ṣe 'lérí",
+          "F' àwọn t' ó tẹ̀ lé Ọ,",
+          "Pé 'bikibi tó O bá wà,",
+          "N' ìránṣẹ́ Rẹ yóò wà;",
+          "Jésù mo ti ṣe 'pínnu",
+          "Láti sìn Ọ d' òpin.",
+          "Jẹ́ k' èmi lè tẹ̀ lé Ọ",
+          "Bàbá mi, Ọ̀rẹ́ mi!"
         ]
       }
     ],
-    "revision": 2
+    "revision": 3
   },
   {
     "index": "261",
     "number": 261,
-    "title": "Mo D' Owo Ife Orun Mu",
-    "english_title": "I Clasp the hand of Love Divine",
+    "title": "Mo D' Ọwọ́ Ìfẹ́ Ọ̀run Mu",
+    "english_title": "I Clasp The Hand Of Love Divine",
     "references": {
       "NAH": 621
     },
@@ -17349,89 +17350,89 @@
         "type": "verse",
         "index": 1,
         "lines": [
-          "Mo d' owo ife orun mu,",
-          "T' emi ni 'leri oor'-ofe,",
-          "Mofi ooko mi kun Tire;",
-          "Mo gba, Oun lo n pese."
+          "Mo d' ọwọ́ ìfẹ́ ọ̀run mu,",
+          "T' ẹ̀mí ní 'lérí oore-ọ̀fẹ́,",
+          "Mo fi oókọ mi kún Tire;",
+          "Mo gbà, Òun ló ń pèsè."
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "Mo gba O Oluwa,",
-          "Mo f' ara mi fun O;",
-          "Iwo, gege bi oro Re,",
-          "Lo si pese fun mi."
+          "Mo gbà Ọ Olúwa,",
+          "Mo f' ara mi fún Ọ;",
+          "Ìwọ, gẹ́gẹ́ bí ọ̀rọ̀ Rẹ,",
+          "Lo sì pèsè fún mi."
         ]
       },
       {
         "type": "verse",
         "index": 2,
         "lines": [
-          "Mo gba ekun oore-ofe",
-          "L' odo Eni t' o ku fun mi;",
-          "O tewo gba mi l' agbatan;",
-          "Mo gba, Oun lo n pese."
+          "Mo gbà ẹ̀kún oore-ọ̀fẹ́",
+          "L' ọ̀dọ̀ Ẹni t' ó kú fún mi;",
+          "Ó tẹ́wọ́ gbà mí l' àgbàtàn;",
+          "Mo gbà, Òun ló ń pèsè."
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "Mo gba O Oluwa,",
-          "Mo f' ara mi fun O;",
-          "Iwo, gege bi oro Re,",
-          "Lo si pese fun mi."
+          "Mo gbà Ọ Olúwa,",
+          "Mo f' ara mi fún Ọ;",
+          "Ìwọ, gẹ́gẹ́ bí ọ̀rọ̀ Rẹ,",
+          "Lo sì pèsè fún mi."
         ]
       },
       {
         "type": "verse",
         "index": 3,
         "lines": [
-          "Oun i Eni Mimo mi ju lo,",
-          "O we okan mi mo toto;",
-          "Mo gb' Oluwa Ododo mi;",
-          "Mo gba, Oun lo n pese."
+          "Òun í Ẹni Mímọ́ mi jù lọ,",
+          "Ó wẹ̀ ọkàn mi mọ́ tòótọ́;",
+          "Mo gb' Olúwa Odòdó mi;",
+          "Mo gbà, Òun ló ń pèsè."
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "Mo gba O Oluwa,",
-          "Mo f' ara mi fun O;",
-          "Iwo, gege bi oro Re,",
-          "Lo si pese fun mi."
+          "Mo gbà Ọ Olúwa,",
+          "Mo f' ara mi fún Ọ;",
+          "Ìwọ, gẹ́gẹ́ bí ọ̀rọ̀ Rẹ,",
+          "Lo sì pèsè fún mi."
         ]
       },
       {
         "type": "verse",
         "index": 4,
         "lines": [
-          "Mo gba Emi ta a seleri,",
-          "Agbara ojo pentikost,",
-          "Lati wa kun mi ni inu;",
-          "Mo gba. Oun lo n pese."
+          "Mo gbà Ẹ̀mí t' a a ṣèlérí,",
+          "Agbára ọjọ́ Pentikọ́stì,",
+          "Láti wá kún mi ní inú;",
+          "Mo gbà. Òun ló ń pèsè."
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "Mo gba O Oluwa,",
-          "Mo f' ara mi fun O;",
-          "Iwo, gege bi oro Re,",
-          "Lo si pese fun mi."
+          "Mo gbà Ọ Olúwa,",
+          "Mo f' ara mi fún Ọ;",
+          "Ìwọ, gẹ́gẹ́ bí ọ̀rọ̀ Rẹ,",
+          "Lo sì pèsè fún mi."
         ]
       }
     ],
-    "revision": 2
+    "revision": 3
   },
   {
     "index": "262",
     "number": 262,
-    "title": "N O Se Te Le Eni Ti Mo N Sin?",
+    "title": "N Ó Ṣe Tẹ̀ Lé Ẹni Tí Mo Ń Sìn?",
     "english_title": "How Shall I Follow Him?",
     "references": {
       "NAH": 476,
@@ -17442,50 +17443,50 @@
         "type": "verse",
         "index": 1,
         "lines": [
-          "N o se te le eni ti mo n sin?",
-          "N o se te le en' ti mo fe?",
-          "Tabi ki n ye ese kuro lona",
-          "'Bukun to lo si orun?"
+          "N ó ṣe tẹ̀ lé ẹni tí mo ń sìn?",
+          "N ó ṣe tẹ̀ lé ẹn' tí mo fẹ́?",
+          "Tàbí kí n yẹ ẹsẹ̀ kúrò l' ọ̀nà",
+          "'Búkún tó lọ sí ọ̀run?"
         ]
       },
       {
         "type": "verse",
         "index": 2,
         "lines": [
-          "Oluwa bi mo tile jiya,",
-          "Jowo ma je ki nse ooko Re,",
-          "Yi 'ju mi s' oke si Kalfari,",
-          "Ki n le Wo ijiya Re."
+          "Olúwa bí mo tilẹ̀ jìyà,",
+          "Jọ̀wọ́ má jẹ́ kí n ṣe oókọ Rẹ,",
+          "Yí 'jú mi s' òkè sí Kalfari,",
+          "Kí n lè wò ìjìyà Rẹ."
         ]
       },
       {
         "type": "verse",
         "index": 3,
         "lines": [
-          "Je ki n ro nipa irubo Re,",
-          "Ni fifi ayo orun sile,",
-          "Ni gbigb aawe, ni siso na, ni jijiya",
-          "T' osan t'oru."
+          "Jẹ́ kí n rò nípa ìrúbọ Rẹ,",
+          "Ní fífi ayọ̀ ọ̀run sílẹ̀,",
+          "Ní gbígb' ààwẹ̀, ní sísọ ná, ní jíjìyà",
+          "T' ọ̀sán t' órù."
         ]
       },
       {
         "type": "verse",
         "index": 4,
         "lines": [
-          "Iwo se yii O si ku fun mi!",
-          "Iwo ko te 'ra Re l' orun",
-          "Bi igbadun aye ti po to n o fe O",
-          "Ju gbogbo won lo."
+          "Ìwọ ṣe yìí O sì kú fún mi!",
+          "Ìwọ kò tẹ́ 'ra Rẹ l' ọ̀run",
+          "Bí ìgbádùn ayé ti pọ̀ tó n ó fẹ́ Ọ",
+          "Ju gbogbo wọn lọ."
         ]
       }
     ],
-    "revision": 2
+    "revision": 3
   },
   {
     "index": "263",
     "number": 263,
-    "title": "A Sin Olurapada Wa",
-    "english_title": "Buried Beneath the Yielding Wave",
+    "title": "A Sìn Olùràpadà Wa",
+    "english_title": "Buried Beneath The Yielding Wave",
     "references": {
       "NAH": 378,
       "CH": 438
@@ -17495,49 +17496,49 @@
         "type": "verse",
         "index": 1,
         "lines": [
-          "A sin Olurapada wa.",
-          "Sinu 'boji omi;",
-          "A f' igbagbo ri I nin' omi",
-          "Ati b O se dide."
+          "A sìn Olùràpadà wa.",
+          "Sínú 'bòjì omi;",
+          "A f' ìgbàgbọ́ rí I nín' omi",
+          "Àti b' Ó ṣe dìde."
         ]
       },
       {
         "type": "verse",
         "index": 2,
         "lines": [
-          "Bayii l' awon wonyi lonii,",
-          "Fi itara won han,",
-          "Won mu gbogbo ododo se;",
-          "B' Oluwa wa ti n fe."
+          "Báyìí l' àwọn wọ̀nyí lónìí,",
+          "Fi ìtara wọn hàn,",
+          "Wọ́n mú gbogbo odòdó ṣe;",
+          "B' Olúwa wa ti ń fẹ́."
         ]
       },
       {
         "type": "verse",
         "index": 3,
         "lines": [
-          "A f' ayo te le sise Re",
-          "A fe se ise Re;",
-          "K' a le' ku gege bi Tire.",
-          "K' a si le ba A joba."
+          "A f' ayọ̀ tẹ̀ lé iṣẹ́ Rẹ",
+          "A fẹ́ ṣe iṣẹ́ Rẹ;",
+          "K' a lè kú gẹ́gẹ́ bí Tire.",
+          "K' a sì lè bá A jọba."
         ]
       },
       {
         "type": "verse",
         "index": 4,
         "lines": [
-          "Oju Re m' okan wa soji,",
-          "O le eru wa lo;",
-          "Ase Re f' agbara fun wa,",
-          "A si f' ayo gboran."
+          "Ojú Rẹ m' ọkàn wa sójí,",
+          "Ó lé èrù wa lọ;",
+          "Àṣẹ Rẹ f' agbára fún wa,",
+          "A sì f' ayọ̀ gbọ́ràn."
         ]
       }
     ],
-    "revision": 2
+    "revision": 3
   },
   {
     "index": "264",
     "number": 264,
-    "title": "A N Fi 'Fe Rin Ona",
+    "title": "A Ń Fi 'Fẹ́ Rìn Ọ̀nà",
     "english_title": "With Willing Heart We Tread",
     "references": {
       "NAH": 379
@@ -17547,32 +17548,32 @@
         "type": "verse",
         "index": 1,
         "lines": [
-          "A n fi 'fe rin ona",
-          "T' Olugbala wa to",
-          "A fe apeere Oga wa,",
-          "Od'-agutan t' orun.",
-          "Ni ireti wa wa.",
-          "Eni n' tor' etutu f' ese",
-          "Wa ku fun elese"
+          "A ń fi 'fẹ́ rìn ọ̀nà",
+          "T' Olùgbàlà wa tọ",
+          "A fẹ́ àpẹẹrẹ Ọ̀gá wa,",
+          "Od'-àgùtàn t' ọ̀run.",
+          "Ní ìrètí wa wà.",
+          "Ẹni ń tòr' ẹ̀tùtù f' ẹ̀ṣẹ̀",
+          "Wá kú fún ẹlẹ́ṣẹ̀"
         ]
       },
       {
         "type": "verse",
         "index": 2,
         "lines": [
-          "A gba irubo Re",
-          "Lori agbelebuu;",
-          "Je k' a d' oku s' ese k' a le",
-          "Wa laaye ninu Re."
+          "A gbà ìrúbọ Rẹ",
+          "Lórí àgbélébùú;",
+          "Jẹ́ k' a d' òkú s' ẹ̀ṣẹ̀ k' a lè",
+          "Wà láàyè nínú Rẹ."
         ]
       }
     ],
-    "revision": 2
+    "revision": 3
   },
   {
     "index": "265",
     "number": 265,
-    "title": "Kil' O Le W' Ese Mi Nu?",
+    "title": "Kíl' Ó Lè W' Ẹ̀ṣẹ̀ Mi Nù?",
     "english_title": "What Can Wash Away My Sins?",
     "references": {
       "CS": 93
@@ -17582,90 +17583,90 @@
         "type": "verse",
         "index": 1,
         "lines": [
-          "Kil' o le w' ese mi nu?",
-          "Ko si lehin eje Jesu;",
-          "Kil' o tun le wo mi san?",
-          "Ko si lehin eje Jesu."
+          "Kíl' ó lè w' ẹ̀ṣẹ̀ mi nù?",
+          "Kò sí lẹ́yìn ẹ̀jẹ̀ Jésù;",
+          "Kíl' ó tún lè wò mi san?",
+          "Kò sí lẹ́yìn ẹ̀jẹ̀ Jésù."
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "A! eje 'yebiye",
-          "T' o mu mi fun bi sno,",
-          "Ko s' isun miiran mo",
-          "Ko si lehin eje Jesu."
+          "A! ẹ̀jẹ̀ 'yebíye",
+          "T' ó mú mi fun bí snò,",
+          "Kò s' ìsun míìràn mọ́",
+          "Kò sí lẹ́yìn ẹ̀jẹ̀ Jésù."
         ]
       },
       {
         "type": "verse",
         "index": 2,
         "lines": [
-          "Fun 'wenumo mi n ko ri",
-          "N' kan mii, lehin eje Jesu;",
-          "Ohun ti mo gbekele",
-          "Fun 'dariji eje Jesu."
+          "Fún 'wẹ̀nùmọ́ mi ń kò rí",
+          "N' kan míì, lẹ́yìn ẹ̀jẹ̀ Jésù;",
+          "Ohun tí mo gbékèlé",
+          "Fún 'dàríjì ẹ̀jẹ̀ Jésù."
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "A! eje 'yebiye",
-          "T' o mu mi fun bi sno,",
-          "Ko s' isun miiran mo",
-          "Ko si lehin eje Jesu."
+          "A! ẹ̀jẹ̀ 'yebíye",
+          "T' ó mú mi fun bí snò,",
+          "Kò s' ìsun míìràn mọ́",
+          "Kò sí lẹ́yìn ẹ̀jẹ̀ Jésù."
         ]
       },
       {
         "type": "verse",
         "index": 3,
         "lines": [
-          "Etutu f' ese ko si,",
-          "Ko si lehin eje Jesu;",
-          "Ise rere kan ko si,",
-          "Ko si lehin eje Jesu"
+          "Ẹ̀tùtù f' ẹ̀ṣẹ̀ kò sí,",
+          "Kò sí lẹ́yìn ẹ̀jẹ̀ Jésù;",
+          "Iṣẹ́ rere kan kò sí,",
+          "Kò sí lẹ́yìn ẹ̀jẹ̀ Jésù"
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "A! eje 'yebiye",
-          "T' o mu mi fun bi sno,",
-          "Ko s' isun miiran mo",
-          "Ko si lehin eje Jesu."
+          "A! ẹ̀jẹ̀ 'yebíye",
+          "T' ó mú mi fun bí snò,",
+          "Kò s' ìsun míìràn mọ́",
+          "Kò sí lẹ́yìn ẹ̀jẹ̀ Jésù."
         ]
       },
       {
         "type": "verse",
         "index": 4,
         "lines": [
-          "Gbogbo igbekele mi,",
-          "Ireti mi, l' eje Jesu",
-          "Gbogbo ododo mi ni",
-          "Eje kiki eje Jesu."
+          "Gbogbo ìgbékèlé mi,",
+          "Ìrètí mi, l' ẹ̀jẹ̀ Jésù",
+          "Gbogbo òdòdó mi ni",
+          "Ẹ̀jẹ̀ kìkì ẹ̀jẹ̀ Jésù."
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "A! eje 'yebiye",
-          "T' o mu mi fun bi sno,",
-          "Ko s' isun miiran mo",
-          "Ko si lehin eje Jesu."
+          "A! ẹ̀jẹ̀ 'yebíye",
+          "T' ó mú mi fun bí snò,",
+          "Kò s' ìsun míìràn mọ́",
+          "Kò sí lẹ́yìn ẹ̀jẹ̀ Jésù."
         ]
       }
     ],
-    "revision": 2
+    "revision": 3
   },
   {
     "index": "266",
     "number": 266,
-    "title": "Oti To Jesu Lo Fun Iwenum o?",
-    "english_title": "Have You Been to Jesus For The Cleansing Pow'r",
+    "title": "Ó Ti Tọ Jésù Lọ Fún Ìwẹ̀nùmọ́?",
+    "english_title": "Have You Been To Jesus For The Cleansing Pow'r",
     "references": {
       "CS": 88
     },
@@ -17674,90 +17675,90 @@
         "type": "verse",
         "index": 1,
         "lines": [
-          "Oti to Jesu lo fun iwenum o?",
-          "A we o n' nu eje Od' agutan",
-          "Iwo ha gbekele oore-ofe Re?",
-          "A we o n' nu eje Od' agutan?"
+          "Ó ti tọ Jésù lọ fún ìwẹ̀númọ́?",
+          "A wẹ̀ ọ n' nú ẹ̀jẹ̀ Od' àgùtàn",
+          "Ìwọ ha gbékèlé oore-ọ̀fẹ́ Rẹ?",
+          "A wẹ̀ ọ n' nú ẹ̀jẹ̀ Od' àgùtàn?"
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "A we o n' nu eje",
-          "Ninu eje ti n we okan mo?",
-          "Aso re ha funfun? o si mo laulau",
-          "A we o n' nu eje Od'-agutan?"
+          "A wẹ̀ ọ n' nú ẹ̀jẹ̀",
+          "Nínú ẹ̀jẹ̀ tí ń wẹ̀ ọkàn mọ́?",
+          "Aṣọ rẹ ha funfun? ó sì mọ́ láúláú",
+          "A wẹ̀ ọ n' nú ẹ̀jẹ̀ Od'-àgùtàn?"
         ]
       },
       {
         "type": "verse",
         "index": 2,
         "lines": [
-          "O n ba Olugbala rin lojoojumo?",
-          "A we o n' nu eje Od'-agutan?",
-          "O ha gbekele Eni ta a kan Mo 'gi",
-          "A we o n' nu eje Od'-agutan?"
+          "Ó ń bá Olùgbàlà rìn lójoojúmọ́?",
+          "A wẹ̀ ọ n' nú ẹ̀jẹ̀ Od'-àgùtàn?",
+          "Ó ha gbékèlé Ẹni t' a a kàn Mọ́ 'gi",
+          "A wẹ̀ ọ n' nú ẹ̀jẹ̀ Od'-àgùtàn?"
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "A we o n' nu eje",
-          "Ninu eje ti n we okan mo?",
-          "Aso re ha funfun? o si mo laulau",
-          "A we o n'nu eje Od'-agutan?"
+          "A wẹ̀ ọ n' nú ẹ̀jẹ̀",
+          "Nínú ẹ̀jẹ̀ tí ń wẹ̀ ọkàn mọ́?",
+          "Aṣọ rẹ ha funfun? ó sì mọ́ láúláú",
+          "A wẹ̀ ọ n' nú ẹ̀jẹ̀ Od'-àgùtàn?"
         ]
       },
       {
         "type": "verse",
         "index": 3,
         "lines": [
-          "Aso re ha mo lati pade Jesu?",
-          "A fo o mo n' nu eje Od'-agutan;",
-          "Iwo ha n mura fun ile didan ni?",
-          "K' a we o n' nu eje Od'-agutan?"
+          "Aṣọ rẹ ha mọ̀ láti padé Jésù?",
+          "A fọ̀ ọ̀ mọ́ n' nú ẹ̀jẹ̀ Od'-àgùtàn;",
+          "Ìwọ ha ń múra fún ilé dídan ni?",
+          "K' a wẹ̀ ọ n' nú ẹ̀jẹ̀ Od'-àgùtàn?"
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "A we o n' nu eje",
-          "Ninu eje ti n we okan mo?",
-          "Aso re ha funfun? o si mo laulau",
-          "A we o n' nu eje Od'-agutan?"
+          "A wẹ̀ ọ n' nú ẹ̀jẹ̀",
+          "Nínú ẹ̀jẹ̀ tí ń wẹ̀ ọkàn mọ́?",
+          "Aṣọ rẹ ha funfun? ó sì mọ́ láúláú",
+          "A wẹ̀ ọ n' nú ẹ̀jẹ̀ Od'-àgùtàn?"
         ]
       },
       {
         "type": "verse",
         "index": 4,
         "lines": [
-          "Bo ewu eeri-ese si apakan,",
-          "K' a we o n' nu eje Od'-agutan?",
-          "Isun kan n san fun gbogbo okan aimo",
-          "Joo lo we n' nu eje Od'-agutan."
+          "Bọ́ ẹ̀wù ẹ̀érí-ẹ̀ṣẹ̀ sí àpákan,",
+          "K' a wẹ̀ ọ n' nú ẹ̀jẹ̀ Od'-àgùtàn?",
+          "Ìsun kan ń san fún gbogbo ọkàn àìmọ́",
+          "Jọ̀ọ́ lọ wẹ̀ n' nú ẹ̀jẹ̀ Od'-àgùtàn."
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "A we o n' nu eje",
-          "Ninu eje ti n we okan mo?",
-          "Aso re ha funfun? o si mo laulau",
-          "A we o n' nu eje Od'-agutan?"
+          "A wẹ̀ ọ n' nú ẹ̀jẹ̀",
+          "Nínú ẹ̀jẹ̀ tí ń wẹ̀ ọkàn mọ́?",
+          "Aṣọ rẹ ha funfun? ó sì mọ́ láúláú",
+          "A wẹ̀ ọ n' nú ẹ̀jẹ̀ Od'-àgùtàn?"
         ]
       }
     ],
-    "revision": 2
+    "revision": 3
   },
   {
     "index": "267",
     "number": 267,
-    "title": "Mo R' Igbi 'Mularada",
-    "english_title": "O Now I see the Cleansing Wave",
+    "title": "Mo R' Ìgbì 'Múláradà",
+    "english_title": "O Now I See The Cleansing Wave",
     "references": {
       "SDAH": 332
     },
@@ -17766,89 +17767,89 @@
         "type": "verse",
         "index": 1,
         "lines": [
-          "Mo r' igbi 'mularada",
-          "Isun t' o jin, t' o fe",
-          "Jesu Krist Olugbala mi",
-          "Toka s' ogbe 'ha Re."
+          "Mo r' ìgbì 'múláradà",
+          "Ìsun t' ó jìn, t' ó fẹ́",
+          "Jésù Kríst Olùgbàlà mi",
+          "Tọ́ka s' ọgbẹ́ 'hà Rẹ."
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "Isun iye mo ri i mo ri i",
-          "Mo ri 'nu re ara mi da?",
-          "Yin Oluwa O wo mi san",
-          "O wo mi san, O wo mi san."
+          "Ìsun ìyè mo rí i mo rí i",
+          "Mo rí 'nú rẹ̀ ara mi dà?",
+          "Yìn Olúwa Ó wò mí san",
+          "Ó wò mí san, Ó wò mí san."
         ]
       },
       {
         "type": "verse",
         "index": 2,
         "lines": [
-          "Mo ri eda titun n' dide,",
-          "Mo gbo oro eje",
-          "O soro ese di' gbagbe",
-          "O ri si 'nu 'sun naa."
+          "Mo rí ẹ̀dá títun ń dìde,",
+          "Mo gbọ́ ọ̀rọ̀ ẹ̀jẹ̀",
+          "Ó sọ̀rọ̀ ẹ̀ṣẹ̀ dí 'gbàgbé",
+          "Ó rí sí 'nú 'sun náà."
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "Isun iye mo ri i mo ri i",
-          "Mo ri 'nu re ara mi da?",
-          "Yin Oluwa O wo mi san",
-          "O wo mi san, O wo mi san."
+          "Ìsun ìyè mo rí i mo rí i",
+          "Mo rí 'nú rẹ̀ ara mi dà?",
+          "Yìn Olúwa Ó wò mí san",
+          "Ó wò mí san, Ó wò mí san."
         ]
       },
       {
         "type": "verse",
         "index": 3,
         "lines": [
-          "Mo n rin 'nu imole orun,",
-          "N' bi t' o ga ju ese;",
-          "Pel' okan at' aso mimo",
-          "Nibi Jesu Joba."
+          "Mo ń rìn 'nú ìmọ́lẹ̀ ọ̀run,",
+          "N' bi t' ó ga ju ẹ̀ṣẹ̀;",
+          "Pẹ̀l' ọkàn àt' aṣọ mímọ́",
+          "Níbi Jésù Jọba."
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "Isun iye mo ri i mo ri i",
-          "Mo ri 'nu re ara mi da?",
-          "Yin Oluwa O wo mi san",
-          "O wo mi san, O wo mi san."
+          "Ìsun ìyè mo rí i mo rí i",
+          "Mo rí 'nú rẹ̀ ara mi dà?",
+          "Yìn Olúwa Ó wò mí san",
+          "Ó wò mí san, Ó wò mí san."
         ]
       },
       {
         "type": "verse",
         "index": 4,
         "lines": [
-          "Oor'ofe! Orun so kale,",
-          "Lati wo ese san;",
-          "Jesu nikan soso l' o mo",
-          "Jesu ta a kan mo 'gi."
+          "Oore-ọ̀fẹ́! Ọ̀run sọ kalẹ̀,",
+          "Láti wò ẹ̀ṣẹ̀ san;",
+          "Jésù nìkan ṣoṣo l' ó mọ̀",
+          "Jésù t' a a kàn mọ́ 'gi."
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "Isun iye mo ri i mo ri i",
-          "Mo ri 'nu re ara mi da?",
-          "Yin Oluwa O wo mi san",
-          "O wo mi san, O wo mi san."
+          "Ìsun ìyè mo rí i mo rí i",
+          "Mo rí 'nú rẹ̀ ara mi dà?",
+          "Yìn Olúwa Ó wò mí san",
+          "Ó wò mí san, Ó wò mí san."
         ]
       }
     ],
-    "revision": 2
+    "revision": 3
   },
   {
     "index": "268",
     "number": 268,
-    "title": "A N Ko Orin Iyin Jesu",
+    "title": "A Ń Kọ Orin Ìyìn Jésù",
     "english_title": "We Sing The Praise of Him",
     "references": {
       "NAH": 109,
@@ -17859,59 +17860,59 @@
         "type": "verse",
         "index": 1,
         "lines": [
-          "'A n ko orin iyin Jesu,",
-          "T' O ku lori agbelebuu;",
-          "B' aye ni' iret' elese rin?",
-          "Eyi mu k' a k' aye s' ofo."
+          "'A ń kọ orin ìyìn Jésù,",
+          "T' Ó kú lórí àgbélébùú;",
+          "B' ayé ní 'rètí ẹlẹ́ṣẹ̀ rín?",
+          "Èyí mú k' a k' ayé s' òfò."
         ]
       },
       {
         "type": "verse",
         "index": 2,
         "lines": [
-          "L' oro didan, lori igi,",
-          "L' a ri i ka pe Fe l' Olorun,",
-          "O ru ese wa lor' igi:",
-          "O mu aanu wa lat' orun."
+          "L' ọ̀rọ̀ dídan, lórí igi,",
+          "L' a rí i ka pé Ìfẹ́ l' Ọlọ́run,",
+          "Ó rù ẹ̀ṣẹ̀ wa lór' igi:",
+          "Ó mú àánú wa lát' ọ̀run."
         ]
       },
       {
         "type": "verse",
         "index": 3,
         "lines": [
-          "Agbelebuu m' ese wa lo:",
-          "O m' okan ti ndaku soji;",
-          "O m' ayo wa l' ojo edun",
-          "O m' ohun t' o buru dara."
+          "Àgbélébùú m' ẹ̀ṣẹ̀ wa lọ:",
+          "Ó m' ọkàn tí ńdàkú sójí;",
+          "Ó m' ayọ̀ wa l' ọjọ́ ẹ̀dùn",
+          "Ó m' ohun t' ó burú dára."
         ]
       },
       {
         "type": "verse",
         "index": 4,
         "lines": [
-          "O f' okan ojo ni okun,",
-          "O s' alaare d' alagbara;",
-          "O m' eru fo lo n' iboji",
-          "O tan 'mole n' igba iku."
+          "Ó f' ọkàn ọ̀jọ̀ ní okùn,",
+          "Ó s' aláàrẹ̀ d' alágbára;",
+          "Ó m' ẹ̀rù fò lọ n' ìbòjì",
+          "Ó tàn 'mọ́lẹ̀ n' ìgbà ikú."
         ]
       },
       {
         "type": "verse",
         "index": 5,
         "lines": [
-          "'Kanra fun ye 'wosan f' ese",
-          "Osunwon at' ipinnu 'fe",
-          "Aabo f' elese laye yii",
-          "Orin f' awon angel' loke."
+          "'Kànrá fún yẹ 'wòsàn f' ẹ̀ṣẹ̀",
+          "Òṣùnwọ̀n àt' ìpinnu 'fẹ́",
+          "Àábò f' ẹlẹ́ṣẹ̀ láyé yìí",
+          "Orin f' àwọn ángẹ́lì lókè."
         ]
       }
     ],
-    "revision": 2
+    "revision": 3
   },
   {
     "index": "269",
     "number": 269,
-    "title": "Ogo Fun Olorun Nitor' Ise Re",
+    "title": "Ògo Fún Ọlọ́run Nítòr' Iṣẹ́ Rẹ",
     "english_title": "To God be the Glory",
     "references": {
       "SDAH": 341,
@@ -17922,76 +17923,76 @@
         "type": "verse",
         "index": 1,
         "lines": [
-          "Ogo fun Olorun nitor' Ise Re;",
-          "O f' Omo Re f' aye nitori 'fe Re,",
-          "Omo to f' eje Re s' etutu f' ese,",
-          "O si lekun iye ki a le wo 'le."
+          "Ògo fún Ọlọ́run nítòr' iṣẹ́ Rẹ;",
+          "Ó f' Ọmọ Rẹ f' ayé nítorí 'fẹ́ Rẹ,",
+          "Ọmọ tó f' ẹ̀jẹ̀ Rẹ s' ẹ̀tùtù f' ẹ̀ṣẹ̀,",
+          "Ó sì lékùn ìyè kí a lè wọ 'lé."
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "Yin Jesu, Yin Jesu,",
-          "Je k' aye gbohun Re;",
-          "Yin Jesu, Yin Jesu,",
-          "Je ki gbogb' eeyan yo;",
-          "E wa sodo Baba ni pase Jesu,",
-          "Ke e si fi Ogo fun Un nitor' ise Re."
+          "Yìn Jésù, Yìn Jésù,",
+          "Jẹ́ k' ayé gbọ́hùn Rẹ;",
+          "Yìn Jésù, Yìn Jésù,",
+          "Jẹ́ kí gbogb' èèyàn yọ;",
+          "Ẹ wá s' ọ̀dọ̀ Bàbá ní pàṣẹ Jésù,",
+          "K' ẹ sì fi Ògo fún Un nítòr' iṣẹ́ Rẹ."
         ]
       },
       {
         "type": "verse",
         "index": 2,
         "lines": [
-          "Irapada pipe ta a Fi eje ra,",
-          "Ileri Olorun n be f' en' to gba gbo",
-          "Elese buburu t' o ba ni 'Gbagbo",
-          "Jesu se tan lati dar' ese re ji."
+          "Ìràpadà pípé t' a a fi ẹ̀jẹ̀ rà,",
+          "Ìlérí Ọlọ́run ń bẹ f' ẹn' tó gbà gbọ́",
+          "Ẹlẹ́ṣẹ̀ búburú t' ó bá ní 'gbàgbọ́",
+          "Jésù ṣe tán láti dàr' ẹ̀ṣẹ̀ rẹ̀ jì."
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "Yin Jesu, Yin Jesu,",
-          "Je k' aye gbohun Re;",
-          "Yin Jesu, Yin Jesu,",
-          "Je ki gbogb' eeyan yo;",
-          "E wa sodo Baba ni pase Jesu,",
-          "Ke e si fi Ogo fun Un nitor' ise Re."
+          "Yìn Jésù, Yìn Jésù,",
+          "Jẹ́ k' ayé gbọ́hùn Rẹ;",
+          "Yìn Jésù, Yìn Jésù,",
+          "Jẹ́ kí gbogb' èèyàn yọ;",
+          "Ẹ wá s' ọ̀dọ̀ Bàbá ní pàṣẹ Jésù,",
+          "K' ẹ sì fi Ògo fún Un nítòr' iṣẹ́ Rẹ."
         ]
       },
       {
         "type": "verse",
         "index": 3,
         "lines": [
-          "O ti ko wa ni eko iyebiye",
-          "Inu didun wa yoo po ninu Jesu;",
-          "Sugbon iyanu wa yoo si Po jojo",
-          "Nigba ti a ba ri oju Oluwa."
+          "Ó ti kọ́ wa ní ẹ̀kọ́ ìyebíye",
+          "Inú dídùn wa yóò pọ̀ nínú Jésù;",
+          "Ṣùgbọ́n ìyànu wa yóò sì pọ̀ jọjọ",
+          "Nígbà tí a bá rí ojú Olúwa."
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "Yin Jesu, Yin Jesu,",
-          "Je k' aye gbohun Re;",
-          "Yin Jesu, Yin Jesu,",
-          "Je ki gbogb' eeyan yo;",
-          "E wa sodo Baba ni pase Jesu,",
-          "Ke e si fi Ogo fun Un nitor' ise Re."
+          "Yìn Jésù, Yìn Jésù,",
+          "Jẹ́ k' ayé gbọ́hùn Rẹ;",
+          "Yìn Jésù, Yìn Jésù,",
+          "Jẹ́ kí gbogb' èèyàn yọ;",
+          "Ẹ wá s' ọ̀dọ̀ Bàbá ní pàṣẹ Jésù,",
+          "K' ẹ sì fi Ògo fún Un nítòr' iṣẹ́ Rẹ."
         ]
       }
     ],
-    "revision": 2
+    "revision": 3
   },
   {
     "index": "270",
     "number": 270,
-    "title": "Wa, Iwo Isun Ibukun",
-    "english_title": "Come Thou Fount of Every Blessing",
+    "title": "Wá, Ìwọ Ìsun Ìbùkún",
+    "english_title": "Come Thou Fount Of Every Blessing",
     "references": {
       "SDAH": 334,
       "NAH": 237,
@@ -18002,51 +18003,51 @@
         "type": "verse",
         "index": 1,
         "lines": [
-          "Wa, Iwo isun ibukun",
-          "Mu mi korin oore Re.",
-          "Odo aanu ti n san titi",
-          "Beere orin 'yin kikan",
-          "Ko mi lati maa juba Re,",
-          "Ki n si royin oore Re,",
-          "N' gba 'reti ogo ailopin",
-          "Kun okan mi pel' ayo."
+          "Wá, Ìwọ ìsun ìbùkún",
+          "Mú mi kọrin oore Rẹ.",
+          "Odò àánú tí ń san títí",
+          "Bèèrè orin 'yìn kíkan",
+          "Kọ́ mi láti máa júbà Rẹ,",
+          "Kí n sì rọ́yìn oore Rẹ,",
+          "N' gbà 'rètí ògo àìlópin",
+          "Kún ọkàn mi pẹ̀l' ayọ̀."
         ]
       },
       {
         "type": "verse",
         "index": 2,
         "lines": [
-          "Nihin-in l' a ran mi lowo de,",
-          "Mo gbe Ebinisa' ro;",
-          "Mo n reti nipa 'nu 're Re,",
-          "Ki n de le l' alaafia",
-          "L' aalejo ni Jesu wa mi",
-          "'Gba mo sako lo l' agbo",
-          "Lati yo mi ninu egbe,",
-          "O f' eje Re s' etutu."
+          "Níhìn-in l' a ràn mí lọ́wọ́ dé,",
+          "Mo gbé Ẹbẹnísà 'rọ̀;",
+          "Mo ń rètí nípa 'nú 'rẹ Rẹ,",
+          "Kí n dé 'lé l' àlàáfíà",
+          "L' àlejò ni Jésù wá mi",
+          "'Gbà mo ṣako lọ l' àgbo",
+          "Láti yọ mi nínú ẹgbẹ́,",
+          "Ó f' ẹ̀jẹ̀ Rẹ s' ẹ̀tùtù."
         ]
       },
       {
         "type": "verse",
         "index": 3,
         "lines": [
-          "Nit' oor' ofe lojoojumo,",
-          "Ni 'gbese mi si n po sii;",
-          "K' oore-ofe yii ja ewon",
-          "Ti n se 'dena okan mi.",
-          "Ki n sako saa l' okan mi n fe,",
-          "Ki n ko Jesu ti mo fe;",
-          "Olugbala, gba aya mi,",
-          "Mu u ye f' agbala orun."
+          "Nít' oore-ọ̀fẹ́ lójoojúmọ́,",
+          "Ni 'gbèsè mi sì ń pọ̀ síi;",
+          "K' oore-ọ̀fẹ́ yìí ja ẹ̀wọ̀n",
+          "Tí ń ṣe 'dènà ọkàn mi.",
+          "Kí n ṣako sáà l' ọkàn mi ń fẹ́,",
+          "Kí n kọ Jésù tí mo fẹ́;",
+          "Olùgbàlà, gbà ayà mi,",
+          "Mú u yẹ f' àgbàlá ọ̀run."
         ]
       }
     ],
-    "revision": 2
+    "revision": 3
   },
   {
     "index": "271",
     "number": 271,
-    "title": "A Ti Se Irapada Nla Mi",
+    "title": "A Ti Ṣe Ìràpadà Ńlá Mi",
     "english_title": "Redeemed How I Love To Proclaim it",
     "references": {
       "SDAH": 337,
@@ -18058,70 +18059,70 @@
         "type": "verse",
         "index": 1,
         "lines": [
-          "A ti se irapada nla mi,",
-          "Nipa eje Od' agutan",
-          "Ati nipa oor' ofe nla Re",
-          "N o j' omo Re titi aye."
+          "A ti ṣe ìràpadà ńlá mi,",
+          "Nípa ẹ̀jẹ̀ Od' àgùtàn",
+          "Àti nípa oore-ọ̀fẹ́ ńlá Rẹ",
+          "N ó j' ọmọ Rẹ títí ayé."
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "Irapada",
-          "Nipa eje Od' agutan,",
-          "Irapada,",
-          "N o j' omo Re titi aye."
+          "Ìràpadà",
+          "Nípa ẹ̀jẹ̀ Od' àgùtàn,",
+          "Ìràpadà,",
+          "N ó j' ọmọ Rẹ títí ayé."
         ]
       },
       {
         "type": "verse",
         "index": 2,
         "lines": [
-          "'Tori naa inu mi dun jojo",
-          "Enu ko le so ayo mi;",
-          "Nitori Oun yoo wa pelu mi",
-          "Ni gbogbo ojo aye mi."
+          "'Tòrí náà inú mi dùn jọjọ",
+          "Ẹnu kò lè sọ ayọ̀ mi;",
+          "Nítorí Òun yóò wà pẹ̀lú mi",
+          "Ní gbogbo ọjọ́ ayé mi."
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "Irapada",
-          "Nipa eje Od' agutan,",
-          "Irapada,",
-          "N o j' omo Re titi aye."
+          "Ìràpadà",
+          "Nípa ẹ̀jẹ̀ Od' àgùtàn,",
+          "Ìràpadà,",
+          "N ó j' ọmọ Rẹ títí ayé."
         ]
       },
       {
         "type": "verse",
         "index": 3,
         "lines": [
-          "Mo mo pe ade kan wa fun mi,",
-          "Ni aye ree ti o n bo:",
-          "Ibi ayo pelu Olorun",
-          "Laipe emi o wa nibe."
+          "Mo mọ̀ pé adé kan wà fún mi,",
+          "Ní ayé rere tí ó ń bọ̀:",
+          "Ibi ayọ̀ pẹ̀lú Ọlọ́run",
+          "Láìpẹ́ èmi ó wà níbẹ̀."
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "Irapada",
-          "Nipa eje Od' agutan,",
-          "Irapada,",
-          "N o j' omo Re titi aye."
+          "Ìràpadà",
+          "Nípa ẹ̀jẹ̀ Od' àgùtàn,",
+          "Ìràpadà,",
+          "N ó j' ọmọ Rẹ títí ayé."
         ]
       }
     ],
-    "revision": 2
+    "revision": 3
   },
   {
     "index": "272",
     "number": 272,
-    "title": "A Ti Se Irapada Nla Mi",
-    "english_title": "Redeemed How I Love to Proclaim it",
+    "title": "A Ti Ṣe Ìràpadà Ńlá Mi",
+    "english_title": "Redeemed How I Love To Proclaim It",
     "references": {
       "SDAH": 338
     },
@@ -18130,73 +18131,73 @@
         "type": "verse",
         "index": 1,
         "lines": [
-          "A ti se irapada nla mi",
-          "Nipa eje Od' agutan",
-          "Ati nipa oor' ofe nla Re",
-          "N o j'o mo Re titi aye."
+          "A ti ṣe ìràpadà ńlá mi",
+          "Nípa ẹ̀jẹ̀ Od' àgùtàn",
+          "Àti nípa oore-ọ̀fẹ́ ńlá Rẹ",
+          "N ó j' ọmọ Rẹ títí ayé."
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "Irapada,",
-          "Nipa eje Od' agutan,",
-          "A ti se irapada nla mi",
-          "Irapada",
-          "N o j' omo Re titi aye."
+          "Ìràpadà,",
+          "Nípa ẹ̀jẹ̀ Od' àgùtàn,",
+          "A ti ṣe ìràpadà ńlá mi",
+          "Ìràpadà",
+          "N ó j' ọmọ Rẹ títí ayé."
         ]
       },
       {
         "type": "verse",
         "index": 2,
         "lines": [
-          "Nigb' osan ati nigba oru",
-          "Olugbala mi l' ero mi,",
-          "Emi ko le dake orin Re",
-          "Orin iyin ife nla Re."
+          "Nígb' ọ̀sán àti nígbà órù",
+          "Olùgbàlà mi l' èrò mi,",
+          "Èmi kò lè dakẹ́ orin Rẹ",
+          "Orin ìyìn ìfẹ́ ńlá Rẹ."
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "Irapada,",
-          "Nipa eje Od' agutan,",
-          "A ti se irapada nla mi",
-          "Irapada",
-          "N o j' omo Re titi aye."
+          "Ìràpadà,",
+          "Nípa ẹ̀jẹ̀ Od' àgùtàn,",
+          "A ti ṣe ìràpadà ńlá mi",
+          "Ìràpadà",
+          "N ó j' ọmọ Rẹ títí ayé."
         ]
       },
       {
         "type": "verse",
         "index": 3,
         "lines": [
-          "Mo mo pe n o ri i ninu ogo,",
-          "Oba, ti mo fe ofin Re,",
-          "T' o n so mi ni ona mi gbogbo,",
-          "Emi o korin Re l' oru."
+          "Mo mọ̀ pé n ó rí i nínú ògo,",
+          "Ọba, tí mo fẹ́ òfin Rẹ,",
+          "T' ó ń ṣọ́ mi ní ọ̀nà mi gbogbo,",
+          "Èmi ó kọrin Rẹ l' órù."
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "Irapada,",
-          "Nipa eje Od' agutan,",
-          "A ti se irapada nla mi",
-          "Irapada",
-          "N o j' omo Re titi aye."
+          "Ìràpadà,",
+          "Nípa ẹ̀jẹ̀ Od' àgùtàn,",
+          "A ti ṣe ìràpadà ńlá mi",
+          "Ìràpadà",
+          "N ó j' ọmọ Rẹ títí ayé."
         ]
       }
     ],
-    "revision": 2
+    "revision": 3
   },
   {
     "index": "273",
     "number": 273,
-    "title": "Isun Kan Wa T' O Kun F' Eje",
-    "english_title": "There is A Fountain",
+    "title": "Ìsun Kan Wà T' Ó Kún F' Ẹ̀jẹ̀",
+    "english_title": "There Is A Fountain",
     "references": {
       "SDAH": 336,
       "CH": 163
@@ -18206,93 +18207,93 @@
         "type": "verse",
         "index": 1,
         "lines": [
-          "Isun kan wa t' o kun f' eje,",
-          "O n sun n' iha Jesu",
-          "Elese mookun ninu re",
-          "O bo ninu ebi,",
-          "O bo ninu ebi",
-          "Elese mookun ninu re",
-          "O bo ninu ebi ."
+          "Ìsun kan wà t' ó kún f' ẹ̀jẹ̀,",
+          "Ó ń sun n' ìhà Jésù",
+          "Ẹlẹ́ṣẹ̀ mọ́ọkùn nínú rẹ̀",
+          "Ó bọ́ nínú ẹ̀bí,",
+          "Ó bọ́ nínú ẹ̀bí",
+          "Ẹlẹ́ṣẹ̀ mọ́ọkùn nínú rẹ̀",
+          "Ó bọ́ nínú ẹ̀bí."
         ]
       },
       {
         "type": "verse",
         "index": 2,
         "lines": [
-          "Ole ori agbelebuu",
-          "Yo lati ri 'sun naa,",
-          "Nibe elese bi emi,",
-          "Yoo we ese mi nu,",
-          "Yoo we ese mi nu,",
-          "Yoo we ese mi nu,",
-          "Nibe elese bi emi,",
-          "Yoo we ese mi nu."
+          "Olè orí àgbélébùú",
+          "Yọ láti rí 'sun náà,",
+          "Níbẹ̀ ẹlẹ́ṣẹ̀ bí èmi,",
+          "Yóò wẹ̀ ẹ̀ṣẹ̀ mi nù,",
+          "Yóò wẹ̀ ẹ̀ṣẹ̀ mi nù,",
+          "Yóò wẹ̀ ẹ̀ṣẹ̀ mi nù,",
+          "Níbẹ̀ ẹlẹ́ṣẹ̀ bí èmi,",
+          "Yóò wẹ̀ ẹ̀ṣẹ̀ mi nù."
         ]
       },
       {
         "type": "verse",
         "index": 3,
         "lines": [
-          "Jesu mi eje Re owon,",
-          "K' yoo s' agbara re nu;",
-          "Titi awon ta a rapada,",
-          "Yoo bo lowo ese,",
-          "Yoo bo lowo ese,",
-          "Yoo bo lowo ese,",
-          "Titi awon ta a rapada,",
-          "Yoo bo lowo ese."
+          "Jésù mi ẹ̀jẹ̀ Rẹ ọ̀wọ́n,",
+          "K' yóò s' agbára rẹ̀ nù;",
+          "Títí àwọn t' a a ràpadà,",
+          "Yóò bọ́ lọ́wọ́ ẹ̀ṣẹ̀,",
+          "Yóò bọ́ lọ́wọ́ ẹ̀ṣẹ̀,",
+          "Yóò bọ́ lọ́wọ́ ẹ̀ṣẹ̀,",
+          "Títí àwọn t' a a ràpadà,",
+          "Yóò bọ́ lọ́wọ́ ẹ̀ṣẹ̀."
         ]
       },
       {
         "type": "verse",
         "index": 4,
         "lines": [
-          "Gba mo f' igbagbo r' isun naa.",
-          "T' ogbe Re n tu jade;",
-          "Irapada d' orin fun mi",
-          "Ti n o maa ko titi",
-          "Ti n o maa ko titi",
-          "Ti n o maa ko titi",
-          "Irapada d' orin fun mi",
-          "Ti n o maa ko titi"
+          "Gbà mo f' ìgbàgbọ́ r' ìsun náà.",
+          "T' ọgbẹ́ Rẹ ń tú jade;",
+          "Ìràpadà d' orin fún mi",
+          "Tí n ó máa kọ títí",
+          "Tí n ó máa kọ títí",
+          "Tí n ó máa kọ títí",
+          "Ìràpadà d' orin fún mi",
+          "Tí n ó máa kọ títí"
         ]
       },
       {
         "type": "verse",
         "index": 5,
         "lines": [
-          "Jesu mo gbagbo po o pese,",
-          "Bi mo tile s' aiye,",
-          "Ebun ofe taa f' eje ra,",
-          "Ati duuru wura",
-          "Ati duuru wura",
-          "Ati duuru wura",
-          "Ebun ofe taa f' eje ra,",
-          "Ati duuru wura"
+          "Jésù mo gbàgbọ́ pé o pèsè,",
+          "Bí mo tilẹ̀ ṣ' àìyẹ,",
+          "Ẹ̀bùn ọ̀fẹ́ t' a a f' ẹ̀jẹ̀ rà,",
+          "Àti dùúrù wúrà",
+          "Àti dùúrù wúrà",
+          "Àti dùúrù wúrà",
+          "Ẹ̀bùn ọ̀fẹ́ t' a a f' ẹ̀jẹ̀ rà,",
+          "Àti dùúrù wúrà"
         ]
       },
       {
         "type": "verse",
         "index": 6,
         "lines": [
-          "Ninu orin t' o dun ju lo,",
-          "L' emi o korin Re,",
-          "'Gbat' akololo ahon yii",
-          "Ba dide n' iboji,",
-          "Ba dide n' iboji,",
-          "Ba dide n' iboji,",
-          "'Gbat' akololo ahon yii",
-          "Ba dide n' iboji"
+          "Nínú orin t' ó dùn jù lọ,",
+          "L' èmi ó kọrin Rẹ,",
+          "'Gbàt' akọlọlọ ahọ́n yìí",
+          "Bá dìde n' ìbòjì,",
+          "Bá dìde n' ìbòjì,",
+          "Bá dìde n' ìbòjì,",
+          "'Gbàt' akọlọlọ ahọ́n yìí",
+          "Bá dìde n' ìbòjì"
         ]
       }
     ],
-    "revision": 2
+    "revision": 3
   },
   {
     "index": "274",
     "number": 274,
-    "title": "Gbo Oro T' Olugbala",
-    "english_title": "Hark My Soul! It is the Lord",
+    "title": "Gbọ́ Ọ̀rọ̀ T' Olùgbàlà",
+    "english_title": "Hark My Soul! It Is The Lord",
     "references": {
       "NAH": 436,
       "CH": 298
@@ -18302,49 +18303,49 @@
         "type": "verse",
         "index": 1,
         "lines": [
-          "Gbo oro t' Olugbala",
-          "N ba iwo okan mi so;",
-          "O n beere lowo re pe,",
-          "Elese, o feran mi?"
+          "Gbọ́ ọ̀rọ̀ t' Olùgbàlà",
+          "Ń bá ìwọ ọkàn mi sọ;",
+          "Ó ń bèèrè lọ́wọ́ rẹ pé,",
+          "Ẹlẹ́ṣẹ̀, o fẹ́ràn mi?"
         ]
       },
       {
         "type": "verse",
         "index": 2,
         "lines": [
-          "Ife Mi ki i yi pada,",
-          "O ga ju oke nla lo;",
-          "O jin ju gbogbo okun,",
-          "O lagbara ju iku."
+          "Ìfẹ́ Mi kì í yí padà,",
+          "Ó ga ju òkè ńlá lọ;",
+          "Ó jìn ju gbogbo òkun,",
+          "Ó lágbára ju ikú."
         ]
       },
       {
         "type": "verse",
         "index": 3,
         "lines": [
-          "Laipe' wo o f' ogo Mi,",
-          "Gba se aanu ba pari,",
-          "Ibeere Mi yoo si je!",
-          "Elese, o feran Mi?"
+          "Láìpẹ́ 'wọ ó f' ògo Mi,",
+          "Gbà ṣe àánú bá parí,",
+          "Ìbéèrè Mi yóò sì jẹ́!",
+          "Ẹlẹ́ṣẹ̀, o fẹ́ràn Mi?"
         ]
       },
       {
         "type": "verse",
         "index": 4,
         "lines": [
-          "Eyi ni ailera mi",
-          "Ife mi ko gbona to;",
-          "Bee mi n fe, mo si yin O:",
-          "N' p' oor' ofe, ki n fe Osi I."
+          "Èyí ni àìlera mi",
+          "Ìfẹ́ mi kò gbóná tó;",
+          "Bẹ́ẹ̀ mo ń fẹ́, mo sì yìn Ọ:",
+          "N' p' oore-ọ̀fẹ́, kí n fẹ́ Ọ sí i."
         ]
       }
     ],
-    "revision": 2
+    "revision": 3
   },
   {
     "index": "275",
     "number": 275,
-    "title": "A Ti Gb' Oro Ayo Kan",
+    "title": "A Ti Gb' Ọ̀rọ̀ Ayọ̀ Kan",
     "english_title": "We Have Heard A Joyful Song",
     "references": {
       "SDAH": 340,
@@ -18356,65 +18357,65 @@
         "type": "verse",
         "index": 1,
         "lines": [
-          "A ti gb' oro ayo kan,",
-          "Pe Jesu n gba ni la",
-          "Tan 'hinrere naa kale,",
-          "Pe Jesu n gba ni la;",
-          "Kede ihin ayo naa,",
-          "Lori' le at' ekusu",
-          "Ase Oluwa wa ni",
-          "Jesu yoo gba wa la."
+          "A ti gb' ọ̀rọ̀ ayọ̀ kan,",
+          "Pé Jésù ń gbà ní là",
+          "Tàn 'hìnrere náà kalẹ̀,",
+          "Pé Jésù ń gbà ní là;",
+          "Kédé ìhìn ayọ̀ náà,",
+          "Lórí 'lẹ̀ àt' èkúsù",
+          "Àṣẹ Olúwa wa ni",
+          "Jésù yóò gbà wá là."
         ]
       },
       {
         "type": "verse",
         "index": 2,
         "lines": [
-          "Korin re lori okun,",
-          "Pe Jesu n gba ni la",
-          "So f' elese n' bi gbogbo,",
-          "Pe Jesu n gba ni la",
-          "Korin eyin ekusu,",
-          "Bu sayo eyin igbi",
-          "Aye yoo gba isimi,",
-          "Jesu yoo gba wa la."
+          "Kọrin rẹ̀ lórí òkun,",
+          "Pé Jésù ń gbà ní là",
+          "Sọ f' ẹlẹ́ṣẹ̀ n' bi gbogbo,",
+          "Pé Jésù ń gbà ní là",
+          "Kọrin ẹ̀yìn èkúsù,",
+          "Bú s' ayọ̀ ẹ̀yìn ìgbì",
+          "Ayé yóò gbà ìsimi,",
+          "Jésù yóò gbà wá là."
         ]
       },
       {
         "type": "verse",
         "index": 3,
         "lines": [
-          "Korin nigba idanwo,",
-          "Pe Jesu yoo gba la,",
-          "Nipa 'ku at' iye Re",
-          "Jesu yoo gba wa la",
-          "Korin nigba iponju,",
-          "Ti okan si n fe aanu",
-          "Korin 'segun lor' iku,",
-          "Jesu yoo gba wa la."
+          "Kọrin nígbà ìdánwò,",
+          "Pé Jésù yóò gbà là,",
+          "Nípa 'kú àt' ìyè Rẹ",
+          "Jésù yóò gbà wá là",
+          "Kọrin nígbà ìpọ́njú,",
+          "Tí ọkàn sì ń fẹ́ àánú",
+          "Kọrin 'ṣẹ́gun lór' ikú,",
+          "Jésù yóò gbà wá là."
         ]
       },
       {
         "type": "verse",
         "index": 4,
         "lines": [
-          "Korin eyin afefe,",
-          "Pe Jesu yoo gba la,",
-          "Gbogbo araye e yo,",
-          "Jesu yoo gba wa la",
-          "Je k' igbo ati iju,",
-          "Y' ayo igbala ofe,",
-          "Eyi l' orin 'segun wa,",
-          "Jesu ti gba wa la."
+          "Kọrin ẹ̀yìn afẹ́fẹ́,",
+          "Pé Jésù yóò gbà là,",
+          "Gbogbo aráyé ẹ yọ,",
+          "Jésù yóò gbà wá là",
+          "Jẹ́ k' igbó àti ijù,",
+          "Y' ayọ̀ ìgbàlà ọ̀fẹ́,",
+          "Èyí l' orin 'ṣẹ́gun wa,",
+          "Jésù ti gbà wá là."
         ]
       }
     ],
-    "revision": 2
+    "revision": 3
   },
   {
     "index": "276",
     "number": 276,
-    "title": "Mo L' Orin Kan Ti Mo Feran",
+    "title": "Mo L' Orin Kan Tí Mo Fẹ́ràn",
     "english_title": "I Have A Song I Love To Sing",
     "references": {
       "CH": 638
@@ -18424,93 +18425,93 @@
         "type": "verse",
         "index": 1,
         "lines": [
-          "Mo l' orin kan ti mo feran,",
-          "Gba ta a ti gba mi la;",
-          "Ni t' Olugbala, Oba mi,",
-          "Gba ta a ti gba mi la."
+          "Mo l' orin kan tí mo fẹ́ràn,",
+          "Gbà t' a a ti gbà mí là;",
+          "Ni t' Olùgbàlà, Ọba mi,",
+          "Gbà t' a a ti gbà mí là."
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "Gba ta a ti gba mi la,",
-          "Gba ta a ti gba mi la",
-          "Em' of' ooko Re sogo;",
-          "Gba ta a... ti gba mi la,",
-          "N o f' ooko Olugbala sogo."
+          "Gbà t' a a ti gbà mí là,",
+          "Gbà t' a a ti gbà mí là",
+          "Èm' ó f' oókọ Rẹ s' ògó;",
+          "Gbà t' a a ti gbà mí là,",
+          "N ó f' oókọ Olùgbàlà s' ògó."
         ]
       },
       {
         "type": "verse",
         "index": 2,
         "lines": [
-          "Kristi mi le te mi lorun",
-          "Gba ta a ti gba mi la",
-          "Sise 'fe Re j' ere fun mi,",
-          "Gba ta a ti gba mi la"
+          "Krístì mi lè tẹ́ mi lọ́rùn",
+          "Gbà t' a a ti gbà mí là",
+          "Ṣíṣe 'fẹ́ Rẹ j' ère fún mi,",
+          "Gbà t' a a ti gbà mí là"
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "Gba ta a ti gba mi la,",
-          "Gba ta a ti gba mi la",
-          "Em' of' ooko Re sogo;",
-          "Gba ta a... ti gba mi la,",
-          "N o f' ooko Olugbala sogo."
+          "Gbà t' a a ti gbà mí là,",
+          "Gbà t' a a ti gbà mí là",
+          "Èm' ó f' oókọ Rẹ s' ògó;",
+          "Gbà t' a a ti gbà mí là,",
+          "N ó f' oókọ Olùgbàlà s' ògó."
         ]
       },
       {
         "type": "verse",
         "index": 3,
         "lines": [
-          "Mo ni eri t' o mo gaara,",
-          "Gba ta a ti gba mi la",
-          "T' o l' eru oun 'yemeji lo,",
-          "Gba ta a ti gba mi la"
+          "Mo ní ẹ̀rí t' ó mọ́ gáárá,",
+          "Gbà t' a a ti gbà mí là",
+          "T' ó l' ẹ̀rù oùn 'yèméjì lọ,",
+          "Gbà t' a a ti gbà mí là"
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "Gba ta a ti gba mi la,",
-          "Gba ta a ti gba mi la",
-          "Em' of' ooko Re sogo;",
-          "Gba ta a... ti gba mi la,",
-          "N o f' ooko Olugbala sogo."
+          "Gbà t' a a ti gbà mí là,",
+          "Gbà t' a a ti gbà mí là",
+          "Èm' ó f' oókọ Rẹ s' ògó;",
+          "Gbà t' a a ti gbà mí là,",
+          "N ó f' oókọ Olùgbàlà s' ògó."
         ]
       },
       {
         "type": "verse",
         "index": 4,
         "lines": [
-          "Ile kan wa ta a se fun mi,",
-          "Gba ta a ti gba mi la",
-          "Nibi ti n o maa gbe laelae,",
-          "Gba ta a ti gba mi la."
+          "Ilé kan wà t' a a ṣe fún mi,",
+          "Gbà t' a a ti gbà mí là",
+          "Níbi tí n ó máa gbé láéláé,",
+          "Gbà t' a a ti gbà mí là."
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "Gba ta a ti gba mi la,",
-          "Gba ta a ti gba mi la",
-          "Em' of' ooko Re sogo;",
-          "Gba ta a... ti gba mi la,",
-          "N o f' ooko Olugbala sogo."
+          "Gbà t' a a ti gbà mí là,",
+          "Gbà t' a a ti gbà mí là",
+          "Èm' ó f' oókọ Rẹ s' ògó;",
+          "Gbà t' a a ti gbà mí là,",
+          "N ó f' oókọ Olùgbàlà s' ògó."
         ]
       }
     ],
-    "revision": 2
+    "revision": 3
   },
   {
     "index": "277",
     "number": 277,
-    "title": "N O Korin Olugbala Mi",
+    "title": "N Ó Kọrin Olùgbàlà Mi",
     "english_title": "I Will Sing Of My Redeemer",
     "references": {
       "SDAH": 343
@@ -18520,70 +18521,70 @@
         "type": "verse",
         "index": 1,
         "lines": [
-          "N o korin Olugbala mi,",
-          "At' ife 'yanu Re;",
-          "O ji ya ni ori igi,",
-          "K' O le so mi dom' nira."
+          "N ó kọrin Olùgbàlà mi,",
+          "Àt' ìfẹ́ 'yànu Rẹ;",
+          "Ó jì yà ní orí igi,",
+          "K' Ó lè sọ mi d' om'nírà."
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "K' orin k' orin s' Olugbala mi,",
-          "O fi eje Re ra mi,",
-          "L' or' igi l' O dariji mi",
-          "O san gbogbo gbese mi."
+          "K' orin k' orin s' Olùgbàlà mi,",
+          "Ó fi ẹ̀jẹ̀ Rẹ rà mi,",
+          "L' ór' igi l' Ó dàríjì mi",
+          "Ó san gbogbo gbèsè mi."
         ]
       },
       {
         "type": "verse",
         "index": 2,
         "lines": [
-          "N o so 'tan, ani 'tan 'yanu,",
-          "Bi o se wa s'aye",
-          "Ninu ife at' aanu Re",
-          "O ra mi pada l' ofee."
+          "N ó sọ 'tàn, àní 'tàn 'yànu,",
+          "Bí ó ṣe wá s' ayé",
+          "Nínú ìfẹ́ àt' àánú Rẹ",
+          "Ó rà mi padà l' ọ̀fẹ́ẹ́."
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "K' orin k' orin s' Olugbala mi,",
-          "O fi eje Re ra mi,",
-          "L' or' igi l' O dariji mi",
-          "O san gbogbo gbese mi."
+          "K' orin k' orin s' Olùgbàlà mi,",
+          "Ó fi ẹ̀jẹ̀ Rẹ rà mi,",
+          "L' ór' igi l' Ó dàríjì mi",
+          "Ó san gbogbo gbèsè mi."
         ]
       },
       {
         "type": "verse",
         "index": 3,
         "lines": [
-          "N o korin Olugbala mi,",
-          "Ati ife t' O fi fe mi;",
-          "O ji mi lati iku si iye,",
-          "Odo Jesu l' o ye mi."
+          "N ó kọrin Olùgbàlà mi,",
+          "Àti ìfẹ́ t' Ó fi fẹ́ mi;",
+          "Ó jí mi láti ikú sí ìyè,",
+          "Ọ̀dọ̀ Jésù l' ó yẹ mi."
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "K' orin k' orin s' Olugbala mi,",
-          "O fi eje Re ra mi,",
-          "L' or' igi l' O dariji mi",
-          "O san gbogbo gbese mi."
+          "K' orin k' orin s' Olùgbàlà mi,",
+          "Ó fi ẹ̀jẹ̀ Rẹ rà mi,",
+          "L' ór' igi l' Ó dàríjì mi",
+          "Ó san gbogbo gbèsè mi."
         ]
       }
     ],
-    "revision": 2
+    "revision": 3
   },
   {
     "index": "278",
     "number": 278,
-    "title": "Isimi wa L' Orun",
-    "english_title": "Isimi wa L' Orun",
+    "title": "Ìsimi Wa L' Ọ̀run",
+    "english_title": "Ìsimi Wa L' Ọ̀run",
     "references": {
       "SDAH": 321
     },
@@ -18592,55 +18593,55 @@
         "type": "verse",
         "index": 1,
         "lines": [
-          "Isimi wa l' orun ko si l' aye yii,",
-          "Emi o se kun,",
-          "gba ti 'yonu ba de?",
-          "Simi, okan mi,",
-          "Eyi t' o wu ko de,",
-          "O din ajo mi ku,",
-          "O mu k' ile ya."
+          "Ìsimi wa l' ọ̀run kò sí l' ayé yìí,",
+          "Èmi ó ṣe kún,",
+          "gbà tí 'yọ̀nú bá dé?",
+          "Simi, ọkàn mi,",
+          "Èyí t' ó wù kó dé,",
+          "Ó dín àjò mi kù,",
+          "Ó mú k' ilé yà."
         ]
       },
       {
         "type": "verse",
         "index": 2,
         "lines": [
-          "Ko to fun mi ki n maa simi",
-          "nihin-in yii;",
-          "Ki n si maa ko' le mi ninu aye yii;",
-          "Oungbe ilu ta a ko",
-          "f' owo ko n gbe mi,",
-          "Mo n reti aye t' ese ko le ba je."
+          "Kò tó fún mi kí n máa simi",
+          "níhìn-in yìí;",
+          "Kí n sì máa kọ́ 'lé mi nínú ayé yìí;",
+          "Oúngbé ilú t' a a kọ́",
+          "f' ọwọ́ kò ń gbé mi,",
+          "Mo ń rètí ayé t' ẹ̀ṣẹ̀ kò lè bà jẹ́."
         ]
       },
       {
         "type": "verse",
         "index": 3,
         "lines": [
-          "Egun osusu le maa hu yi mi ka,",
-          "Sugbon emi ko ni gbera le aye;",
-          "Emi ko wa isimi kan ni aye,",
-          "Emi o fi simi l' aya Jesu mi."
+          "Ẹ̀gún ọ̀ṣùṣù lè máa hù yí mi ká,",
+          "Ṣùgbọ́n èmi kò ní gbéra lé ayé;",
+          "Èmi kò wá ìsimi kan ní ayé,",
+          "Èmi ó fi simi l' àyà Jésù mi."
         ]
       },
       {
         "type": "verse",
         "index": 4,
         "lines": [
-          "'Yonu le daamu, sugbon ko",
-          "le pa mi,",
-          "Oju 'fe Jesu le so 'yonu d' erin,",
-          "Erin Re yoo so ekun wa d' ayo.",
-          "Bi 'gba t' efuufu fe ojo sisu lo."
+          "'Yọ̀nú lè dààmú, ṣùgbọ́n kò",
+          "lè pa mi,",
+          "Ojú 'fẹ́ Jésù lè sọ 'yọ̀nú d' ẹrín,",
+          "Ẹrín Rẹ yóò sọ ẹkún wa d' ayọ̀.",
+          "Bí 'gbà t' èfúùfù fé ojò sísù lọ."
         ]
       }
     ],
-    "revision": 2
+    "revision": 3
   },
   {
     "index": "279",
     "number": 279,
-    "title": "Jesu Wa Ninu Oore Re",
+    "title": "Jésù Wá Nínú Oore Rẹ",
     "english_title": "In Loving Kindness Jesus Comes",
     "references": {
       "GS": 94,
@@ -18651,89 +18652,89 @@
         "type": "verse",
         "index": 1,
         "lines": [
-          "Jesu wa ninu oore Re",
-          "Lati ra okan mi pada,",
-          "Kuro n' nu ese oun tiju,",
-          "N' nu aanu O yo mi."
+          "Jésù wá nínú oore Rẹ",
+          "Láti rà ọkàn mi padà,",
+          "Kúrò n' nú ẹ̀ṣẹ̀ oùn tìjú,",
+          "N' nú àánú Ó yọ mi."
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "O yo mi kuro n' nu ese,",
-          "Owo jeje l' O fi fa mi",
-          "Lati ookun si imole,",
-          "Ogo ni fun oruko Re."
+          "Ó yọ mi kúrò n' nú ẹ̀ṣẹ̀,",
+          "Ọwọ́ jẹ̀jẹ̀ l' Ó fi fà mi",
+          "Láti òòkùn sí ìmọ́lẹ̀,",
+          "Ògo ni fún orúkọ Rẹ."
         ]
       },
       {
         "type": "verse",
         "index": 2,
         "lines": [
-          "O ti n pe mi pe ki n to gbo,",
-          "K' okan ese mi to soji;",
-          "'Gbati mo si gb' oro Re gbo,",
-          "Ni dariji O yo mi."
+          "Ó ti ń pè mi pé kí n tó gbọ́,",
+          "K' ọkàn ẹ̀ṣẹ̀ mi tó sójí;",
+          "'Gbàtí mo sì gb' ọ̀rọ̀ Rẹ gbọ́,",
+          "Ní dàríjì Ó yọ mi."
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "O yo mi kuro n' nu ese,",
-          "Owo jeje l' O fi fa mi",
-          "Lati ookun si imole,",
-          "Ogo ni fun oruko Re."
+          "Ó yọ mi kúrò n' nú ẹ̀ṣẹ̀,",
+          "Ọwọ́ jẹ̀jẹ̀ l' Ó fi fà mi",
+          "Láti òòkùn sí ìmọ́lẹ̀,",
+          "Ògo ni fún orúkọ Rẹ."
         ]
       },
       {
         "type": "verse",
         "index": 3,
         "lines": [
-          "A f' ade egun de E lori,",
-          "A si kan owo Re n' iso,",
-          "'Gba ta a tor' ese ko mi 'le",
-          "N' nu ife O yo mi."
+          "A f' adé ẹ̀gún dé E lórí,",
+          "A sì kan ọwọ́ Rẹ n' ìsọ,",
+          "'Gbà ta a tòr' ẹ̀ṣẹ̀ kọ mi 'lẹ̀",
+          "N' nú ìfẹ́ Ó yọ mi."
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "O yo mi kuro n' nu ese,",
-          "Owo jeje l' O fi fa mi",
-          "Lati ookun si imole,",
-          "Ogo ni fun oruko Re."
+          "Ó yọ mi kúrò n' nú ẹ̀ṣẹ̀,",
+          "Ọwọ́ jẹ̀jẹ̀ l' Ó fi fà mi",
+          "Láti òòkùn sí ìmọ́lẹ̀,",
+          "Ògo ni fún orúkọ Rẹ."
         ]
       },
       {
         "type": "verse",
         "index": 4,
         "lines": [
-          "Nisiyi mo n gbe 'bi giga,",
-          "Mo mo l' okan mi p'o dara,",
-          "Sugbon n ko le so idi re,",
-          "Ti O fi yo mi bee."
+          "Nísiyìí mo ń gbé 'bi gíga,",
+          "Mo mọ̀ l' ọkàn mi p' ó dára,",
+          "Ṣùgbọ́n ń kò lè sọ ìdí rẹ̀,",
+          "Tí Ó fi yọ mi bẹ́ẹ̀."
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "O yo mi kuro n' nu ese,",
-          "Owo jeje l' O fi fa mi",
-          "Lati ookun si imole,",
-          "Ogo ni fun oruko Re."
+          "Ó yọ mi kúrò n' nú ẹ̀ṣẹ̀,",
+          "Ọwọ́ jẹ̀jẹ̀ l' Ó fi fà mi",
+          "Láti òòkùn sí ìmọ́lẹ̀,",
+          "Ògo ni fún orúkọ Rẹ."
         ]
       }
     ],
-    "revision": 2
+    "revision": 3
   },
   {
     "index": "280",
     "number": 280,
-    "title": "'Bukun Ni Fun Ohun T' O De Wa Po",
+    "title": "'Búkún Ni Fún Ohun T' Ó Dé Wa Pọ̀",
     "english_title": "Blest Be the Tie that Binds",
     "references": {
       "SDAH": 350,
@@ -18745,49 +18746,49 @@
         "type": "verse",
         "index": 1,
         "lines": [
-          "'Bukun ni fun ohun",
-          "T' o de wa po n' nu 'fe!",
-          "Idapo awon olufe",
-          "Dabi ijo t' orun."
+          "'Búkún ni fún ohun",
+          "T' ó dé wa pọ̀ n' nú 'fẹ́!",
+          "Ìdápọ̀ àwọn olùfẹ́",
+          "Dàbí ìjọ t' ọ̀run."
         ]
       },
       {
         "type": "verse",
         "index": 2,
         "lines": [
-          "Niwaju 'te Baba",
-          "Ni awa n gbadura",
-          "Okan n' ireti at' eru,",
-          "Ati ni itunu."
+          "Níwájú 'tẹ́ Bàbá",
+          "Ni àwa ń gbàdúrà",
+          "Ọkàn n' ìrètí àt' ẹ̀rù,",
+          "Àti ní ìtùnú."
         ]
       },
       {
         "type": "verse",
         "index": 3,
         "lines": [
-          "Awa n b' ara wa pin",
-          "Ninu wahala wa;",
-          "Awa si n b' ara wa sokun",
-          "Ninu 'banuje wa."
+          "Àwa ń b' ara wa pín",
+          "Nínú wàhálà wa;",
+          "Àwa sì ń b' ara wa sọkún",
+          "Nínú 'bànújẹ́ wa."
         ]
       },
       {
         "type": "verse",
         "index": 4,
         "lines": [
-          "Nigba ta a ba pinya,",
-          "Inu wa a baje;",
-          "Sibe okan wa yoo j'okan",
-          "Ni ireti ipade."
+          "Nígbà ta a bá pínà,",
+          "Inú wa a bàjẹ́;",
+          "Síbẹ̀ ọkàn wa yóò j' ọkàn",
+          "Ní ìrètí ìpadé."
         ]
       }
     ],
-    "revision": 2
+    "revision": 3
   },
   {
     "index": "281",
     "number": 281,
-    "title": "Rin N' Nu 'Mole",
+    "title": "Rìn N' Nú 'Mọ́lẹ̀",
     "english_title": "Walk in the Light",
     "references": {
       "NAH": 441,
@@ -18798,49 +18799,49 @@
         "type": "verse",
         "index": 1,
         "lines": [
-          "Rin n' nu 'mole! 'wo yoo si mo",
-          "Idapo ife ni,",
-          "T' Emi Re nikan le fun ni",
-          "En' t' o joba l' orun."
+          "Rìn n' nú 'mọ́lẹ̀! 'wọ yóò sì mọ̀",
+          "Ìdápọ̀ ìfẹ́ ni,",
+          "T' Ẹ̀mí Rẹ nìkan lè fún ni",
+          "Ẹn' t' ó jọba l' ọ̀run."
         ]
       },
       {
         "type": "verse",
         "index": 2,
         "lines": [
-          "Rin n' nu 'mole! 'wo yoo si mo",
-          "P' okunkun re fo lo;",
-          "Tori imole pipe ni,",
-          "Ti tan 'mole si o."
+          "Rìn n' nú 'mọ́lẹ̀! 'wọ yóò sì mọ̀",
+          "P' òkùnkùn rẹ fò lọ;",
+          "Tòrí ìmọ́lẹ̀ pípé ni,",
+          "Ti tàn 'mọ́lẹ̀ sí ọ."
         ]
       },
       {
         "type": "verse",
         "index": 3,
         "lines": [
-          "Rin n' nu 'mole! eru iku",
-          "Ki yoo si ba O;",
-          "Ogo yoo le okunkun re,",
-          "'Tori Kristi segun."
+          "Rìn n' nú 'mọ́lẹ̀! ẹ̀rù ikú",
+          "Kì yóò sì bà Ọ;",
+          "Ògo yóò lé òkùnkùn rẹ,",
+          "'Tòrí Krístì ṣẹ́gun."
         ]
       },
       {
         "type": "verse",
         "index": 4,
         "lines": [
-          "Rin n' nu 'mole! ona re yoo",
-          "Dan b' o tile l' egun-un",
-          "Olorun yoo maa gbe nu re;",
-          "Imole l' Olorun."
+          "Rìn n' nú 'mọ́lẹ̀! ọ̀nà rẹ yóò",
+          "Dán b' ó tilẹ̀ l' ẹ̀gún-un",
+          "Ọlọ́run yóò máa gbé nù rẹ;",
+          "Ìmọ́lẹ̀ l' Ọlọ́run."
         ]
       }
     ],
-    "revision": 2
+    "revision": 3
   },
   {
     "index": "282",
     "number": 282,
-    "title": "Igba Naa Yoo Ti Dun To",
+    "title": "Ìgbà Náà Yóò Ti Dùn Tó",
     "english_title": "Sweet the Time",
     "references": {
       "NAH": 267,
@@ -18851,60 +18852,60 @@
         "type": "verse",
         "index": 1,
         "lines": [
-          "Igba naa yoo ti dun to,",
-          "T' awon mimo yoo pade;",
-          "Ti Jesu yoo j' orin won,",
-          "Ti won yoo ko orin Re."
+          "Ìgbà náà yóò ti dùn tó,",
+          "T' àwọn mímọ́ yóò padé;",
+          "Tí Jésù yóò j' orin wọn,",
+          "Tí wọ́n yóò kọ orin Rẹ."
         ]
       },
       {
         "type": "verse",
         "index": 2,
         "lines": [
-          "Je k' a ko orin ife,",
-          "T' o mu Baba wa orun",
-          "F' Omo Re 'kansoso fun wa,",
-          "'Gba t 'O r' aye n' ibaje."
+          "Jẹ́ k' a kọ orin ìfẹ́,",
+          "T' ó mú Bàbá wa ọ̀run",
+          "F' Ọmọ Rẹ 'kanṣoṣo fún wa,",
+          "'Gbà t' Ó r' ayé n' ìbàjẹ́."
         ]
       },
       {
         "type": "verse",
         "index": 3,
         "lines": [
-          "Korin ife Omo naa,",
-          "B' O ti f' ite orun 'le;",
-          "O gb' a wo at' ipo wa,",
-          "O ku lati gba wa la"
+          "Kọrin ìfẹ́ Ọmọ náà,",
+          "B' Ó ti f' ìtẹ́ ọ̀run 'lẹ̀;",
+          "Ó gb' àwọ̀ àt' ipò wa,",
+          "Ó kú láti gbà wá là"
         ]
       },
       {
         "type": "verse",
         "index": 4,
         "lines": [
-          "Je k' a korin if' Emi,",
-          "Eni t' o n ro okan wa,",
-          "T' o n fi ese wa han wa,",
-          "T' o mu Jesu sun mo wa."
+          "Jẹ́ k' a kọrin ìf' Ẹ̀mí,",
+          "Ẹni t' ó ń rò ọkàn wa,",
+          "T' ó ń fi ẹ̀ṣẹ̀ wa hàn wa,",
+          "T' ó mú Jésù sún mọ́ wa."
         ]
       },
       {
         "type": "verse",
         "index": 5,
         "lines": [
-          "Igba naa yoo ti dun to,",
-          "T' awon mimo yoo pade;",
-          "Jesu yoo maa j' orin won,",
-          "Won yoo maa ko orin Re."
+          "Ìgbà náà yóò ti dùn tó,",
+          "T' àwọn mímọ́ yóò padé;",
+          "Jésù yóò máa j' orin wọn,",
+          "Wọ́n yóò máa kọ orin Rẹ."
         ]
       }
     ],
-    "revision": 2
+    "revision": 3
   },
   {
     "index": "283",
     "number": 283,
-    "title": "N' Nu Gbogb' Ayidayid' Aye",
-    "english_title": "Through All the Changing Scenes of Life",
+    "title": "N' Nú Gbogb' Ayídáyíd' Ayé",
+    "english_title": "Through All The Changing Scenes Of Life",
     "references": {
       "NAH": 245
     },
@@ -18913,60 +18914,60 @@
         "type": "verse",
         "index": 1,
         "lines": [
-          "N' nu gbogb' ayidayid' aye,",
-          "N' nu 'yonu at' ayo,",
-          "Sibe iyin Olorun mi",
-          "Ni yoo gb' enu mi kan."
+          "N' nú gbogb' ayídáyíd' ayé,",
+          "N' nú 'yọ̀nú àt' ayọ̀,",
+          "Síbẹ̀ ìyìn Ọlọ́run mi",
+          "Ni yóò gb' ẹnu mi kan."
         ]
       },
       {
         "type": "verse",
         "index": 2,
         "lines": [
-          "N o sogo n' nu igbala Re,",
-          "Tit' awon t' oju n pon",
-          "Yoo f' apeere mi se 'tunu",
-          "T' edun won yoo fo lo."
+          "N ó s' ògó n' nú ìgbàlà Rẹ,",
+          "Tít' àwọn t' ojú ń pọn",
+          "Yóò f' àpẹẹrẹ mi ṣe 'tùnú",
+          "T' ẹ̀dùn wọn yóò fò lọ."
         ]
       },
       {
         "type": "verse",
         "index": 3,
         "lines": [
-          "Awon ogun orun si yi",
-          "'Bugbe oloooto ka;",
-          "O j' aabo fun gbogbo awon",
-          "T' o gbekel' ooko Re."
+          "Àwọn ogun ọ̀run sì yí",
+          "'Búgbé olóòótọ́ ká;",
+          "Ó j' àábò fún gbogbo àwọn",
+          "T' ó gbékèl' oókọ Rẹ."
         ]
       },
       {
         "type": "verse",
         "index": 4,
         "lines": [
-          "Iwo saa dan ife Re wo,",
-          "Iwo yoo si ri I pe",
-          "Opo 'bukun l' o wa f' awon",
-          "Ti n gbe 'nu ooto Re."
+          "Ìwọ ṣàá dán ìfẹ́ Rẹ wò,",
+          "Ìwọ yóò sì rí I pé",
+          "Ọ̀pọ̀ 'búkún l' ó wà f' àwọn",
+          "Tí ń gbé 'nú òótọ́ Rẹ."
         ]
       },
       {
         "type": "verse",
         "index": 5,
         "lines": [
-          "Beru Re, e ki yoo si ni",
-          "Iberu miran mo;",
-          "Fi ise Re se ayo re;",
-          "'Toju re d' ise Re."
+          "Bẹ̀rù Rẹ, ẹ kì yóò sì ní",
+          "Ìbẹ̀rù míràn mọ́;",
+          "Fi iṣẹ́ Rẹ ṣe ayọ̀ rẹ;",
+          "'Tọ́jú rẹ d' iṣẹ́ Rẹ."
         ]
       }
     ],
-    "revision": 2
+    "revision": 3
   },
   {
     "index": "284",
     "number": 284,
-    "title": "Bugbe Re ti L' Ewa To",
-    "english_title": "Pleasant are Thy Courts above",
+    "title": "'Búgbé Rẹ Ti L' Ẹwà Tó",
+    "english_title": "Pleasant Are Thy Courts Above",
     "references": {
       "NAH": 226
     },
@@ -18975,65 +18976,65 @@
         "type": "verse",
         "index": 1,
         "lines": [
-          "'Bugbe Re ti l' ewa to!",
-          "N' ile 'mole at' ife",
-          "'Bugbe Re ti l' ewa to!",
-          "L' aye ese at' osi;",
-          "Okan mi n fa nitooto,",
-          "Si 'dapo eniyan Re,",
-          "Fun imole oju Re,",
-          "Fun Okun Re Olorun."
+          "'Búgbé Rẹ ti l' ẹwà tó!",
+          "N' ilé 'mọ́lẹ̀ àt' ìfẹ́",
+          "'Búgbé Rẹ ti l' ẹwà tó!",
+          "L' ayé ẹ̀ṣẹ̀ àt' òsì;",
+          "Ọkàn mi ń fà nítòótọ́,",
+          "Sí 'dápọ̀ ènìyàn Rẹ,",
+          "Fún ìmọ́lẹ̀ ojú Rẹ,",
+          "Fún Okùn Rẹ Ọlọ́run."
         ]
       },
       {
         "type": "verse",
         "index": 2,
         "lines": [
-          "Awon eye, kun f' ayo,",
-          "Won n fo yi ite Re ka;",
-          "Ayo okan t' o simi,",
-          "L' aya Baba wa Orun;",
-          "Gege b' adaba Noa,",
-          "Ti ko r' ibi simi le,",
-          "Won pada sodo Baba",
-          "Wo si n yo titi aye."
+          "Àwọn ẹyẹ, kún f' ayọ̀,",
+          "Wọ́n ń fò yí ìtẹ́ Rẹ ká;",
+          "Ayọ̀ ọkàn t' ó simi,",
+          "L' àyà Bàbá wa Ọ̀run;",
+          "Gẹ́gẹ́ b' àdàbà Nóà,",
+          "Tí kò r' ibi simi lé,",
+          "Wọ́n padà sọ̀dọ̀ Bàbá",
+          "Wọ sì ń yọ títí ayé."
         ]
       },
       {
         "type": "verse",
         "index": 3,
         "lines": [
-          "Okan t' o kun fun iyin,",
-          "Ninu aye osi yii;",
-          "Omi n sun ni aginju,",
-          "Won n je manna lat' Orun,",
-          "Won n lo lat' ipa de 'pa,",
-          "Titi won yoo r' ite Re,",
-          "Ki wo wolel' ese Re,",
-          "To o mu won la ewu ja."
+          "Ọkàn t' ó kún fún ìyìn,",
+          "Nínú ayé òsì yìí;",
+          "Omi ń sun ní àginjù,",
+          "Wọ́n ń jẹ manna lát' Ọ̀run,",
+          "Wọ́n ń lọ lát' ipa dé 'pa,",
+          "Títí wọ́n yóò r' ìtẹ́ Rẹ,",
+          "Kí wọ wọlẹ̀l' ẹsẹ̀ Rẹ,",
+          "Tó O mú wọn là ewu ja."
         ]
       },
       {
         "type": "verse",
         "index": 4,
         "lines": [
-          "Baba je ki n jere 'bee",
-          "To mi l' aye ese yii;",
-          "F' oore-ofe pa mi mo,",
-          "Fun mi l' aye l' odo Re",
-          "Iwo l' Orun at' Asa;",
-          "To okan isina mi;",
-          "Iwo l' orisun oore,",
-          "Ro ojo Re sori mi."
+          "Bàbá jẹ́ kí n jèrè 'bẹ̀ẹ̀",
+          "Tọ́ mi l' ayé ẹ̀ṣẹ̀ yìí;",
+          "F' oore-ọ̀fẹ́ pa mi mọ́,",
+          "Fún mi l' àyè l' ọ̀dọ̀ Rẹ",
+          "Ìwọ l' Ọ̀run àt' Àsà;",
+          "Tọ́ ọkàn ìṣìnà mi;",
+          "Ìwọ l' orísun oore,",
+          "Rọ̀ ojò Rẹ s' orí mi."
         ]
       }
     ],
-    "revision": 2
+    "revision": 3
   },
   {
     "index": "285",
     "number": 285,
-    "title": "'Pile Ijo Olorun",
+    "title": "'Pìlẹ̀ Ìjọ Ọlọ́run",
     "english_title": "The Church's One Foundation",
     "references": {
       "SDAH": 348,
@@ -19045,65 +19046,65 @@
         "type": "verse",
         "index": 1,
         "lines": [
-          "Pile ijo Olorun",
-          "Ni Jesu Oluwa;",
-          "O je eda Re titun",
-          "Pel' omi at' Oro,",
-          "O wa wa lati orun",
-          "Lati fi s' aya Re;",
-          "O si fi eje Re ra a,",
-          "O ku ki Oun le ye"
+          "'Pìlẹ̀ ìjọ Ọlọ́run",
+          "Ni Jésù Olúwa;",
+          "Ó jẹ́ ẹ̀dá Rẹ títun",
+          "Pẹ̀l' omi àt' Ọ̀rọ̀,",
+          "Ó wá wa láti ọ̀run",
+          "Láti fi ṣ' ayà Rẹ;",
+          "Ó sì fi ẹ̀jẹ̀ Rẹ rà á,",
+          "Ó kú kí Òun lè yè"
         ]
       },
       {
         "type": "verse",
         "index": 2,
         "lines": [
-          "A sa won nibi gbogbo,",
-          "Sibe won je okan",
-          "Oluwa kan, 'gbagbo kan",
-          "L' ofin igbala re",
-          "Ooko kan ni won n yin",
-          "Okan ni ireti won,",
-          "Okan ni ireti won",
-          "Pelu oore-ofe."
+          "A sà wọn níbi gbogbo,",
+          "Síbẹ̀ wọ́n jẹ́ ọkàn",
+          "Olúwa kan, 'gbàgbọ́ kan",
+          "L' òfin ìgbàlà rẹ̀",
+          "Oókọ kan ni wọ́n ń yìn",
+          "Ọkàn ni ìrètí wọn,",
+          "Ọkàn ni ìrètí wọn",
+          "Pẹ̀lú oore-ọ̀fẹ́."
         ]
       },
       {
         "type": "verse",
         "index": 3,
         "lines": [
-          "Pelu egan iyanu",
-          "La ri i b' o ti n jiya",
-          "Bi ota tile fe wo",
-          "O di 'bi sinmi Re",
-          "O n fi itara beere",
-          "Bawo ni yoo pe to?",
-          "Laipe ale ekun kan",
-          "Yoo di ooro ayo."
+          "Pẹ̀lú ẹ̀gàn ìyànu",
+          "Là rí i b' ó ti ń jìyà",
+          "Bí ọ̀tá tilẹ̀ fẹ́ wó",
+          "Ódi 'bi sìnmi Rẹ",
+          "Ó ń fi ìtara bèèrè",
+          "Báwo ni yóò pẹ́ tó?",
+          "Láìpẹ́ alẹ́ ẹkún kan",
+          "Yóò di oòrọ̀ ayọ̀."
         ]
       },
       {
         "type": "verse",
         "index": 4,
         "lines": [
-          "Ninu laalaa oun 'ponju",
-          "L' aarin ogun aye",
-          "O n reti ojo 'kehin",
-          "T' alaafia Laelae,",
-          "Tit' oju ireti Re",
-          "Yoo r' iran t' o logo",
-          "Ti ijo nla t' o segun",
-          "Yoo si ni isimi."
+          "Nínú láálàá oùn 'pọ́njú",
+          "L' àárín ogun ayé",
+          "Ó ń rètí ọjọ́ 'kẹ́yìn",
+          "T' àlàáfíà láéláé,",
+          "Títí ojú ìrètí Rẹ",
+          "Yóò r' ìràn t' ó l' ògó",
+          "Tí ìjọ ńlá t' ó ṣẹ́gun",
+          "Yóò sì ní ìsimi."
         ]
       }
     ],
-    "revision": 2
+    "revision": 3
   },
   {
     "index": "286",
     "number": 286,
-    "title": "Jesu Ba Ijo Re Gbe",
+    "title": "Jésù Bá Ìjọ Rẹ Gbé",
     "english_title": "Jesus With Thy Church Abide",
     "references": {
       "SDAH": 374,
@@ -19114,50 +19115,50 @@
         "type": "verse",
         "index": 1,
         "lines": [
-          "Jesu, ba ijo Re gbe",
-          "S' Amona at' Odi re",
-          "B' o ti n la 'danwo koja;",
-          "A n be O, gbo ti wa."
+          "Jésù, bá ìjọ Rẹ gbé",
+          "S' Àmọ̀nà àt' Odì rẹ",
+          "B' ó ti ń là 'dánwò kọjá;",
+          "A ń bẹ Ọ, gbọ́ ti wa."
         ]
       },
       {
         "type": "verse",
         "index": 2,
         "lines": [
-          "K' ohun re maa ja gooro,",
-          "Ni' kilo 'dajo ti n bo;",
-          "Ni siso ife Jesu;",
-          "A n be O, gbo ti wa."
+          "K' ohùn rẹ̀ máa ja gòòrò,",
+          "Ní 'kìlọ̀ 'dájọ́ tí ń bọ̀;",
+          "Ní sísọ ìfẹ́ Jésù;",
+          "A ń bẹ Ọ, gbọ́ ti wa."
         ]
       },
       {
         "type": "verse",
         "index": 3,
         "lines": [
-          "Ko o to awon afoju",
-          "Wa awon t' o nu kiri,",
-          "M' okan t' o gbogbe duro;",
-          "A n be O, gbo ti wa."
+          "Kọ́ ọ tọ́ àwọn afọ́jú",
+          "Wá àwọn t' ó nù kiri,",
+          "M' ọkàn t' ó gbọ̀gbẹ̀ dúró;",
+          "A ń bẹ Ọ, gbọ́ ti wa."
         ]
       },
       {
         "type": "verse",
         "index": 4,
         "lines": [
-          "K' ijo yii je asegun;",
-          "J' o bori ogun ese",
-          "Ko gbogo aye wole;",
-          "A n be O, gbo tiwa."
+          "K' ìjọ yìí jẹ́ aṣẹ́gun;",
+          "J' ó borí ogun ẹ̀ṣẹ̀",
+          "Kó gbogbo ayé wọlé;",
+          "A ń bẹ Ọ, gbọ́ ti wa."
         ]
       }
     ],
-    "revision": 2
+    "revision": 3
   },
   {
     "index": "287",
     "number": 287,
-    "title": "Sise 'Tori Oru N Bo",
-    "english_title": "Work for the Night Is Coming",
+    "title": "Ṣiṣẹ́ 'Tòrí Órù Ń Bọ̀",
+    "english_title": "Work For The Night Is Coming",
     "references": {
       "SDAH": 375,
       "NAH": 486,
@@ -19168,51 +19169,51 @@
         "type": "verse",
         "index": 1,
         "lines": [
-          "Sise 'tori oru n bo!",
-          "Sise ni owuro",
-          "Sise nigba iri n se",
-          "Sise n' nu tanna;",
-          "Sise ki osan to pon",
-          "Sise nigb' oorun n ran;",
-          "Sise 'tori oru n bo!",
-          "'Gba 'se o pari."
+          "Ṣiṣẹ́ 'tòrí órù ń bọ̀!",
+          "Ṣiṣẹ́ ní òwúrọ̀",
+          "Ṣiṣẹ́ nígbà ìrí ń ṣe",
+          "Ṣiṣẹ́ n' nú tànná;",
+          "Ṣiṣẹ́ kí ọ̀sán tó pọn",
+          "Ṣiṣẹ́ nígb' oòrùn ń rán;",
+          "Ṣiṣẹ́ 'tòrí órù ń bọ̀!",
+          "'Gbà 'ṣe ó parí."
         ]
       },
       {
         "type": "verse",
         "index": 2,
         "lines": [
-          "Sise 'tori oru n bo!",
-          "Sise l' osan-an gangan,",
-          "F' akoko rere fun 'se,",
-          "Isimi daju,",
-          "F' olukuluku igba,",
-          "Ni nnkan lati pa mo;",
-          "Sise 'tori oru n bo,",
-          "'Gba 'se o pari."
+          "Ṣiṣẹ́ 'tòrí órù ń bọ̀!",
+          "Ṣiṣẹ́ l' ọ̀sán-an gangan,",
+          "F' àkókò rere fún 'ṣe,",
+          "Ìsimi dájú,",
+          "F' olúkúlùkù ìgbà,",
+          "Ní nnkan láti pa mọ́;",
+          "Ṣiṣẹ́ 'tòrí órù ń bọ̀,",
+          "'Gbà 'ṣe ó parí."
         ]
       },
       {
         "type": "verse",
         "index": 3,
         "lines": [
-          "Sise 'tori oru n bo!",
-          "Oorun fere wo na,",
-          "Sise 'gbat' imole wa,",
-          "Ojo bu lo tan,",
-          "Sise titi de opin,",
-          "Sise titi d 'ale,",
-          "Sise gbat' ile ba n su,",
-          "'Gba 'se o pari."
+          "Ṣiṣẹ́ 'tòrí órù ń bọ̀!",
+          "Oòrùn fẹ́rẹ̀ wọ̀ nà,",
+          "Ṣiṣẹ́ 'gbàt' ìmọ́lẹ̀ wà,",
+          "Ọjọ́ bù lọ tán,",
+          "Ṣiṣẹ́ títí dé òpin,",
+          "Ṣiṣẹ́ títí d' alẹ́,",
+          "Ṣiṣẹ́ gbàt' ilẹ̀ bá ń sù,",
+          "'Gbà 'ṣe ó parí."
         ]
       }
     ],
-    "revision": 2
+    "revision": 3
   },
   {
     "index": "288",
     "number": 288,
-    "title": "Yo Awon Ti N Segbe",
+    "title": "Yọ Àwọn Tí Ń Ṣègbé",
     "english_title": "Rescue the Perishing",
     "references": {
       "SDAH": 367,
@@ -19223,64 +19224,64 @@
         "type": "verse",
         "index": 1,
         "lines": [
-          "Yo awon ti n segbe, s' aajo eni n ku",
-          "F' aanu ja won kuro ninu ese",
-          "Ke f' awon ti n sina, gb' eni subo ro",
-          "So fun won pe, Jesu le gba won la"
+          "Yọ àwọn tí ń ṣègbé, s' àájò ẹni ń kú",
+          "F' àánú ja wọ́n kúrò nínú ẹ̀ṣẹ̀",
+          "Kẹ f' àwọn tí ń ṣìnà, gb' ẹni ṣubú rò",
+          "Sọ fún wọn pé, Jésù lè gbà wọ́n là"
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "Yo awon ti n segbe, saajo eni n ku",
-          "Alaanu ni Jesu; yoo si gbala."
+          "Yọ àwọn tí ń ṣègbé, s' àájò ẹni ń kú",
+          "Aláànú ni Jésù; yóò sì gbàlà."
         ]
       },
       {
         "type": "verse",
         "index": 2,
         "lines": [
-          "Bi won o tile gan-an sibe O n duro",
-          "Lati gb' omo t' o ronu piwada;",
-          "Saa f' itara ro won, si ro won jeje,",
-          "Oun o dariji, bi won je, gbagbo."
+          "Bí wọ́n ó tilẹ̀ gàn-an síbẹ̀ Ó ń dúró",
+          "Láti gb' ọmọ t' ó ronú píwàdà;",
+          "Ṣàá f' ìtara rò wọ́n, sì rò wọ́n jẹ̀jẹ̀,",
+          "Òun ó dàríjì, bí wọ́n jẹ́, gbàgbọ́."
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "Yo awon ti n segbe, saajo eni n ku",
-          "Alaanu ni Jesu; yoo si gbala."
+          "Yọ àwọn tí ń ṣègbé, s' àájò ẹni ń kú",
+          "Aláànú ni Jésù; yóò sì gbàlà."
         ]
       },
       {
         "type": "verse",
         "index": 3,
         "lines": [
-          "Yo awon ti n segbe,",
-          "Ise tire ni;",
-          "Oluwa, yoo fi agbara fun o;",
-          "Fi suuru ro won, pada s' ona tooro,",
-          "So f' asako p' Olugbala ti ku."
+          "Yọ àwọn tí ń ṣègbé,",
+          "Iṣẹ́ tire ni;",
+          "Olúwa, yóò fi agbára fún ọ;",
+          "Fi sùúrù rò wọ́n, padà s' ọ̀nà tòórò,",
+          "Sọ f' aṣako p' Olùgbàlà ti kú."
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "Yo awon ti n segbe, saajo eni n ku",
-          "Alaanu ni Jesu; yoo si gbala."
+          "Yọ àwọn tí ń ṣègbé, s' àájò ẹni ń kú",
+          "Aláànú ni Jésù; yóò sì gbàlà."
         ]
       }
     ],
-    "revision": 2
+    "revision": 3
   },
   {
     "index": "289",
     "number": 289,
-    "title": "A O Sise! A O Sise!",
+    "title": "A Ó Ṣiṣẹ́! A Ó Ṣiṣẹ́!",
     "english_title": "To the Work! To the Work!",
     "references": {
       "CS": 576
@@ -19290,88 +19291,88 @@
         "type": "verse",
         "index": 1,
         "lines": [
-          "A o sise! a o sise!",
-          "Om' Olorun ni wa!",
-          "Je k' a te le ipa ti Oluwa wa to",
-          "K' a f' imoran Re so agbara wa d' otun,",
+          "A ó ṣiṣẹ́! a ó ṣiṣẹ́!",
+          "Ọm' Ọlọ́run ni wa!",
+          "Jẹ́ k' a tẹ̀ lé ipa tí Olúwa wa tọ",
+          "K' a f' ìmọ̀ràn Rẹ sọ agbára wa d' ọ̀tún,",
           "K' a fi gbogbo",
-          "Kun wa sise t' a ni se."
+          "Kún wa ṣiṣẹ́ t' a ní ṣe."
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "Fori tii, fori tii, Fori tii, fori tii,",
-          "Maa reti, maa sona,",
-          "Titi Oluwa yoo fi de."
+          "Forí tìí, forí tìí, Forít ìí, forí tìí,",
+          "Máa rètí, máa ṣọ́nà,",
+          "Títí Olúwa yóò fi dé."
         ]
       },
       {
         "type": "verse",
         "index": 2,
         "lines": [
-          "A o sise! a o sise! bo awon t' ebi n pa,",
-          "Ko awon alaare lo s' orisun iye;",
-          "Ninu agbelebuu l' awa o maa sogo,",
-          "Nigba ti a n kede pe Ofe n' igbala."
+          "A ó ṣiṣẹ́! a ó ṣiṣẹ́! bo àwọn t' ẹ̀bí ń pa,",
+          "Kọ àwọn aláàrẹ̀ lọ s' orísun ìyè;",
+          "Nínú àgbélébùú l' àwa ó máa s' ògó,",
+          "Nígbà tí a ń kédé pé Ọ̀fẹ́ n' ìgbàlà."
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "Fori tii, fori tii, Fori tii, fori tii,",
-          "Maa reti, maa sona,",
-          "Titi Oluwa yoo fi de."
+          "Forí tìí, forí tìí, Forít ìí, forí tìí,",
+          "Máa rètí, máa ṣọ́nà,",
+          "Títí Olúwa yóò fi dé."
         ]
       },
       {
         "type": "verse",
         "index": 3,
         "lines": [
-          "A o sise! a o sise! gbogbo wa ni yoo se e,",
-          "Ijoba okunkun ati iro yoo fo;",
-          "A o si gbe oruko Jehofa leke,",
-          "N' nu orin iyin wa pe, Ofe n' igbala."
+          "A ó ṣiṣẹ́! a ó ṣiṣẹ́! gbogbo wa ni yóò ṣe é,",
+          "Ìjọba òkùnkùn àti irọ́ yóò fọ́;",
+          "A ó sì gbé orúkọ Jèhófà lékè,",
+          "N' nú orin ìyìn wa pé, Ọ̀fẹ́ n' ìgbàlà."
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "Fori tii, fori tii, Fori tii, fori tii,",
-          "Maa reti, maa sona,",
-          "Titi Oluwa yoo fi de."
+          "Forí tìí, forí tìí, Forít ìí, forí tìí,",
+          "Máa rètí, máa ṣọ́nà,",
+          "Títí Olúwa yóò fi dé."
         ]
       },
       {
         "type": "verse",
         "index": 4,
         "lines": [
-          "A o sise! a o sise! l' agbara Oluwa.",
-          "Agbada at' ade yoo si je ere wa;",
-          "Nigba ti a ba awon olooto gbe,",
-          "Gbogbo wa yoo jo ho pe Ofe n' igbala."
+          "A ó ṣiṣẹ́! a ó ṣiṣẹ́! l' agbára Olúwa.",
+          "Agbádá àt' adé yóò sì jẹ́ ère wa;",
+          "Nígbà tí a bá àwọn olóòótọ́ gbé,",
+          "Gbogbo wa yóò jọ hó pé Ọ̀fẹ́ n' ìgbàlà."
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "Fori tii, fori tii, Fori tii, fori tii,",
-          "Maa reti, maa sona,",
-          "Titi Oluwa yoo fi de."
+          "Forí tìí, forí tìí, Forít ìí, forí tìí,",
+          "Máa rètí, máa ṣọ́nà,",
+          "Títí Olúwa yóò fi dé."
         ]
       }
     ],
-    "revision": 2
+    "revision": 3
   },
   {
     "index": "290",
     "number": 290,
-    "title": "Gbo Ohun Jesu Ti N Ke Pe",
-    "english_title": "Hark! The Voice of Jesus Calling",
+    "title": "Gbọ́ Ohùn Jésù Tí Ń Ké Pé",
+    "english_title": "Hark! The Voice Of Jesus Calling",
     "references": {
       "SDAH": 359,
       "NAH": 485,
@@ -19382,65 +19383,65 @@
         "type": "verse",
         "index": 1,
         "lines": [
-          "Gbo ohun Jesu ti n ke pe",
-          "Tani yoo sise lonii?",
-          "Oko pon pupo fun 'kore;",
-          "Tani yoo lo ko o wa 'le",
-          "Kikan kikan l' Oluwa n pe,",
-          "Ebun n la ni yoo fun o;",
-          "Tani yoo fi ayo dahun?",
-          "Pe Emi ni yii ran mi!"
+          "Gbọ́ ohùn Jésù tí ń ké pé",
+          "Tani yóò ṣiṣẹ́ lónìí?",
+          "Oko pọn púpọ̀ fún 'kórè;",
+          "Tani yóò lọ kó o wá 'lé",
+          "Kíkan kíkan l' Olúwa ń pè,",
+          "Ẹ̀bùn ńlá ni yóò fún ọ;",
+          "Tani yóò fi ayọ̀ dáhùn?",
+          "Pé Èmi ni yìí ràn mi!"
         ]
       },
       {
         "type": "verse",
         "index": 2,
         "lines": [
-          "B' iwo ko le la okun lo,",
-          "Lati w' awon keeferi,",
-          "O le ri won nitosi re,",
-          "Won wa l' enu-ona re",
-          "Bo o ko le soro b' angeli,",
-          "Bo o ko le se bi ti Paul,",
-          "'Wo le jeri ife Jesu",
-          "Pe, O ku fun gbogbo wa."
+          "B' ìwọ kò lè la òkun lọ,",
+          "Láti w' àwọn kèèfèrí,",
+          "O lè rí wọn nítòsí rẹ,",
+          "Wọ́n wà l' ẹnu-ọ̀nà rẹ",
+          "Bó o kò lè sọ̀rọ̀ b' ángẹ́lì,",
+          "Bó o kò lè ṣe bí ti Paul,",
+          "'Wọ lè jẹ́rí ìfẹ́ Jésù",
+          "Pé, Ó kú fún gbogbo wa."
         ]
       },
       {
         "type": "verse",
         "index": 3,
         "lines": [
-          "B' iwo ko le se alore,",
-          "Lori odi Sioni,",
-          "Lati toka s' ona orun,",
-          "Lati f' iye lo eda,",
-          "'Wo le f' adura at' ore",
-          "Se ohun t' Olorun wi;",
-          "'Wo le gege bi Aaron'",
-          "T' o gb' owo wolii soke."
+          "B' ìwọ kò lè ṣe alọ́rẹ,",
+          "Lórí odì Síónì,",
+          "Láti tọ́ka s' ọ̀nà ọ̀run,",
+          "Láti f' ìyè lọ ẹ̀dá,",
+          "'Wọ lè f' àdúrà àt' ore",
+          "Ṣe ohun t' Ọlọ́run wí;",
+          "'Wọ lè se gẹ́gẹ́ bí Aaron",
+          "T' ó gb' ọwọ́ wòlíì s' òkè."
         ]
       },
       {
         "type": "verse",
         "index": 4,
         "lines": [
-          "Nigba t' emi eniyan n ku,",
-          "Ti Oluwa si n pe o,",
-          "Ma je k' a gbo, ki o wipe",
-          "Ko si nkan t' emi le se!",
-          "F' ayo gba ise t' O ran o",
-          "F' ise Re se ayo re;",
-          "'Gbat' O n pe o, tara dahun",
-          "Pe, emi ni yii, ran mi!."
+          "Nígbà t' ẹ̀mí ènìyàn ń kú,",
+          "Tí Olúwa sì ń pè ọ,",
+          "Má jẹ́ k' a gbọ́, kí o wí pé",
+          "Kò sí nkan t' èmi lè ṣe!",
+          "F' ayọ̀ gbà iṣẹ́ t' Ó ràn ọ",
+          "F' iṣẹ́ Rẹ ṣe ayọ̀ rẹ;",
+          "'Gbàt' Ó ń pè ọ, tara dáhùn",
+          "Pé, èmi ni yìí, ràn mi!"
         ]
       }
     ],
-    "revision": 2
+    "revision": 3
   },
   {
     "index": "291",
     "number": 291,
-    "title": "Maa Sise Lo",
+    "title": "Máa Ṣiṣẹ́ Lọ",
     "english_title": "Go Labour On",
     "references": {
       "NAH": 303,
@@ -19451,49 +19452,49 @@
         "type": "verse",
         "index": 1,
         "lines": [
-          "Maa sise lo, nigba osan,",
-          "Oru aye yii fere de;",
-          "Mura s' ise mase s' ole",
-          "Ki o ba le gba okan la"
+          "Máa ṣiṣẹ́ lọ, nígbà ọ̀sán,",
+          "Órù ayé yìí fẹ́rẹ̀ dé;",
+          "Múra s' iṣẹ́ máṣe s' ọ̀lẹ",
+          "Kí o bá lè gbà ọkàn là"
         ]
       },
       {
         "type": "verse",
         "index": 2,
         "lines": [
-          "Ogunlogo l' awon t' o n ku",
-          "Laini ireti ajinde,",
-          "Tan 'mole naa kari aye",
-          "Ki okunkun le d' imole."
+          "Ọgọ́lọ́gọ̀ l' àwọn t' ó ń kú",
+          "Láìní ìrètí àjíǹdé,",
+          "Tàn 'mọ́lẹ̀ náà kárí ayé",
+          "Kí òkùnkùn lè d' ìmọ́lẹ̀."
         ]
       },
       {
         "type": "verse",
         "index": 3,
         "lines": [
-          "Ma a sise lo, Maa gbadura;",
-          "F' ogbon wa awon t' o sin;",
-          "Jade lo s' opopo ona,",
-          "Ro asako lati wo 'le."
+          "Máa ṣiṣẹ́ lọ, Máa gbàdúrà;",
+          "F' ọgbọ́n wá àwọn t' ó ṣìn;",
+          "Jáde lọ s' ọ̀pọ̀pọ̀ ọ̀nà,",
+          "Rò aṣako láti wọ 'lé."
         ]
       },
       {
         "type": "verse",
         "index": 4,
         "lines": [
-          "Ma a sise lo, b' aare tile",
-          "Mu owo ati eekun re;",
-          "Te' ra mo 'se ere re ni",
-          "Ijoba at' ade ogo."
+          "Máa ṣiṣẹ́ lọ, b' ààrẹ̀ tilẹ̀",
+          "Mú ọwọ́ àti ẹ̀ẹ́kún rẹ;",
+          "Tẹ́ 'ra mọ́ 'ṣe ère rẹ ni",
+          "Ìjọba àt' adé ògo."
         ]
       }
     ],
-    "revision": 2
+    "revision": 3
   },
   {
     "index": "292",
     "number": 292,
-    "title": "Oluwa, 'Biti Mo Ba Wa",
+    "title": "Olúwa, 'Bití Mo Bá Wà",
     "english_title": "Just Where I Am",
     "references": {
       "NAH": 642,
@@ -19504,130 +19505,130 @@
         "type": "verse",
         "index": 1,
         "lines": [
-          "Oluwa, 'biti mo ba wa,",
-          "Ki n s' elerii tooto fun O",
-          "'Gba awon mii n wa bi t' o san",
-          "Se mi l' olooto nihin yii."
+          "Olúwa, 'bití mo bá wà,",
+          "Kí n s' ẹlẹ́rìí tòótọ́ fún Ọ",
+          "'Gbà àwọn míì ń wá bí t' ó san",
+          "Ṣe mi l' olóòótọ́ níhìn yìí."
         ]
       },
       {
         "type": "verse",
         "index": 2,
         "lines": [
-          "Ona 'biti mo wa ko dan,",
-          "Sugbon iwo wa pelu mi;",
-          "Awon t' o ba O rin simi...",
-          "Fun mi l' okun, ki n si gbe jee."
+          "Ọ̀nà 'bití mo wà kò dán,",
+          "Ṣùgbọ́n ìwọ wà pẹ̀lú mi;",
+          "Àwọn t' ó bá Ọ rìn simi",
+          "Fún mi l' okùn, kí n sì gbé jẹẹ."
         ]
       },
       {
         "type": "verse",
         "index": 3,
         "lines": [
-          "Oluwa, bo O toka mi si,",
-          "Ile ti o jina rere",
-          "T' imole orun ko si si,",
-          "Je k' emi lo rohin Kristi."
+          "Olúwa, bó O tọ́ka mi sí,",
+          "Ilẹ̀ tí ó jìnà rere",
+          "T' ìmọ́lẹ̀ ọ̀run kò sí sí,",
+          "Jẹ́ k' èmi lọ ròhìn Krístì."
         ]
       },
       {
         "type": "verse",
         "index": 4,
         "lines": [
-          "Bo O ba si ni ki n d' ro ni' le,",
-          "Je ki emi tun ona se",
-          "Fun awon ti o lo sise",
-          "Ti won fi' le oun ore 'le."
+          "Bó O bá sì ní kí n d' rọ̀ ní 'lé,",
+          "Jẹ́ kí èmi tún ọ̀nà ṣe",
+          "Fún àwọn tí ó lọ ṣiṣẹ́",
+          "Tí wọ́n fi 'lé oùn ore 'lẹ̀."
         ]
       },
       {
         "type": "verse",
         "index": 5,
         "lines": [
-          "'Bi ti mo wa je ki n jere",
-          "Okan ti ko si 'reti fun,",
-          "Pelu itara gbigbona,",
-          "Fun mi l' agbara lati lo."
+          "'Bí tí mo wà jẹ́ kí n jèrè",
+          "Ọkàn tí kò sí 'rètí fún,",
+          "Pẹ̀lú ìtara gbígbóná,",
+          "Fún mi l' agbára láti lọ."
         ]
       }
     ],
-    "revision": 2
+    "revision": 3
   },
   {
     "index": "293",
     "number": 293,
-    "title": "Kin Ni Ki N Se F' Olugbala Mi?",
-    "english_title": "What Shall I do For Christ My Saviour",
+    "title": "Kín Ni Kí N Ṣe F' Olùgbàlà Mi?",
+    "english_title": "What Shall I Do For Christ My Saviour",
     "references": {},
     "lyrics": [
       {
         "type": "verse",
         "index": 1,
         "lines": [
-          "Kin ni ki n se F' Olugbala mi?",
-          "N o se san gbese ti mo je E?",
-          "Oda mi n' de k' ro l' oko eru",
-          "N o se le fi ife mi han?"
+          "Kín ni kí n ṣe f' Olùgbàlà mi?",
+          "N ó ṣe san gbèsè tí mo jẹ́ Ẹ?",
+          "Ó dà mí ń dé k' rọ̀ l' oko ẹrú",
+          "N ó ṣe lè fi ìfẹ́ mi hàn?"
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "Eyi ni n o se F' Olugbala mi,",
-          "Eyi yoo fi ife mi han?",
-          "N o so t' oore Re, n o so t' aanu Re,",
-          "N o rin l' ona Re l' aye yii"
+          "Èyí ni n ó ṣe f' Olùgbàlà mi,",
+          "Èyí yóò fi ìfẹ́ mi hàn?",
+          "N ó sọ t' oore Rẹ, n ó sọ t' àánú Rẹ,",
+          "N ó rìn l' ọ̀nà Rẹ l' ayé yìí"
         ]
       },
       {
         "type": "verse",
         "index": 2,
         "lines": [
-          "N o so fun-un pe mo ti n sako lo;",
-          "N o bebe k' O gba mi pada;",
-          "N o toro 'dariji lowo Re",
-          "N o bebe k' o w' ese mi nu."
+          "N ó sọ fún-un pé mo ti ń ṣako lọ;",
+          "N ó bẹ̀bẹ̀ k' Ó gbà mí padà;",
+          "N ó tọrọ 'dàríjì lọ́wọ́ Rẹ",
+          "N ó bẹ̀bẹ̀ k' ó w' ẹ̀ṣẹ̀ mi nù."
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "Eyi ni n o se F' Olugbala mi,",
-          "Eyi yoo fi ife mi han?",
-          "N o so t' oore Re, n o so t' aanu Re,",
-          "N o rin l' ona Re l' aye yii"
+          "Èyí ni n ó ṣe f' Olùgbàlà mi,",
+          "Èyí yóò fi ìfẹ́ mi hàn?",
+          "N ó sọ t' oore Rẹ, n ó sọ t' àánú Rẹ,",
+          "N ó rìn l' ọ̀nà Rẹ l' ayé yìí"
         ]
       },
       {
         "type": "verse",
         "index": 3,
         "lines": [
-          "'Gba naa n o mu Bibeli mimo,",
-          "Lati ma a wa otito Re",
-          "Ki n baa le to elomii s' ona,",
-          "Jesu t' O koko feran mi."
+          "'Gbà náà n ó mú Bíbélì mímọ́,",
+          "Láti máa wá òtítọ́ Rẹ",
+          "Kí n bàá lè tọ́ elòmíì s' ọ̀nà,",
+          "Jésù t' Ó kọ́kọ́ fẹ́ràn mi."
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "Eyi ni n o se F' Olugbala mi,",
-          "Eyi yoo fi ife mi han?",
-          "N o so t' oore Re, n o so t' aanu Re,",
-          "N o rin l' ona Re l' aye yii"
+          "Èyí ni n ó ṣe f' Olùgbàlà mi,",
+          "Èyí yóò fi ìfẹ́ mi hàn?",
+          "N ó sọ t' oore Rẹ, n ó sọ t' àánú Rẹ,",
+          "N ó rìn l' ọ̀nà Rẹ l' ayé yìí"
         ]
       }
     ],
-    "revision": 2
+    "revision": 3
   },
   {
     "index": "294",
     "number": 294,
-    "title": "Gbo Ohun Olus' agutan,",
-    "english_title": "Hark! 'Tis the Shepherd's Voice I Hear",
+    "title": "Gbọ́ Ohùn Olùṣ' Àgùtàn",
+    "english_title": "Hark! 'Tis The Shepherd's Voice I Hear",
     "references": {
       "SDAH": 361
     },
@@ -19636,70 +19637,70 @@
         "type": "verse",
         "index": 1,
         "lines": [
-          "Gbo ohun Olus' agutan,",
-          "Jina rere s' aye ese;",
-          "O n p' agutan ti n sonu lo,",
-          "Kuro l' agb' Olus' agutan"
+          "Gbọ́ ohùn Olùṣ'-àgùtàn,",
+          "Jìnà rere s' ayé ẹ̀ṣẹ̀;",
+          "Ó ń p' àgùtàn tí ń ṣonù lọ,",
+          "Kúrò l' àgb' Olùṣ'-àgùtàn"
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "Mu won wa... mu won wa",
-          "Mu won kuro nin' oko ese;",
-          "Mu won wa... mu won wa,",
-          "Mu asako wa fun Jesu."
+          "Mú wọn wá, mú wọn wá",
+          "Mú wọn kúrò nín' oko ẹ̀ṣẹ̀;",
+          "Mú wọn wá, mú wọn wá,",
+          "Mú aṣako wá fún Jésù."
         ]
       },
       {
         "type": "verse",
         "index": 2,
         "lines": [
-          "Tani yoo lo se 'ranwo fun-Un?",
-          "Lati wa awon asako;",
-          "Tani yoo mu won wa s' ile",
-          "Kuro nin' otutu ese?"
+          "Tani yóò lọ ṣe 'ránwọ́ fún-Un?",
+          "Láti wá àwọn aṣako;",
+          "Tani yóò mú wọn wá s' ilé",
+          "Kúrò nín' òtútù ẹ̀ṣẹ̀?"
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "Mu won wa... mu won wa",
-          "Mu won kuro nin' oko ese;",
-          "Mu won wa... mu won wa,",
-          "Mu asako wa fun Jesu."
+          "Mú wọn wá, mú wọn wá",
+          "Mú wọn kúrò nín' oko ẹ̀ṣẹ̀;",
+          "Mú wọn wá, mú wọn wá,",
+          "Mú aṣako wá fún Jésù."
         ]
       },
       {
         "type": "verse",
         "index": 3,
         "lines": [
-          "Gbo 'rahun won ninu iju,",
-          "Lori oke palapala,",
-          "Gbo, Oluwa n so fun o pe;",
-          "Lo w' agutan mi l' awari."
+          "Gbọ́ 'ráhùn wọn nínú ijù,",
+          "Lórí òkè palapala,",
+          "Gbọ́, Olúwa ń sọ fún ọ pé;",
+          "Lọ w' àgùtàn mi l' àwárí."
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "Mu won wa... mu won wa",
-          "Mu won kuro nin' oko ese;",
-          "Mu won wa... mu won wa,",
-          "Mu asako wa fun Jesu."
+          "Mú wọn wá, mú wọn wá",
+          "Mú wọn kúrò nín' oko ẹ̀ṣẹ̀;",
+          "Mú wọn wá, mú wọn wá,",
+          "Mú aṣako wá fún Jésù."
         ]
       }
     ],
-    "revision": 2
+    "revision": 3
   },
   {
     "index": "295",
     "number": 295,
-    "title": "T' Ayo, T' Ayo L' A O Sise Jesu",
-    "english_title": "Gladly, gladly, Toiling for the Master",
+    "title": "T' Ayọ̀, T' Ayọ̀ L' A Ó Ṣiṣẹ́ Jésù",
+    "english_title": "Gladly, Gladly, Toiling For The Master",
     "references": {
       "CS": 574
     },
@@ -19708,69 +19709,69 @@
         "type": "verse",
         "index": 1,
         "lines": [
-          "T' ayo, t' ayo l' a o sise Jesu,",
-          "Pelu owo at' okan ife;",
-          "Isekise t'o O yan sile fun wa,",
-          "A o maa f' ife sa ipa tiwa."
+          "T' ayọ̀, t' ayọ̀ l' a ó ṣiṣẹ́ Jésù,",
+          "Pẹ̀lú ọwọ́ àt' ọkàn ìfẹ́;",
+          "Iṣẹ́kiṣẹ́ t' O yàn sílẹ̀ fún wa,",
+          "A ó máa f' ìfẹ́ ṣa ipa tiwa."
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "Ise fun Jesu,",
-          "T' ere t' ayo ni,",
-          "A o maa f' ayo se",
-          "Ise fun Jesu, nin' ogba Re nihin yii."
+          "Iṣẹ́ fún Jésù,",
+          "T' ère t' ayọ̀ ni,",
+          "A ó máa f' ayọ̀ ṣe",
+          "Iṣẹ́ fún Jésù, nín' ọgbà Rẹ níhìn yìí."
         ]
       },
       {
         "type": "verse",
         "index": 2,
         "lines": [
-          "T' ayo, t' ayo la o maa so itan naa.",
-          "T' ife Jesu si gbogb' agbaye;",
-          "Krist' imole didan ogo Baba",
-          "Yoo fi ife fun wa n' ibukun."
+          "T' ayọ̀, t' ayọ̀ là ó máa sọ ìtàn náà.",
+          "T' ìfẹ́ Jésù sí gbogb' àgbáyé;",
+          "Kríst' ìmọ́lẹ̀ dídan ògo Bàbá",
+          "Yóò fi ìfẹ́ fún wa n' ìbùkún."
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "Ise fun Jesu,",
-          "T' ere t' ayo ni,",
-          "A o maa f' ayo se",
-          "Ise fun Jesu, nin' ogba Re nihin yii."
+          "Iṣẹ́ fún Jésù,",
+          "T' ère t' ayọ̀ ni,",
+          "A ó máa f' ayọ̀ ṣe",
+          "Iṣẹ́ fún Jésù, nín' ọgbà Rẹ níhìn yìí."
         ]
       },
       {
         "type": "verse",
         "index": 3,
         "lines": [
-          "Ni irele la o maa tele Jesu",
-          "A o f' ododo rin ni ona Re;",
-          "Mu alarinkiri s' ona Jesu,",
-          "Toka elese s' Od' aguntan."
+          "Ní ìrẹ̀lẹ̀ là ó máa tẹ̀lé Jésù",
+          "A ó f' odòdó rìn ní ọ̀nà Rẹ;",
+          "Mú alárìnkiri s' ọ̀nà Jésù,",
+          "Tọ́ka ẹlẹ́ṣẹ̀ s' Od' àgùtàn."
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "Ise fun Jesu,",
-          "T' ere t' ayo ni,",
-          "A o maa f' ayo se",
-          "Ise fun Jesu, nin' ogba Re nihin yii."
+          "Iṣẹ́ fún Jésù,",
+          "T' ère t' ayọ̀ ni,",
+          "A ó máa f' ayọ̀ ṣe",
+          "Iṣẹ́ fún Jésù, nín' ọgbà Rẹ níhìn yìí."
         ]
       }
     ],
-    "revision": 2
+    "revision": 3
   },
   {
     "index": "296",
     "number": 296,
-    "title": "M' ooto Re Yara Oluwa",
+    "title": "M' Òótọ́ Rẹ Yára Olúwa",
     "english_title": "Speed On Thy Truth Eternal One",
     "references": {
       "NAH": 282
@@ -19780,66 +19781,66 @@
         "type": "verse",
         "index": 1,
         "lines": [
-          "M' ooto Re yara Oluwa,",
-          "Si kede ofin Re,",
-          "Tit' olukuluku ee' yan",
-          "Yoo fi gb' ooko Jesu",
-          "Agbara 'joba Re n' tiwa,",
-          "A wole n' waju Re.",
-          "L' akoko yii lati yin O,",
-          "Olorun ti kii ku."
+          "M' òótọ́ Rẹ yára Olúwa,",
+          "Sì kédé òfin Rẹ,",
+          "Títí olúkúlùkù èèyàn",
+          "Yóò fi gb' oókọ Jésù",
+          "Agbára 'jọba Rẹ n' tiwa,",
+          "A wọlé ń wájú Rẹ.",
+          "L' àkókò yìí láti yìn Ọ,",
+          "Ọlọ́run tí kì í kú."
         ]
       },
       {
         "type": "verse",
         "index": 2,
         "lines": [
-          "Olorun ti kii yi pada,",
-          "Ooto Re wa laelae",
-          "B' a tile n te e nibi gbogbo,",
-          "Ti ese gbe n joba,",
-          "E dide, ke e si tan 'mole,",
-          "Eyin die ta a yan;",
-          "Ko si ise to lola bii",
-          "Ise t' a fi fun yin"
+          "Ọlọ́run tí kì í yí padà,",
+          "Òótọ́ Rẹ wà láéláé",
+          "B' a tilẹ̀ ń tẹ̀ ẹ níbi gbogbo,",
+          "Tí ẹ̀ṣẹ̀ gbé ń jọba,",
+          "Ẹ dìde, k' ẹ sì tàn 'mọ́lẹ̀,",
+          "Ẹ̀yin díẹ̀ t' a a yàn;",
+          "Kò sí iṣẹ́ tó l' ọlá bíi",
+          "Iṣẹ́ t' a fi fún yín"
         ]
       },
       {
         "type": "verse",
         "index": 3,
         "lines": [
-          "A fere de akoko naa",
-          "Ti 'ku ki yoo si mo,",
-          "Ti yoo mu simi b' alaare,",
-          "Ti orun yoo sokale",
-          "Ji dide, ke e si tan 'mole;",
-          "Kede otito Re",
-          "'Se Jesu ati tire ni,",
-          "'Wo 'ranse Olorun."
+          "A fẹ́rẹ̀ dé àkókò náà",
+          "Tí 'kú kì yóò sí mọ́,",
+          "Tí yóò mú simi b' aláàrẹ̀,",
+          "Tí ọ̀run yóò sọ̀kalẹ̀",
+          "Jí dìde, k' ẹ sì tàn 'mọ́lẹ̀;",
+          "Kédé òtítọ́ Rẹ",
+          "'Ṣe Jésù àti tire ni,",
+          "'Wọ 'ránṣẹ́ Ọlọ́run."
         ]
       },
       {
         "type": "verse",
         "index": 4,
         "lines": [
-          "A yin Oba ayeraye",
-          "A kede ooto Re,",
-          "Ase Re b' ida at' asa;",
-          "Oro Re bi ina,",
-          "B' odun ba ti n yi lu odun",
-          "Ati titi aye",
-          "A o wole f' ase jeje Re,",
-          "Awa o si sin O."
+          "A yìn Ọba ayérayé",
+          "A kédé òótọ́ Rẹ,",
+          "Àṣẹ Rẹ b' idà àt' àsà;",
+          "Ọ̀rọ̀ Rẹ bí iná,",
+          "B' ọdún bá ti ń yí l' ọdún",
+          "Àti títí ayé",
+          "A ó wọlé f' àṣẹ jẹ̀jẹ̀ Rẹ,",
+          "Àwa ó sì sìn Ọ."
         ]
       }
     ],
-    "revision": 2
+    "revision": 3
   },
   {
     "index": "297",
     "number": 297,
-    "title": "Awon Olukore Da?",
-    "english_title": "Oh Where are the Reapers?",
+    "title": "Àwọn Olùkórè Dà?",
+    "english_title": "Oh Where Are The Reapers?",
     "references": {
       "SDAH": 366,
       "CH": 620
@@ -19849,70 +19850,70 @@
         "type": "verse",
         "index": 1,
         "lines": [
-          "Awon olukore da, ti yoo ko",
-          "Alikama kuro l' oko ese?",
-          "Pel' ododo - l' a o se ise naa,",
-          "Isimi ko si titi yoo fi tan."
+          "Àwọn olùkórè dà, tí yóò kó",
+          "Àlìkámà kúrò l' oko ẹ̀ṣẹ̀?",
+          "Pẹ̀l' odòdó - l' a ó ṣe iṣẹ́ náà,",
+          "Ìsimi kò sí títí yóò fi tán."
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "Olukore da? Tani yoo wa",
-          "Lati ba wa yo ayo ikore naa?",
-          "Tani yoo wa lati ba wa ko",
-          "Alikama kuro l' oko ese?"
+          "Olùkórè dà? Tani yóò wá",
+          "Láti bá wa yọ ayọ̀ ìkórè náà?",
+          "Tani yóò wá láti bá wa kó",
+          "Àlìkámà kúrò l' oko ẹ̀ṣẹ̀?"
         ]
       },
       {
         "type": "verse",
         "index": 2,
         "lines": [
-          "Saa woo, ire oko gbogbo ti pon",
-          "Aye si n duro de ikore naa;",
-          "Sugbon awon alagbase ko to",
-          "Pelu ilora, opo yoo segbe."
+          "Ṣàá wòó, ire oko gbogbo ti pọn",
+          "Ayé sì ń dúró dé ìkórè náà;",
+          "Ṣùgbọ́n àwọn aláàgbàṣe kò tó",
+          "Pẹ̀lú ìlọ̀ra, ọ̀pọ̀ yóò ṣègbé."
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "Olukore da? Tani yoo wa",
-          "Lati ba wa yo ayo ikore naa?",
-          "Tani yoo wa lati ba wa ko",
-          "Alikama kuro l' oko ese?"
+          "Olùkórè dà? Tani yóò wá",
+          "Láti bá wa yọ ayọ̀ ìkórè náà?",
+          "Tani yóò wá láti bá wa kó",
+          "Àlìkámà kúrò l' oko ẹ̀ṣẹ̀?"
         ]
       },
       {
         "type": "verse",
         "index": 3,
         "lines": [
-          "Om' ee'y an e wa pelu 'doje,",
-          "E si wa ko ire iyebiye;",
-          "Laipe Oluwa ikore yoo de,",
-          "Lati fun yin ni ayo ikore."
+          "Ọm' èè 'yàn ẹ wá pẹ̀lú 'dọ̀jẹ́,",
+          "Ẹ sì wá kó ire ìyebíye;",
+          "Láìpẹ́ Olúwa ìkórè yóò dé,",
+          "Láti fún yín ní ayọ̀ ìkórè."
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "Olukore da? Tani yoo wa",
-          "Lati ba wa yo ayo ikore naa?",
-          "Tani yoo wa lati ba wa ko",
-          "Alikama kuro l' oko ese?"
+          "Olùkórè dà? Tani yóò wá",
+          "Láti bá wa yọ ayọ̀ ìkórè náà?",
+          "Tani yóò wá láti bá wa kó",
+          "Àlìkámà kúrò l' oko ẹ̀ṣẹ̀?"
         ]
       }
     ],
-    "revision": 2
+    "revision": 3
   },
   {
     "index": "298",
     "number": 298,
-    "title": "Fun Irugbin Ni Kutukutu",
-    "english_title": "Sowing the Seed By the Daylight Fair",
+    "title": "Fún Irúgbìn Ní Kùtùkùtù",
+    "english_title": "Sowing The Seed By The Daylight Fair",
     "references": {
       "CS": 58
     },
@@ -19921,92 +19922,92 @@
         "type": "verse",
         "index": 1,
         "lines": [
-          "Fun irugbin ni kutukutu,",
-          "Fun irugbin ni osan gangan,",
-          "Fun irugbin ni oju ale,",
-          "Fun irugbin ni oru ganjo;",
-          "A! kin ni 'kore yoo je?"
+          "Fún irúgbìn ní kùtùkùtù,",
+          "Fún irúgbìn ní ọ̀sán gangan,",
+          "Fún irúgbìn ní ojú alẹ́,",
+          "Fún irúgbìn ní órù gànjọ́;",
+          "A! kín ni 'kórè yóò jẹ́?"
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "Ohun t' a gbin l' okunkun tabi ni 'mole,",
-          "Ni ailera tabi ni agbara,",
-          "A o kore re l' aye tabi l' orun,",
-          "Dajudaju n' ikore re yoo je!"
+          "Ohun t' a gbìn l' òkùnkùn tàbí ní 'mọ́lẹ̀,",
+          "Ní àìlera tàbí ní agbára,",
+          "A ó kórè rẹ̀ l' ayé tàbí l' ọ̀run,",
+          "Dájúdájú n' ìkórè rẹ̀ yóò jẹ́!"
         ]
       },
       {
         "type": "verse",
         "index": 2,
         "lines": [
-          "Fun irugbin si eba ona",
-          "Fun irugbin s' ori apata",
-          "Fun irugbin si aarin egun,",
-          "Fun irugbin si ile rere,",
-          "A! kin ni 'kore yoo je?"
+          "Fún irúgbìn sí ẹ̀bá ọ̀nà",
+          "Fún irúgbìn s' orí àpáta",
+          "Fún irúgbìn sí àárín ẹ̀gún,",
+          "Fún irúgbìn sí ilẹ̀ rere,",
+          "A! kín ni 'kórè yóò jẹ́?"
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "Ohun t' a gbin l' okunkun tabi ni 'mole,",
-          "Ni ailera tabi ni agbara,",
-          "A o kore re l' aye tabi l' orun,",
-          "Dajudaju n' ikore re yoo je!"
+          "Ohun t' a gbìn l' òkùnkùn tàbí ní 'mọ́lẹ̀,",
+          "Ní àìlera tàbí ní agbára,",
+          "A ó kórè rẹ̀ l' ayé tàbí l' ọ̀run,",
+          "Dájúdájú n' ìkórè rẹ̀ yóò jẹ́!"
         ]
       },
       {
         "type": "verse",
         "index": 3,
         "lines": [
-          "Fun irugbin opo irora,",
-          "Fun irugbin alainironu;",
-          "Fun irugbin iwa-ibaje,",
-          "Fun irugbin 'tiju ailopin;",
-          "A! kin ni 'kore yoo je?"
+          "Fún irúgbìn ọ̀pọ̀ ìrora,",
+          "Fún irúgbìn aláìníronú;",
+          "Fún irúgbìn ìwà-ìbàjẹ́,",
+          "Fún irúgbìn 'tìjú àìlópin;",
+          "A! kín ni 'kórè yóò jẹ́?"
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "Ohun t' a gbin l' okunkun tabi ni 'mole,",
-          "Ni ailera tabi ni agbara,",
-          "A o kore re l' aye tabi l' orun,",
-          "Dajudaju n' ikore re yoo je!"
+          "Ohun t' a gbìn l' òkùnkùn tàbí ní 'mọ́lẹ̀,",
+          "Ní àìlera tàbí ní agbára,",
+          "A ó kórè rẹ̀ l' ayé tàbí l' ọ̀run,",
+          "Dájúdájú n' ìkórè rẹ̀ yóò jẹ́!"
         ]
       },
       {
         "type": "verse",
         "index": 4,
         "lines": [
-          "Fun irugbin pelu 'banuje,",
-          "Fun irugbin 'gba t' ekun n gbon ni,",
-          "Tit' Olukore yoo f' ayo de,",
-          "A! kin ni 'kore yoo je?"
+          "Fún irúgbìn pẹ̀lú 'bànújẹ́,",
+          "Fún irúgbìn 'gbà t' ẹkún ń gbọ̀n ní,",
+          "Tít' Olùkórè yóò f' ayọ̀ dé,",
+          "A! kín ni 'kórè yóò jẹ́?"
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "Ohun t' a gbin l' okunkun tabi ni 'mole,",
-          "Ni ailera tabi ni agbara,",
-          "A o kore re l' aye tabi l' orun,",
-          "Dajudaju n' ikore re yoo je!"
+          "Ohun t' a gbìn l' òkùnkùn tàbí ní 'mọ́lẹ̀,",
+          "Ní àìlera tàbí ní agbára,",
+          "A ó kórè rẹ̀ l' ayé tàbí l' ọ̀run,",
+          "Dájúdájú n' ìkórè rẹ̀ yóò jẹ́!"
         ]
       }
     ],
-    "revision": 2
+    "revision": 3
   },
   {
     "index": "299",
     "number": 299,
-    "title": "Funrugbin L' Owuro",
+    "title": "Fúnrúgbìn L' Òwúrọ̀",
     "english_title": "Sowing in the Morning",
     "references": {
       "CH": 621
@@ -20016,72 +20017,72 @@
         "type": "verse",
         "index": 1,
         "lines": [
-          "Funrugbin l' owuro,",
-          "Fun, irugbin oore,",
-          "Funrugbin ni osan, ati loj' ale;",
-          "Maa reti ikore at' igba ikojo,",
-          "Awa yoo si f' ayo ru iti wo 'le."
+          "Fúnrúgbìn l' òwúrọ̀,",
+          "Fúnrúgbìn oore,",
+          "Fúnrúgbìn ní ọ̀sán, àti lój' alẹ́;",
+          "Máa rètí ìkórè àt' ìgbà ìkójọ,",
+          "Àwa yóò sì f' ayọ̀ rù ìtí wọ 'lé."
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "Ru iti wo 'le, Ru iti wo 'le,",
-          "Awa yoo si f' ayo ru iti wo 'le",
-          "Ru iti wo 'le, ru iti wo 'le",
-          "Awa yoo si f' ayo ru iti wo 'le."
+          "Rù ìtí wọ 'lé, Rù ìtí wọ 'lé,",
+          "Àwa yóò sì f' ayọ̀ rù ìtí wọ 'lé",
+          "Rù ìtí wọ 'lé, rù ìtí wọ 'lé",
+          "Àwa yóò sì f' ayọ̀ rù ìtí wọ 'lé."
         ]
       },
       {
         "type": "verse",
         "index": 2,
         "lines": [
-          "Fun irugbin n' nu oorun",
-          "Funrugbin n' iboji",
-          "Mase beru sanma, tabi otutu;",
-          "'Gbat' ikore ati laalaa ba si pari.",
-          "Awa yoo si f' ayo ru iti wo 'le."
+          "Fún irúgbìn n' nú oòrùn",
+          "Fúnrúgbìn n' ìbòjì",
+          "Máṣe bẹ̀rù sánmà, tàbí òtútù;",
+          "'Gbàt' ìkórè àti làálàá bá sì parí.",
+          "Àwa yóò sì f' ayọ̀ rù ìtí wọ 'lé."
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "Ru iti wo 'le, Ru iti wo 'le,",
-          "Awa yoo si f' ayo ru iti wo 'le",
-          "Ru iti wo 'le, ru iti wo le",
-          "Awa yoo si f' ayo ru iti wo 'le."
+          "Rù ìtí wọ 'lé, Rù ìtí wọ 'lé,",
+          "Àwa yóò sì f' ayọ̀ rù ìtí wọ 'lé",
+          "Rù ìtí wọ 'lé, rù ìtí wọ 'lé",
+          "Àwa yóò sì f' ayọ̀ rù ìtí wọ 'lé."
         ]
       },
       {
         "type": "verse",
         "index": 3,
         "lines": [
-          "F' omije funrugbin,",
-          "Funrugbin f' Oluwa,",
-          "B' adanu t' a n ri n m' edun wa n' gbagbogbo,",
-          "Ni opin ekun wa, Oun yoo ki wa kaabo",
-          "Awa yoo si f' ayo ru iti wo 'le."
+          "F' omijé fúnrúgbìn,",
+          "Fúnrúgbìn f' Olúwa,",
+          "B' àdánù t' a ń rí ń m' ẹ̀dùn wa n' gbagbogbo,",
+          "Ní òpin ẹkún wa, Òun yóò kí wa káàbọ̀",
+          "Àwa yóò sì f' ayọ̀ rù ìtí wọ 'lé."
         ]
       },
       {
         "type": "chorus",
         "index": 1,
         "lines": [
-          "Ru iti wo 'le, Ru iti wo 'le,",
-          "Awa yoo si f' ayo ru iti wo 'le",
-          "Ru iti wo 'le, ru iti wo 'le",
-          "Awa yoo si f' ayo ru iti wo 'le."
+          "Rù ìtí wọ 'lé, Rù ìtí wọ 'lé,",
+          "Àwa yóò sì f' ayọ̀ rù ìtí wọ 'lé",
+          "Rù ìtí wọ 'lé, rù ìtí wọ 'lé",
+          "Àwa yóò sì f' ayọ̀ rù ìtí wọ 'lé."
         ]
       }
     ],
-    "revision": 2
+    "revision": 3
   },
   {
     "index": "300",
     "number": 300,
-    "title": "A! Olukore Emi",
+    "title": "A! Olùkórè Èmi",
     "english_title": "Ho! Reapers of Life's Harvest",
     "references": {
       "CH": 444
@@ -20091,60 +20092,60 @@
         "type": "verse",
         "index": 1,
         "lines": [
-          "A! olukore emi,",
-          "E se n duro lasan,",
-          "T' ojij' ale n yii yin ka,",
-          "T' ile bere si su?",
-          "Eese ti e fi n w' ona",
-          "F' olukore miran,",
-          "Aaro n yara lo kankan;",
-          "Eese t' e fi n sole?"
+          "A! olùkórè èmi,",
+          "Ẹ ṣe ń dúró lásán,",
+          "T' ojìj' alẹ́ ń yí yín ká,",
+          "T' ilẹ̀ bẹ̀rẹ̀ sí sù?",
+          "Ẹ̀ṣe tí ẹ fi ń w' ọ̀nà",
+          "F' olùkórè míràn,",
+          "Àárọ̀ ń yára lọ kankan;",
+          "Ẹ̀ṣe t' ẹ fi ń ṣ' ọ̀lẹ?"
         ]
       },
       {
         "type": "verse",
         "index": 2,
         "lines": [
-          "E fi doje mimu yin",
-          "Se 'kore oka naa;",
-          "Ale n yara bo kankan,",
-          "Yoo si tun de laipe;",
-          "Oluwa n p' olukore",
-          "Yoo ha pe lasan bi?",
-          "O ha ye ki oka naa",
-          "Sofo s' inu oko?"
+          "Ẹ fi dọ̀jẹ́ mímú yín",
+          "Ṣe 'kórè ọkà náà;",
+          "Alẹ́ ń yára bọ̀ kankan,",
+          "Yóò sì tún dé láìpẹ́;",
+          "Olúwa ń p' olùkórè",
+          "Yóò ha pè lásán bí?",
+          "Ó ha yẹ kí ọkà náà",
+          "Ṣòfò s' inú oko?"
         ]
       },
       {
         "type": "verse",
         "index": 3,
         "lines": [
-          "Sokale lat' oke wa,",
-          "Pelu 'tara okan,",
-          "Beeni k' o ma jafara,",
-          "'Tor' osan fere pon",
-          "Wa pelu agbara re,",
-          "Beeni k' o ma saare",
-          "Ma duro titi ale",
-          "Yoo fi m' oro re wa."
+          "Sọ̀kalẹ̀ lát' òkè wá,",
+          "Pẹ̀lú 'tara ọkàn,",
+          "Bẹ́ẹ̀ni k' ó má jàfàrà,",
+          "'Tòr' ọ̀sán fẹ́rẹ̀ pọn",
+          "Wá pẹ̀lú agbára rẹ,",
+          "Bẹ́ẹ̀ni k' ó má ṣààrẹ̀",
+          "Má dúró títí alẹ́",
+          "Yóò fi m' ọrọ̀ rẹ wá."
         ]
       },
       {
         "type": "verse",
         "index": 4,
         "lines": [
-          "Gun oke lati l' ogbon,",
-          "Pa gbogb' asise re;",
-          "Mase f' imo re pamo,",
-          "K' eniyan baa le mo;",
-          "J' Olooto n' nu ise re,",
-          "N' ise Oluwa re,",
-          "Laipe li ade wura,",
-          "Yoo si je ere re."
+          "Gun òkè láti l' ọgbọ́n,",
+          "Pa gbogb' àṣìṣe rẹ;",
+          "Máṣe f' ìmọ̀ rẹ pamọ́,",
+          "K' ènìyàn bàá lè mọ̀;",
+          "J' Olóòótọ́ n' nú iṣẹ́ rẹ,",
+          "N' iṣẹ́ Olúwa rẹ,",
+          "Láìpẹ́ li adé wúrà,",
+          "Yóò sì jẹ́ ère rẹ."
         ]
       }
     ],
-    "revision": 2
+    "revision": 3
   },
   {
     "index": "301",
