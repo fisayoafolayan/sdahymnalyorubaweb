@@ -6,7 +6,7 @@ const path = require('path');
 const DIST = path.join(__dirname, 'dist');
 const WATCH = process.argv.includes('--watch');
 
-const SOURCE_FILES = ['app.js', 'styles.css', 'index.html', 'hymns.json', 'sw.js', 'manifest.json', 'sitemap.xml'];
+const SOURCE_FILES = ['app.js', 'styles.css', 'index.html', 'privacy.html', 'hymns.json', 'sw.js', 'manifest.json', 'sitemap.xml'];
 
 function build() {
     fs.mkdirSync(DIST, { recursive: true });
@@ -44,7 +44,7 @@ function build() {
     fs.writeFileSync(path.join(DIST, 'sw.js'), sw);
 
     // Copy remaining static files
-    for (const file of ['index.html', 'manifest.json', 'sitemap.xml']) {
+    for (const file of ['index.html', 'privacy.html', 'manifest.json', 'sitemap.xml']) {
         if (fs.existsSync(file)) {
             fs.copyFileSync(file, path.join(DIST, file));
         }

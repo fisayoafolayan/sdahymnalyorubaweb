@@ -48,21 +48,27 @@ self.addEventListener('fetch', e => {
   const url = e.request.url;
   if (!url.startsWith('http') || !isCacheable(url)) return;
 
-  // Navigation requests: always serve cached root page
+  // Navigation requests: serve cached root page (except standalone pages like /privacy)
   if (isNavigate(e.request)) {
-    e.respondWith(
-      caches.open(CACHE).then(cache =>
-        cache.match('/').then(cached => {
-          const fetchPromise = fetch(e.request).then(response => {
-            if (response && response.status === 200) {
-              cache.put('/', response.clone());
-            }
-            return response;
-          }).catch(() => cached);
+    const pathname = new URL(e.request.url).pathname;
+    const isRoot = pathname === '/' || pathname === '/index.html';
 
-          return cached || fetchPromise;
-        })
-      )
+    e.respondWith(
+      caches.open(CACHE).then(cache => {
+        if (isRoot) {
+          return cache.match('/').then(cached => {
+            const fetchPromise = fetch(e.request).then(response => {
+              if (response && response.status === 200) {
+                cache.put('/', response.clone());
+              }
+              return response;
+            }).catch(() => cached);
+            return cached || fetchPromise;
+          });
+        }
+        // Non-root pages (e.g., /privacy) -- fetch directly
+        return fetch(e.request);
+      })
     );
     return;
   }
