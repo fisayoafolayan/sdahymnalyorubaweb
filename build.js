@@ -50,6 +50,14 @@ function build() {
         }
     }
 
+    // Copy .well-known (Android App Links verification)
+    const wellKnownSrc = path.join(__dirname, '.well-known', 'assetlinks.json');
+    if (fs.existsSync(wellKnownSrc)) {
+        const wellKnownDst = path.join(DIST, '.well-known');
+        fs.mkdirSync(wellKnownDst, { recursive: true });
+        fs.copyFileSync(wellKnownSrc, path.join(wellKnownDst, 'assetlinks.json'));
+    }
+
     // Report
     const jsOrig = fs.statSync('app.js').size;
     const jsMin = fs.statSync('dist/app.js').size;
