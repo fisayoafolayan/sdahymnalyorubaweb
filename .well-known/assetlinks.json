@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.sdahymnalyoruba",
+      "sha256_cert_fingerprints": [
+        "74:55:46:DA:09:E9:3E:54:94:70:5E:FF:12:B3:4E:4F:F9:64:F2:79:69:25:01:4E:04:0A:04:67:21:AE:1B:D1"
+      ]
+    }
+  }
+]
