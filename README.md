@@ -4,7 +4,7 @@
 
 # SDA Hymnal Yoruba
 
-A web-based Yoruba hymnal for Seventh-day Adventist worship, study, and church projection. Browse, search, and present over 620 hymns.
+A web-based [Seventh-day Adventist church](https://adventist.org/) hymnal in Yoruba, suitable for worship, study, and church projection. Browse, search, and present over 620 hymns.
 
 **Live site:** [sdahymnalyoruba.com](https://sdahymnalyoruba.com)
 

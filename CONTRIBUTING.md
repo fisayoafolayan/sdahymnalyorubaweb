@@ -114,6 +114,7 @@ npx serve .
 
 5. Commit with a clear message:
    ```bash
+   git add hymns.json
    git commit -m "Fix diacritics in hymn 42, verse 3"
    ```
 
