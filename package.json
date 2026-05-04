@@ -2,7 +2,7 @@
   "name": "sda-hymnal-yoruba",
   "version": "1.0.0",
   "private": true,
-  "description": "SDA Hymnal Yoruba - a complete Yoruba hymnal for Seventh-day Adventist worship",
+  "description": "SDA Hymnal Yorùbá - a complete Yorùbá hymnal for Seventh-day Adventist worship",
   "scripts": {
     "build": "node build.js",
     "dev": "node build.js --watch & npx wrangler dev",

@@ -1,5 +1,5 @@
 /**
- * app.js - SDA Hymnal Yoruba Web Application
+ * app.js - SDA Hymnal Yorùbá Web Application
  *
  * Main client-side logic for browsing, searching, and presenting Yoruba
  * Seventh-day Adventist hymns. Loads hymn data from hymns.json, renders a
@@ -298,6 +298,7 @@ let initialLoad = true;
 function renderHymn(hymn) {
     $('empty').style.display = 'none';
     $('hymn-content').style.display = 'block';
+    $('numpad-fab').classList.add('active');
     document.querySelector('.scroll-spacer').style.height = '4rem';
     const view = $('hymn-view');
     const doFade = !initialLoad;
@@ -620,6 +621,7 @@ function goHome() {
     current = null;
     $('hymn-content').style.display = 'none';
     $('empty').style.display = '';
+    $('numpad-fab').classList.remove('active');
     document.querySelector('.scroll-spacer').style.height = '0';
     $('pres-open').disabled = true;
     $('fs-toggle').style.display = 'none';
@@ -681,7 +683,7 @@ document.getElementById('canonical-url').setAttribute('href', canonicalBase);
 document.getElementById('og-url').setAttribute('content', canonicalBase);
 document.addEventListener('DOMContentLoaded', () => {
     const hymView = document.getElementById('hymn-view');
-    if (hymView) hymView.setAttribute('data-print-credit', 'SDA Hymnal Yoruba - ' + location.hostname);
+    if (hymView) hymView.setAttribute('data-print-credit', 'SDA Hymnal Yorùbá - ' + location.hostname);
 });
 
 document.addEventListener('keydown', e => {
@@ -712,25 +714,33 @@ function resolveTheme(mode) {
     return mode;
 }
 
-/** Apply theme: set data-theme attribute, update toggle button icon, update meta theme-color. */
+/** Apply theme: set data-theme attribute, update toggle button icons, update meta theme-color. */
 function applyTheme(mode) {
     const resolved = resolveTheme(mode);
     document.documentElement.setAttribute('data-theme', resolved);
-    const btn = $('theme-btn');
-    if (btn) btn.innerHTML = mode === 'system' ? systemSvg : resolved === 'dark' ? sunSvg : moonSvg;
+    const icon = mode === 'system' ? systemSvg : resolved === 'dark' ? sunSvg : moonSvg;
+    ['theme-btn', 'theme-btn-hdr'].forEach(id => {
+        const btn = $(id);
+        if (btn) btn.innerHTML = icon;
+    });
     const meta = document.querySelector('meta[name="theme-color"]');
     if (meta) meta.setAttribute('content', resolved === 'dark' ? '#1A1840' : '#5B52C8');
 }
 
 applyTheme(getThemeMode());
 
-$('theme-btn').addEventListener('click', () => {
+function cycleTheme() {
     const mode = getThemeMode();
     const next = mode === 'light' ? 'dark' : mode === 'dark' ? 'system' : 'light';
     if (next === 'system') localStorage.removeItem('theme');
     else localStorage.setItem('theme', next);
     applyTheme(next);
     if (typeof umami !== 'undefined') umami.track('theme_' + next);
+}
+
+['theme-btn', 'theme-btn-hdr'].forEach(id => {
+    const btn = $(id);
+    if (btn) btn.addEventListener('click', cycleTheme);
 });
 
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
@@ -740,3 +750,129 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () 
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/sw.js');
 }
+
+// ── Android app banner & footer link ──
+// Banner: shown on Android browsers only, dismissible.
+// Footer "Android App" link: hidden on iOS (no point showing it).
+(function() {
+    const isAndroid = /Android/i.test(navigator.userAgent);
+    const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+    // Hide footer Android link + dot on iOS
+    if (isIOS) {
+        const link = $('footer-android-link');
+        const dot = $('footer-android-dot');
+        if (link) link.style.display = 'none';
+        if (dot) dot.style.display = 'none';
+    }
+
+    // Show banner on Android only
+    const isDismissed = sessionStorage.getItem('appBannerDismissed');
+    const banner = $('app-banner');
+    if (!banner || !isAndroid || isDismissed) return;
+
+    banner.style.display = 'flex';
+    document.body.classList.add('has-banner');
+
+    $('banner-close').addEventListener('click', () => {
+        banner.style.display = 'none';
+        document.body.classList.remove('has-banner');
+        sessionStorage.setItem('appBannerDismissed', '1');
+    });
+})();
+
+// ── Number Pad (mobile FAB) ──
+// Floating action button that opens a keypad dialog for jumping to a hymn
+// by number. Only visible on mobile (<769px). Mirrors the Android app's
+// NumberPadDialog: keypad grid, live title preview, backspace, Go button.
+(function() {
+    const fab = $('numpad-fab');
+    const overlay = $('numpad-overlay');
+    const inputEl = $('numpad-input');
+    const preview = $('numpad-preview');
+    const bksp = $('numpad-bksp');
+    const goBtn = $('numpad-go');
+    let numpadValue = '';
+
+    function updateDisplay() {
+        inputEl.textContent = numpadValue || '\u2014';
+        inputEl.classList.toggle('empty', !numpadValue);
+        bksp.classList.toggle('visible', numpadValue.length > 0);
+        goBtn.classList.toggle('disabled', !numpadValue);
+
+        const num = parseInt(numpadValue);
+        const hymn = num ? HYMNS.find(h => h.number === num) : null;
+        if (hymn) {
+            preview.textContent = hymn.title;
+            preview.classList.remove('error');
+        } else if (numpadValue) {
+            preview.textContent = 'Hymn not found';
+            preview.classList.add('error');
+        } else {
+            preview.textContent = '';
+            preview.classList.remove('error');
+        }
+    }
+
+    function openNumpad() {
+        numpadValue = '';
+        updateDisplay();
+        overlay.classList.add('open');
+    }
+
+    function closeNumpad() {
+        overlay.classList.remove('open');
+    }
+
+    function tryGo() {
+        const num = parseInt(numpadValue);
+        if (!num) return;
+        const hymn = HYMNS.find(h => h.number === num);
+        if (!hymn) return;
+        selectHymn(hymn);
+        closeNumpad();
+        if (typeof umami !== 'undefined') umami.track('numpad_go', { hymn: num });
+    }
+
+    fab.addEventListener('click', openNumpad);
+
+    overlay.addEventListener('click', e => {
+        if (e.target === overlay) closeNumpad();
+    });
+
+    $('numpad-cancel').addEventListener('click', closeNumpad);
+
+    bksp.addEventListener('click', () => {
+        if (numpadValue.length > 0) {
+            numpadValue = numpadValue.slice(0, -1);
+            updateDisplay();
+        }
+    });
+
+    goBtn.addEventListener('click', tryGo);
+
+    document.querySelectorAll('.numpad-key[data-key]').forEach(btn => {
+        btn.addEventListener('click', () => {
+            if (numpadValue.length < 4) {
+                numpadValue += btn.dataset.key;
+                updateDisplay();
+            }
+        });
+    });
+
+    // Keyboard support when dialog is open
+    document.addEventListener('keydown', e => {
+        if (!overlay.classList.contains('open')) return;
+        if (e.key >= '0' && e.key <= '9' && numpadValue.length < 4) {
+            numpadValue += e.key;
+            updateDisplay();
+        } else if (e.key === 'Backspace') {
+            numpadValue = numpadValue.slice(0, -1);
+            updateDisplay();
+        } else if (e.key === 'Enter') {
+            tryGo();
+        } else if (e.key === 'Escape') {
+            closeNumpad();
+        }
+    });
+})();
