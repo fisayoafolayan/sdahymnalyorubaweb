@@ -119,10 +119,14 @@ npx serve .
    ```
 
 6. Push changes to remote repository
-git push --set-upstream origin fix/hymn-42-diacritics
+  ```bash
+  git push --set-upstream origin fix/hymn-42-diacritics
+  ``` 
 
 7. Open a pull request directly on Github (not on the terminal)
-https://github.com/<username>/sdahymnalyorubaweb/pull/new/fix/hymn-42-diacritics
+```bash
+  https://github.com/<username>/sdahymnalyorubaweb/pull/new/fix/hymn-42-diacritics
+```
 
 ### PR Guidelines
 
