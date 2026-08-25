@@ -29,7 +29,7 @@ const $ = id => document.getElementById(id);
 /** Fetch hymn data from hymns.json. Returns false and shows error UI on failure. */
 async function loadData() {
     try {
-        const res = await fetch('hymns.json');
+        const res = await fetch('/hymns.json');
         if (!res.ok) throw new Error('not ok');
         HYMNS = await res.json();
     } catch(e) {
@@ -46,6 +46,51 @@ async function loadData() {
 /** Strip diacritics and special chars for search comparison. Yoruba text uses combining marks that must be removed for accent-insensitive matching. */
 function normalise(str) {
     return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9\s]/gi, '').toLowerCase();
+}
+
+// \u2500\u2500 SEO-friendly URLs \u2500\u2500
+// Hymns are addressed by clean paths like /hymn/1-gbogbo-eyin-ti-n-gbe-aye instead
+// of ?hymn=1. The number is the source of truth; the slug is decorative (a wrong or
+// missing slug still resolves via the leading number). slugify() MUST stay in sync
+// with the identical function in build.js so client URLs match the prerendered pages.
+
+/** Build a URL-safe slug from a hymn title (diacritics stripped, lowercased, hyphenated). */
+function slugify(str) {
+    return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+}
+
+/** Canonical path for a hymn, e.g. /hymn/1-gbogbo-eyin-ti-n-gbe-aye */
+function hymnPath(hymn) {
+    return '/hymn/' + hymn.number + '-' + slugify(hymn.title);
+}
+
+/** Parse the hymn number from the current location: clean path /hymn/<n>-\u2026 first, then legacy ?hymn=<n>. Returns NaN when neither is present. */
+function hymnNumFromLocation() {
+    const m = location.pathname.match(/^\/hymn\/(\d+)/);
+    return m ? parseInt(m[1]) : parseInt(new URLSearchParams(location.search).get('hymn'));
+}
+
+/** Update <title>, meta description, canonical and social tags for a hymn (or the home page when hymn is null). Critical for SEO: without this, every hymn URL would keep the homepage's canonical/title and never be indexed on its own. */
+function updateMeta(hymn) {
+    const setAttr = (sel, attr, val) => { const el = document.querySelector(sel); if (el) el.setAttribute(attr, val); };
+    let title, desc, url;
+    if (hymn) {
+        title = 'Hymn ' + hymn.number + ' \u2013 ' + hymn.title + ' (' + hymn.english_title + ') | SDA Hymnal Yor\u00f9b\u00e1';
+        desc  = 'Hymn ' + hymn.number + ' \u201c' + hymn.title + '\u201d (' + hymn.english_title + ') \u2014 read the full Yor\u00f9b\u00e1 lyrics from the Seventh-day Adventist hymnal.';
+        url   = location.origin + hymnPath(hymn);
+    } else {
+        title = 'SDA Hymnal Yor\u00f9b\u00e1';
+        desc  = 'A complete Yor\u00f9b\u00e1 hymnal for Seventh-day Adventist worship, study and church projection. Search hymns by title, number or lyrics.';
+        url   = location.origin + '/';
+    }
+    document.title = title;
+    setAttr('meta[name="description"]', 'content', desc);
+    setAttr('#canonical-url', 'href', url);
+    setAttr('#og-url', 'content', url);
+    setAttr('meta[property="og:title"]', 'content', title);
+    setAttr('meta[property="og:description"]', 'content', desc);
+    setAttr('meta[name="twitter:title"]', 'content', title);
+    setAttr('meta[name="twitter:description"]', 'content', desc);
 }
 
 // Pre-built search index - built once on load, reused on every keystroke
@@ -77,24 +122,30 @@ function buildIndex() {
     $('loading').style.opacity = '0';
     setTimeout(() => $('loading').style.display = 'none', 400);
 
-    // Restore from URL (?hymn=42), then localStorage, then first hymn on desktop
-    const urlNum    = parseInt(new URLSearchParams(location.search).get('hymn'));
+    // Restore from URL (/hymn/42-… or legacy ?hymn=42), then localStorage
+    const urlNum    = hymnNumFromLocation();
+    const fromUrl   = !isNaN(urlNum);
     const savedNum  = parseInt(localStorage.getItem('lastHymn'));
-    const startNum  = urlNum || savedNum || null;
+    const startNum  = fromUrl ? urlNum : (savedNum || null);
     const startHymn = startNum ? HYMNS.find(h => h.number === startNum) : null;
 
-    if (urlNum && !startHymn) {
+    if (fromUrl && !startHymn) {
         $('empty').style.display = '';
         $('hymn-content').style.display = 'none';
         const emptyH2 = $('empty').querySelector('h2');
         const emptyP  = $('empty').querySelector('p');
         if (emptyH2) emptyH2.textContent = 'Hymn ' + urlNum + ' not found';
         if (emptyP)  { emptyP.textContent = 'This hymn number doesn\'t exist in the hymnal.'; emptyP.style.display = ''; }
-        // Clear the bad URL
-        const url = new URL(location.href);
-        url.searchParams.delete('hymn');
-        history.replaceState(null, '', url);
+        // Reset the bad URL back to home
+        history.replaceState(null, '', '/');
+        updateMeta(null);
     } else if (startHymn) {
+        // Normalise legacy ?hymn= or a slugless/mismatched path to the canonical clean
+        // URL in place (no new history entry) so search engines consolidate on one URL.
+        if (fromUrl && location.pathname !== hymnPath(startHymn)) {
+            history.replaceState({ hymn: startHymn.number }, '', hymnPath(startHymn));
+            fromPopstate = true; // prevents selectHymn from pushing a duplicate entry
+        }
         selectHymn(startHymn);
     }
 })();
@@ -282,12 +333,11 @@ function selectHymn(hymn) {
     if (window.innerWidth < 769) closeSidebar(true);
     $('main').scrollTo({ top: 0, behavior: 'smooth' });
     localStorage.setItem('lastHymn', hymn.number);
-    const url = new URL(location.href);
-    url.searchParams.set('hymn', hymn.number);
+    updateMeta(hymn);
     if (fromPopstate) {
         fromPopstate = false;
     } else {
-        history.pushState({ hymn: hymn.number }, '', url);
+        history.pushState({ hymn: hymn.number }, '', hymnPath(hymn));
     }
     if (typeof umami !== 'undefined') umami.track('hymn_' + hymn.number);
     scrollSidebarToActive();
@@ -372,17 +422,16 @@ ${html}`;
 
 /** Share hymn via Web Share API (mobile) or copy URL to clipboard (desktop). */
 function shareHymn(hymn) {
-    const url = new URL(location.href);
-    url.searchParams.set('hymn', hymn.number);
+    const url = location.origin + hymnPath(hymn);
     const shareData = {
         title: `Hymn ${hymn.number} – ${hymn.title}`,
         text: `${hymn.title} (${hymn.english_title})`,
-        url: url.toString()
+        url
     };
     if (navigator.share) {
         navigator.share(shareData).catch(() => {});
     } else {
-        navigator.clipboard.writeText(url.toString()).then(() => {
+        navigator.clipboard.writeText(url).then(() => {
             const btn = $('share-btn');
             btn.classList.add('copied');
             setTimeout(() => btn.classList.remove('copied'), 1500);
@@ -630,12 +679,11 @@ function goHome() {
     filtered = [...HYMNS];
     renderList();
     localStorage.removeItem('lastHymn');
+    updateMeta(null);
     if (fromPopstate) {
         fromPopstate = false;
     } else {
-        const url = new URL(location.href);
-        url.searchParams.delete('hymn');
-        history.pushState(null, '', url);
+        history.pushState(null, '', '/');
     }
     $('main').scrollTo({ top: 0, behavior: 'smooth' });
 }
@@ -665,8 +713,8 @@ window.addEventListener('popstate', e => {
         return;
     }
     // Restore hymn from URL
-    const num = parseInt(new URLSearchParams(location.search).get('hymn'));
-    const hymn = num ? HYMNS.find(h => h.number === num) : null;
+    const num = hymnNumFromLocation();
+    const hymn = isNaN(num) ? null : HYMNS.find(h => h.number === num);
     fromPopstate = true;
     if (hymn) {
         selectHymn(hymn);
@@ -678,9 +726,8 @@ window.addEventListener('popstate', e => {
 /** Escape HTML special characters to prevent XSS in innerHTML. */
 function escHtml(s) { return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 
-const canonicalBase = location.origin + '/';
-document.getElementById('canonical-url').setAttribute('href', canonicalBase);
-document.getElementById('og-url').setAttribute('content', canonicalBase);
+// Canonical/OG tags are managed per-view by updateMeta(); the home page keeps the
+// defaults baked into index.html, and prerendered hymn pages ship their own canonical.
 document.addEventListener('DOMContentLoaded', () => {
     const hymView = document.getElementById('hymn-view');
     if (hymView) hymView.setAttribute('data-print-credit', 'SDA Hymnal Yorùbá - ' + location.hostname);

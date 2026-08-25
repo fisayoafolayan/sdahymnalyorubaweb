@@ -48,14 +48,16 @@ self.addEventListener('fetch', e => {
   const url = e.request.url;
   if (!url.startsWith('http') || !isCacheable(url)) return;
 
-  // Navigation requests: serve cached root page (except standalone pages like /privacy)
+  // Navigation requests.
   if (isNavigate(e.request)) {
     const pathname = new URL(e.request.url).pathname;
     const isRoot = pathname === '/' || pathname === '/index.html';
+    const isHymn = pathname.startsWith('/hymn/');
 
     e.respondWith(
       caches.open(CACHE).then(cache => {
         if (isRoot) {
+          // App shell: stale-while-revalidate for instant load.
           return cache.match('/').then(cached => {
             const fetchPromise = fetch(e.request).then(response => {
               if (response && response.status === 200) {
@@ -66,7 +68,12 @@ self.addEventListener('fetch', e => {
             return cached || fetchPromise;
           });
         }
-        // Non-root pages (e.g., /privacy) -- fetch directly
+        if (isHymn) {
+          // Prerendered hymn pages: network-first for fresh content, falling back to the
+          // cached app shell offline (the SPA re-renders the hymn from the URL path).
+          return fetch(e.request).catch(() => cache.match('/'));
+        }
+        // Standalone pages (e.g., /privacy) -- fetch directly.
         return fetch(e.request);
       })
     );
