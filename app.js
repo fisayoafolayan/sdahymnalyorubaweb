@@ -26,6 +26,17 @@ let readFz     = parseFloat(localStorage.getItem('readFz')) || 1.0;
 
 const $ = id => document.getElementById(id);
 
+/** Show a fatal error screen in place of the loading spinner. */
+function showLoadError(msg) {
+    $('loading').innerHTML = `
+  <svg style="width:36px;height:36px;color:var(--load-spin)" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+    <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><circle cx="12" cy="16" r="1" fill="currentColor"/>
+  </svg>
+  <p style="max-width:320px;text-align:center;line-height:1.6">${escHtml(msg)}</p>`;
+    $('loading').style.display = 'flex';
+    $('loading').style.opacity = '1';
+}
+
 /** Fetch hymn data from hymns.json. Returns false and shows error UI on failure. */
 async function loadData() {
     try {
@@ -33,20 +44,20 @@ async function loadData() {
         if (!res.ok) throw new Error('not ok');
         HYMNS = await res.json();
     } catch(e) {
-        $('loading').innerHTML = `
-  <svg style="width:36px;height:36px;color:var(--load-spin)" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-    <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><circle cx="12" cy="16" r="1" fill="currentColor"/>
-  </svg>
-  <p style="max-width:320px;text-align:center;line-height:1.6">Could not load hymns. Check your connection and try again.</p>`;
+        showLoadError('Could not load hymns. Check your connection and try again.');
         return false;
     }
     return true;
 }
 
-/** Strip diacritics and special chars for search comparison. Yoruba text uses combining marks that must be removed for accent-insensitive matching. */
+/** Strip diacritics and special chars for search comparison. Yoruba text uses combining marks that must be removed for accent-insensitive matching. Null-safe: a hymn missing a field degrades to empty-string matching instead of crashing boot. */
 function normalise(str) {
-    return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9\s]/gi, '').toLowerCase();
+    return (str || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9\s]/gi, '').toLowerCase();
 }
+
+/** Labels for call-&-response parts; falls back to the capitalized raw part so a future split-part import (women, men, \u2026) can't silently mislabel. */
+const CR_PART_LABELS = { leader: 'Leader/Lile', congregation: 'All/Egbe', women: 'Women/Aw\u1ecdn obinrin', men: 'Men/Aw\u1ecdn \u1ecdk\u00f9nrin' };
+function crPartLabel(part) { return CR_PART_LABELS[part] || (part ? part.charAt(0).toUpperCase() + part.slice(1) : 'All/Egbe'); }
 
 // \u2500\u2500 SEO-friendly URLs \u2500\u2500
 // Hymns are addressed by clean paths like /hymn/1-gbogbo-eyin-ti-n-gbe-aye instead
@@ -75,8 +86,9 @@ function updateMeta(hymn) {
     const setAttr = (sel, attr, val) => { const el = document.querySelector(sel); if (el) el.setAttribute(attr, val); };
     let title, desc, url;
     if (hymn) {
-        title = 'Hymn ' + hymn.number + ' \u2013 ' + hymn.title + ' (' + hymn.english_title + ') | SDA Hymnal Yor\u00f9b\u00e1';
-        desc  = 'Hymn ' + hymn.number + ' \u201c' + hymn.title + '\u201d (' + hymn.english_title + ') \u2014 read the full Yor\u00f9b\u00e1 lyrics from the Seventh-day Adventist hymnal.';
+        const en = hymn.english_title || '';
+        title = 'Hymn ' + hymn.number + ' \u2013 ' + hymn.title + (en ? ' (' + en + ')' : '') + ' | SDA Hymnal Yor\u00f9b\u00e1';
+        desc  = 'Hymn ' + hymn.number + ' \u201c' + hymn.title + '\u201d' + (en ? ' (' + en + ')' : '') + ' \u2014 read the full Yor\u00f9b\u00e1 lyrics from the Seventh-day Adventist hymnal.';
         url   = location.origin + hymnPath(hymn);
     } else {
         title = 'SDA Hymnal Yor\u00f9b\u00e1';
@@ -114,39 +126,45 @@ function buildIndex() {
 (async () => {
     const ok = await loadData();
     if (!ok) return;
-    buildIndex();
-    filtered = [...HYMNS];
-    renderList();
-    const cy = $('copy-year');
-    if (cy) cy.textContent = new Date().getFullYear();
-    $('loading').style.opacity = '0';
-    setTimeout(() => $('loading').style.display = 'none', 400);
+    try {
+        buildIndex();
+        filtered = [...HYMNS];
+        renderList();
+        const cy = $('copy-year');
+        if (cy) cy.textContent = new Date().getFullYear();
+        $('loading').style.opacity = '0';
+        setTimeout(() => $('loading').style.display = 'none', 400);
 
-    // Restore from URL (/hymn/42-… or legacy ?hymn=42), then localStorage
-    const urlNum    = hymnNumFromLocation();
-    const fromUrl   = !isNaN(urlNum);
-    const savedNum  = parseInt(localStorage.getItem('lastHymn'));
-    const startNum  = fromUrl ? urlNum : (savedNum || null);
-    const startHymn = startNum ? HYMNS.find(h => h.number === startNum) : null;
+        // Restore from URL (/hymn/42-… or legacy ?hymn=42), then localStorage
+        const urlNum    = hymnNumFromLocation();
+        const fromUrl   = !isNaN(urlNum);
+        const savedNum  = parseInt(localStorage.getItem('lastHymn'));
+        const startNum  = fromUrl ? urlNum : (savedNum || null);
+        const startHymn = startNum ? HYMNS.find(h => h.number === startNum) : null;
 
-    if (fromUrl && !startHymn) {
-        $('empty').style.display = '';
-        $('hymn-content').style.display = 'none';
-        const emptyH2 = $('empty').querySelector('h2');
-        const emptyP  = $('empty').querySelector('p');
-        if (emptyH2) emptyH2.textContent = 'Hymn ' + urlNum + ' not found';
-        if (emptyP)  { emptyP.textContent = 'This hymn number doesn\'t exist in the hymnal.'; emptyP.style.display = ''; }
-        // Reset the bad URL back to home
-        history.replaceState(null, '', '/');
-        updateMeta(null);
-    } else if (startHymn) {
-        // Normalise legacy ?hymn= or a slugless/mismatched path to the canonical clean
-        // URL in place (no new history entry) so search engines consolidate on one URL.
-        if (fromUrl && location.pathname !== hymnPath(startHymn)) {
-            history.replaceState({ hymn: startHymn.number }, '', hymnPath(startHymn));
-            fromPopstate = true; // prevents selectHymn from pushing a duplicate entry
+        if (fromUrl && !startHymn) {
+            $('empty').style.display = '';
+            $('hymn-content').style.display = 'none';
+            const emptyH2 = $('empty').querySelector('h2');
+            const emptyP  = $('empty').querySelector('p');
+            if (emptyH2) emptyH2.textContent = 'Hymn ' + urlNum + ' not found';
+            if (emptyP)  { emptyP.textContent = 'This hymn number doesn\'t exist in the hymnal.'; emptyP.style.display = ''; }
+            // Reset the bad URL back to home
+            history.replaceState(null, '', '/');
+            updateMeta(null);
+        } else if (startHymn) {
+            // Normalise legacy ?hymn= or a slugless/mismatched path to the canonical clean
+            // URL in place (no new history entry) so search engines consolidate on one URL.
+            if (fromUrl && location.pathname !== hymnPath(startHymn)) {
+                history.replaceState({ hymn: startHymn.number }, '', hymnPath(startHymn));
+                fromPopstate = true; // prevents selectHymn from pushing a duplicate entry
+            }
+            selectHymn(startHymn);
         }
-        selectHymn(startHymn);
+    } catch (err) {
+        // A malformed hymn record must surface as an error screen, not an infinite spinner
+        console.error('Boot failed:', err);
+        showLoadError('Something went wrong while loading the hymnal. Refresh to try again.');
     }
 })();
 
@@ -181,9 +199,10 @@ function renderList() {
         const div = document.createElement('div');
         div.className = 'hymn-row' + (current && current.number === h.number ? ' active' : '');
         div.dataset.n = h.number;
+        div.id = 'hymn-opt-' + h.number;
         div.setAttribute('role', 'option');
         div.setAttribute('aria-selected', current && current.number === h.number ? 'true' : 'false');
-        div.innerHTML = `<div class="hnum" aria-hidden="true">${h.number}</div><div class="htitles"><div class="hyo" lang="yo">${escHtml(h.title)}</div><div class="hsub" lang="en">${escHtml(h.english_title)}</div></div>`;
+        div.innerHTML = `<div class="hnum" aria-hidden="true">${h.number}</div><div class="htitles"><div class="hyo" lang="yo">${escHtml(h.title)}</div>${h.english_title ? `<div class="hsub" lang="en">${escHtml(h.english_title)}</div>` : ''}</div>`;
         div.addEventListener('click', () => selectHymn(h));
         frag.appendChild(div);
     }
@@ -202,7 +221,7 @@ function renderList() {
     } else {
         wrap.appendChild(frag);
     }
-    $('list-count').textContent = total === 0 ? 'No hymns found' : total + (total === 1 ? ' hymn' : ' hymns');
+    $('list-count').textContent = total === 0 ? 'No hymns found' : total.toLocaleString() + (total === 1 ? ' hymn' : ' hymns');
 }
 
 // Re-render on scroll to show newly visible rows
@@ -223,6 +242,7 @@ let searchHighlight = -1;
 
 $('search').addEventListener('input', () => {
     searchHighlight = -1;
+    $('search').removeAttribute('aria-activedescendant');
     debouncedSearch($('search').value.trim());
 });
 
@@ -260,6 +280,10 @@ function updateSearchHighlight() {
     rows.forEach(el => {
         if (parseInt(el.dataset.n) === filtered[searchHighlight]?.number) el.classList.add('kb-focus');
     });
+    // Expose the highlighted option to screen readers via the input's activedescendant
+    const active = filtered[searchHighlight];
+    if (active) $('search').setAttribute('aria-activedescendant', 'hymn-opt-' + active.number);
+    else $('search').removeAttribute('aria-activedescendant');
 }
 
 $('empty-search').addEventListener('input', () => {
@@ -367,8 +391,8 @@ function renderHymn(hymn) {
             if (isCallResponse) {
                 label = 'Call &amp; Response ' + block.index;
                 const rows = block.lines.map(l => `
-                <div class="cr-line ${l.part}">
-                    <span class="cr-part">${l.part === 'leader' ? 'Leader/Lile' : 'All/Egbe'}</span>
+                <div class="cr-line ${escHtml(l.part)}">
+                    <span class="cr-part">${escHtml(crPartLabel(l.part))}</span>
                     <span class="cr-text">${escHtml(l.text)}</span>
                 </div>`).join('');
                 inner = `<div class="cr-block">${rows}</div>`;
@@ -399,7 +423,7 @@ function renderHymn(hymn) {
 <div class="hymn-hdr">
   <div class="h-badge" aria-label="Hymn number">Hymn ${hymn.number}</div>
   <h1 class="h-title" lang="yo" tabindex="-1" id="hymn-title">${escHtml(hymn.title)}</h1>
-  <div class="h-en" lang="en">${escHtml(hymn.english_title)}</div>
+  ${hymn.english_title ? `<div class="h-en" lang="en">${escHtml(hymn.english_title)}</div>` : ''}
   ${refs ? `<div class="h-refs">${refs}</div>` : ''}
 </div>
 ${html}`;
@@ -412,7 +436,8 @@ ${html}`;
         if (shareBtn) shareBtn.addEventListener('click', () => shareHymn(hymn));
         if (doFade) view.classList.remove('fading');
         // Move focus to hymn title on desktop for screen reader users
-        if (window.innerWidth >= 769) {
+        // (skipped while presentation mode is restoring focus to its opener)
+        if (window.innerWidth >= 769 && !presRestorePending) {
             const title = document.getElementById('hymn-title');
             if (title) title.focus();
         }
@@ -462,6 +487,28 @@ $('fs-toggle').addEventListener('click', () => {
 });
 
 
+let presOpener = null;
+let presRestorePending = false; // blocks renderHymn's title.focus() until focus is restored to the opener
+
+// ── Screen wake lock (presentation mode) ──
+let wakeLock = null;
+function requestWakeLock() {
+    if (!('wakeLock' in navigator)) return;
+    navigator.wakeLock.request('screen').then(l => {
+        wakeLock = l;
+        l.addEventListener('release', () => { wakeLock = null; });
+    }).catch(() => {});
+}
+function releaseWakeLock() {
+    if (!wakeLock) return;
+    wakeLock.release().catch(() => {});
+    wakeLock = null;
+}
+// The lock is dropped whenever the tab is hidden; re-acquire when the service resumes.
+document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible' && $('pres').classList.contains('on')) requestWakeLock();
+});
+
 $('pres-open').addEventListener('click', () => {
     if (!current) return;
     if (typeof umami !== 'undefined') umami.track('presented_' + current.number);
@@ -472,8 +519,12 @@ $('pres-open').addEventListener('click', () => {
     history.pushState({ presentation: true }, '');
     renderPresBlock();
     document.addEventListener('keydown', presKey);
+    requestWakeLock();
+    presOpener = document.activeElement;
+    const stage = $('pres-stage');
+    stage.focus(); // visibility flips instantly with .on
     const el = $('pres');
-    if (el.requestFullscreen) el.requestFullscreen();
+    if (el.requestFullscreen) el.requestFullscreen().then(() => stage.focus()).catch(() => {});
     else if (el.webkitRequestFullscreen) el.webkitRequestFullscreen();
 });
 
@@ -552,10 +603,10 @@ function renderPresBlock() {
             // Add small part label
             const label = document.createElement('em');
             label.style.cssText = 'display:block;font-size:0.45em;letter-spacing:0.2em;text-transform:uppercase;opacity:0.5;margin-bottom:0.2em;font-style:normal;';
-            label.textContent = part === 'leader' ? 'Leader / Lile' : 'All / Egbe';
+            label.textContent = crPartLabel(part).replace(/\//g, ' / ');
             span.appendChild(label);
             span.appendChild(document.createTextNode(text));
-            span.style.animationDelay = (i * 0.08) + 's';
+            span.style.animationDelay = (Math.min(i * 0.06, 0.3)) + 's';
             linesEl.appendChild(span);
             linesEl.appendChild(document.createElement('br'));
             return;
@@ -563,7 +614,7 @@ function renderPresBlock() {
             span.className = 'pl ' + (isChorus ? 'chorus-line' : 'verse-line');
         }
         span.textContent = text;
-        span.style.animationDelay = (i * 0.08) + 's';
+        span.style.animationDelay = (Math.min(i * 0.06, 0.3)) + 's';
         linesEl.appendChild(span);
         linesEl.appendChild(document.createElement('br'));
     });
@@ -595,19 +646,33 @@ function presKey(e) {
     if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') { e.preventDefault(); advance(); }
     else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); retreat(); }
     else if (e.key === 'Escape') closePres();
+    else if (e.key === 'Tab') {
+        const focusables = [...$('pres').querySelectorAll('button')].filter(b => !b.disabled);
+        if (!focusables.length) return;
+        const first = focusables[0], last = focusables[focusables.length - 1];
+        if (!document.activeElement.closest('#pres')) { e.preventDefault(); first.focus(); }
+        else if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
     else if (e.key === '+' || e.key === '=') { presFz = Math.min(presFz + 0.15, 2.5); applyPresFz(); localStorage.setItem('presFz', presFz); }
     else if (e.key === '-') { presFz = Math.max(presFz - 0.15, 0.4); applyPresFz(); localStorage.setItem('presFz', presFz); }
 }
-/** Exit presentation mode: hide overlay, remove keyboard listener, exit fullscreen, update history. */
+/** Exit presentation mode: hide overlay, remove keyboard listener, exit fullscreen, update history. Focus restore waits 200ms so fullscreen exit (which blurs to <body>) and the popstate re-render settle first. */
 function closePres(fromPopstate) {
     if (!$('pres').classList.contains('on')) return;
     $('pres').classList.remove('on');
     document.removeEventListener('keydown', presKey);
+    releaseWakeLock();
+    presRestorePending = true;
     if (document.fullscreenElement || document.webkitFullscreenElement) {
         if (document.exitFullscreen) document.exitFullscreen();
         else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
     }
     if (!fromPopstate && history.state && history.state.presentation) history.back();
+    setTimeout(() => {
+        presRestorePending = false;
+        if (presOpener) { presOpener.focus(); presOpener = null; }
+    }, 200);
 }
 
 /** Scroll the sidebar so the active hymn row is visible. Accounts for virtual list row positioning. */
@@ -782,6 +847,17 @@ function cycleTheme() {
     if (next === 'system') localStorage.removeItem('theme');
     else localStorage.setItem('theme', next);
     applyTheme(next);
+    // Swap feedback: the new icon rotates/fades in. WAAPI keeps it off the
+    // main thread and skipped entirely for reduced-motion users.
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        ['theme-btn', 'theme-btn-hdr'].forEach(id => {
+            const btn = $(id);
+            if (btn && btn.animate) btn.animate(
+                [{ transform: 'rotate(-70deg) scale(0.7)', opacity: 0 }, { transform: 'none', opacity: 1 }],
+                { duration: 200, easing: 'cubic-bezier(0.23, 1, 0.32, 1)' }
+            );
+        });
+    }
     if (typeof umami !== 'undefined') umami.track('theme_' + next);
 }
 
@@ -835,6 +911,7 @@ if ('serviceWorker' in navigator) {
 (function() {
     const fab = $('numpad-fab');
     const overlay = $('numpad-overlay');
+    const dialog = overlay.querySelector('.numpad-dialog');
     const inputEl = $('numpad-input');
     const preview = $('numpad-preview');
     const bksp = $('numpad-bksp');
@@ -846,6 +923,7 @@ if ('serviceWorker' in navigator) {
         inputEl.classList.toggle('empty', !numpadValue);
         bksp.classList.toggle('visible', numpadValue.length > 0);
         goBtn.classList.toggle('disabled', !numpadValue);
+        goBtn.setAttribute('aria-disabled', String(!numpadValue));
 
         const num = parseInt(numpadValue);
         const hymn = num ? HYMNS.find(h => h.number === num) : null;
@@ -861,14 +939,19 @@ if ('serviceWorker' in navigator) {
         }
     }
 
+    let numpadOpener = null;
+
     function openNumpad() {
         numpadValue = '';
         updateDisplay();
         overlay.classList.add('open');
+        numpadOpener = document.activeElement;
+        dialog.focus(); // visibility flips instantly with .open
     }
 
     function closeNumpad() {
         overlay.classList.remove('open');
+        if (numpadOpener) { numpadOpener.focus(); numpadOpener = null; }
     }
 
     function tryGo() {
@@ -917,9 +1000,19 @@ if ('serviceWorker' in navigator) {
             numpadValue = numpadValue.slice(0, -1);
             updateDisplay();
         } else if (e.key === 'Enter') {
-            tryGo();
+            // Skip tryGo when a dialog button has focus — its own click handles it
+            const onBtn = document.activeElement && document.activeElement.tagName === 'BUTTON' && overlay.contains(document.activeElement);
+            if (!onBtn) tryGo();
         } else if (e.key === 'Escape') {
             closeNumpad();
+        } else if (e.key === 'Tab') {
+            // Keep Tab inside the dialog
+            const focusables = [...overlay.querySelectorAll('button')].filter(b => getComputedStyle(b).visibility !== 'hidden');
+            if (!focusables.length) return;
+            const first = focusables[0], last = focusables[focusables.length - 1];
+            if (!document.activeElement.closest('.numpad-dialog')) { e.preventDefault(); first.focus(); }
+            else if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+            else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
         }
     });
 })();
