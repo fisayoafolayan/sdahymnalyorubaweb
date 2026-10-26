@@ -1321,7 +1321,12 @@ window.addEventListener('resize', () => { if ($('pres').classList.contains('on')
 // ── Swipe pager ──
 const pager      = $('hymn-pager');
 const paneEls    = [$('pane-prev'), $('hymn-view').parentElement, $('pane-next')];
-const paneW      = () => pager.clientWidth || 1;
+
+let paneWidth = 0;
+const measurePaneW = () => { paneWidth = pager.clientWidth || 1; };
+const paneW = () => paneWidth || 1;
+measurePaneW();
+window.addEventListener('resize', measurePaneW);
 const reducedMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const liveX = el => new DOMMatrixReadOnly(getComputedStyle(el).transform).m41;
 
@@ -1366,7 +1371,6 @@ function fillNeighbours() {
 function endPagerMotion() {
     swipeAnim = null;
     pager.classList.remove('swiping');
-    paneEls.forEach(el => { el.style.willChange = ''; });
     setTranslate(0);
     paneEls[0].innerHTML = '';
     paneEls[2].innerHTML = '';
@@ -1403,6 +1407,7 @@ $('main').addEventListener('pointerdown', e => {
     if (!current || e.pointerType === 'mouse') return;                 // mouse: keep text selection
     if (e.target.closest('button, a, input, #pres, .numpad-overlay')) return;
     if (swipeAnim) { swipeAnim.stop(); swipeAnim = null; }             // grab mid-flight
+    measurePaneW();                                                    // one flush per gesture, not per frame
     swipe = { pid: e.pointerId, x0: e.clientX, y0: e.clientY, base: liveX(paneEls[1]), hist: [{ x: e.clientX, t: performance.now() }] };
     swipeVel = 0;
 });
@@ -1416,7 +1421,6 @@ $('main').addEventListener('pointermove', e => {
         try { $('main').setPointerCapture(e.pointerId); } catch (err) {}
         pager.classList.add('swiping');
         fillNeighbours();
-        paneEls.forEach(el => { el.style.willChange = 'transform'; });
     }
     paintDrag(swipe.base + fx);
     const now = performance.now();

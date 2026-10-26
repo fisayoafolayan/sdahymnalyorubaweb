@@ -478,6 +478,9 @@ body.hdr-hidden #hdr { transform: translateY(-100%); }
 .hymn-pane { width: 100%; padding: 1.5rem 2.5rem 6.5rem; }
 .hymn-pane.center { position: relative; }
 .hymn-pane:not(.center) { position: absolute; top: 0; left: 0; pointer-events: none; }
+
+#pane-prev { transform: translateX(-100%); }
+#pane-next { transform: translateX(100%); }
 #hymn-view { transition: opacity 0.15s ease, transform 0.15s ease; }
 #hymn-view.fading { opacity: 0; transform: translateY(4px); }
 .hymn-rail { display: none; }
