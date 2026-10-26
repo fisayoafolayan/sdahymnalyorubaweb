@@ -9,13 +9,13 @@
   "lang": "yo",
   "icons": [
     {
-      "src": "https://res.cloudinary.com/dv2546q8h/image/upload/v1773653279/iwe-orin-app-icon.png",
+      "src": "https://res.cloudinary.com/dv2546q8h/image/upload/w_512,h_512/v1773653279/iwe-orin-app-icon.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "https://res.cloudinary.com/dv2546q8h/image/upload/v1773653279/iwe-orin-app-icon.png",
+      "src": "https://res.cloudinary.com/dv2546q8h/image/upload/w_192,h_192/v1773653279/iwe-orin-app-icon.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"

@@ -8,11 +8,14 @@ const ASSETS = [
   '/manifest.json'
 ];
 
-const CACHEABLE_ORIGINS = [
-  self.location.origin,
-  'https://fonts.googleapis.com',
-  'https://fonts.gstatic.com'
-];
+// Fonts are self-hosted now, so the app has no cross-origin dependencies left.
+const CACHEABLE_ORIGINS = [self.location.origin];
+
+// On a dev origin the shell must never be served from cache, or a stale copy hides your
+// edits — the trap that previously had to be worked around by unregistering the worker
+// entirely (which also cost the app its PWA installability). Production is unaffected:
+// build.js rotates the cache name on every build, so a stale cache can't survive a deploy.
+const DEV = self.location.hostname === 'localhost' || self.location.hostname === '127.0.0.1';
 
 self.addEventListener('install', e => {
   e.waitUntil(
@@ -56,6 +59,10 @@ self.addEventListener('fetch', e => {
 
     e.respondWith(
       caches.open(CACHE).then(cache => {
+        if (DEV) {
+          // Dev: always go to the network; the cache is only an offline fallback.
+          return fetch(e.request).catch(() => cache.match('/'));
+        }
         if (isRoot) {
           // App shell: stale-while-revalidate for instant load.
           return cache.match('/').then(cached => {
@@ -80,10 +87,18 @@ self.addEventListener('fetch', e => {
     return;
   }
 
-  // All other GET requests: cache-first
+  // All other GET requests: cache-first in production, network-first on a dev origin.
   e.respondWith(
-    caches.open(CACHE).then(cache =>
-      cache.match(e.request).then(cached => {
+    caches.open(CACHE).then(cache => {
+      if (DEV) {
+        return fetch(e.request).then(response => {
+          if (response && response.status === 200) {
+            cache.put(e.request, response.clone());
+          }
+          return response;
+        }).catch(() => cache.match(e.request));
+      }
+      return cache.match(e.request).then(cached => {
         const fetchPromise = fetch(e.request).then(response => {
           if (response && response.status === 200) {
             cache.put(e.request, response.clone());
@@ -92,7 +107,7 @@ self.addEventListener('fetch', e => {
         }).catch(() => cached);
 
         return cached || fetchPromise;
-      })
-    )
+      });
+    })
   );
 });

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, interactive-widget=resizes-content">
+    <script>document.documentElement.classList.add('js');</script>
     <title>SDA Hymnal Yorùbá</title>
 
     <!-- SEO -->
@@ -55,22 +56,20 @@
     <meta name="theme-color" content="#5B52C8">
     <link rel="icon" type="image/png" href="https://res.cloudinary.com/dv2546q8h/image/upload/v1773653279/iwe-orin-app-icon.png">
     <link rel="apple-touch-icon" href="https://res.cloudinary.com/dv2546q8h/image/upload/v1773653279/iwe-orin-app-icon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Noto+Serif:ital,wght@0,400;0,500;1,400&display=swap">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Noto+Serif:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <!-- Fonts are self-hosted and subsetted (see styles.css). Preload the two faces used above
+         the fold; the rest are discovered from the stylesheet. -->
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/noto-serif-400.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/playfair-display-600.woff2" crossorigin>
     <script defer src="https://analytics.afolayan.com/script.js" data-website-id="20dd9029-2ed1-4919-a60d-ae74d89795c1"></script>
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
 
-<!-- ANDROID APP BANNER (shown on Android browsers, dismissible) -->
 <div id="app-banner" class="app-banner">
     <svg class="app-banner-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
         <rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/>
     </svg>
     <div class="app-banner-text">
-        <div class="app-banner-name">SDA Hymnal Yorùbá</div>
         <div class="app-banner-sub">Available on Android</div>
     </div>
     <a href="https://play.google.com/store/apps/details?id=com.sdahymnalyoruba"
@@ -95,28 +94,10 @@
             </svg>
         </button>
         <button class="brand-home" id="home-btn" aria-label="Go to home">
-            <svg class="xsvg" viewBox="0 0 48 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M4 6 L4 34 L24 34 L24 6 Q14 4 4 6Z" stroke="white" stroke-width="1.8" fill="none" stroke-linejoin="round"/>
-                <path d="M44 6 L44 34 L24 34 L24 6 Q34 4 44 6Z" stroke="white" stroke-width="1.8" fill="none" stroke-linejoin="round"/>
-                <path d="M24 34 Q23 36 24 38 Q25 36 24 34Z" stroke="white" stroke-width="1.6" fill="none"/>
-                <line x1="8"  y1="10" x2="20" y2="9"  stroke="white" stroke-width="1.2" stroke-linecap="round"/>
-                <line x1="8"  y1="13.5" x2="20" y2="12.5" stroke="white" stroke-width="1.2" stroke-linecap="round"/>
-                <line x1="8"  y1="17" x2="20" y2="16" stroke="white" stroke-width="1.2" stroke-linecap="round"/>
-                <line x1="8"  y1="20.5" x2="20" y2="19.5" stroke="white" stroke-width="1.2" stroke-linecap="round"/>
-                <line x1="8"  y1="24" x2="20" y2="23" stroke="white" stroke-width="1.2" stroke-linecap="round"/>
-                <line x1="8"  y1="27.5" x2="20" y2="26.5" stroke="white" stroke-width="1.2" stroke-linecap="round"/>
-                <line x1="8"  y1="31" x2="20" y2="30" stroke="white" stroke-width="1.2" stroke-linecap="round"/>
-                <line x1="28" y1="9"  x2="40" y2="10" stroke="white" stroke-width="1.2" stroke-linecap="round"/>
-                <line x1="28" y1="12.5" x2="40" y2="13.5" stroke="white" stroke-width="1.2" stroke-linecap="round"/>
-                <line x1="28" y1="16" x2="40" y2="17" stroke="white" stroke-width="1.2" stroke-linecap="round"/>
-                <line x1="28" y1="19.5" x2="40" y2="20.5" stroke="white" stroke-width="1.2" stroke-linecap="round"/>
-                <line x1="28" y1="23" x2="40" y2="24" stroke="white" stroke-width="1.2" stroke-linecap="round"/>
-                <line x1="28" y1="26.5" x2="40" y2="27.5" stroke="white" stroke-width="1.2" stroke-linecap="round"/>
-                <line x1="28" y1="30" x2="40" y2="31" stroke="white" stroke-width="1.2" stroke-linecap="round"/>
-            </svg>
+            <img class="xsvg" src="https://res.cloudinary.com/dv2546q8h/image/upload/w_56,h_56/v1773653279/iwe-orin-app-icon.png"
+                 width="28" height="28" alt="" aria-hidden="true">
             <div class="brand-text">
                 <div class="brand-name">SDA Hymnal Yorùbá</div>
-                <div class="brand-sub">Worship · Study · Projection</div>
             </div>
         </button>
     </div>
@@ -147,33 +128,17 @@
                 <input id="search" type="search" placeholder="Search by title, number or lyrics…" autocomplete="off" spellcheck="false" autocapitalize="none" autocorrect="off" enterkeyhint="search">
             </div>
         </div>
-        <div id="list-wrap" role="listbox" aria-label="Hymn list"></div>
+        <div id="set-wrap" hidden></div>
+        <div id="recent-wrap" hidden></div>
+        <div id="list-wrap" role="listbox" aria-label="Hymn list" tabindex="0"></div>
         <div id="list-count" aria-live="polite" aria-atomic="true"></div>
     </aside>
 
     <main id="main" role="main" aria-label="Hymn content">
         <div id="empty">
-            <svg class="e-cross" viewBox="0 0 48 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="opacity:0.22">
-                <path d="M4 6 L4 34 L24 34 L24 6 Q14 4 4 6Z" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"/>
-                <path d="M44 6 L44 34 L24 34 L24 6 Q34 4 44 6Z" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"/>
-                <path d="M24 34 Q23 36 24 38 Q25 36 24 34Z" stroke="currentColor" stroke-width="1.8" fill="none"/>
-                <line x1="8"  y1="10" x2="20" y2="9"  stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
-                <line x1="8"  y1="13.5" x2="20" y2="12.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
-                <line x1="8"  y1="17" x2="20" y2="16" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
-                <line x1="8"  y1="20.5" x2="20" y2="19.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
-                <line x1="8"  y1="24" x2="20" y2="23" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
-                <line x1="8"  y1="27.5" x2="20" y2="26.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
-                <line x1="8"  y1="31" x2="20" y2="30" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
-                <line x1="28" y1="9"  x2="40" y2="10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
-                <line x1="28" y1="12.5" x2="40" y2="13.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
-                <line x1="28" y1="16" x2="40" y2="17" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
-                <line x1="28" y1="19.5" x2="40" y2="20.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
-                <line x1="28" y1="23" x2="40" y2="24" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
-                <line x1="28" y1="26.5" x2="40" y2="27.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
-                <line x1="28" y1="30" x2="40" y2="31" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
-            </svg>
-            <h2>SDA Hymnal Yorùbá</h2>
-            <p>Select a hymn from the list or search by title or number</p>
+            <div class="e-eyebrow">Ìwé Orin · SDA</div>
+            <h1>SDA Hymnal Yorùbá</h1>
+            <p><span id="empty-count">621</span> Yorùbá hymns for worship, study and projection —<br>pick one from the list, or search by title, number or lyric.</p>
             <div class="empty-search-wrap">
                 <div class="empty-search-inner">
                     <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -193,7 +158,37 @@
         </div>
 
         <div id="hymn-content">
-            <div id="hymn-view"></div>
+            <div class="hymn-doc">
+                <div class="hymn-pager" id="hymn-pager">
+                    <div class="hymn-pane" id="pane-prev" aria-hidden="true"></div>
+                    <div class="hymn-pane center">
+                        <div id="hymn-view"></div>
+                    </div>
+                    <div class="hymn-pane" id="pane-next" aria-hidden="true"></div>
+                </div>
+                <aside class="hymn-rail" id="hymn-rail" aria-label="Hymn actions">
+                    <button class="act act-primary" id="rail-present" type="button">
+                        <svg class="act-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                        <span>Present</span>
+                    </button>
+                    <button class="act act-icon" id="rail-fav" type="button" aria-label="Add to list" title="Add to list" aria-pressed="false">
+                        <svg class="act-ic ic-add" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        <svg class="act-ic ic-added" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                    </button>
+                    <button class="act act-icon" id="rail-print" type="button" aria-label="Print sheet" title="Print sheet">
+                        <svg class="act-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+                    </button>
+                    <button class="act act-icon" id="rail-share" type="button" aria-label="Share" title="Share">
+                        <svg class="act-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+                    </button>
+                    <button class="act act-icon" id="rail-copy" type="button" aria-label="Copy link" title="Copy link">
+                        <svg class="act-ic ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                        <svg class="act-ic ic-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                    </button>
+                </aside>
+                <!-- Lives outside the rail so it stays in the a11y tree when the rail is display:none on mobile -->
+                <span id="rail-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></span>
+            </div>
         </div>
 
         <button id="scroll-top" class="scroll-top" aria-label="Scroll to top">
@@ -219,7 +214,6 @@
                     Android App
                 </a>
             </div>
-            <button class="theme-footer-btn" id="theme-btn" aria-label="Toggle theme"></button>
             <div class="footer-copy">&copy; <span id="copy-year"></span></div>
         </footer>
         <div class="scroll-spacer"></div>
@@ -234,8 +228,14 @@
         <div id="pres-end">
             <div id="pres-end-line"></div>
             <div id="pres-end-text">End of hymn</div>
+            <button class="pres-next-btn" id="pres-next-hymn" type="button">
+                <span class="pres-next-meta">
+                    <span class="pres-next-kicker">Next hymn <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
+                    <span class="pres-next-name"><span id="pres-next-num"></span> <span id="pres-next-title"></span></span>
+                </span>
+            </button>
         </div>
-        <div id="pres-hint">← → arrow keys · space · tap to advance</div>
+        <div id="pres-hint"><span class="hint-kb">← → arrow keys · space · </span>tap to advance</div>
     </div>
     <footer id="pres-foot">
         <div class="pf-info">
