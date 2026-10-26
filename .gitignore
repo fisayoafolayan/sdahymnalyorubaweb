@@ -1,6 +1,7 @@
 .idea/
 .DS_Store
 node_modules/
+redesign
 dist/
 *.bak
 
@@ -10,3 +11,6 @@ dist/
 !.dev.vars.example
 .env*
 !.env.example
+
+.impeccable
+.playwright-mcp

@@ -6,20 +6,41 @@
     <title>Privacy Policy - SDA Hymnal Yorùbá</title>
     <meta name="description" content="Privacy policy for SDA Hymnal Yorùbá.">
     <link rel="canonical" href="https://sdahymnalyoruba.com/privacy">
+    <meta name="theme-color" content="#5B52C8">
+    <script>
+    (function () {
+        var mode = null;
+        try { mode = localStorage.getItem('theme'); } catch (e) {}
+        if (mode !== 'light' && mode !== 'dark') mode = null;
+        var dark = mode ? mode === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (mode) document.documentElement.setAttribute('data-theme', mode);
+        var meta = document.querySelector('meta[name="theme-color"]');
+        if (meta) meta.setAttribute('content', dark ? '#1A1840' : '#5B52C8');
+    })();
+    </script>
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/noto-serif-400.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/playfair-display-600.woff2" crossorigin>
     <style>
+        @font-face { font-family: 'Playfair Display'; font-style: normal; font-weight: 600; font-display: swap; src: url('/fonts/playfair-display-600.woff2') format('woff2'); }
+        @font-face { font-family: 'Noto Serif'; font-style: normal; font-weight: 400; font-display: swap; src: url('/fonts/noto-serif-400.woff2') format('woff2'); }
+        @font-face { font-family: 'Noto Serif'; font-style: normal; font-weight: 500; font-display: swap; src: url('/fonts/noto-serif-500.woff2') format('woff2'); }
+        /* Token values mirror styles.css, which stays the source of truth. */
         :root { --accent: #8B85E0; --accent-dk: #3D37A0; --ink: #14123A; --ink2: #1E1B4B; --parch: #FFFFFF; --muted: #4A4578; }
-        @media (prefers-color-scheme: dark) { :root { --ink: #E8E6F8; --ink2: #D0CEE8; --parch: #121024; --muted: #8885B0; --accent-dk: #8B85E0; } }
+        /* Dark is duplicated into a media query and an attribute selector on purpose: the media
+           query covers 'system', the attribute covers an explicit app choice. Keep them identical. */
+        @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --accent: #9B95F0; --accent-dk: #C5C2F0; --ink: #E8E6F8; --ink2: #D0CEE8; --parch: #121024; --muted: #8886B0; } }
+        [data-theme="dark"] { --accent: #9B95F0; --accent-dk: #C5C2F0; --ink: #E8E6F8; --ink2: #D0CEE8; --parch: #121024; --muted: #8886B0; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Noto Serif', Georgia, serif; background: var(--parch); color: var(--ink); line-height: 1.7; padding: 2rem 1.5rem; max-width: 640px; margin: 0 auto; }
         a { color: var(--accent); text-decoration: none; }
         a:hover { text-decoration: underline; }
         .back { display: inline-block; margin-bottom: 2rem; font-size: 0.85rem; color: var(--muted); }
-        h1 { font-family: 'Playfair Display', Georgia, serif; font-size: 1.8rem; color: var(--accent-dk); margin-bottom: 0.5rem; }
+        h1 { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; font-size: 1.8rem; color: var(--accent-dk); margin-bottom: 0.5rem; }
         .subtitle { font-size: 0.85rem; color: var(--muted); margin-bottom: 2rem; }
         h2 { font-size: 1.1rem; color: var(--ink2); margin: 2rem 0 0.75rem; }
         p { margin-bottom: 1rem; font-size: 0.95rem; color: var(--ink2); }
         .divider { width: 32px; height: 2px; background: var(--accent); opacity: 0.3; border-radius: 1px; margin: 2.5rem 0; }
-        .footer { font-size: 0.7rem; color: var(--muted); letter-spacing: 0.08em; }
+        .footer { font-size: 0.7rem; color: var(--muted); letter-spacing: 0.04em; }
     </style>
 </head>
 <body>

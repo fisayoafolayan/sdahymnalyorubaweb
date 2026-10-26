@@ -8,11 +8,10 @@ const ASSETS = [
   '/manifest.json'
 ];
 
-const CACHEABLE_ORIGINS = [
-  self.location.origin,
-  'https://fonts.googleapis.com',
-  'https://fonts.gstatic.com'
-];
+// Fonts are self-hosted now, so the app has no cross-origin dependencies left.
+const CACHEABLE_ORIGINS = [self.location.origin];
+
+const DEV = self.location.hostname === 'localhost' || self.location.hostname === '127.0.0.1';
 
 self.addEventListener('install', e => {
   e.waitUntil(
@@ -56,6 +55,9 @@ self.addEventListener('fetch', e => {
 
     e.respondWith(
       caches.open(CACHE).then(cache => {
+        if (DEV) {
+          return fetch(e.request).catch(() => cache.match('/'));
+        }
         if (isRoot) {
           // App shell: stale-while-revalidate for instant load.
           return cache.match('/').then(cached => {
@@ -69,8 +71,6 @@ self.addEventListener('fetch', e => {
           });
         }
         if (isHymn) {
-          // Prerendered hymn pages: network-first for fresh content, falling back to the
-          // cached app shell offline (the SPA re-renders the hymn from the URL path).
           return fetch(e.request).catch(() => cache.match('/'));
         }
         // Standalone pages (e.g., /privacy) -- fetch directly.
@@ -80,10 +80,17 @@ self.addEventListener('fetch', e => {
     return;
   }
 
-  // All other GET requests: cache-first
   e.respondWith(
-    caches.open(CACHE).then(cache =>
-      cache.match(e.request).then(cached => {
+    caches.open(CACHE).then(cache => {
+      if (DEV) {
+        return fetch(e.request).then(response => {
+          if (response && response.status === 200) {
+            cache.put(e.request, response.clone());
+          }
+          return response;
+        }).catch(() => cache.match(e.request));
+      }
+      return cache.match(e.request).then(cached => {
         const fetchPromise = fetch(e.request).then(response => {
           if (response && response.status === 200) {
             cache.put(e.request, response.clone());
@@ -92,7 +99,7 @@ self.addEventListener('fetch', e => {
         }).catch(() => cached);
 
         return cached || fetchPromise;
-      })
-    )
+      });
+    })
   );
 });

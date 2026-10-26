@@ -13,7 +13,9 @@
  *   9. Loading Screen
  *  10. Responsive Breakpoints (768px tablet, 520px, 480px mobile)
  *  11. Scroll-to-top
- *  12. Print
+ *  12. Hover (pointer devices only)
+ *  13. Reduced Motion
+ *  14. Print
  *
  * Z-index stack:
  *   9999 - #loading (covers everything during load)
@@ -24,8 +26,27 @@
  *     10 - .scroll-top
  *
  * Key coupling:
- *   .hymn-row height (padding + content ≈ 62px) must match ROW_H in app.js
+ *   Virtual-list geometry lives in the --row-h / --decade-h tokens below;
+ *   app.js reads them at boot, so this file is the single source of truth.
  */
+
+/* ═══ FONTS (self-hosted) ═══
+   Subsetted to the exact 143 codepoints this app renders (basic Latin for user input, plus
+   every non-ASCII character in the hymns and UI) — 94 KB total instead of the ~349 KB Google
+   served. No unicode-range: each file already holds only those glyphs, so anything else falls
+   through to Georgia. build.js fails the build if a hymn introduces a character outside
+   fonts/charset.txt. Licences: fonts/LICENSE.txt.
+
+   Note: ← → ✓ are in charset.txt but are not actually in either typeface, so those three
+   always come from the system fallback. That was already true when the fonts came from
+   Google — it is not a subsetting artefact.
+*/
+@font-face { font-family: 'Playfair Display'; font-style: normal; font-weight: 400; font-display: swap; src: url('/fonts/playfair-display-400.woff2') format('woff2'); }
+@font-face { font-family: 'Playfair Display'; font-style: normal; font-weight: 600; font-display: swap; src: url('/fonts/playfair-display-600.woff2') format('woff2'); }
+@font-face { font-family: 'Playfair Display'; font-style: italic; font-weight: 400; font-display: swap; src: url('/fonts/playfair-display-400-italic.woff2') format('woff2'); }
+@font-face { font-family: 'Noto Serif'; font-style: normal; font-weight: 400; font-display: swap; src: url('/fonts/noto-serif-400.woff2') format('woff2'); }
+@font-face { font-family: 'Noto Serif'; font-style: normal; font-weight: 500; font-display: swap; src: url('/fonts/noto-serif-500.woff2') format('woff2'); }
+@font-face { font-family: 'Noto Serif'; font-style: italic; font-weight: 400; font-display: swap; src: url('/fonts/noto-serif-400-italic.woff2') format('woff2'); }
 
 /* ═══ LIGHT THEME VARIABLES ═══
    --accent/lt/dk: brand purple palette
@@ -37,9 +58,11 @@
    --sidebar/hdr: layout dimensions
    --row-active-*: selected hymn row colors
    --chorus-*: chorus block styling
-   --badge/ref-*: hymn number badge and reference tag colors
+   --rail-*: floating chrome (glass material + its lit edge)
+   --act-bg: action button face
+   --danger: the app's only red (errors)
+   --shadow-soft/hard: the elevation scale, ink-tinted
    --load-spin: loading spinner color
-   --ft-*: footer colors
 */
 :root {
     --accent:   #8B85E0;
@@ -52,45 +75,52 @@
     --cream:    #FFFFFF;
     --muted:    #4A4578;
     --border:   #E2E1EC;
+    /* Form fields need a boundary you can actually see: --border is a 1.3:1 hairline (fine
+       for decorative dividers), but WCAG 1.4.11 wants 3:1 for a UI component's edge. */
+    --border-field: #8E8CB0;   /* 3.2:1 on white */
     --pres-chorus-stage-bg:  #100C30;
-    --pres-chorus-pill-bg:   rgba(180,170,255,0.12);
-    --pres-chorus-pill-fg:   #C5C2F0;
-    --pres-chorus-pill-bd:   rgba(180,170,255,0.25);
     --sidebar:  300px;
     --hdr:      54px;
-    --hdr-bg:      #5B52C8;
-    --hdr-border:  #3D37A0;
-    --row-active-bg: #5B52C8;
+    /* Virtual-list geometry: the JS reads these tokens, so CSS is the single source of truth
+       (they were hardcoded in app.js as ROW_H = 62 while real rows render at 67). */
+    --row-h:     67px;
+    --decade-h:  26px;
+    --hnum-col: 4.2rem;
+    --row-active-bg: #3D37A0;
     --row-active-fg: #EEECfC;
-    --row-active-num:#C5C2F0;
-    --chorus-bar:   #8B85E0;
+    --row-active-num:#E2E0FA;
     --chorus-bg:    rgba(91,82,200,0.07);
     --pres-bg:     #0E0C28;
     --pres-text:   #EEECfC;
     --pres-chorus: #C5C2F0;
-    --pres-label:  #2E2A60;
-    --pres-prog:   #2E2A60;
-    --pres-hint:   #1C1840;
+    --pres-label:  #6A64B8;
+    --pres-prog:   #7A75C4;   /* 4.92:1 on the footer material — the counter is read at a glance */
+    --pres-end-label: #7A75C4;/* 4.70:1 — the "End of hymn" label was 1.68:1, i.e. invisible */
+    --pres-hint:   #8A87C0;   /* 5.72:1 — legible chrome, still recessive */
     --pres-btn-bg: rgba(139,133,224,0.12);
     --pres-btn-bd: rgba(139,133,224,0.25);
     --pres-btn-fg: #C5C2F0;
-    --pres-exit-bd:#1C1840;
-    --pres-exit-fg:#3A3680;
+    --pres-exit-bd:#4A4690;
+    --pres-exit-fg:#8A87C0;   /* 6.00:1 — Exit must be findable mid-projection */
     --pres-foot-bg:rgba(0,0,0,0.45);
-    --pres-foot-bd:#140E30;
+    --pres-foot-bd:#2A2660;
     --pf-num:      #9B98D8;
-    --pf-name:     #3A3680;
-    --pfont-bd:    #1C1840;
-    --pfont-fg:    #3A3680;
-    --badge-fg:    #4A46A0;
-    --badge-bg:    #E8E6F8;
-    --ref-bg:      #E8E6F8;
-    --ref-fg:      #7B78AA;
+    --pf-name:     #7A75C4;   /* 4.92:1 — was 1.92:1, effectively invisible */
+    --pfont-bd:    #4A4690;
+    --pfont-fg:    #8A87C0;   /* 6.00:1 */
+    --rail-bg: #FBFAF7;
+    --act-bg: #FFFFFF;
+    --rail-glass: rgba(255,255,255,0.72); /* frosted dock + header material */
+    --rail-edge: rgba(255,255,255,0.65);  /* light catching the top of the glass */
+    --danger:  #C0392B;                    /* the app's only red: errors */
+    --shadow-soft: rgba(20,18,58,0.07);    /* elevation scale, ink-tinted */
+    --shadow-hard: rgba(20,18,58,0.20);
 
     --load-spin:   #8B85E0;
-    --ft-bg:       #FFFFFF;
-    --ft-note:     #C8C5E8;
-    --ft-logo:     #8B85E0;
+
+    color-scheme: light;
+    --ease-out:    cubic-bezier(0.23, 1, 0.32, 1);
+    --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
 }
 /* ═══ DARK MODE ═══
    These two blocks MUST have identical values. Both are required:
@@ -112,20 +142,21 @@
         --cream:    #161432;
         --muted:    #8886B0;
         --border:   #2A2850;
-        --hdr-bg:      #1A1840;
-        --hdr-border:  #2A2850;
+        --border-field: #6E6C90;   /* 3.6:1 on the dark surface */
         --row-active-bg: #2E2A60;
         --row-active-fg: #E8E6F8;
         --row-active-num:#9B95F0;
         --chorus-bg:    rgba(139,133,224,0.1);
-        --badge-fg:    #9B95F0;
-        --badge-bg:    #1E1C40;
-        --ref-bg:      #1E1C40;
-        --ref-fg:      #8886B0;
-
-        --ft-bg:       #121024;
-        --ft-note:     #2A2850;
+        --rail-bg: #161432;
+        --act-bg: #1E1C40;
+        --rail-glass: rgba(22,20,50,0.72);
+        --rail-edge: rgba(255,255,255,0.09);
+        --danger:  #EE5544;
+        --shadow-soft: rgba(0,0,0,0.28);
+        --shadow-hard: rgba(0,0,0,0.45);
         --load-spin:   #9B95F0;
+
+        color-scheme: dark;
     }
 }
 [data-theme="dark"] {
@@ -139,115 +170,258 @@
     --cream:    #161432;
     --muted:    #8886B0;
     --border:   #2A2850;
-    --hdr-bg:      #1A1840;
-    --hdr-border:  #2A2850;
+    --border-field: #6E6C90;   /* 3.6:1 on the dark surface */
     --row-active-bg: #2E2A60;
     --row-active-fg: #E8E6F8;
     --row-active-num:#9B95F0;
     --chorus-bg:    rgba(139,133,224,0.1);
-    --badge-fg:    #9B95F0;
-    --badge-bg:    #1E1C40;
-    --ref-bg:      #1E1C40;
-    --ref-fg:      #8886B0;
-
-    --ft-bg:       #121024;
-    --ft-note:     #2A2850;
+    --rail-bg: #161432;
+    --act-bg: #1E1C40;
+    --rail-glass: rgba(22,20,50,0.72);
+    --rail-edge: rgba(255,255,255,0.09);
+    --danger:  #EE5544;
+    --shadow-soft: rgba(0,0,0,0.28);
+    --shadow-hard: rgba(0,0,0,0.45);
     --load-spin:   #9B95F0;
+
+    color-scheme: dark;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html, body { height: 100%; }
+/* Platform layer: no gray tap flash anywhere (every tappable has its own :active),
+   no landscape font inflation, no root pull-to-refresh — the app scrolls in #main. */
+html {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+    overscroll-behavior: none;
+}
 body { font-family: 'Noto Serif', Georgia, serif; background: var(--parch); color: var(--ink); overflow: hidden; }
+
+/* Native touch feel: no double-tap-zoom wait on controls, no long-press text
+   selection on tappables (lyrics in #main stay selectable). */
+button, a, [role="button"], [role="option"] { touch-action: manipulation; }
+button, [role="button"], [role="option"] { user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; }
+
+/* iPads are wide AND touch — keep inputs at 16px so focus never zooms the page */
+@media (pointer: coarse) {
+    #search, #empty-search { font-size: 1rem; }
+}
 
 /* ═══ UTILITIES ═══ */
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 
 /* Focus styles for keyboard navigation */
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-.ic-btn:focus-visible, .pres-btn:focus-visible, .hymn-nav-btn:focus-visible { outline: 2px solid var(--accent-lt); outline-offset: 2px; }
+.ic-btn:focus-visible, .pres-btn:focus-visible, .hymn-nav-btn:focus-visible, .brand-home:focus-visible { outline: 2px solid var(--accent-lt); outline-offset: 2px; }
 
 /* ═══ HEADER ═══ */
 #hdr {
-    position: fixed; top: 0; left: 0; right: 0; height: var(--hdr);
-    background: var(--hdr-bg); border-bottom: none; box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    position: fixed; top: env(safe-area-inset-top, 0px); left: 0; right: 0; height: var(--hdr);
+    background: var(--rail-glass);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    backdrop-filter: blur(20px) saturate(180%);
+    border-bottom: 1px solid var(--rail-edge);
+    box-shadow: 0 1px 12px var(--shadow-soft);
     display: flex; align-items: center; justify-content: space-between;
     padding: 0 1rem; z-index: 300; gap: 10px;
+    transition: transform .3s var(--ease-out);
 }
+/* Reading a long hymn: the bar gets out of the way (toggled by the #main scroll listener) */
+body.hdr-hidden #hdr { transform: translateY(-100%); }
 .brand { display: flex; align-items: center; gap: 10px; min-width: 0; }
 .brand-home {
     display: flex; align-items: center; gap: 10px; min-width: 0;
     background: none; border: none; padding: 0; cursor: pointer;
-    text-decoration: none; outline: none;
+    text-decoration: none;
+    transition: transform .15s var(--ease-out);
 }
-.brand-home:hover { opacity: 0.85; }
-.xsvg { width: 28px; height: 24px; flex-shrink: 0; }
+/* Gentler than .ic-btn's 0.92 — this is a ~160px target, and that much shrink reads as a wobble */
+.brand-home:active { transform: scale(0.98); }
+.xsvg { width: 28px; height: 28px; flex-shrink: 0; border-radius: 7px; } /* the app icon, as the favicon uses it */
 .brand-text { line-height: 1.2; }
-.brand-name { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 600; color: #FFFFFF; letter-spacing: 0.04em; white-space: nowrap; }
-.brand-sub  { font-size: 0.55rem; color: rgba(255,255,255,0.85); letter-spacing: 0.14em; text-transform: uppercase; margin-top: 2px; }
+.brand-name { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 600; color: var(--ink); letter-spacing: 0.04em; white-space: nowrap; }
 .hdr-actions { display: flex; gap: 6px; align-items: center; flex-shrink: 0; }
 .ic-btn {
-    background: transparent; border: 1px solid rgba(255,255,255,0.25); color: #EEECfC;
+    background: transparent; border: 1px solid var(--border); color: var(--muted);
     width: 34px; height: 34px; border-radius: 5px; cursor: pointer;
     display: flex; align-items: center; justify-content: center;
-    transition: background .15s, border-color .15s; flex-shrink: 0;
+    transition: background .15s, border-color .15s, transform .15s var(--ease-out); flex-shrink: 0;
 }
-.ic-btn:hover { background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.5); }
 .ic-btn:active { transform: scale(0.92); }
 .ic-btn svg { width: 16px; height: 16px; }
 #menu-btn { display: none; }
 .pres-btn {
-    display: flex; align-items: center; gap: 6px;
-    background: rgba(255,255,255,0.15); border: none; color: #fff;
+    display: none;   /* the dock owns Present at every width */
+    align-items: center; gap: 6px;
+    background: var(--accent-dk); border: none; color: var(--parch);
     height: 34px; padding: 0 14px; border-radius: 5px; cursor: pointer;
     font-family: 'Noto Serif', serif; font-size: 0.9rem; letter-spacing: 0.03em;
-    transition: background .15s, opacity .15s; white-space: nowrap;
+    transition: background .15s, opacity .15s, transform .15s var(--ease-out); white-space: nowrap;
 }
-.pres-btn:hover { opacity: 0.88; }
 .pres-btn:active { transform: scale(0.95); }
 .pres-btn:disabled { opacity: 0.35; cursor: default; pointer-events: none; }
 .pres-btn svg { width: 14px; height: 14px; }
 
 /* ═══ LAYOUT ═══ */
-#app { display: flex; height: 100vh; padding-top: var(--hdr); }
+#app { display: flex; height: 100vh; height: 100dvh; padding-top: 0; }
 
 /* ═══ SIDEBAR ═══ */
 #sidebar {
-    width: var(--sidebar); flex-shrink: 0; background: var(--cream);
-    box-shadow: 1px 0 6px rgba(0,0,0,0.06); display: flex;
-    flex-direction: column; height: 100%; transition: transform .25s ease;
+    width: var(--sidebar); flex-shrink: 0; background: var(--cream); padding-top: var(--hdr);
+    box-shadow: 1px 0 6px var(--shadow-soft); display: flex;
+    flex-direction: column; height: 100%; transition: transform .25s var(--ease-drawer);
 }
-.search-box { padding: 10px; box-shadow: 0 1px 4px rgba(0,0,0,0.05); background: var(--cream); position: sticky; top: 0; z-index: 2; }
+.search-box { padding: 10px; box-shadow: 0 1px 4px var(--shadow-soft); background: var(--cream); position: sticky; top: 0; z-index: 2; }
 .search-inner { position: relative; display: flex; align-items: center; }
 .search-inner svg { position: absolute; left: 9px; width: 14px; height: 14px; color: var(--muted); pointer-events: none; }
 #search {
-    width: 100%; padding: 7px 9px 7px 30px; border: 1px solid var(--border);
-    border-radius: 5px; background: var(--parch2); font-family: 'Noto Serif', serif;
+    width: 100%; padding: 7px 9px 7px 30px; border: 1px solid var(--border-field);
+    border-radius: 5px; background: var(--cream); font-family: 'Noto Serif', serif;
     font-size: 0.92rem; color: var(--ink); outline: none; transition: border-color .15s, background .15s;
 }
-#search:focus { border-color: var(--accent); background: var(--cream); }
+#search:focus { border-color: var(--accent); }
+/* The border+bg change is the focus indicator; the :focus-visible ring doubles it up on touch */
+#search:focus-visible, #empty-search:focus-visible { outline: none; }
 #search::placeholder { color: var(--muted); }
-#list-wrap { overflow-y: auto; flex: 1; }
+#list-wrap { overflow-y: auto; flex: 1; overscroll-behavior: contain; }
 #list-wrap::-webkit-scrollbar { width: 3px; }
 #list-wrap::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+.decade { height: var(--decade-h); display: flex; align-items: center; padding: 0 14px;
+          background: var(--parch2); border-bottom: 1px solid var(--border);
+          font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
 .hymn-row {
+    height: var(--row-h);
     display: flex; align-items: baseline; gap: 9px; padding: 13px 14px;
+    /* Rows are <div> in the main list (listbox options) and <button> in Recent/Saved, where
+       they have to be independently focusable — so reset the button chrome either way. */
+    width: 100%; background: none; border: 0; font: inherit; text-align: left; color: inherit;
     cursor: pointer; border-bottom: 1px solid rgba(0,0,0,0.04); transition: background .1s, transform .1s;
+    -webkit-tap-highlight-color: transparent;
 }
-.hymn-row:hover { background: var(--parch2); }
+/* Inset ring — an offset one would be clipped by the list's overflow */
+.hymn-row:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+.hymn-row.active:focus-visible { outline-color: var(--row-active-fg); }
 .hymn-row:active { transform: scale(0.985); background: var(--parch2); }
 .hymn-row.kb-focus { background: var(--border); }
 .hymn-row.active { background: var(--row-active-bg); color: var(--row-active-fg); }
 .hymn-row.active .hnum { color: var(--row-active-num); }
-.hymn-row.active .hsub { color: rgba(255,255,255,0.5); }
-.hnum { font-family: 'Playfair Display', serif; font-size: 0.82rem; color: var(--accent-dk); min-width: 28px; flex-shrink: 0; }
+.hymn-row.active .hsub { color: rgba(255,255,255,0.68); }
+.hnum { font-family: 'Playfair Display', serif; font-weight: 600; font-size: 0.95rem; color: var(--accent-dk); min-width: 34px; flex-shrink: 0; font-variant-numeric: tabular-nums; }
+/* Match context: the hit is marked; a lyrics-only match swaps the English subtitle for the lyric line */
+/* The matched text: a stronger tint plus the brand colour and weight, because a
+   16%-alpha wash (#E5E3F6 on white) was effectively invisible on a bright screen. */
+.hl { background: rgba(91,82,200,0.26); color: var(--accent-dk); font-weight: 600; border-radius: 2px; padding: 0 1px; }
+.hymn-row.active .hl { background: rgba(255,255,255,0.28); color: #fff; }
+.hsnip { display: block; font-size: 0.78rem; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+         margin-top: 2px; padding-left: 8px; border-left: 2px solid var(--border); }
+.hymn-row.active .hsnip { color: rgba(255,255,255,0.68); border-left-color: rgba(255,255,255,0.3); }
+
+/* Recent group above the list (the search box already handles number lookups) */
+.sect-label { padding: 8px 14px 4px; font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+/* Section header row: the label doubles as a filter, with the set's play control beside it */
+.sect-row { display: flex; align-items: center; justify-content: space-between; padding: 8px 14px 4px; }
+.sect-row .sect-label { padding: 0; }
+.sect-toggle { background: none; border: 0; cursor: pointer; font: inherit; font-size: 0.6rem;
+               letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted);
+               display: inline-flex; align-items: center; gap: 6px; transition: color .15s; }
+.sect-back:focus-visible, .sect-present:focus-visible, .sect-manage:focus-visible, .set-del:focus-visible { outline: 2px solid var(--accent-lt); outline-offset: 2px; }
+.sect-present { background: none; border: 1px solid var(--border); border-radius: 6px; color: var(--accent-dk);
+                min-width: 30px; height: 24px; display: inline-flex; align-items: center; justify-content: center;
+                cursor: pointer; transition: border-color .15s, transform .15s var(--ease-out); }
+.sect-present svg { width: 11px; height: 11px; }
+.sect-present:disabled svg { opacity: 0.5; }
+.sect-present:active { transform: scale(0.94); }
+.sect-present:disabled { opacity: 0.3; cursor: default; }
+/* The list section: header row (name + present + manage), and the manager behind ▾ */
+.sect-actions { display: flex; align-items: center; gap: 4px; }
+.sect-manage { width: 26px; height: 26px; border: 0; background: none; border-radius: 6px; color: var(--muted);
+               cursor: pointer; display: inline-flex; align-items: center; justify-content: center;
+               transition: background .15s, color .15s, transform .15s var(--ease-out); }
+.sect-manage:active { transform: scale(0.92); }
+.sect-manage svg { width: 14px; height: 14px; transition: transform .2s var(--ease-out); }
+.sect-manage[aria-expanded="true"] svg { transform: rotate(180deg); }
+.sect-manage[aria-expanded="true"] { color: var(--accent-dk); }
+.sect-back { border: 0; background: none; padding: 0; cursor: pointer; font: inherit; font-size: 0.6rem;
+             letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-dk); }
+/* The manager inserts above the saved rows, so without this they jump down. grid-template-rows
+   rather than height — no measurement needed, and it collapses the panel's padding too.
+   The .reveal class is only on the render right after opening (see renderSets): the markup is
+   rebuilt on every render, so an unconditional transition would replay it on unrelated renders. */
+.set-reveal { display: grid; grid-template-rows: 1fr; overflow: hidden; }
+.set-reveal > .set-panel { min-height: 0; }
+.set-reveal.reveal { transition: grid-template-rows 200ms var(--ease-out); }
+@starting-style { .set-reveal.reveal { grid-template-rows: 0fr; } }
+.set-panel { display: flex; flex-direction: column; gap: 6px; padding: 0 12px 8px; }
+/* Lists are chosen from rows, not a native <select> — the popup of one can't be styled,
+   and this matches how every other choice in the app is presented. */
+.set-lists { display: flex; flex-direction: column; gap: 2px; }
+.set-opt { display: flex; align-items: center; gap: 8px; width: 100%; text-align: left; border: 0; background: none;
+           border-radius: 8px; padding: 10px; color: var(--ink); font-family: 'Noto Serif', serif; font-size: 0.82rem;
+           cursor: pointer; transition: background .15s, color .15s, transform .15s var(--ease-out); }
+.set-opt:active { transform: scale(0.98); }
+.set-opt-name { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.set-opt-count { font-size: 0.68rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.set-opt svg { width: 13px; height: 13px; flex-shrink: 0; color: var(--accent-dk); }
+.set-opt.on { background: var(--parch2); font-weight: 600; }
+.set-opt-new { color: var(--accent-dk); }
+.set-opt:focus-visible { outline: 2px solid var(--accent-lt); outline-offset: -2px; }
+/* The app's only destructive action: full width, 40px tall, and clear of the switcher */
+.set-del { border: 1px solid var(--border); background: none; border-radius: 8px; color: var(--danger);
+           font-family: 'Noto Serif', serif; font-size: 0.78rem; padding: 11px 12px; text-align: left; cursor: pointer;
+           transition: background .15s, border-color .15s, transform .15s var(--ease-out); }
+.set-del:active { transform: scale(0.98); }
+.set-undo { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 9px 14px;
+            font-size: 0.72rem; color: var(--muted); background: var(--parch2); border-bottom: 1px solid var(--border); }
+.set-undo button { border: 0; background: none; color: var(--accent-dk); font: inherit; font-size: 0.72rem;
+                   font-weight: 600; cursor: pointer; padding: 4px 6px; }
+.set-empty { padding: 6px 14px 14px; font-size: 0.75rem; font-style: italic; color: var(--muted); line-height: 1.5; }
+.set-new { display: flex; align-items: center; gap: 4px; }
+.set-new[hidden] { display: none; } /* a display declaration beats the UA's [hidden] rule */
+.set-new input { flex: 1; min-width: 0; padding: 7px 8px; border: 1px solid var(--accent); border-radius: 6px;
+                 background: var(--cream); color: var(--ink); font-family: 'Noto Serif', serif; font-size: 0.8rem; outline: none; }
+.set-new .set-ok, .set-new .set-cancel { border: 1px solid var(--border); background: none; border-radius: 6px;
+                 color: var(--muted); cursor: pointer; width: 32px; height: 32px; display: inline-flex;
+                 align-items: center; justify-content: center;
+                 transition: background .15s, border-color .15s, transform .15s var(--ease-out); }
+.set-new .set-ok:active, .set-new .set-cancel:active { transform: scale(0.92); }
+.set-new .set-ok svg, .set-new .set-cancel svg { width: 14px; height: 14px; }
+.set-new .set-ok { color: var(--accent-dk); border-color: var(--accent-lt); }
+.set-more { display: block; width: 100%; text-align: left; padding: 6px 14px 10px; border: 0; background: none;
+            color: var(--accent-dk); font: inherit; font-size: 0.7rem; letter-spacing: 0.04em; cursor: pointer; }
+/* Reorder / remove controls — only in the set view, where the order is editable */
+.row-actions { display: flex; align-items: center; gap: 1px; flex-shrink: 0; align-self: center; }
+.ra { width: 26px; height: 26px; border: 0; background: none; border-radius: 6px; color: var(--muted);
+      cursor: pointer; display: flex; align-items: center; justify-content: center;
+      transition: background .15s, color .15s, transform .15s var(--ease-out); }
+.ra svg { width: 13px; height: 13px; }
+.ra:disabled { opacity: 0.22; cursor: default; }
+.ra:active:not(:disabled) { transform: scale(0.9); }
+.ra:focus-visible { outline: 2px solid var(--accent-lt); outline-offset: 1px; }
+.hymn-row.active .ra { color: rgba(255,255,255,0.7); }
+#recent-wrap, #set-wrap { border-bottom: 1px solid var(--border); }
+#recent-wrap .hymn-row:last-child, #set-wrap .hymn-row:last-child { border-bottom: none; }
+/* the saved star, echoed in the sidebar group so the state reads in both places */
+.hymn-row.listed .hnum::after { content: '✓'; font-size: 0.6rem; color: var(--accent); margin-left: 4px; vertical-align: 1px; }
+.hymn-row.active.listed .hnum::after { color: var(--row-active-num); }
 .htitles { flex: 1; min-width: 0; }
-.hyo { font-size: 0.96rem; line-height: 1.3; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.hsub { font-size: 0.78rem; color: var(--muted); font-style: italic; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 2px; }
+.hyo { display: block; font-size: 0.96rem; line-height: 1.3; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.hsub { display: block; font-size: 0.78rem; color: var(--muted); font-style: italic; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 2px; }
 .no-results { text-align: center; padding: 2rem 1rem; font-size: 0.85rem; color: var(--muted); font-style: italic; }
+.no-results button {
+    display: block; margin: 0.9rem auto 0; padding: 7px 14px;
+    border: 1px solid var(--border-field); border-radius: 8px; background: none;
+    font-family: 'Noto Serif', serif; font-size: 0.8rem; font-style: normal;
+    color: var(--accent-dk); cursor: pointer;
+    transition: background .15s, border-color .15s, transform .15s var(--ease-out);
+}
+.no-results button:active { transform: scale(0.97); }
 #list-count { text-align: center; padding: 7px; font-size: 0.68rem; color: var(--muted); font-style: italic; border-top: 1px solid var(--border); }
 
 /* ═══ MAIN ═══ */
-#main { flex: 1; overflow-y: auto; background: var(--parch); position: relative; display: flex; flex-direction: column; }
+/* touch-action: pan-y — the browser keeps vertical scrolling; the swipe pager owns the
+   horizontal axis (and the browser's own horizontal gestures, e.g. back-swipe, are off). */
+#main { flex: 1; overflow-y: auto; background: var(--parch); position: relative; display: flex; flex-direction: column; overscroll-behavior: contain; padding-top: var(--hdr); touch-action: pan-y; }
 #main > #empty { flex: 1; }
 #main::-webkit-scrollbar { width: 5px; }
 #main::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
@@ -256,12 +430,16 @@ body { font-family: 'Noto Serif', Georgia, serif; background: var(--parch); colo
 /* ═══ EMPTY STATE ═══ */
 #empty {
     display: flex; flex-direction: column; align-items: center;
-    justify-content: center; padding: 2rem;
-    text-align: center; color: var(--muted); gap: 1rem;
+    /* Optical centring: the extra bottom padding lifts the hero just above true centre, so it
+       doesn't read as sinking into the empty field of a tall viewport. */
+    justify-content: center; padding: 2rem 2rem 6rem;
+    text-align: center; color: var(--muted); gap: 0.6rem;
 }
-#empty .e-cross { width: 64px; height: 54px; color: var(--accent); }
-#empty h2 { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 400; color: var(--ink2); }
-#empty p { font-size: 0.95rem; font-style: italic; }
+/* Type-only entry point: the display heading carries the space, with a muted eyebrow
+   giving it a place to start (the 64px glyph it replaced duplicated the brand mark) */
+#empty .e-eyebrow { font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+#empty h1 { font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 600; letter-spacing: -0.012em; line-height: 1.15; color: var(--ink2); }
+#empty p { font-size: 0.95rem; font-style: italic; margin-top: 0.35rem; }
 .empty-search-wrap {
     display: none; width: 100%; max-width: 320px;
     flex-direction: column; gap: 10px; margin-top: 0.5rem;
@@ -273,7 +451,7 @@ body { font-family: 'Noto Serif', Georgia, serif; background: var(--parch); colo
 }
 #empty-search {
     width: 100%; padding: 10px 12px 10px 34px;
-    border: 1px solid var(--border); border-radius: 8px;
+    border: 1px solid var(--border-field); border-radius: 8px;
     background: var(--cream); font-family: 'Noto Serif', serif;
     font-size: 1rem; color: var(--ink); outline: none; transition: border-color .15s;
     box-shadow: 0 1px 4px rgba(91,82,200,0.08);
@@ -282,11 +460,11 @@ body { font-family: 'Noto Serif', Georgia, serif; background: var(--parch); colo
 #empty-search::placeholder { color: var(--muted); }
 .empty-browse-btn {
     display: flex; align-items: center; justify-content: center; gap: 8px;
-    background: var(--hdr-bg); color: white; border: none; border-radius: 8px;
+    background: var(--accent-dk); color: var(--parch); border: none; border-radius: 8px;
     padding: 11px 20px; font-family: 'Noto Serif', serif; font-size: 1rem;
-    cursor: pointer; transition: opacity .15s; width: 100%;
+    cursor: pointer; transition: opacity .15s, transform .15s var(--ease-out); width: 100%;
 }
-.empty-browse-btn:hover { opacity: 0.88; }
+.empty-browse-btn:active { transform: scale(0.98); }
 .empty-browse-btn svg { width: 16px; height: 16px; }
 @media (max-width: 768px) {
     .empty-search-wrap { display: flex; }
@@ -295,45 +473,119 @@ body { font-family: 'Noto Serif', Georgia, serif; background: var(--parch); colo
 
 /* ═══ HYMN DISPLAY ═══ */
 #hymn-content { display: none; }
-#hymn-view { max-width: 660px; margin: 0 auto; padding: 0.75rem 2.5rem 5rem; width: 100%; transition: opacity 0.15s ease, transform 0.15s ease; }
+.hymn-doc { max-width: 660px; margin: 0 auto; width: 100%; }
+.hymn-pager { position: relative; overflow: hidden; }
+.hymn-pane { width: 100%; padding: 1.5rem 2.5rem 6.5rem; }
+.hymn-pane.center { position: relative; }
+.hymn-pane:not(.center) { position: absolute; top: 0; left: 0; pointer-events: none; }
+#hymn-view { transition: opacity 0.15s ease, transform 0.15s ease; }
 #hymn-view.fading { opacity: 0; transform: translateY(4px); }
-.hymn-hdr { text-align: center; margin-bottom: 2.2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); border-bottom-color: transparent; box-shadow: 0 1px 0 var(--border); }
-.hymn-nav { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.2rem; }
+.hymn-rail { display: none; }
+.act { display: none; align-items: center; gap: 10px; width: 100%;
+       background: var(--act-bg); border: 1px solid var(--border); border-radius: 12px;
+       padding: 12px 14px; font-family: 'Noto Serif', serif; font-size: 0.85rem;
+       color: var(--ink); cursor: pointer; text-align: left;
+       transition: background .16s ease, border-color .16s ease, transform .16s var(--ease-out); }
+html.js .act { display: flex; }
+.act-ic { width: 16px; height: 16px; flex-shrink: 0; color: var(--accent); }
+/* --parch flips with the theme (white in light, near-black in dark), so one rule
+   keeps the primary button legible against the inverting --accent-dk fill */
+.act-primary { background: var(--accent-dk); border-color: var(--accent-dk); color: var(--parch); }
+.act-primary .act-ic { color: var(--parch); }
+.act:active { transform: scale(0.98); }
+.act:focus-visible { outline: 2px solid var(--accent-lt); outline-offset: 2px; }
+.act.copied { border-color: var(--accent); color: var(--accent-dk); }
+.act.copied .act-ic { color: var(--accent-dk); }
+/* Icon-only dock buttons: the copy button swaps to a check when it lands */
+.ic-check { display: none; }
+.act.copied .ic-copy { display: none; }
+.act.copied .ic-check { display: block; }
+/* …and the add control becomes a check once the hymn is in the list */
+.ic-added { display: none; }
+.act.added .ic-add { display: none; }
+.act.added .ic-added { display: block; }
+.act.added { border-color: var(--accent); color: var(--accent-dk); }
+.act.added .act-ic { color: var(--accent-dk); }
+
+/* ═══ ACTION DOCK ═══
+   One control on every width: a frosted capsule floating over the page, so the
+   actions are always in reach (they used to live at the very end of the hymn on
+   mobile — 1,100px of scroll away). */
+html.js .hymn-rail { display: flex; align-items: center; gap: 6px;
+                     position: fixed; right: 24px; bottom: calc(24px + env(safe-area-inset-bottom, 0px));
+                     z-index: 20; padding: 8px;
+                     background: var(--rail-glass);
+                     -webkit-backdrop-filter: blur(20px) saturate(180%);
+                     backdrop-filter: blur(20px) saturate(180%);
+                     border-top: 1px solid var(--rail-edge);
+                     border-radius: 16px;
+                     box-shadow: 0 12px 34px var(--shadow-hard), 0 1px 2px var(--shadow-soft); }
+.act { width: auto; border-radius: 10px; }
+.act-primary { padding: 11px 17px; }
+.act-icon { width: 40px; height: 40px; justify-content: center; padding: 0; background: var(--act-bg); }
+/* App handoff is a supporting link, not a primary action — the loud dark card
+   out-shouted the rail's own Present button */
+
+.hymn-hdr {
+    display: grid;
+    grid-template-columns: var(--hnum-col) minmax(0, 1fr);
+    grid-template-areas: "num title" ". en" ". refs";
+    column-gap: 1.3rem;
+    align-items: start;
+    text-align: left;
+    margin-bottom: 2.2rem;
+}
+.h-num {
+    grid-area: num;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600; font-size: 2.5rem; line-height: 1;
+    color: var(--accent-dk);
+    font-variant-numeric: tabular-nums;
+    padding-top: 0.14em;
+}
+.hymn-nav { display: flex; align-items: center; justify-content: space-between; margin: 2.5rem 0 0; }
 .hymn-nav-btn {
     display: flex; align-items: center; gap: 5px;
     background: transparent; border: 1px solid var(--border); color: var(--muted);
-    padding: 6px 11px; border-radius: 6px; cursor: pointer;
+    padding: 9px 14px; border-radius: 6px; cursor: pointer;
     font-family: 'Noto Serif', serif; font-size: 0.8rem; letter-spacing: 0.02em;
-    transition: background .15s, border-color .15s, color .15s;
+    transition: background .15s, border-color .15s, color .15s, transform .15s var(--ease-out);
     white-space: nowrap; min-width: 36px; justify-content: center;
+    text-decoration: none; /* prerendered pages render these as <a> links */
 }
-.hymn-nav-btn:hover:not(:disabled) { background: var(--parch2); border-color: var(--accent); color: var(--accent-dk); }
 .hymn-nav-btn:active:not(:disabled) { transform: scale(0.94); }
 .hymn-nav-btn:disabled { opacity: 0.22; cursor: default; }
 .hymn-nav-btn svg { width: 15px; height: 15px; flex-shrink: 0; }
 .hymn-nav-btn .nav-label { display: none; }
 @media (min-width: 500px) { .hymn-nav-btn .nav-label { display: inline; } }
 .hymn-nav-center { display: flex; align-items: center; gap: 0.4rem; font-size: 0.68rem; color: var(--muted); font-style: italic; letter-spacing: 0.04em; }
-.h-badge { display: inline-block; font-family: 'Playfair Display', serif; font-size: 0.8rem; font-weight: 600; color: var(--accent-dk); background: var(--badge-bg); border: 1px solid var(--border); padding: 4px 16px; border-radius: 20px; letter-spacing: 0.06em; margin-bottom: 0.65rem; }
-.h-title { font-family: 'Playfair Display', serif; font-size: 1.85rem; font-weight: 600; line-height: 1.2; margin-bottom: 0.35rem; }
+.h-title { grid-area: title; font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 600; line-height: 1.2; letter-spacing: -0.01em; margin-bottom: 0.3rem; overflow-wrap: anywhere; }
 .h-title:focus { outline: none; }
-.h-en { font-size: 0.95rem; color: var(--muted); font-style: italic; margin-bottom: 0.7rem; }
-.h-refs { display: flex; flex-wrap: wrap; gap: 5px; justify-content: center; margin-top: 0.4rem; }
-.share-icon { display: inline-flex; align-items: center; justify-content: center; padding: 8px; margin: -8px; margin-left: 0; border: none; background: transparent; color: var(--muted); cursor: pointer; transition: color 0.2s; -webkit-tap-highlight-color: transparent; }
-.share-icon svg { width: 14px; height: 14px; }
-.share-icon:hover { color: var(--accent); }
-.share-icon.copied { color: var(--accent); }
-.ref-tag { font-size: 0.68rem; background: var(--ref-bg); border: 1px solid var(--border); color: var(--ref-fg); padding: 2px 8px; border-radius: 4px; }
+.h-en    { grid-area: en; }
+.h-refs  { grid-area: refs; display: block; margin-top: 0.75rem;
+           font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+/* (.share-icon retired — share lives in the desktop rail and the mobile end-of-hymn card) */
+.ref-tag { font-size: inherit; color: inherit; background: none; border: 0; padding: 0; border-radius: 0; }
+.ref-tag + .ref-tag::before { content: '·'; margin: 0 0.7em; opacity: 0.55; }
 .stanza { margin-bottom: 2.2rem; padding-left: 0.5rem; }
+.lyrics { columns: calc(19rem * var(--read-fz, 1)) 2; column-gap: 2.5rem; }
+.lyrics[data-blocks="1"], .lyrics[data-blocks="2"] { columns: auto; }
+.stanza { break-inside: avoid; page-break-inside: avoid; }
+.stanza.wide { column-span: all; }
+.verse-block .s-line, .chorus-block .s-line { text-indent: -1em; padding-left: 1em; }
 .s-label { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.13em; color: var(--muted); margin-bottom: 0.45rem; display: flex; align-items: center; gap: 8px; }
 .s-label::after { content: ''; flex: 1; height: 1px; background: var(--border); opacity: 0.55; }
-.verse-block .s-line { font-size: 1.08rem; line-height: 1.75; color: var(--ink2); display: block; }
+.verse-block .s-line { font-size: calc(1.08rem * var(--read-fz, 1)); line-height: 1.75; color: var(--ink2); display: block; overflow-wrap: anywhere; }
 .chorus-block { padding: 0.55rem 0 0.55rem 1rem; background: var(--chorus-bg); border-radius: 5px; }
-.chorus-block .s-line { font-size: 1.08rem; line-height: 1.75; color: var(--ink2); display: block; }
+/* A repeat of an identical chorus reads as a reference, not a second copy of the block —
+   otherwise the two-column layout printed the same lines twice, side by side. */
+.chorus-ref-block { margin-bottom: 1.2rem; }
+.chorus-ref { padding-left: 1rem; font-size: calc(1.02rem * var(--read-fz, 1)); font-style: italic; color: var(--muted); }
+.chorus-block .s-line { font-size: calc(1.08rem * var(--read-fz, 1)); line-height: 1.75; color: var(--ink2); display: block; overflow-wrap: anywhere; }
 .cr-block { margin-bottom: 0.6rem; }
-.cr-line { display: flex; gap: 0.6rem; font-size: 1.08rem; line-height: 1.75; color: var(--ink2); }
+.cr-line { display: flex; gap: 0.6rem; font-size: calc(1.08rem * var(--read-fz, 1)); line-height: 1.75; color: var(--ink2); }
 .cr-part { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); min-width: 90px; padding-top: 0.35rem; flex-shrink: 0; text-align: right; }
-.cr-text { flex: 1; }
+.cr-text { flex: 1; min-width: 0; overflow-wrap: anywhere; }
 .cr-line.congregation .cr-text { font-style: italic; color: var(--accent-dk); }
 
 /* ═══ FOOTER ═══ */
@@ -344,107 +596,132 @@ body { font-family: 'Noto Serif', Georgia, serif; background: var(--parch); colo
 }
 .scroll-spacer { height: 0; flex-shrink: 0; }
 .footer-line { width: 32px; height: 2px; border-radius: 1px; background: var(--accent); opacity: 0.3; }
-.footer-links { display: flex; align-items: center; gap: 0.75rem; }
+.footer-links { display: flex; align-items: center; justify-content: center; gap: 0.75rem; flex-wrap: wrap; }
 .footer-links a {
     color: var(--muted); text-decoration: none; font-size: 0.72rem;
     letter-spacing: 0.06em; text-transform: uppercase;
+    white-space: nowrap;   /* each link stays on one line; the row wraps between links, never mid-phrase */
     transition: color .2s;
 }
-.footer-links a:hover { color: var(--accent); }
 .footer-dot { width: 3px; height: 3px; border-radius: 50%; background: var(--border); }
-.theme-footer-btn { background: none; border: 1px solid var(--border); border-radius: 50%; cursor: pointer; color: var(--muted); padding: 6px; display: inline-flex; align-items: center; justify-content: center; transition: color 0.2s, border-color 0.2s; margin: 0.6rem 0; }
-.theme-footer-btn:hover { color: var(--accent); border-color: var(--accent); }
-.theme-footer-btn svg { width: 14px; height: 14px; }
-.theme-hdr-btn { display: none; }
-@media (min-width: 769px) {
-    .theme-hdr-btn { display: inline-flex; }
-    .theme-footer-btn { display: none; }
+
+.footer-copy { font-size: 0.6rem; color: var(--muted); letter-spacing: 0.04em; }
+
+/* ═══ SIDEBAR OVERLAY ═══
+   Faded with opacity+visibility (not display) so it eases in alongside the drawer */
+#sb-overlay { position: fixed; inset: 0; background: rgba(10,8,30,0.45); backdrop-filter: blur(3px); -webkit-backdrop-filter: blur(3px); z-index: 199; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity .2s ease-out, visibility 0s linear .2s; }
+/* .show flips visibility instantly; the base rule delays it on close until the fade finishes */
+#sb-overlay.show { opacity: 1; visibility: visible; pointer-events: auto; transition: opacity .2s ease-out, visibility 0s; }
+@media (max-width: 768px) {
+    #sb-overlay { top: calc(var(--hdr) + env(safe-area-inset-top, 0px)); }
+    body.has-banner #sb-overlay { top: calc(var(--hdr) + env(safe-area-inset-top, 0px) + 48px); }
 }
-.footer-copy { font-size: 0.6rem; color: var(--muted); letter-spacing: 0.08em; }
-
-/* ═══ SIDEBAR OVERLAY ═══ */
-#theme-btn svg { transition: transform .3s ease; }
-
-#sb-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.45); z-index: 199; }
 
 /* ═══ PRESENTATION ═══ */
-#pres { display: none; position: fixed; inset: 0; z-index: 500; background: var(--pres-bg); flex-direction: column; }
-#pres.on { display: flex; }
-#pres-stage { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 3rem 4rem; cursor: pointer; overflow: hidden; position: relative; user-select: none; }
+/* Rendered but invisible (opacity+visibility, not display) so entering presentation mode fades in instead of jump-cutting to black */
+#pres { display: flex; position: fixed; inset: 0; z-index: 500; background: var(--pres-bg); flex-direction: column; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity .2s ease-out, visibility 0s linear .2s; }
+/* .on flips visibility instantly so stage.focus() works on open; base rule delays it on close until the fade finishes */
+#pres.on { opacity: 1; visibility: visible; pointer-events: auto; transition: opacity .2s ease-out, visibility 0s; }
+#pres-stage { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 3rem 4rem; cursor: pointer; overflow: hidden; position: relative; user-select: none; touch-action: manipulation; }
+#pres-stage:focus { outline: none; } /* programmatic focus target; rings stay on the real controls */
 #pres-stage::before, #pres-stage::after { content: ''; position: absolute; width: 24px; height: 24px; border-color: rgba(255,255,255,0.06); border-style: solid; }
 #pres-stage::before { top: 20px; left: 20px; border-width: 1px 0 0 1px; }
 #pres-stage::after  { bottom: 20px; right: 20px; border-width: 0 1px 1px 0; }
 #pres-blk-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--pres-label); margin-bottom: 2rem; text-align: center; }
 #pres-lines { text-align: center; width: 100%; max-width: 960px; }
-.pl { display: block; font-family: 'Playfair Display', serif; color: var(--pres-text); line-height: 1.65; opacity: 0; transform: translateY(6px); animation: pline .3s ease forwards; }
+.pl { --pl-x: 0px; --pl-y: 6px; display: block; font-family: 'Playfair Display', serif; color: var(--pres-text); line-height: 1.65; opacity: 0; transform: translate(var(--pl-x), var(--pl-y)); animation: pline .3s var(--ease-out) forwards; overflow-wrap: anywhere; }
 .pl.ch { color: var(--pres-chorus); }
 @keyframes pline { to { opacity: 1; transform: none; } }
+#pres-lines.dir-next .pl { --pl-x: 30px; --pl-y: 0px; }
+#pres-lines.dir-prev .pl { --pl-x: -30px; --pl-y: 0px; }
 #pres-foot { background: var(--pres-foot-bg); border-top: 1px solid var(--pres-foot-bd); padding: 8px 16px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 .pf-info { flex: 1; min-width: 0; }
 .pf-num { font-family: 'Playfair Display', serif; font-size: 0.75rem; color: var(--pf-num); margin-bottom: 1px; }
 .pf-name { font-size: 0.8rem; color: var(--pf-name); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .pf-controls { display: flex; align-items: center; gap: 6px; }
-.p-btn { background: var(--pres-btn-bg); border: 1px solid var(--pres-btn-bd); color: var(--pres-btn-fg); width: 36px; height: 36px; border-radius: 5px; cursor: pointer; font-size: 18px; display: flex; align-items: center; justify-content: center; transition: background .15s; }
-.p-btn:hover { opacity: 0.8; }
+.p-btn { background: var(--pres-btn-bg); border: 1px solid var(--pres-btn-bd); color: var(--pres-btn-fg); width: 36px; height: 36px; border-radius: 5px; cursor: pointer; font-size: 18px; display: flex; align-items: center; justify-content: center; transition: background .15s, transform .15s var(--ease-out); }
+.p-btn:active:not(:disabled) { transform: scale(0.94); }
 .p-btn:disabled { opacity: 0.25; cursor: default; }
 .p-prog { font-size: 0.75rem; color: var(--pres-prog); min-width: 48px; text-align: center; }
 .pf-font { display: flex; gap: 4px; }
-.pfont-btn { background: transparent; border: 1px solid var(--pfont-bd); color: var(--pfont-fg); width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 11px; display: flex; align-items: center; justify-content: center; transition: color .15s; }
-.pfont-btn:hover { color: var(--pres-chorus); border-color: var(--pfont-fg); }
+.pfont-btn { background: transparent; border: 1px solid var(--pfont-bd); color: var(--pfont-fg); width: 36px; height: 36px; border-radius: 4px; cursor: pointer; font-size: 12px; display: flex; align-items: center; justify-content: center; transition: color .15s; }
 .p-exit { background: transparent; border: 1px solid var(--pres-exit-bd); color: var(--pres-exit-fg); height: 36px; padding: 0 12px; border-radius: 5px; cursor: pointer; font-family: 'Noto Serif', serif; font-size: 0.8rem; letter-spacing: 0.04em; transition: color .15s, border-color .15s; white-space: nowrap; }
-.p-exit:hover { color: var(--pres-chorus); border-color: var(--pfont-fg); }
-#pres-hint { position: absolute; bottom: 60px; right: 24px; font-size: 0.62rem; color: var(--pres-hint); letter-spacing: 0.06em; pointer-events: none; }
+#pres-hint { position: absolute; bottom: 60px; right: 24px; font-size: 0.62rem; color: var(--pres-hint); letter-spacing: 0.04em; pointer-events: none; }
+/* The keyboard half of the hint is meaningless on a touch device — drop it there */
+@media (pointer: coarse) { .hint-kb { display: none; } }
 #pres-stage.is-chorus { background: var(--pres-chorus-stage-bg); transition: background 0.3s ease; }
 #pres-stage.is-verse  { background: var(--pres-bg); transition: background 0.3s ease; }
+/* Container-free label, matching the reading view's section labels: letterspaced caps
+   flanked by hairlines instead of a filled bubble. State reads through colour, not a shape. */
 #pres-blk-label {
-    display: inline-flex; align-items: center; gap: 6px;
-    padding: 4px 14px; border-radius: 20px; font-size: 0.65rem;
-    text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: 2rem;
-    border: 1px solid transparent;
-    transition: background 0.3s, color 0.3s, border-color 0.3s;
+    display: inline-flex; align-items: center; gap: 14px;
+    padding: 0; border: 0; border-radius: 0; background: none;
+    font-size: 0.68rem;
+    text-transform: uppercase; letter-spacing: 0.28em; margin-bottom: 2rem;
+    transition: color 0.3s;
 }
-#pres-blk-label.label-verse  { background: rgba(255,255,255,0.04); color: var(--pres-label); border-color: rgba(255,255,255,0.07); }
-#pres-blk-label.label-chorus { background: var(--pres-chorus-pill-bg); color: var(--pres-chorus-pill-fg); border-color: var(--pres-chorus-pill-bd); }
-#pres-blk-label.label-title  { background: rgba(255,255,255,0.06); color: rgba(255,255,255,0.5); border-color: rgba(255,255,255,0.1); letter-spacing: 0.25em; }
+#pres-blk-label::before, #pres-blk-label::after { content: ''; width: 30px; height: 1px; background: currentColor; opacity: 0.4; }
+#pres-blk-label.label-verse  { color: var(--pres-label); }
+#pres-blk-label.label-chorus { color: var(--pres-chorus); }
+#pres-blk-label.label-title  { color: rgba(255,255,255,0.5); letter-spacing: 0.32em; }
+/* Tracking is size-specific and set in app.js applyPresFz() (a fixed value is wrong at
+   both ends of the 18–78px range this text spans) — no letter-spacing here. */
 .pl.verse-line  { font-style: normal; font-weight: 400; color: var(--pres-text); }
-.pl.chorus-line { font-style: italic; font-weight: 400; color: var(--pres-chorus); letter-spacing: 0.01em; }
-.pl.title-main  { font-style: normal; font-weight: 600; color: var(--pres-text); letter-spacing: 0.02em; }
+.pl.chorus-line { font-style: italic; font-weight: 400; color: var(--pres-chorus); }
+.pl.title-main  { font-style: normal; font-weight: 600; color: var(--pres-text); }
 .pl.title-sub   { font-style: italic; font-weight: 400; color: rgba(255,255,255,0.4); margin-top: 0.5rem; }
 #pres-stage.is-title { background: var(--pres-bg); transition: background 0.3s ease; }
-#pres-end { display: none; flex-direction: column; align-items: center; gap: 0.75rem; opacity: 0; transition: opacity 0.5s ease; }
+#pres-end { display: none; flex-direction: column; align-items: center; gap: 0.75rem; opacity: 0; transition: opacity 0.3s var(--ease-out); }
 #pres-end.visible { display: flex; opacity: 1; }
+/* display:none → flex skips transitions; @starting-style supplies the pre-change style so the fade actually runs */
+@starting-style {
+    #pres-end.visible { opacity: 0; }
+}
 #pres-end-line { width: 48px; height: 1px; background: rgba(255,255,255,0.12); margin-bottom: 0.25rem; }
-#pres-end-text { font-family: 'Playfair Display', serif; font-size: 0.8rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.18); }
+/* The end slide is a wayfinding moment, not a dead end. Container-free, like every other
+   label in the app: a hairline, a letterspaced kicker, then the hymn in type. */
+.pres-next-btn { display: flex; flex-direction: column; align-items: center; gap: 7px;
+                 margin-top: 2.2rem; padding: 0; background: none; border: 0; border-radius: 0;
+                 color: var(--pres-btn-fg); font-family: 'Noto Serif', serif; cursor: pointer; }
+.pres-next-btn::before { content: ''; width: 34px; height: 1px; background: currentColor; opacity: 0.3; margin-bottom: 6px; }
+.pres-next-meta { display: flex; flex-direction: column; align-items: center; gap: 5px; }
+.pres-next-kicker { display: inline-flex; align-items: center; gap: 7px; font-size: 0.56rem;
+                    letter-spacing: 0.24em; text-transform: uppercase; opacity: 0.7; }
+.pres-next-kicker svg { width: 12px; height: 12px; }
+.pres-next-name { font-size: 0.95rem; }
+.pres-next-name #pres-next-num { font-family: 'Playfair Display', serif; color: var(--pres-text); }
+.pres-next-btn:active .pres-next-name { opacity: 0.7; }
+.pres-next-btn:focus-visible { outline: 2px solid var(--accent-lt); outline-offset: 5px; }
+#pres-end-text { font-family: 'Playfair Display', serif; font-size: 0.8rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--pres-end-label); }
 
 /* ═══ APP BANNER ═══ */
 .app-banner {
-    position: fixed; top: 0; left: 0; right: 0; height: 48px;
+    position: fixed; top: env(safe-area-inset-top, 0px); left: 0; right: 0; height: 48px;
     background: var(--parch2); border-bottom: 1px solid var(--border);
     display: none; align-items: center; gap: 10px;
     padding: 0 12px; z-index: 301;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    box-shadow: 0 1px 4px var(--shadow-soft);
 }
 .app-banner-icon { width: 24px; height: 24px; color: var(--accent-dk); flex-shrink: 0; }
 .app-banner-text { flex: 1; min-width: 0; line-height: 1.2; }
-.app-banner-name { font-family: 'Playfair Display', serif; font-size: 0.8rem; font-weight: 600; color: var(--ink); }
-.app-banner-sub { font-size: 0.65rem; color: var(--muted); }
+/* No app name in the banner: the header directly below carries the brand and icon, so two
+   stacked identical titles just read as an echo. The strip states the fact; Install acts. */
+.app-banner-sub { font-size: 0.82rem; color: var(--ink); }
 .app-banner-btn {
-    flex-shrink: 0; background: var(--hdr-bg); color: #fff; border: none;
+    flex-shrink: 0; background: var(--accent-dk); color: var(--parch); border: none;
     padding: 5px 14px; border-radius: 5px; font-family: 'Noto Serif', serif;
     font-size: 0.75rem; letter-spacing: 0.04em; cursor: pointer;
     text-decoration: none; transition: opacity .15s;
 }
-.app-banner-btn:hover { opacity: 0.88; text-decoration: none; }
 .app-banner-close {
     flex-shrink: 0; background: none; border: none; color: var(--muted);
     font-size: 1.2rem; cursor: pointer; padding: 4px 2px; line-height: 1;
     transition: color .15s;
 }
-.app-banner-close:hover { color: var(--ink); }
-body.has-banner #hdr { top: 48px; }
-body.has-banner #app { padding-top: calc(var(--hdr) + 48px); }
+body.has-banner #hdr { top: calc(env(safe-area-inset-top, 0px) + 48px); }
+body.has-banner #main, body.has-banner #sidebar { padding-top: calc(var(--hdr) + 48px); }
 @media (max-width: 768px) {
-    body.has-banner #sidebar { top: calc(var(--hdr) + 48px); height: calc(100vh - var(--hdr) - 48px); }
+    body.has-banner #sidebar { top: calc(var(--hdr) + env(safe-area-inset-top, 0px) + 48px); height: calc(100vh - var(--hdr) - env(safe-area-inset-top, 0px) - 48px); height: calc(100dvh - var(--hdr) - env(safe-area-inset-top, 0px) - 48px); padding-top: 0; }
 }
 
 /* ═══ FOOTER APP LINK ═══ */
@@ -453,9 +730,17 @@ body.has-banner #app { padding-top: calc(var(--hdr) + 48px); }
 
 /* ═══ LOADING ═══ */
 #loading { position: fixed; inset: 0; background: var(--parch); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; z-index: 9999; transition: opacity .4s; }
-#loading svg { width: 36px; height: 36px; color: var(--load-spin); animation: spin 1.5s linear infinite; }
+#loading svg { width: 36px; height: 36px; color: var(--load-spin); animation: spin 1s linear infinite; }
 @keyframes spin { to { transform: rotate(360deg); } }
-#loading p { font-family: 'Playfair Display', serif; font-size: 0.9rem; color: var(--muted); letter-spacing: 0.05em; }
+#loading p { font-family: 'Playfair Display', serif; font-size: 0.9rem; color: var(--muted); letter-spacing: 0.04em; }
+/* The error screen's only action: the copy says "try again", so there is something to try. */
+.load-retry {
+    padding: 10px 22px; border: none; border-radius: 8px;
+    background: var(--accent-dk); color: var(--parch);
+    font-family: 'Noto Serif', serif; font-size: 0.95rem; cursor: pointer;
+    transition: opacity .15s, transform .15s var(--ease-out);
+}
+.load-retry:active { transform: scale(0.97); }
 
 /* ═══ RESPONSIVE ═══
    768px: Mobile layout - sidebar becomes slide-out overlay, header centers
@@ -464,21 +749,22 @@ body.has-banner #app { padding-top: calc(var(--hdr) + 48px); }
 @media (max-width: 768px) {
     :root { --sidebar: 88vw; }
     #hdr { padding-left: max(1rem, env(safe-area-inset-left)); padding-right: max(1rem, env(safe-area-inset-right)); }
-    #sidebar { position: fixed; top: var(--hdr); left: 0; height: calc(100vh - var(--hdr)); z-index: 200; transform: translateX(-100%); }
-    #sidebar.open { transform: translateX(0); box-shadow: 4px 0 20px rgba(0,0,0,0.18); touch-action: pan-y; }
-    #sb-overlay.show { display: block; }
+    #sidebar { position: fixed; top: calc(var(--hdr) + env(safe-area-inset-top, 0px)); left: 0; height: calc(100vh - var(--hdr) - env(safe-area-inset-top, 0px)); height: calc(100dvh - var(--hdr) - env(safe-area-inset-top, 0px)); z-index: 200; transform: translateX(-100%); padding-top: 0; }
+    #sidebar.open { transform: translateX(0); box-shadow: 4px 0 20px var(--shadow-hard); touch-action: pan-y; }
     #hdr { justify-content: center; }
     #menu-btn { display: flex; position: absolute; left: max(0.75rem, env(safe-area-inset-left)); }
     .hdr-actions { position: absolute; right: max(0.75rem, env(safe-area-inset-right)); }
     .hdr-actions { gap: 8px; }
-    .hdr-actions .ic-btn { width: 30px; height: 30px; }
-    .hdr-actions .ic-btn svg { width: 14px; height: 14px; }
-    .pres-btn { padding: 4px 8px; font-size: 0.65rem; }
+    .hdr-actions .ic-btn { width: 38px; height: 38px; }
+    .hdr-actions .ic-btn svg { width: 16px; height: 16px; }
     .pres-btn svg { width: 12px; height: 12px; }
     .brand { gap: 8px; max-width: calc(100vw - 180px); text-align: center; }
     .brand-name { font-size: 0.85rem; }
     .xsvg { display: none; }
-    #hymn-view { padding: 1.5rem 1.8rem calc(4rem + env(safe-area-inset-bottom)); }
+    .hymn-pane { padding: 1.5rem 1.8rem calc(6.5rem + env(safe-area-inset-bottom)); }
+    :root { --hnum-col: 3.3rem }
+    .h-num { font-size: 1.9rem }
+    .hymn-hdr { column-gap: 0.85rem }
     .h-title { font-size: 1.2rem; }
     #pres-stage { padding: 2rem 1.5rem; }
     .pf-info { display: none; }
@@ -486,21 +772,29 @@ body.has-banner #app { padding-top: calc(var(--hdr) + 48px); }
     #search { font-size: 1rem; padding: 10px 10px 10px 32px; }
     .empty-search-wrap { display: flex; }
     #empty p { display: none; }
+    #empty h1 { font-size: 1.7rem; }
 }
 @media (max-width: 520px) {
     #site-footer { padding-bottom: max(1.5rem, env(safe-area-inset-bottom)); }
+    /* Phone widths: let the links wrap between items, and drop the separators so a
+       wrapped row never leaves a dangling dot at a line end. */
+    .footer-links { gap: 0.5rem 0.9rem; }
+    .footer-dot { display: none; }
 }
-@media (max-width: 480px) {
-    .pres-btn .pres-label { display: none; }
+@media (min-width: 1180px) {
+    /* The reading measure owns the width; the dock floats over it */
+    .hymn-doc { max-width: 880px; }
+    /* Clearance for the dock below it */
+    .scroll-top { bottom: 7.5rem; }
 }
 
 /* ═══ Scroll-to-top ═══ */
 .scroll-top {
     position: fixed; bottom: 5rem; right: 1.5rem;
     width: 44px; height: 44px; border-radius: 50%;
-    background: var(--accent-dk); color: #fff; border: none;
+    background: var(--accent-dk); color: var(--parch); border: none;
     cursor: pointer; display: flex; align-items: center; justify-content: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    box-shadow: 0 2px 8px var(--shadow-hard);
     opacity: 0; pointer-events: none;
     transition: opacity 0.25s, transform 0.25s;
     transform: translateY(8px);
@@ -508,52 +802,74 @@ body.has-banner #app { padding-top: calc(var(--hdr) + 48px); }
 }
 .scroll-top svg { width: 20px; height: 20px; flex-shrink: 0; }
 .scroll-top.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
-.scroll-top:hover { background: var(--accent); }
+.scroll-top.visible:active { transform: translateY(0) scale(0.94); transition: transform .15s var(--ease-out), opacity 0.25s; }
 [data-theme="dark"] .scroll-top { background: rgba(255,255,255,0.15); }
-[data-theme="dark"] .scroll-top:hover { background: rgba(255,255,255,0.25); }
 
 /* ═══ Number Pad FAB & Dialog (mobile only) ═══ */
 .numpad-fab {
     display: none;
-    position: fixed; bottom: 1.5rem; right: 1.5rem;
+    position: fixed; bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px)); right: 1.5rem;
     width: 52px; height: 52px; border-radius: 50%;
-    background: var(--accent-dk); color: #fff; border: none;
+    background: var(--accent-dk); color: var(--parch); border: none;
     cursor: pointer; align-items: center; justify-content: center;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.25);
+    box-shadow: 0 3px 12px var(--shadow-hard);
     z-index: 10;
-    transition: background 0.2s;
+    transition: background 0.2s, transform .15s var(--ease-out);
     -webkit-tap-highlight-color: transparent;
     outline: none;
 }
+.numpad-fab:active { transform: scale(0.94); }
 .numpad-fab svg { width: 28px; height: 28px; }
-.numpad-fab:hover { background: var(--accent); }
-[data-theme="dark"] .numpad-fab { background: rgba(139,133,224,0.35); }
-[data-theme="dark"] .numpad-fab:hover { background: rgba(139,133,224,0.5); }
+[data-theme="dark"] .numpad-fab { background: var(--accent-dk); }
 @media (max-width: 768px) {
     .numpad-fab.active { display: flex; }
     .scroll-top { display: none !important; }
-    .footer-copy { padding-bottom: 2rem; }
+    /* the numpad FAB sits above the dock, same thumb corner */
+    .numpad-fab { bottom: calc(88px + env(safe-area-inset-bottom, 0px)); }
+    #site-footer { padding-bottom: calc(5.5rem + env(safe-area-inset-bottom, 0px)); }
+    /* Reading a hymn, the dock collapses to its primary action and the FAB leaves, so they
+       stop covering the last verse — but Present, the reason this app exists, stays in reach
+       without scrolling back. Everything returns on scroll-up (mirrors the header). Only the
+       mobile layout needs this; on desktop the dock floats over the margin. */
+    .act-icon { overflow: hidden; transition: width .22s var(--ease-out), margin .22s var(--ease-out), border-width .22s var(--ease-out), opacity .16s; }
+    body.dock-hidden .act-icon { width: 0; margin-left: -6px; border-width: 0; opacity: 0; pointer-events: none; }
+    .numpad-fab { transition: transform .25s var(--ease-out), opacity .2s; }
+    body.dock-hidden .numpad-fab { transform: translateY(calc(100% + 24px)); opacity: 0; pointer-events: none; }
 }
 
+/* Faded with opacity+visibility (not display) so backdrop and dialog ease in together */
 .numpad-overlay {
-    display: none;
+    display: flex;
     position: fixed; inset: 0;
-    background: rgba(0,0,0,0.5);
+    /* a plain dim (Apple: dim to focus), not a weak blur — the panel carries the material */
+    background: rgba(10,8,30,0.58);
     z-index: 600;
     align-items: center; justify-content: center;
+    opacity: 0; visibility: hidden; pointer-events: none;
+    transition: opacity .2s ease-out, visibility 0s linear .2s;
 }
-.numpad-overlay.open { display: flex; }
+.numpad-overlay.open { opacity: 1; visibility: visible; pointer-events: auto; transition: opacity .2s ease-out, visibility 0s; }
 
 .numpad-dialog {
-    background: var(--parch);
-    border-radius: 20px;
+    background: var(--rail-glass);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    backdrop-filter: blur(20px) saturate(180%);
+    border-top: 1px solid var(--rail-edge);
+    border-radius: 16px;
     padding: 1.25rem;
     width: 260px;
     max-width: 85vw;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    box-shadow: 0 8px 32px var(--shadow-hard);
     text-align: center;
+    /* Grows from the lower-right, toward the FAB that opened it, rather than blooming
+       from its own centre — the panel reads as coming from where you tapped. */
+    transform-origin: bottom right;
+    opacity: 0; transform: scale(0.94) translateY(8px);
+    transition: opacity .2s ease-out, transform .24s var(--ease-out);
 }
-[data-theme="dark"] .numpad-dialog { background: #1E1B4B; }
+.numpad-overlay.open .numpad-dialog { opacity: 1; transform: scale(1) translateY(0); }
+/* Receives programmatic focus on open (focus containment); visible rings stay on the keys */
+.numpad-dialog:focus { outline: none; }
 
 .numpad-title {
     font-family: 'Playfair Display', serif;
@@ -573,7 +889,7 @@ body.has-banner #app { padding-top: calc(var(--hdr) + 48px); }
 }
 [data-theme="dark"] .numpad-display { background: rgba(255,255,255,0.08); }
 
-.numpad-spacer { width: 32px; flex-shrink: 0; }
+.numpad-spacer { width: 44px; flex-shrink: 0; }
 
 .numpad-input {
     flex: 1;
@@ -588,30 +904,34 @@ body.has-banner #app { padding-top: calc(var(--hdr) + 48px); }
 [data-theme="dark"] .numpad-input { color: var(--accent-lt); }
 
 .numpad-bksp {
-    width: 32px; height: 32px;
+    width: 44px; height: 44px;
     background: none; border: none;
     cursor: pointer; color: var(--muted);
     display: flex; align-items: center; justify-content: center;
     border-radius: 50%;
     flex-shrink: 0;
     opacity: 0;
-    transition: opacity 0.15s;
+    visibility: hidden;
+    transition: opacity 0.15s, visibility 0.15s, background 0.15s;
 }
-.numpad-bksp.visible { opacity: 1; }
+.numpad-bksp.visible { opacity: 1; visibility: visible; }
+/* Matches .numpad-key's press, not the app-wide scale: it sits in the key row, and a
+   shrinking circle next to twelve filling ones would read as a different control. */
+.numpad-bksp:active { background: var(--border); }
+[data-theme="dark"] .numpad-bksp:active { background: rgba(255,255,255,0.1); }
 .numpad-bksp svg { width: 18px; height: 18px; }
 
 .numpad-preview {
     height: 1.4rem;
     font-family: 'Noto Serif', serif;
     font-size: 0.8rem;
-    color: var(--muted);
-    opacity: 0.6;
+    color: var(--muted);   /* full muted, not dimmed — 0.6 opacity halved its contrast */
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
     margin-bottom: 0.75rem;
 }
-.numpad-preview.error { color: #e54; opacity: 1; }
+.numpad-preview.error { color: var(--danger); opacity: 1; }
 
 .numpad-grid {
     display: grid;
@@ -634,7 +954,7 @@ body.has-banner #app { padding-top: calc(var(--hdr) + 48px); }
     -webkit-tap-highlight-color: transparent;
 }
 .numpad-key:active { background: var(--border); }
-[data-theme="dark"] .numpad-key { color: #EEECfC; }
+[data-theme="dark"] .numpad-key { color: var(--ink); }
 [data-theme="dark"] .numpad-key:active { background: rgba(255,255,255,0.1); }
 
 .numpad-empty { pointer-events: none; }
@@ -643,6 +963,9 @@ body.has-banner #app { padding-top: calc(var(--hdr) + 48px); }
     font-weight: 700;
     font-size: 1rem;
     color: var(--accent-dk);
+    /* opacity as well as background: Go eases from disabled to enabled on the first keystroke,
+       instead of snapping while the backspace beside it fades in over .15s */
+    transition: background 0.15s, opacity 0.15s;
 }
 .numpad-go:active { background: var(--border); }
 .numpad-go.disabled { color: var(--muted); opacity: 0.3; pointer-events: none; }
@@ -656,43 +979,138 @@ body.has-banner #app { padding-top: calc(var(--hdr) + 48px); }
     color: var(--muted);
     cursor: pointer;
     padding: 0.5rem 1rem;
+    border-radius: 8px;   /* invisible at rest; gives the press fill a deliberate shape */
+    transition: background 0.15s;
+}
+.numpad-cancel:active { background: var(--border); }
+[data-theme="dark"] .numpad-cancel:active { background: rgba(255,255,255,0.1); }
+
+/* ═══ HOVER (pointer devices only) ═══
+   Hover styles live here, gated behind (hover: hover), so touch devices
+   don't get stuck in a hovered state after tapping. */
+@media (hover: hover) and (pointer: fine) {
+    .brand-home:hover { opacity: 0.85; }
+    .ic-btn:hover { background: var(--parch2); border-color: var(--accent-lt); }
+    .pres-btn:hover { opacity: 0.88; }
+    .hymn-row:not(.active):hover { background: var(--parch2); } /* :not(.active) — the selected row keeps its purple bg + light text on hover */
+    .empty-browse-btn:hover { opacity: 0.88; }
+    .hymn-nav-btn:hover:not(:disabled) { background: var(--parch2); border-color: var(--accent); color: var(--accent-dk); }
+    .act:hover { background: var(--parch2); border-color: var(--accent-lt); }
+    .act-primary:hover { background: var(--accent); border-color: var(--accent); }
+    .pres-next-btn:hover .pres-next-kicker { opacity: 1; }
+    .pres-next-btn:hover .pres-next-name { color: var(--pres-text); }
+    .sect-manage:hover { background: var(--parch2); color: var(--accent-dk); }
+    .set-opt:hover { background: var(--parch2); }
+    .sect-back:hover { color: var(--accent); }
+    .set-del:hover { background: var(--parch2); }
+    .set-undo button:hover { text-decoration: underline; }
+    .sect-present:hover { border-color: var(--accent-lt); }
+    .ra:hover:not(:disabled) { background: var(--parch2); color: var(--accent-dk); }
+    .hymn-row.active .ra:hover:not(:disabled) { background: rgba(255,255,255,0.14); color: #fff; }
+    .set-del:hover { color: var(--danger); }
+    .no-results button:hover { background: var(--parch2); border-color: var(--accent); }
+    .load-retry:hover { opacity: 0.88; }
+    .footer-links a:hover { color: var(--accent); }
+    .p-btn:hover:not(:disabled) { opacity: 0.8; } /* :not(:disabled) — disabled state must win over hover */
+    .pfont-btn:hover { color: var(--pres-chorus); border-color: var(--pfont-fg); }
+    .p-exit:hover { color: var(--pres-chorus); border-color: var(--pfont-fg); }
+    .app-banner-btn:hover { opacity: 0.88; text-decoration: none; }
+    .app-banner-close:hover { color: var(--ink); }
+    .scroll-top:hover { background: var(--accent); }
+    [data-theme="dark"] .scroll-top:hover { background: rgba(255,255,255,0.25); }
+    .numpad-fab:hover { background: var(--accent); }
+    [data-theme="dark"] .numpad-fab:hover { background: var(--accent); }
+}
+
+/* ═══ REDUCED MOTION ═══
+   Reduced motion = gentler, not zero. Keep opacity fades that aid
+   comprehension; drop movement and stagger delays. The loading spinner
+   stays: it communicates state rather than decorating. */
+@media (prefers-reduced-motion: reduce) {
+    #sidebar, #pres, #sb-overlay, .numpad-overlay, .numpad-dialog, #pres-end { transition-duration: 0.01s; }
+    /* Press feedback stays (it's direct manipulation, not motion) but lands instantly, matching
+       how .hymn-row is already handled below. The manager panel opens with no travel at all. */
+    .brand-home, .sect-manage, .set-opt, .set-del, .set-new .set-ok, .set-new .set-cancel { transition-duration: 0.01s; }
+    .set-reveal.reveal { transition: none; }
+    #hymn-view, .scroll-top { transform: none !important; }
+    .scroll-top { transition: opacity 0.2s ease; }
+    .act { transition: background .16s ease, border-color .16s ease; }
+    .hymn-row { transition: background .1s ease; } /* press scale stays, its animation goes */
+    #hdr { transition: none; }
+    body.hdr-hidden #hdr { transform: none; } /* the bar stays put — sliding is movement */
+    /* Dock still collapses (occlusion) and the FAB still leaves, but without motion */
+    .act-icon { transition: none; }
+    .numpad-fab { transition: opacity .2s; }
+    body.dock-hidden .numpad-fab { transform: none; }
+    .pl { opacity: 1; transform: none; animation: pl-fade .2s ease both; animation-delay: 0s !important; }
+    #pres-stage { transition: none; }
+}
+@keyframes pl-fade { from { opacity: 0; } }
+
+/* Ease brightness jumps and frosted materials per the user's preferences */
+@media (prefers-reduced-transparency: reduce) {
+    #sb-overlay, .numpad-overlay { background: rgba(10,8,30,0.85); backdrop-filter: none; -webkit-backdrop-filter: none; }
+    #pres-foot { background: #0B0920; }
+    /* Frostier than requested: solid, no blur */
+    .hymn-rail { background: var(--rail-bg); -webkit-backdrop-filter: none; backdrop-filter: none; }
+}
+
+/* ═══ HIGH CONTRAST ═══
+   The third preference signal (the other two are handled above): strengthen hairlines
+   and secondary text and drop translucency, so every boundary is unambiguous. */
+@media (prefers-contrast: more) {
+    :root { --border: #A9A7C4; --muted: #332E5C; }
+    #hdr, .hymn-rail, .numpad-dialog { background: var(--parch); -webkit-backdrop-filter: none; backdrop-filter: none; }
+    #sb-overlay, .numpad-overlay { background: rgba(10,8,30,0.78); }
+    .hymn-row { border-bottom-color: var(--border); }
+    .hymn-nav-btn, .ic-btn, .sect-present { border-color: var(--border); }
+    [data-theme="dark"] { --border: #56549A; --muted: #B4B2D8; }
+}
+@media (prefers-color-scheme: dark) and (prefers-contrast: more) {
+    :root:not([data-theme="light"]) { --border: #56549A; --muted: #B4B2D8; }
+}
+html.theme-anim, html.theme-anim *, html.theme-anim *::before, html.theme-anim *::after {
+    transition: background-color 250ms ease, color 250ms ease, border-color 250ms ease, fill 250ms ease, stroke 250ms ease !important;
 }
 
 /* ═══ PRINT ═══ */
 @media print {
-    #hdr, #sidebar, #sb-overlay, #loading, #pres,
-    #site-footer, .hymn-nav, #empty, .scroll-top, .numpad-fab, .numpad-overlay { display: none !important; }
+    #hdr, #sidebar, #sb-overlay, #loading, #pres, #app-banner,
+    #site-footer, .hymn-nav, #empty, .scroll-top, .numpad-fab, .numpad-overlay,
+    .hymn-rail { display: none !important; }
 
     html, body { height: auto; overflow: visible; background: #fff; }
     #app { display: block; padding-top: 0; height: auto; }
     #main { overflow: visible; height: auto; }
     #hymn-content { display: block !important; }
-    #hymn-view {
-        max-width: 100%;
-        padding: 1rem;
-        opacity: 1 !important;
-    }
+    .hymn-doc { max-width: 100%; display: block; }
+    .hymn-pager { overflow: visible; }
+    .hymn-pane { padding: 0; max-width: 100%; }
+    .hymn-pane:not(.center) { display: none !important; }   /* only the current hymn prints */
+    #hymn-view { opacity: 1 !important; --read-fz: 1; }
 
+    .hymn-hdr { border-bottom: 1px solid #000; box-shadow: none; padding-bottom: 0.6rem; margin-bottom: 1.4rem;
+                column-gap: 0.9rem; grid-template-columns: 3.4rem minmax(0, 1fr); }
+    .h-num   { font-size: 2rem; color: #000; }
     .h-title { font-size: 1.6rem; color: #000; }
-    .h-en { color: #444; }
-    .h-badge { border: 1px solid #ccc; color: #444; }
-    .ref-tag { border: 1px solid #ccc; color: #444; background: #f5f5f5; }
+    .h-en    { color: #444; }
+    .h-refs  { color: #555; }
+    .ref-tag { border: 0; background: none; color: #555; }
+
+    .lyrics  { columns: auto; }
     .s-label { color: #666; }
     .s-label::after { background: #ccc; }
-    .verse-block .s-line { color: #000; font-size: 11pt; line-height: 1.7; }
-    .chorus-block { border-left: 2px solid #999; background: #f9f9f9; }
-    .chorus-block .s-line { color: #000; font-size: 11pt; line-height: 1.7; }
-
-    .stanza { page-break-inside: avoid; break-inside: avoid; }
-
+    .verse-block .s-line, .chorus-block .s-line { color: #000; font-size: 11pt; line-height: 1.7; }
+    .chorus-block { border-left: 2px solid #999; background: #f9f9f9;
+                    -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .chorus-ref { color: #666; }
+    .cr-line { font-size: 11pt; color: #000; }
+    .cr-part { color: #555; }
+    .stanza  { break-inside: avoid; page-break-inside: avoid; }
     #hymn-view::after {
         content: attr(data-print-credit);
-        display: block;
-        margin-top: 2rem;
-        padding-top: 0.75rem;
-        border-top: 1px solid #ccc;
-        font-size: 8pt;
-        color: #999;
-        text-align: center;
+        display: block; margin-top: 2rem; padding-top: 0.75rem;
+        border-top: 1px solid #ccc; font-size: 8pt; color: #999; text-align: center;
     }
+    @page { margin: 16mm 14mm; }
 }
