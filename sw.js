@@ -11,10 +11,6 @@ const ASSETS = [
 // Fonts are self-hosted now, so the app has no cross-origin dependencies left.
 const CACHEABLE_ORIGINS = [self.location.origin];
 
-// On a dev origin the shell must never be served from cache, or a stale copy hides your
-// edits — the trap that previously had to be worked around by unregistering the worker
-// entirely (which also cost the app its PWA installability). Production is unaffected:
-// build.js rotates the cache name on every build, so a stale cache can't survive a deploy.
 const DEV = self.location.hostname === 'localhost' || self.location.hostname === '127.0.0.1';
 
 self.addEventListener('install', e => {
@@ -60,7 +56,6 @@ self.addEventListener('fetch', e => {
     e.respondWith(
       caches.open(CACHE).then(cache => {
         if (DEV) {
-          // Dev: always go to the network; the cache is only an offline fallback.
           return fetch(e.request).catch(() => cache.match('/'));
         }
         if (isRoot) {
@@ -76,8 +71,6 @@ self.addEventListener('fetch', e => {
           });
         }
         if (isHymn) {
-          // Prerendered hymn pages: network-first for fresh content, falling back to the
-          // cached app shell offline (the SPA re-renders the hymn from the URL path).
           return fetch(e.request).catch(() => cache.match('/'));
         }
         // Standalone pages (e.g., /privacy) -- fetch directly.
@@ -87,7 +80,6 @@ self.addEventListener('fetch', e => {
     return;
   }
 
-  // All other GET requests: cache-first in production, network-first on a dev origin.
   e.respondWith(
     caches.open(CACHE).then(cache => {
       if (DEV) {

@@ -7,9 +7,6 @@
     <meta name="description" content="Privacy policy for SDA Hymnal Yorùbá.">
     <link rel="canonical" href="https://sdahymnalyoruba.com/privacy">
     <meta name="theme-color" content="#5B52C8">
-    <!-- Honor the theme chosen in the app, before first paint, so the page never flashes the
-         wrong one. Mirrors app.js: an explicit light/dark is written to data-theme; 'system'
-         (or unset) leaves it off so prefers-color-scheme decides. -->
     <script>
     (function () {
         var mode = null;
@@ -21,8 +18,6 @@
         if (meta) meta.setAttribute('content', dark ? '#1A1840' : '#5B52C8');
     })();
     </script>
-    <!-- Same self-hosted, subsetted faces as the app (declared in styles.css). Only the three
-         this page actually uses — it is standalone and doesn't load the app stylesheet. -->
     <link rel="preload" as="font" type="font/woff2" href="/fonts/noto-serif-400.woff2" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="/fonts/playfair-display-600.woff2" crossorigin>
     <style>
