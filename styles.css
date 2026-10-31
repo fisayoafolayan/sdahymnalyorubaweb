@@ -580,10 +580,13 @@ html.js .hymn-rail { display: flex; align-items: center; gap: 6px;
 .s-label::after { content: ''; flex: 1; height: 1px; background: var(--border); opacity: 0.55; }
 .verse-block .s-line { font-size: calc(1.08rem * var(--read-fz, 1)); line-height: 1.75; color: var(--ink2); display: block; overflow-wrap: anywhere; }
 .chorus-block { padding: 0.55rem 0 0.55rem 1rem; background: var(--chorus-bg); border-radius: 5px; }
-/* A repeat of an identical chorus reads as a reference, not a second copy of the block —
-   otherwise the two-column layout printed the same lines twice, side by side. */
 .chorus-ref-block { margin-bottom: 1.2rem; }
 .chorus-ref { padding-left: 1rem; font-size: calc(1.02rem * var(--read-fz, 1)); font-style: italic; color: var(--muted); }
+.chorus-repeat { display: none; }   /* desktop: ref wins */
+@media (max-width: 768px) {
+    .chorus-repeat { display: block; }
+    .chorus-ref-block { display: none; }
+}
 .chorus-block .s-line { font-size: calc(1.08rem * var(--read-fz, 1)); line-height: 1.75; color: var(--ink2); display: block; overflow-wrap: anywhere; }
 .cr-block { margin-bottom: 0.6rem; }
 .cr-line { display: flex; gap: 0.6rem; font-size: calc(1.08rem * var(--read-fz, 1)); line-height: 1.75; color: var(--ink2); }
@@ -648,6 +651,7 @@ html.js .hymn-rail { display: flex; align-items: center; gap: 6px;
 .p-prog { font-size: 0.75rem; color: var(--pres-prog); min-width: 48px; text-align: center; }
 .pf-font { display: flex; gap: 4px; }
 .pfont-btn { background: transparent; border: 1px solid var(--pfont-bd); color: var(--pfont-fg); width: 36px; height: 36px; border-radius: 4px; cursor: pointer; font-size: 12px; display: flex; align-items: center; justify-content: center; transition: color .15s; }
+.pfont-btn:disabled { opacity: 0.3; cursor: default; }
 .p-exit { background: transparent; border: 1px solid var(--pres-exit-bd); color: var(--pres-exit-fg); height: 36px; padding: 0 12px; border-radius: 5px; cursor: pointer; font-family: 'Noto Serif', serif; font-size: 0.8rem; letter-spacing: 0.04em; transition: color .15s, border-color .15s; white-space: nowrap; }
 #pres-hint { position: absolute; bottom: 60px; right: 24px; font-size: 0.62rem; color: var(--pres-hint); letter-spacing: 0.04em; pointer-events: none; }
 /* The keyboard half of the hint is meaningless on a touch device — drop it there */
@@ -1107,6 +1111,8 @@ html.theme-anim, html.theme-anim *, html.theme-anim *::before, html.theme-anim *
     .chorus-block { border-left: 2px solid #999; background: #f9f9f9;
                     -webkit-print-color-adjust: exact; print-color-adjust: exact; }
     .chorus-ref { color: #666; }
+    .chorus-repeat   { display: none !important; }
+    .chorus-ref-block { display: block !important; }
     .cr-line { font-size: 11pt; color: #000; }
     .cr-part { color: #555; }
     .stanza  { break-inside: avoid; page-break-inside: avoid; }

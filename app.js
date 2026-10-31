@@ -22,6 +22,7 @@ let current = null;
 let presBlocks = [];
 let presIdx    = 0;
 let presFz     = parseFloat(localStorage.getItem('presFz')) || 1.0;
+let presFzApplied = presFz;
 let readFz     = parseFloat(localStorage.getItem('readFz')) || 1.0;
 
 const $ = id => document.getElementById(id);
@@ -839,16 +840,13 @@ function hymnHTML(hymn) {
         const isCallResponse = block.type === 'call_response';
         let label, inner;
 
+        let isChorusRepeat = false;
         if (isChorus) {
-            // The data repeats the refrain after every verse. Rendering each repeat in full
-            // makes two identical blocks land side by side in the two-column layout, which
-            // reads as a duplication glitch — so after the first, show a reference instead.
-            // (Presentation mode still shows every chorus in full: the congregation needs it.)
             const key = JSON.stringify(block.lines);
             if (firstChorus === null) firstChorus = key;
             else if (key === firstChorus) {
                 html += '<div class="stanza chorus-ref-block"><div class="s-label">Chorus</div><div class="chorus-ref">Repeat the chorus</div></div>';
-                return;
+                isChorusRepeat = true;   // fall through and ALSO emit the full block (mobile-only)
             }
         }
 
@@ -868,7 +866,8 @@ function hymnHTML(hymn) {
                 : `<div class="verse-block">${lines}</div>`;
         }
         const wide = block.type === 'call_response' || block.lines.length >= WIDE_LINES;
-        html += `<div class="stanza${wide ? ' wide' : ''}"><div class="s-label">${label}</div>${inner}</div>`;
+        const repeat = isChorusRepeat ? ' chorus-repeat' : '';   // mobile shows it, desktop hides it
+        html += `<div class="stanza${wide ? ' wide' : ''}${repeat}"><div class="s-label">${label}</div>${inner}</div>`;
     });
     return `
 <div class="hymn-hdr">
@@ -1129,6 +1128,7 @@ function renderPresBlock() {
             : presIdx + ' / ' + (presBlocks.length - 1);
 
     if (isEnd) {
+        $('pf-up').disabled = false;
         // Offer the next hymn — a service is a sequence, so the end slide must lead somewhere
         const next = nextPresHymn();
         const btn = $('pres-next-hymn');
@@ -1198,21 +1198,54 @@ function renderPresBlock() {
     applyPresFz();
 }
 
-/** Scale presentation text based on viewport width and user font size preference. Base size ranges 18-52px proportional to screen width. */
 function applyPresFz() {
     const base = Math.max(18, Math.min(window.innerWidth * 0.038, 52));
-    // Tracking is size-specific — one value is wrong at both ends of the 18–78px range this
-    // text spans. Small sizes want a touch of positive tracking; large display sizes want
-    // negative. Interpolate on the rendered size (≈ +0.006em at 20px → -0.015em at 56px+).
     const track = px => (0.006 - 0.021 * Math.max(0, Math.min(1, (px - 20) / 36))).toFixed(4) + 'em';
-    $('pres-lines').querySelectorAll('.pl').forEach(el => {
-        let size;
-        if (el.classList.contains('title-main'))     size = base * presFz * 1.5;
-        else if (el.classList.contains('title-sub')) size = base * presFz * 0.75;
-        else                                         size = base * presFz;
+    const lines = $('pres-lines');
+    const els = [...lines.querySelectorAll('.pl')];
+    const sizeFor = (el, fz) => {
+        if (el.classList.contains('title-main')) return base * fz * 1.5;
+        else if (el.classList.contains('title-sub')) return base * fz * 0.75;
+        return base * fz;
+    };
+    const paint = fz => els.forEach(el => {
+        const size = sizeFor(el, fz);
         el.style.fontSize = size + 'px';
         el.style.letterSpacing = track(size);
     });
+
+    let fz = presFz;
+    paint(fz);
+
+    const stage = $('pres-stage');
+    const scs = getComputedStyle(stage);
+    const label = $('pres-blk-label');
+    const labelH = label.style.display === 'none'
+        ? 0
+        : label.offsetHeight + parseFloat(getComputedStyle(label).marginBottom || 0);
+    const avail = stage.clientHeight - parseFloat(scs.paddingTop) - parseFloat(scs.paddingBottom) - labelH;
+
+    if (avail > 0 && lines.scrollHeight > avail - 2) {
+        let lo = 0.2, hi = fz;
+        for (let i = 0; i < 12; i++) {
+            const mid = (lo + hi) / 2;
+            paint(mid);
+            if (lines.scrollHeight <= avail - 2) lo = mid; else hi = mid;
+        }
+        fz = lo;
+        paint(fz);
+    }
+    presFzApplied = fz;
+
+    const zoomed = $('pf-up');
+    if (zoomed) zoomed.disabled = presFzApplied < presFz - 1e-6;
+}
+
+function presZoom(delta) {
+    if (delta > 0 && presFzApplied < presFz - 1e-6) return;
+    presFz = Math.max(0.4, Math.min(presFz + delta, 2.5));
+    localStorage.setItem('presFz', presFz);
+    applyPresFz();
 }
 
 $('p-next').addEventListener('click', advance);
@@ -1261,8 +1294,8 @@ function presentSet() {
 }
 $('pres-next-hymn').addEventListener('click', nextHymnInPresentation);
 $('p-exit').addEventListener('click', closePres);
-$('pf-up').addEventListener('click',   () => { presFz = Math.min(presFz + 0.15, 2.5); applyPresFz(); localStorage.setItem('presFz', presFz); });
-$('pf-down').addEventListener('click', () => { presFz = Math.max(presFz - 0.15, 0.4); applyPresFz(); localStorage.setItem('presFz', presFz); });
+$('pf-up').addEventListener('click',   () => presZoom(0.15));
+$('pf-down').addEventListener('click', () => presZoom(-0.15));
 /** Keyboard handler for presentation mode. Arrow keys and space navigate slides; +/- adjust font; Escape exits. */
 function presKey(e) {
     if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') { e.preventDefault(); advance(); }
@@ -1276,8 +1309,8 @@ function presKey(e) {
         else if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
         else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
     }
-    else if (e.key === '+' || e.key === '=') { presFz = Math.min(presFz + 0.15, 2.5); applyPresFz(); localStorage.setItem('presFz', presFz); }
-    else if (e.key === '-') { presFz = Math.max(presFz - 0.15, 0.4); applyPresFz(); localStorage.setItem('presFz', presFz); }
+    else if (e.key === '+' || e.key === '=') presZoom(0.15);
+    else if (e.key === '-') presZoom(-0.15);
 }
 /** Exit presentation mode: hide overlay, remove keyboard listener, exit fullscreen, update history. Focus restore waits 200ms so fullscreen exit (which blurs to <body>) and the popstate re-render settle first. */
 function closePres(fromPopstate) {
@@ -1317,6 +1350,7 @@ function scrollSidebarToActive() {
 }
 
 window.addEventListener('resize', () => { if ($('pres').classList.contains('on')) applyPresFz(); });
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => { if ($('pres').classList.contains('on')) applyPresFz(); });
 
 // ── Swipe pager ──
 const pager      = $('hymn-pager');
